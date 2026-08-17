@@ -1,0 +1,197 @@
+﻿.add-job-page {
+    width: 100%;
+    padding: 8px 0 40px 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+    .back-link i {
+        font-size: 21px;
+    }
+
+    .back-link:hover {
+        color: #1d4ed8;
+    }
+
+.page-title {
+    margin: 0 0 30px 0;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.job-form-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce2e8;
+    border-radius: 8px;
+    padding: 38px 39px 38px 39px;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 28px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+    .form-group.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #1e293b;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+        .form-group label span {
+            color: #ef4444;
+        }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        border: 1px solid #d9dee5;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #263247;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        outline: none;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 45px;
+        padding: 0 14px;
+    }
+
+    .form-group select {
+        cursor: pointer;
+    }
+
+    .form-group textarea {
+        height: 135px;
+        padding: 13px 14px;
+        resize: vertical;
+        line-height: 1.5;
+    }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #7b8495;
+            opacity: 1;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+        }
+
+.form-divider {
+    width: 100%;
+    height: 1px;
+    background: #dfe3e8;
+    margin-top: 28px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    padding-top: 29px;
+}
+
+.cancel-button,
+.create-button {
+    height: 45px;
+    padding: 0 25px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cancel-button {
+    min-width: 111px;
+    background: #ffffff;
+    border: 1px solid #d9dee5;
+    color: #1e293b;
+}
+
+.create-button {
+    min-width: 145px;
+    background: #2563eb;
+    border: 1px solid #2563eb;
+    color: #ffffff;
+}
+
+.cancel-button:hover {
+    background: #f8fafc;
+}
+
+.create-button:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+@media (max-width: 900px) {
+
+    .job-form-card {
+        padding: 28px 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .job-form-card {
+        padding: 22px 18px;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+
+    .form-buttons {
+        justify-content: stretch;
+    }
+
+    .cancel-button,
+    .create-button {
+        flex: 1;
+    }
+}

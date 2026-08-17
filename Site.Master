@@ -176,35 +176,21 @@
 
             </a>
 
-
-            <!-- =================================================
-                 REPORTS
-            ================================================== -->
-
-            <a href="<%= ResolveUrl("~/Admin/Reports.aspx") %>">
-
-                <i class="bi bi-bar-chart"></i>
-
-                <span>Reports</span>
-
-            </a>
-
-
             <!-- =================================================
                  SETTINGS
             ================================================== -->
 
-            <a href="<%= ResolveUrl("~/Admin/Settings.aspx") %>">
+            <a href="<%= ResolveUrl("~/Admin/Settings.aspx") %>>"
+                style="color: tomato; text-decoration: none;">
 
-                <i class="bi bi-gear"></i>
+                <i class="bi bi-box-arrow-right"
+                    style="color: red !important;"></i>>
 
-                <span>Settings</span>
+
+                <span style="color:tomato !important;"> Logout</span>
 
             </a>
-
-
         </div>
-
 
         <!-- =================================================
              ADMIN USER

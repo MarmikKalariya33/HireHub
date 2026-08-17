@@ -101,12 +101,24 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Accounts\Login.aspx" />
+    <Content Include="Admin\Add_Jobs.aspx" />
+    <Content Include="Admin\AdminProfile.aspx" />
+    <Content Include="Admin\Applications.aspx" />
+    <Content Include="Admin\Applications_Details.aspx" />
+    <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\Companies.aspx" />
     <Content Include="Admin\Edit_Employers.aspx" />
+    <Content Include="Admin\Edit_Jobs.aspx" />
     <Content Include="Admin\Edit_users.aspx" />
     <Content Include="Admin\Employers.aspx" />
     <Content Include="Admin\Jobs.aspx" />
     <Content Include="Admin\Users.aspx" />
+    <Content Include="Assets\css\add_jobs.css" />
+    <Content Include="Assets\css\admin_profile.css" />
+    <Content Include="Assets\css\applications.css" />
+    <Content Include="Assets\css\application_detail.css" />
+    <Content Include="Assets\css\categories.css" />
+    <Content Include="Assets\css\edit_jobs.css" />
     <Content Include="Assets\css\jobs.css" />
     <Content Include="Assets\css\login.css" />
     <Content Include="Assets\css\site.css" />
@@ -208,6 +220,41 @@
     <Compile Include="Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Add_Jobs.aspx.cs">
+      <DependentUpon>Add_Jobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Add_Jobs.aspx.designer.cs">
+      <DependentUpon>Add_Jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.aspx.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminProfile.aspx.designer.cs">
+      <DependentUpon>AdminProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Applications.aspx.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Applications.aspx.designer.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Applications_Details.aspx.cs">
+      <DependentUpon>Applications_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Applications_Details.aspx.designer.cs">
+      <DependentUpon>Applications_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Companies.aspx.cs">
       <DependentUpon>Companies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,6 +268,13 @@
     </Compile>
     <Compile Include="Admin\Edit_Employers.aspx.designer.cs">
       <DependentUpon>Edit_Employers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit_Jobs.aspx.cs">
+      <DependentUpon>Edit_Jobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit_Jobs.aspx.designer.cs">
+      <DependentUpon>Edit_Jobs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Edit_users.aspx.cs">
       <DependentUpon>Edit_users.aspx</DependentUpon>

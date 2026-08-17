@@ -1,0 +1,395 @@
+﻿/* =========================================
+   APPLICATIONS PAGE
+   ========================================= */
+
+.applications-page {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    padding: 36px 35px;
+    box-sizing: border-box;
+    background: #faf8f3;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.page-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+    .page-header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #202b40;
+        letter-spacing: -0.5px;
+    }
+
+
+/* =========================================
+   HEADER ACTIONS
+   ========================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================
+   SEARCH BOX
+   ========================================= */
+
+.search-box {
+    width: 262px;
+    height: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    padding: 0 14px 0 38px;
+    border: 1px solid #dfe3e8;
+    border-radius: 7px;
+    background: #ffffff;
+    font-size: 15px;
+    color: #273247;
+    outline: none;
+}
+
+    .search-input::placeholder {
+        color: #7c8494;
+    }
+
+    .search-input:focus {
+        border-color: #b7c4d8;
+    }
+
+
+/* Search Icon */
+
+.search-icon {
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    font-size: 25px;
+    line-height: 25px;
+    color: #6f7888;
+    z-index: 2;
+}
+
+
+/* =========================================
+   STATUS DROPDOWN
+   ========================================= */
+
+.status-dropdown {
+    width: 133px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #dfe3e8;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #273247;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+    .status-dropdown:focus {
+        border-color: #b7c4d8;
+    }
+
+
+/* =========================================
+   APPLICATION CARD
+   ========================================= */
+
+.applications-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+    /* =========================================
+   TABLE HEADER
+   ========================================= */
+
+    .applications-table thead {
+        background: #f8f9fb;
+    }
+
+    .applications-table th {
+        height: 51px;
+        padding: 0 16px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 700;
+        color: #273247;
+        border-bottom: 1px solid #e1e4e8;
+    }
+
+
+        /* Column Widths */
+
+        .applications-table th:nth-child(1) {
+            width: 23%;
+        }
+
+        .applications-table th:nth-child(2) {
+            width: 21%;
+        }
+
+        .applications-table th:nth-child(3) {
+            width: 12%;
+        }
+
+        .applications-table th:nth-child(4) {
+            width: 14%;
+        }
+
+        .applications-table th:nth-child(5) {
+            width: 14%;
+        }
+
+
+    /* =========================================
+   TABLE BODY
+   ========================================= */
+
+    .applications-table tbody tr {
+        height: 69px;
+        border-bottom: 1px solid #e4e7eb;
+    }
+
+        .applications-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .applications-table tbody tr:hover {
+            background: #fafbfc;
+        }
+
+    .applications-table td {
+        padding: 0 16px;
+        font-size: 15px;
+        color: #283247;
+        vertical-align: middle;
+    }
+
+
+/* =========================================
+   APPLICANT
+   ========================================= */
+
+.applicant-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8edf4;
+    color: #26354a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.applicant-info span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #263247;
+}
+
+
+/* =========================================
+   DATE
+   ========================================= */
+
+.date {
+    color: #747e91 !important;
+    font-size: 15px !important;
+}
+
+
+/* =========================================
+   STATUS BADGES
+   ========================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 67px;
+    height: 25px;
+    padding: 0 9px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+
+    /* Pending */
+
+    .status.pending {
+        background: #fff4c9;
+        color: #d99a00;
+    }
+
+
+    /* Reviewed */
+
+    .status.reviewed {
+        background: #dce9ff;
+        color: #2857c7;
+    }
+
+
+    /* Hired */
+
+    .status.hired {
+        background: #d9f7e4;
+        color: #16934b;
+    }
+
+
+    /* Rejected */
+
+    .status.rejected {
+        background: #ffe4e4;
+        color: #e21e2b;
+    }
+
+
+/* =========================================
+   ACTION BUTTONS
+   ========================================= */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+    /* Common button */
+
+    .action-buttons button {
+        width: 20px;
+        height: 25px;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 23px;
+        transition: 0.2s ease;
+    }
+
+
+/* Edit */
+
+.edit-btn {
+    color: #1769ff;
+}
+
+    .edit-btn:hover {
+        color: #0052d9;
+        transform: scale(1.1);
+    }
+
+
+/* Delete */
+
+.delete-btn {
+    color: #f21f2f;
+}
+
+    .delete-btn:hover {
+        color: #c9000d;
+        transform: scale(1.1);
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .applications-page {
+        padding: 28px 22px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-actions {
+        justify-content: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .applications-table {
+        min-width: 850px;
+    }
+}

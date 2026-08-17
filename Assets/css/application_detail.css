@@ -1,0 +1,453 @@
+﻿/* =========================================
+   APPLICATION DETAILS PAGE
+   ========================================= */
+
+.application-details-page {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    padding: 34px 35px 40px 35px;
+    box-sizing: border-box;
+    background: #faf8f3;
+}
+
+
+/* =========================================
+   BACK LINK
+   ========================================= */
+
+.back-section {
+    margin-bottom: 26px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #1769ff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+    .back-link:hover {
+        color: #0052d9;
+    }
+
+.back-arrow {
+    font-size: 28px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   MAIN APPLICATION CARD
+   ========================================= */
+
+.application-card {
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    padding: 34px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   APPLICANT HEADER
+   ========================================= */
+
+.applicant-header {
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+}
+
+
+/* Avatar */
+
+.applicant-avatar {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5ebf3;
+    color: #202c42;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+/* Heading */
+
+.applicant-heading {
+    margin-left: 22px;
+}
+
+
+/* Name + Status */
+
+.name-status {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+    .name-status h1 {
+        margin: 0;
+        font-size: 25px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #202b40;
+    }
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+    .status-badge.pending {
+        background: #fff3bf;
+        color: #d99b00;
+    }
+
+
+/* =========================================
+   APPLIED FOR
+   ========================================= */
+
+.applied-for {
+    margin-top: 3px;
+    color: #727c8e;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.job-link {
+    color: #1769ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .job-link:hover {
+        text-decoration: underline;
+    }
+
+.at-company {
+    color: #727c8e;
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5e9;
+    margin-top: 26px;
+}
+
+
+/* =========================================
+   APPLICANT INFORMATION
+   ========================================= */
+
+.applicant-information {
+    padding-top: 26px;
+}
+
+.info-item {
+    margin-bottom: 14px;
+}
+
+    .info-item:last-child {
+        margin-bottom: 0;
+    }
+
+
+/* Label */
+
+.info-label {
+    margin-bottom: 5px;
+    color: #707a8b;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+
+/* Value */
+
+.info-value {
+    color: #202b40;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+/* Information divider */
+
+.information-divider {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   DOCUMENTS
+   ========================================= */
+
+.documents-section {
+    padding-top: 26px;
+}
+
+    .documents-section h2 {
+        margin: 0 0 12px 0;
+        color: #202b40;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   DOCUMENT BOX
+   ========================================= */
+
+.document-box {
+    width: 100%;
+    min-height: 72px;
+    box-sizing: border-box;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 0 17px;
+    background: #ffffff;
+}
+
+
+/* Document Left */
+
+.document-left {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Document Icon */
+
+.document-icon {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+    .document-icon span {
+        color: #1769ff;
+        font-size: 27px;
+        font-weight: 400;
+    }
+
+
+/* Document Details */
+
+.document-name {
+    color: #273247;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.document-size {
+    color: #7c8493;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+   ========================================= */
+
+.download-button {
+    height: 36px;
+    padding: 0 15px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 5px;
+    color: #263247;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .download-button:hover {
+        background: #f7f8fa;
+        border-color: #c8cfd8;
+    }
+
+
+/* =========================================
+   DOCUMENT DIVIDER
+   ========================================= */
+
+.document-divider {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   BOTTOM ACTIONS
+   ========================================= */
+
+.bottom-actions {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding-top: 25px;
+}
+
+
+/* =========================================
+   SHORTLIST BUTTON
+   ========================================= */
+
+.shortlist-button {
+    height: 40px;
+    min-width: 190px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 6px;
+    background: #12b886;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .shortlist-button:hover {
+        background: #0ca678;
+    }
+
+
+/* =========================================
+   REJECT BUTTON
+   ========================================= */
+
+.reject-button {
+    height: 40px;
+    min-width: 174px;
+    padding: 0 24px;
+    border: 1px solid #ff3030;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #ed1c24;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+    .reject-button:hover {
+        background: #fff5f5;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .application-details-page {
+        padding: 25px 22px;
+    }
+
+    .application-card {
+        padding: 25px;
+    }
+
+    .document-box {
+        gap: 15px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .application-details-page {
+        padding: 20px 15px;
+    }
+
+    .application-card {
+        padding: 20px;
+    }
+
+    .applicant-header {
+        align-items: flex-start;
+    }
+
+    .applicant-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 19px;
+    }
+
+    .applicant-heading {
+        margin-left: 15px;
+    }
+
+    .name-status {
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+        .name-status h1 {
+            font-size: 21px;
+        }
+
+    .document-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .download-button {
+        margin-top: 12px;
+        width: 100%;
+    }
+
+    .bottom-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .shortlist-button,
+    .reject-button {
+        width: 100%;
+    }
+}

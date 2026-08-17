@@ -61,7 +61,7 @@
 
                 </div>
 
-                <a href="#"
+                <a href="Add_Jobs.aspx"
                    class="add-job-btn">
 
                     <i class="bi bi-plus-lg"></i>
@@ -212,7 +212,7 @@
 
                                 <div class="job-actions">
 
-                                    <a href="#"
+                                    <a href="Edit_Jobs.aspx"
                                        class="job-action job-edit"
                                        title="Edit Job">
 
@@ -271,7 +271,7 @@
 
                                 <div class="job-actions">
 
-                                    <a href="#"
+                                    <a href="Edit_Jobs.aspx"    
                                        class="job-action job-edit"
                                        title="Edit Job">
 

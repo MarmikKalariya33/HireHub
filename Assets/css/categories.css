@@ -1,0 +1,285 @@
+﻿/* =========================================
+   CATEGORIES PAGE
+   ========================================= */
+
+.categories-page {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    padding: 36px 35px 40px 35px;
+    box-sizing: border-box;
+    background: #faf8f3;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.categories-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+
+
+    .categories-header h1 {
+        margin: 0;
+        color: #202b40;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+
+/* =========================================
+   ADD CATEGORY BUTTON
+   ========================================= */
+
+.add-category-btn {
+    height: 36px;
+    min-width: 163px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2867e8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+    .add-category-btn:hover {
+        background: #1557d4;
+    }
+
+
+/* =========================================
+   CATEGORY CARD
+   ========================================= */
+
+.categories-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+   ========================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+.categories-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+    /* =========================================
+   TABLE HEADER
+   ========================================= */
+
+    .categories-table thead {
+        background: #f8f9fb;
+    }
+
+
+    .categories-table th {
+        height: 51px;
+        padding: 0 16px;
+        text-align: left;
+        color: #202b40;
+        font-size: 15px;
+        font-weight: 700;
+        border-bottom: 1px solid #dfe3e8;
+    }
+
+
+        /* Column sizes */
+
+        .categories-table th:nth-child(1) {
+            width: 32%;
+        }
+
+
+        .categories-table th:nth-child(2) {
+            width: 25%;
+        }
+
+
+        .categories-table th:nth-child(3) {
+            width: 30%;
+        }
+
+
+    /* =========================================
+   TABLE BODY
+   ========================================= */
+
+    .categories-table tbody tr {
+        height: 53px;
+        border-bottom: 1px solid #dfe3e8;
+        transition: background 0.15s ease;
+    }
+
+
+        .categories-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+
+        .categories-table tbody tr:hover {
+            background: #fafbfc;
+        }
+
+
+    /* =========================================
+   TABLE CELLS
+   ========================================= */
+
+    .categories-table td {
+        padding: 0 16px;
+        vertical-align: middle;
+        font-size: 15px;
+        color: #263247;
+    }
+
+
+/* =========================================
+   CATEGORY NAME
+   ========================================= */
+
+.category-name {
+    color: #202b40;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   JOB COUNT
+   ========================================= */
+
+.job-count {
+    color: #737d8f;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   ACTIONS
+   ========================================= */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* =========================================
+   EDIT BUTTON
+   ========================================= */
+
+.edit-btn {
+    width: 20px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #1769ff;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+    .edit-btn:hover {
+        color: #0052d9;
+        transform: scale(1.1);
+    }
+
+
+/* =========================================
+   DELETE BUTTON
+   ========================================= */
+
+.delete-btn {
+    width: 20px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #f21f2f;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+    .delete-btn:hover {
+        color: #c9000d;
+        transform: scale(1.1);
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .categories-page {
+        padding: 28px 22px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .categories-page {
+        padding: 22px 15px;
+    }
+
+
+    .categories-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+
+        .categories-header h1 {
+            font-size: 24px;
+        }
+
+
+    .add-category-btn {
+        min-width: 140px;
+        font-size: 13px;
+    }
+
+
+    .categories-table {
+        min-width: 700px;
+    }
+}

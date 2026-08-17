@@ -1,0 +1,269 @@
+﻿/* =========================================
+   ADMIN PROFILE PAGE
+   ========================================= */
+
+.admin-profile-page {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    padding: 35px 35px 40px 35px;
+    box-sizing: border-box;
+    background: #faf8f3;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.profile-page-header {
+    width: 100%;
+    margin-bottom: 27px;
+}
+
+    .profile-page-header h1 {
+        margin: 0;
+        color: #202b40;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+
+/* =========================================
+   PROFILE CARD
+   ========================================= */
+
+.profile-card {
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    padding: 34px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   PROFILE HEADER
+   ========================================= */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    min-height: 95px;
+}
+
+
+/* =========================================
+   PROFILE AVATAR
+   ========================================= */
+
+.profile-avatar {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #28566c;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROFILE HEADING
+   ========================================= */
+
+.profile-heading {
+    margin-left: 26px;
+}
+
+    .profile-heading h2 {
+        margin: 0;
+        color: #202b40;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 32px;
+    }
+
+    .profile-heading p {
+        margin: 2px 0 0 0;
+        color: #727c8e;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+.separator {
+    margin: 0 4px;
+    color: #7c8493;
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.profile-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5e9;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   PROFILE INFORMATION
+   ========================================= */
+
+.profile-information {
+    padding-top: 25px;
+}
+
+    .profile-information h3 {
+        margin: 0 0 18px 0;
+        color: #202b40;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   PROFILE ITEM
+   ========================================= */
+
+.profile-item {
+    margin-bottom: 13px;
+}
+
+    .profile-item:last-child {
+        margin-bottom: 0;
+    }
+
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+.profile-label {
+    margin-bottom: 5px;
+    color: #747e8f;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+/* =========================================
+   VALUE
+   ========================================= */
+
+.profile-value {
+    color: #202b40;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+
+/* Email */
+
+.email-value {
+    font-weight: 600;
+}
+
+
+/* =========================================
+   BOTTOM DIVIDER
+   ========================================= */
+
+.profile-bottom-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5e9;
+    margin-top: 24px;
+}
+
+
+/* =========================================
+   PROFILE ACTION
+   ========================================= */
+
+.profile-actions {
+    padding-top: 25px;
+}
+
+
+/* =========================================
+   EDIT PROFILE BUTTON
+   ========================================= */
+
+.edit-profile-btn {
+    height: 40px;
+    min-width: 133px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 6px;
+    background: #2867e8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+    .edit-profile-btn:hover {
+        background: #1557d4;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .admin-profile-page {
+        padding: 28px 22px;
+    }
+
+    .profile-card {
+        padding: 27px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .admin-profile-page {
+        padding: 22px 15px;
+    }
+
+    .profile-card {
+        padding: 22px;
+    }
+
+    .profile-header {
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 24px;
+    }
+
+    .profile-heading {
+        margin-left: 17px;
+    }
+
+        .profile-heading h2 {
+            font-size: 21px;
+        }
+
+        .profile-heading p {
+            font-size: 14px;
+        }
+}
