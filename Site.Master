@@ -1,0 +1,303 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="Job_Portal.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>HireHub Admin</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+
+    <!-- =====================================================
+         BOOTSTRAP ICONS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+
+    <!-- =====================================================
+         COMMON SITE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          type="text/css"
+          href="<%= ResolveUrl("~/Assets/css/site.css") %>" />
+
+
+    <!-- =====================================================
+         PAGE SPECIFIC HEAD
+    ====================================================== -->
+
+    <asp:ContentPlaceHolder
+        ID="head"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+
+
+<body>
+
+
+<form id="form1" runat="server">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="logo">
+
+            <i class="bi bi-briefcase-fill"></i>
+
+            <span>HireHub</span>
+
+        </div>
+
+
+        <!-- =================================================
+             MENU
+        ================================================== -->
+
+        <div class="menu">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Dashboard.aspx") %>">
+
+                <i class="bi bi-grid-fill"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 USERS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Users.aspx") %>">
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>Users</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 EMPLOYERS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Employers.aspx") %>">
+
+                <i class="bi bi-building"></i>
+
+                <span>Employers</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 JOBS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Jobs.aspx") %>">
+
+                <i class="bi bi-briefcase"></i>
+
+                <span>Jobs</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 APPLICATIONS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Applications.aspx") %>">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>Applications</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 COMPANIES
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Companies.aspx") %>">
+
+                <i class="bi bi-buildings"></i>
+
+                <span>Companies</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 CATEGORIES
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Categories.aspx") %>">
+
+                <i class="bi bi-tags"></i>
+
+                <span>Categories</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 REPORTS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Reports.aspx") %>">
+
+                <i class="bi bi-bar-chart"></i>
+
+                <span>Reports</span>
+
+            </a>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <a href="<%= ResolveUrl("~/Admin/Settings.aspx") %>">
+
+                <i class="bi bi-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- =================================================
+             ADMIN USER
+        ================================================== -->
+
+        <div class="admin-user">
+
+
+            <!-- ADMIN ICON -->
+
+            <div class="admin-icon">
+
+                <i class="bi bi-person"></i>
+
+            </div>
+
+
+            <!-- ADMIN INFORMATION -->
+
+            <div class="admin-info">
+
+                <div class="admin-name">
+                    Super Admin
+                </div>
+
+                <div class="admin-email">
+                    admin@hirehub.com
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+                Admin Dashboard
+
+            </div>
+
+
+            <div class="notification">
+
+                <i class="bi bi-bell"></i>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <section class="content">
+
+
+            <asp:ContentPlaceHolder
+                ID="ContentPlaceHolder1"
+                runat="server">
+            </asp:ContentPlaceHolder>
+
+
+        </section>
+
+
+    </main>
+
+
+</form>
+
+
+</body>
+
+</html>
