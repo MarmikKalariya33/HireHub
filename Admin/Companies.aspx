@@ -1,55 +1,65 @@
-﻿<%@ Page Title="Companies"
+﻿<%@ Page Title="Manage Companies"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
     CodeBehind="Companies.aspx.cs"
     Inherits="Job_Portal.Admin.Companies" %>
 
-
-<asp:Content ID="Content1"
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
+
+    <link rel="stylesheet"
+        type="text/css"
+        href="<%= ResolveUrl("~/Assets/css/companies.css") %>" />
+
 </asp:Content>
 
 
-<asp:Content ID="Content2"
+<asp:Content
+    ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
     <div class="companies-page">
 
-        <!-- ================= HEADER ================= -->
+        <!-- =========================================
+             HEADER
+        ========================================== -->
 
-        <div class="companies-page-header">
+        <div class="companies-header">
 
-            <h1>Manage Companies</h1>
+            <h1 class="companies-title">
+                Manage Companies
+            </h1>
 
-            <div class="companies-toolbar">
+            <div class="companies-actions">
 
-                <!-- Search -->
+                <!-- SEARCH -->
 
                 <div class="company-search">
 
-                    <span class="search-icon">⌕</span>
+                    <i class="bi bi-search company-search-icon"></i>
 
                     <input type="text"
-                           id="companySearch"
-                           class="search-input"
-                           placeholder="Search companies..."
-                           onkeyup="searchCompanies()" />
+                        id="companySearch"
+                        placeholder="Search companies..."
+                        autocomplete="off" />
 
                 </div>
 
 
-                <!-- Add Company -->
+                <!-- ADD COMPANY -->
 
-                <a href="#"
-                   class="add-company-btn"
-                   onclick="return addCompany();">
+                <a href="Add_Companies.aspx"
+                    class="add-company-btn">
 
-                    <span>+</span>
+                    <i class="bi bi-plus-lg"></i>
 
-                    Add New Company
+                    <span>
+                        Add New Company
+                    </span>
 
                 </a>
 
@@ -58,388 +68,415 @@
         </div>
 
 
-        <!-- ================= COMPANY CARD ================= -->
+        <!-- =========================================
+             TABLE CARD
+        ========================================== -->
 
-        <div class="company-card">
+        <div class="companies-table-card">
 
-            <!-- TABLE HEADER -->
+            <div class="companies-table-wrapper">
 
-            <div class="company-row company-head">
+                <table
+                    class="companies-table"
+                    id="companiesTable">
 
-                <div>
-                    Company
-                </div>
+                    <!-- TABLE HEADER -->
 
-                <div>
-                    Industry
-                </div>
+                    <thead>
 
-                <div>
-                    Employees
-                </div>
+                        <tr>
 
-                <div>
-                    Status
-                </div>
+                            <th class="company-col-company">
+                                Company
+                            </th>
 
-                <div>
-                    Actions
-                </div>
+                            <th class="company-col-industry">
+                                Industry
+                            </th>
 
-            </div>
+                            <th class="company-col-employees">
+                                Employees
+                            </th>
 
+                            <th class="company-col-status">
+                                Status
+                            </th>
 
-            <!-- ================= TCS ================= -->
+                            <th class="company-col-actions">
+                                Actions
+                            </th>
 
-            <div class="company-row">
+                        </tr>
 
-                <div class="company-name-cell">
+                    </thead>
 
-                    <div class="company-avatar">
-                        T
-                    </div>
 
-                    <span>
-                        TCS
-                    </span>
+                    <!-- TABLE BODY -->
 
-                </div>
+                    <tbody>
 
+                        <!-- ROW 1 -->
 
-                <div class="industry-cell">
-                    IT &amp; Software
-                </div>
+                        <tr>
 
+                            <td>
 
-                <div>
-                    500,000+
-                </div>
+                                <div class="company-name-wrapper">
 
+                                    <div class="company-logo">
+                                        T
+                                    </div>
 
-                <div>
+                                    <span class="company-name">
+                                        TCS
+                                    </span>
 
-                    <span class="status-badge active">
-                        Active
-                    </span>
+                                </div>
 
-                </div>
+                            </td>
 
 
-                <div class="actions-cell">
+                            <td>
+                                <span class="company-industry">
+                                    IT &amp; Software
+                                </span>
+                            </td>
 
-                    <a href="#"
-                       class="edit-btn"
-                       title="Edit"
-                       onclick="return editCompany('TCS');">
 
-                        ✎
+                            <td>
+                                <span class="company-employees">
+                                    500,000+
+                                </span>
+                            </td>
 
-                    </a>
 
+                            <td>
 
-                    <button type="button"
-                            class="delete-btn"
-                            title="Delete"
-                            onclick="deleteCompany('TCS');">
+                                <span class="company-status company-status-active">
+                                    Active
+                                </span>
 
-                        🗑
+                            </td>
 
-                    </button>
 
-                </div>
+                            <td>
 
-            </div>
+                                <div class="company-actions">
 
+                                    <a href="Edit_Companies.aspx"
+                                        class="company-action company-edit"
+                                        title="Edit Company">
 
-            <!-- ================= INFOSYS ================= -->
+                                        <i class="bi bi-pencil"></i>
 
-            <div class="company-row">
+                                    </a>
 
-                <div class="company-name-cell">
 
-                    <div class="company-avatar">
-                        I
-                    </div>
+                                    <a href="#"
+                                        class="company-action company-delete"
+                                        title="Delete Company">
 
-                    <span>
-                        Infosys
-                    </span>
+                                        <i class="bi bi-trash3"></i>
 
-                </div>
+                                    </a>
 
+                                </div>
 
-                <div class="industry-cell">
-                    IT &amp; Software
-                </div>
+                            </td>
 
+                        </tr>
 
-                <div>
-                    300,000+
-                </div>
 
+                        <!-- ROW 2 -->
 
-                <div>
+                        <tr>
 
-                    <span class="status-badge active">
-                        Active
-                    </span>
+                            <td>
 
-                </div>
+                                <div class="company-name-wrapper">
 
+                                    <div class="company-logo">
+                                        I
+                                    </div>
 
-                <div class="actions-cell">
+                                    <span class="company-name">
+                                        Infosys
+                                    </span>
 
-                    <a href="#"
-                       class="edit-btn"
-                       title="Edit"
-                       onclick="return editCompany('Infosys');">
+                                </div>
 
-                        ✎
+                            </td>
 
-                    </a>
 
+                            <td>
+                                <span class="company-industry">
+                                    IT &amp; Software
+                                </span>
+                            </td>
 
-                    <button type="button"
-                            class="delete-btn"
-                            title="Delete"
-                            onclick="deleteCompany('Infosys');">
 
-                        🗑
+                            <td>
+                                <span class="company-employees">
+                                    300,000+
+                                </span>
+                            </td>
 
-                    </button>
 
-                </div>
+                            <td>
 
-            </div>
+                                <span class="company-status company-status-active">
+                                    Active
+                                </span>
 
+                            </td>
 
-            <!-- ================= WIPRO ================= -->
 
-            <div class="company-row">
+                            <td>
 
-                <div class="company-name-cell">
+                                <div class="company-actions">
 
-                    <div class="company-avatar">
-                        W
-                    </div>
+                                    <a href="Edit_Companies.aspx"
+                                        class="company-action company-edit"
+                                        title="Edit Company">
 
-                    <span>
-                        Wipro
-                    </span>
+                                        <i class="bi bi-pencil"></i>
 
-                </div>
+                                    </a>
 
 
-                <div class="industry-cell">
-                    IT &amp; Software
-                </div>
+                                    <a href="#"
+                                        class="company-action company-delete"
+                                        title="Delete Company">
 
+                                        <i class="bi bi-trash3"></i>
 
-                <div>
-                    250,000+
-                </div>
+                                    </a>
 
+                                </div>
 
-                <div>
+                            </td>
 
-                    <span class="status-badge active">
-                        Active
-                    </span>
+                        </tr>
 
-                </div>
 
+                        <!-- ROW 3 -->
 
-                <div class="actions-cell">
+                        <tr>
 
-                    <a href="#"
-                       class="edit-btn"
-                       title="Edit"
-                       onclick="return editCompany('Wipro');">
+                            <td>
 
-                        ✎
+                                <div class="company-name-wrapper">
 
-                    </a>
+                                    <div class="company-logo">
+                                        W
+                                    </div>
 
+                                    <span class="company-name">
+                                        Wipro
+                                    </span>
 
-                    <button type="button"
-                            class="delete-btn"
-                            title="Delete"
-                            onclick="deleteCompany('Wipro');">
+                                </div>
 
-                        🗑
+                            </td>
 
-                    </button>
 
-                </div>
+                            <td>
+                                <span class="company-industry">
+                                    IT &amp; Software
+                                </span>
+                            </td>
 
-            </div>
 
+                            <td>
+                                <span class="company-employees">
+                                    250,000+
+                                </span>
+                            </td>
 
-            <!-- ================= HCL ================= -->
 
-            <div class="company-row">
+                            <td>
 
-                <div class="company-name-cell">
+                                <span class="company-status company-status-active">
+                                    Active
+                                </span>
 
-                    <div class="company-avatar">
-                        H
-                    </div>
+                            </td>
 
-                    <span>
-                        HCL Technologies
-                    </span>
 
-                </div>
+                            <td>
 
+                                <div class="company-actions">
 
-                <div class="industry-cell">
-                    IT Services
-                </div>
+                                    <a href="Edit_Companies.aspx"
+                                        class="company-action company-edit"
+                                        title="Edit Company">
 
+                                        <i class="bi bi-pencil"></i>
 
-                <div>
-                    220,000+
-                </div>
+                                    </a>
 
 
-                <div>
+                                    <a href="#"
+                                        class="company-action company-delete"
+                                        title="Delete Company">
 
-                    <span class="status-badge active">
-                        Active
-                    </span>
+                                        <i class="bi bi-trash3"></i>
 
-                </div>
+                                    </a>
 
+                                </div>
 
-                <div class="actions-cell">
+                            </td>
 
-                    <a href="#"
-                       class="edit-btn"
-                       title="Edit"
-                       onclick="return editCompany('HCL Technologies');">
+                        </tr>
 
-                        ✎
 
-                    </a>
+                        <!-- ROW 4 -->
 
+                        <tr>
 
-                    <button type="button"
-                            class="delete-btn"
-                            title="Delete"
-                            onclick="deleteCompany('HCL Technologies');">
+                            <td>
 
-                        🗑
+                                <div class="company-name-wrapper">
 
-                    </button>
+                                    <div class="company-logo">
+                                        H
+                                    </div>
 
-                </div>
+                                    <span class="company-name">
+                                        HCL Technologies
+                                    </span>
 
-            </div>
+                                </div>
 
+                            </td>
 
-            <!-- ================= RELIANCE ================= -->
 
-            <div class="company-row">
+                            <td>
+                                <span class="company-industry">
+                                    IT Services
+                                </span>
+                            </td>
 
-                <div class="company-name-cell">
 
-                    <div class="company-avatar">
-                        R
-                    </div>
+                            <td>
+                                <span class="company-employees">
+                                    220,000+
+                                </span>
+                            </td>
 
-                    <span>
-                        Reliance Industries
-                    </span>
 
-                </div>
+                            <td>
 
+                                <span class="company-status company-status-active">
+                                    Active
+                                </span>
 
-                <div class="industry-cell">
-                    Conglomerate
-                </div>
+                            </td>
 
 
-                <div>
-                    340,000+
-                </div>
+                            <td>
 
+                                <div class="company-actions">
 
-                <div>
+                                    <a href="Edit_Companies.aspx"
+                                        class="company-action company-edit"
+                                        title="Edit Company">
 
-                    <span class="status-badge active">
-                        Active
-                    </span>
+                                        <i class="bi bi-pencil"></i>
 
-                </div>
+                                    </a>
 
 
-                <div class="actions-cell">
+                                    <a href="#"
+                                        class="company-action company-delete"
+                                        title="Delete Company">
 
-                    <a href="#"
-                       class="edit-btn"
-                       title="Edit"
-                       onclick="return editCompany('Reliance Industries');">
+                                        <i class="bi bi-trash3"></i>
 
-                        ✎
+                                    </a>
 
-                    </a>
+                                </div>
 
+                            </td>
 
-                    <button type="button"
-                            class="delete-btn"
-                            title="Delete"
-                            onclick="deleteCompany('Reliance Industries');">
+                        </tr>
 
-                        🗑
 
-                    </button>
+                        <!-- ROW 5 -->
 
-                </div>
+                        <tr>
 
-            </div>
+                            <td>
 
-        </div>
+                                <div class="company-name-wrapper">
 
+                                    <div class="company-logo">
+                                        R
+                                    </div>
 
-        <!-- ================= FOOTER ================= -->
+                                    <span class="company-name">
+                                        Reliance Industries
+                                    </span>
 
-        <div class="companies-footer">
+                                </div>
 
-            <span class="showing-text">
-                Showing 1-5 of 120 companies
-            </span>
+                            </td>
 
 
-            <div class="pagination">
+                            <td>
+                                <span class="company-industry">
+                                    Conglomerate
+                                </span>
+                            </td>
 
-                <button type="button"
-                        class="page-btn">
-                    Previous
-                </button>
 
+                            <td>
+                                <span class="company-employees">
+                                    340,000+
+                                </span>
+                            </td>
 
-                <button type="button"
-                        class="page-btn active">
-                    1
-                </button>
 
+                            <td>
 
-                <button type="button"
-                        class="page-btn">
-                    2
-                </button>
+                                <span class="company-status company-status-active">
+                                    Active
+                                </span>
 
+                            </td>
 
-                <button type="button"
-                        class="page-btn">
-                    3
-                </button>
 
+                            <td>
 
-                <button type="button"
-                        class="page-btn">
-                    Next
-                </button>
+                                <div class="company-actions">
+
+                                    <a href="Edit_Companies.aspx"
+                                        class="company-action company-edit"
+                                        title="Edit Company">
+
+                                        <i class="bi bi-pencil"></i>
+
+                                    </a>
+
+
+                                    <a href="#"
+                                        class="company-action company-delete"
+                                        title="Delete Company">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
             </div>
 
@@ -448,98 +485,43 @@
     </div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- =========================================
+         SEARCH
+    ========================================== -->
 
-    <script type="text/javascript">
+    <script>
 
-        /* SEARCH */
+        document.addEventListener("DOMContentLoaded", function () {
 
-        function searchCompanies() {
-
-            var input =
+            const searchInput =
                 document.getElementById("companySearch");
 
-            var filter =
-                input.value.toLowerCase();
+            const table =
+                document.getElementById("companiesTable");
 
-            var rows =
-                document.querySelectorAll(
-                    ".company-card .company-row:not(.company-head)"
-                );
+            const rows =
+                table.querySelectorAll("tbody tr");
 
 
-            for (var i = 0; i < rows.length; i++) {
+            searchInput.addEventListener("input", function () {
 
-                var text =
-                    rows[i].innerText.toLowerCase();
-
-
-                if (text.indexOf(filter) !== -1) {
-
-                    rows[i].style.display = "grid";
-
-                }
-                else {
-
-                    rows[i].style.display = "none";
-
-                }
-
-            }
-
-        }
+                const search =
+                    this.value.toLowerCase().trim();
 
 
-        /* ADD COMPANY */
+                rows.forEach(function (row) {
 
-        function addCompany() {
+                    const text =
+                        row.innerText.toLowerCase();
 
-            alert(
-                "Add New Company page will be connected later."
-            );
+                    row.style.display =
+                        text.includes(search) ? "" : "none";
 
-            return false;
+                });
 
-        }
+            });
 
-
-        /* EDIT COMPANY */
-
-        function editCompany(companyName) {
-
-            alert(
-                "Edit " +
-                companyName +
-                " will be connected later."
-            );
-
-            return false;
-
-        }
-
-
-        /* DELETE COMPANY */
-
-        function deleteCompany(companyName) {
-
-            var confirmDelete =
-                confirm(
-                    "Are you sure you want to delete " +
-                    companyName +
-                    "?"
-                );
-
-
-            if (confirmDelete) {
-
-                alert(
-                    companyName +
-                    " deleted successfully."
-                );
-
-            }
-
-        }
+        });
 
     </script>
 

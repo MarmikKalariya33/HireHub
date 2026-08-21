@@ -1,81 +1,103 @@
-﻿/* =========================================
-   CATEGORIES PAGE
-   ========================================= */
-
-.categories-page {
-    width: 100%;
-    min-height: calc(100vh - 40px);
-    padding: 36px 35px 40px 35px;
+﻿* {
     box-sizing: border-box;
-    background: #faf8f3;
 }
 
 
 /* =========================================
-   PAGE HEADER
-   ========================================= */
+   CATEGORIES PAGE
+========================================= */
 
-.categories-header {
+.categories-page {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 27px;
 }
 
 
-    .categories-header h1 {
-        margin: 0;
-        color: #202b40;
-        font-size: 28px;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-    }
+/* =========================================
+   HEADER
+========================================= */
+
+.categories-header {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+
+.categories-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #202a3d;
+    line-height: 1;
+}
+
+
+/* =========================================
+   HEADER ACTIONS
+========================================= */
+
+.categories-actions {
+    display: flex;
+    align-items: center;
+}
 
 
 /* =========================================
    ADD CATEGORY BUTTON
-   ========================================= */
+========================================= */
 
 .add-category-btn {
-    height: 36px;
+    height: 37px;
     min-width: 163px;
-    padding: 0 18px;
-    border: none;
-    border-radius: 6px;
-    background: #2867e8;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #2864df;
     color: #ffffff;
-    font-size: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 
+    .add-category-btn i {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+
     .add-category-btn:hover {
-        background: #1557d4;
+        background: #1e55c5;
+        color: #ffffff;
+        text-decoration: none;
     }
 
 
 /* =========================================
-   CATEGORY CARD
-   ========================================= */
+   TABLE CARD
+========================================= */
 
-.categories-card {
+.categories-table-card {
     width: 100%;
     background: #ffffff;
     border: 1px solid #dfe3e8;
     border-radius: 9px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 
 /* =========================================
    TABLE WRAPPER
-   ========================================= */
+========================================= */
 
-.table-wrapper {
+.categories-table-wrapper {
     width: 100%;
     overflow-x: auto;
 }
@@ -83,7 +105,7 @@
 
 /* =========================================
    TABLE
-   ========================================= */
+========================================= */
 
 .categories-table {
     width: 100%;
@@ -94,192 +116,163 @@
 
     /* =========================================
    TABLE HEADER
-   ========================================= */
+========================================= */
 
     .categories-table thead {
-        background: #f8f9fb;
+        background: #f8f9fa;
     }
 
 
     .categories-table th {
-        height: 51px;
+        height: 52px;
         padding: 0 16px;
         text-align: left;
-        color: #202b40;
-        font-size: 15px;
+        color: #202a3d;
+        font-size: 14px;
         font-weight: 700;
-        border-bottom: 1px solid #dfe3e8;
-    }
-
-
-        /* Column sizes */
-
-        .categories-table th:nth-child(1) {
-            width: 32%;
-        }
-
-
-        .categories-table th:nth-child(2) {
-            width: 25%;
-        }
-
-
-        .categories-table th:nth-child(3) {
-            width: 30%;
-        }
-
-
-    /* =========================================
-   TABLE BODY
-   ========================================= */
-
-    .categories-table tbody tr {
-        height: 53px;
-        border-bottom: 1px solid #dfe3e8;
-        transition: background 0.15s ease;
-    }
-
-
-        .categories-table tbody tr:last-child {
-            border-bottom: none;
-        }
-
-
-        .categories-table tbody tr:hover {
-            background: #fafbfc;
-        }
-
-
-    /* =========================================
-   TABLE CELLS
-   ========================================= */
-
-    .categories-table td {
-        padding: 0 16px;
-        vertical-align: middle;
-        font-size: 15px;
-        color: #263247;
+        border-bottom: 1px solid #e2e5e9;
     }
 
 
 /* =========================================
+   COLUMN WIDTH
+========================================= */
+
+.category-col-name {
+    width: 35%;
+}
+
+
+.category-col-jobs {
+    width: 26%;
+}
+
+
+.category-col-actions {
+    width: 39%;
+}
+
+
+/* =========================================
+   TABLE ROW
+========================================= */
+
+.categories-table tbody tr {
+    height: 53px;
+    border-bottom: 1px solid #e3e6ea;
+}
+
+
+    .categories-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+
+/* =========================================
+   TABLE CELL
+========================================= */
+
+.categories-table td {
+    height: 53px;
+    padding: 0 16px;
+    vertical-align: middle;
+    color: #202a3d;
+    font-size: 15px;
+}
+
+
+/* =========================================
    CATEGORY NAME
-   ========================================= */
+========================================= */
 
 .category-name {
-    color: #202b40;
-    font-size: 15px;
+    color: #202a3d;
+    font-size: 16px;
     font-weight: 500;
 }
 
 
 /* =========================================
-   JOB COUNT
-   ========================================= */
+   NUMBER OF JOBS
+========================================= */
 
-.job-count {
-    color: #737d8f;
-    font-size: 15px;
-    font-weight: 400;
+.category-jobs {
+    color: #788294;
+    font-size: 16px;
 }
 
 
 /* =========================================
    ACTIONS
-   ========================================= */
+========================================= */
 
-.action-buttons {
+.category-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
+}
+
+
+.category-action {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1;
 }
 
 
 /* =========================================
-   EDIT BUTTON
-   ========================================= */
+   EDIT
+========================================= */
 
-.edit-btn {
-    width: 20px;
-    height: 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.category-edit {
     color: #1769ff;
-    font-size: 18px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 
-    .edit-btn:hover {
-        color: #0052d9;
-        transform: scale(1.1);
+    .category-edit:hover {
+        color: #0752d6;
     }
 
 
 /* =========================================
-   DELETE BUTTON
-   ========================================= */
+   DELETE
+========================================= */
 
-.delete-btn {
-    width: 20px;
-    height: 24px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #f21f2f;
-    font-size: 17px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+.category-delete {
+    color: #f01824;
 }
 
 
-    .delete-btn:hover {
-        color: #c9000d;
-        transform: scale(1.1);
+    .category-delete:hover {
+        color: #c9000b;
     }
 
 
 /* =========================================
    RESPONSIVE
-   ========================================= */
+========================================= */
 
 @media screen and (max-width: 900px) {
 
-    .categories-page {
-        padding: 28px 22px;
-    }
-}
-
-
-@media screen and (max-width: 650px) {
-
-    .categories-page {
-        padding: 22px 15px;
-    }
-
-
     .categories-header {
         align-items: flex-start;
-        gap: 15px;
+        flex-direction: column;
+        gap: 18px;
+        height: auto;
     }
 
 
-        .categories-header h1 {
-            font-size: 24px;
-        }
+    .categories-actions {
+        width: 100%;
+    }
 
 
     .add-category-btn {
-        min-width: 140px;
-        font-size: 13px;
+        width: 163px;
     }
 
 
     .categories-table {
-        min-width: 700px;
+        min-width: 850px;
     }
 }

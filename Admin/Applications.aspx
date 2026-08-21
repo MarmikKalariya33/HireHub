@@ -5,328 +5,545 @@
     CodeBehind="Applications.aspx.cs"
     Inherits="Job_Portal.Admin.Applications" %>
 
-<asp:Content ID="Content1"
+
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
 
-    <link href="../Assets/css/applications.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        type="text/css"
+        href="<%= ResolveUrl("~/Assets/css/applications.css") %>" />
 
 </asp:Content>
 
 
-<asp:Content ID="Content2"
+<asp:Content
+    ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
+
     <div class="applications-page">
 
-        <!-- Page Header -->
-        <div class="page-header">
 
-            <h1>Manage Applications</h1>
+        <!-- =========================================
+             PAGE HEADER
+        ========================================== -->
 
-            <div class="header-actions">
+        <div class="applications-header">
+
+            <h1 class="applications-title">
+                Manage Applications
+            </h1>
+
+
+            <div class="applications-actions">
+
 
                 <!-- Search -->
-                <div class="search-box">
-                    <span class="search-icon">⌕</span>
 
-                    <asp:TextBox
-                        ID="txtSearch"
-                        runat="server"
-                        CssClass="search-input"
-                        placeholder="Search applicants...">
-                    </asp:TextBox>
+                <div class="application-search">
+
+                    <i class="bi bi-search application-search-icon"></i>
+
+                    <input
+                        type="text"
+                        id="applicationSearch"
+                        placeholder="Search applicants..."
+                        autocomplete="off" />
+
                 </div>
 
-                <!-- Status Dropdown -->
-                <asp:DropDownList
-                    ID="ddlStatus"
-                    runat="server"
-                    CssClass="status-dropdown">
 
-                    <asp:ListItem Text="All Statuses" Value="All"></asp:ListItem>
-                    <asp:ListItem Text="Pending" Value="Pending"></asp:ListItem>
-                    <asp:ListItem Text="Reviewed" Value="Reviewed"></asp:ListItem>
-                    <asp:ListItem Text="Hired" Value="Hired"></asp:ListItem>
-                    <asp:ListItem Text="Rejected" Value="Rejected"></asp:ListItem>
+                <!-- Status Filter -->
 
-                </asp:DropDownList>
+                <div class="application-filter">
+
+                    <select id="applicationStatusFilter">
+
+                        <option value="all">
+                            All Statuses
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="reviewed">
+                            Reviewed
+                        </option>
+
+                        <option value="hired">
+                            Hired
+                        </option>
+
+                        <option value="rejected">
+                            Rejected
+                        </option>
+
+                    </select>
+
+                </div>
+
 
             </div>
 
         </div>
 
 
-        <!-- Applications Table -->
-        <div class="applications-card">
+        <!-- =========================================
+             APPLICATION TABLE
+        ========================================== -->
 
-            <div class="table-wrapper">
+        <div class="applications-table-card">
 
-                <table class="applications-table">
+            <div class="applications-table-wrapper">
+
+                <table
+                    class="applications-table"
+                    id="applicationsTable">
+
+
+                    <!-- TABLE HEADER -->
 
                     <thead>
 
                         <tr>
-                            <th>Applicant</th>
-                            <th>Job Title</th>
-                            <th>Status</th>
-                            <th>Applied Date</th>
-                            <th>Actions</th>
+
+                            <th class="application-col-applicant">
+                                Applicant
+                            </th>
+
+                            <th class="application-col-job">
+                                Job Title
+                            </th>
+
+                            <th class="application-col-status">
+                                Status
+                            </th>
+
+                            <th class="application-col-date">
+                                Applied Date
+                            </th>
+
+                            <th class="application-col-actions">
+                                Actions
+                            </th>
+
                         </tr>
 
                     </thead>
 
+
+                    <!-- TABLE BODY -->
+
                     <tbody>
 
-                        <!-- Row 1 -->
+
+                        <!-- =================================
+                             ROW 1
+                        ================================== -->
+
                         <tr>
 
                             <td>
-                                <div class="applicant-info">
 
-                                    <div class="avatar">
+                                <div class="application-applicant">
+
+                                    <div class="application-avatar">
                                         RS
                                     </div>
 
-                                    <span>Rahul Sharma</span>
+                                    <span class="applicant-name">
+                                        Rahul Sharma
+                                    </span>
 
                                 </div>
+
                             </td>
 
-                            <td>
-                                Senior React Developer
-                            </td>
 
                             <td>
-                                <span class="status pending">
+
+                                <span class="application-job">
+                                    Senior React Developer
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="application-status status-pending">
                                     Pending
                                 </span>
+
                             </td>
 
-                            <td class="date">
-                                Jan 22 2024
-                            </td>
 
                             <td>
-                                <div class="action-buttons">
 
-                                   <a href="Applications_Details.aspx"
-                                    class="edit-btn"
-                                    title="View Application">
-                                      ✎
+                                <span class="application-date">
+                                    Jan 22 2024
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <div class="application-actions">
+
+
+                                    <a href="#"
+                                       class="application-action application-edit"
+                                       title="Edit Application">
+
+                                        <i class="bi bi-pencil"></i>
+
                                     </a>
 
-                                    <button type="button"
-                                        class="delete-btn"
-                                        title="Delete">
-                                        ♜
-                                    </button>
+
+                                    <a href="#"
+                                       class="application-action application-delete"
+                                       title="Delete Application">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
 
                                 </div>
+
                             </td>
 
                         </tr>
 
 
-                        <!-- Row 2 -->
+
+                        <!-- =================================
+                             ROW 2
+                        ================================== -->
+
                         <tr>
 
                             <td>
-                                <div class="applicant-info">
 
-                                    <div class="avatar">
+                                <div class="application-applicant">
+
+                                    <div class="application-avatar">
                                         PP
                                     </div>
 
-                                    <span>Priya Patel</span>
+                                    <span class="applicant-name">
+                                        Priya Patel
+                                    </span>
 
                                 </div>
+
                             </td>
 
-                            <td>
-                                UI/UX Designer
-                            </td>
 
                             <td>
-                                <span class="status reviewed">
+
+                                <span class="application-job">
+                                    UI/UX Designer
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="application-status status-reviewed">
                                     Reviewed
                                 </span>
+
                             </td>
 
-                            <td class="date">
-                                Jan 25 2024
-                            </td>
 
                             <td>
-                                <div class="action-buttons">
 
-                                    <button type="button"
-                                        class="edit-btn"
-                                        title="Edit">
-                                        ✎
-                                    </button>
+                                <span class="application-date">
+                                    Jan 25 2024
+                                </span>
 
-                                    <button type="button"
-                                        class="delete-btn"
-                                        title="Delete">
-                                        ♜
-                                    </button>
+                            </td>
+
+
+                            <td>
+
+                                <div class="application-actions">
+
+
+                                    <a href="#"
+                                       class="application-action application-edit"
+                                       title="Edit Application">
+
+                                        <i class="bi bi-pencil"></i>
+
+                                    </a>
+
+
+                                    <a href="#"
+                                       class="application-action application-delete"
+                                       title="Delete Application">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
 
                                 </div>
+
                             </td>
 
                         </tr>
 
 
-                        <!-- Row 3 -->
+
+                        <!-- =================================
+                             ROW 3
+                        ================================== -->
+
                         <tr>
 
                             <td>
-                                <div class="applicant-info">
 
-                                    <div class="avatar">
+                                <div class="application-applicant">
+
+                                    <div class="application-avatar">
                                         AK
                                     </div>
 
-                                    <span>Amit Kumar</span>
+                                    <span class="applicant-name">
+                                        Amit Kumar
+                                    </span>
 
                                 </div>
+
                             </td>
 
-                            <td>
-                                Data Analyst
-                            </td>
 
                             <td>
-                                <span class="status hired">
+
+                                <span class="application-job">
+                                    Data Analyst
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="application-status status-hired">
                                     Hired
                                 </span>
+
                             </td>
 
-                            <td class="date">
-                                Feb 01 2024
-                            </td>
 
                             <td>
-                                <div class="action-buttons">
 
-                                    <button type="button"
-                                        class="edit-btn"
-                                        title="Edit">
-                                        ✎
-                                    </button>
+                                <span class="application-date">
+                                    Feb 01 2024
+                                </span>
 
-                                    <button type="button"
-                                        class="delete-btn"
-                                        title="Delete">
-                                        ♜
-                                    </button>
+                            </td>
+
+
+                            <td>
+
+                                <div class="application-actions">
+
+
+                                    <a href="#"
+                                       class="application-action application-edit"
+                                       title="Edit Application">
+
+                                        <i class="bi bi-pencil"></i>
+
+                                    </a>
+
+
+                                    <a href="#"
+                                       class="application-action application-delete"
+                                       title="Delete Application">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
 
                                 </div>
+
                             </td>
 
                         </tr>
 
 
-                        <!-- Row 4 -->
+
+                        <!-- =================================
+                             ROW 4
+                        ================================== -->
+
                         <tr>
 
                             <td>
-                                <div class="applicant-info">
 
-                                    <div class="avatar">
+                                <div class="application-applicant">
+
+                                    <div class="application-avatar">
                                         SG
                                     </div>
 
-                                    <span>Sneha Gupta</span>
+                                    <span class="applicant-name">
+                                        Sneha Gupta
+                                    </span>
 
                                 </div>
+
                             </td>
 
-                            <td>
-                                Backend Developer
-                            </td>
 
                             <td>
-                                <span class="status rejected">
+
+                                <span class="application-job">
+                                    Backend Developer
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="application-status status-rejected">
                                     Rejected
                                 </span>
+
                             </td>
 
-                            <td class="date">
-                                Feb 05 2024
-                            </td>
 
                             <td>
-                                <div class="action-buttons">
 
-                                    <button type="button"
-                                        class="edit-btn"
-                                        title="Edit">
-                                        ✎
-                                    </button>
+                                <span class="application-date">
+                                    Feb 05 2024
+                                </span>
 
-                                    <button type="button"
-                                        class="delete-btn"
-                                        title="Delete">
-                                        ♜
-                                    </button>
+                            </td>
+
+
+                            <td>
+
+                                <div class="application-actions">
+
+
+                                    <a href="#"
+                                       class="application-action application-edit"
+                                       title="Edit Application">
+
+                                        <i class="bi bi-pencil"></i>
+
+                                    </a>
+
+
+                                    <a href="#"
+                                       class="application-action application-delete"
+                                       title="Delete Application">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
 
                                 </div>
+
                             </td>
 
                         </tr>
 
 
-                        <!-- Row 5 -->
+
+                        <!-- =================================
+                             ROW 5
+                        ================================== -->
+
                         <tr>
 
                             <td>
-                                <div class="applicant-info">
 
-                                    <div class="avatar">
+                                <div class="application-applicant">
+
+                                    <div class="application-avatar">
                                         VS
                                     </div>
 
-                                    <span>Vikram Singh</span>
+                                    <span class="applicant-name">
+                                        Vikram Singh
+                                    </span>
 
                                 </div>
+
                             </td>
 
-                            <td>
-                                Marketing Manager
-                            </td>
 
                             <td>
-                                <span class="status pending">
+
+                                <span class="application-job">
+                                    Marketing Manager
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <span class="application-status status-pending">
                                     Pending
                                 </span>
+
                             </td>
 
-                            <td class="date">
-                                Feb 10 2024
-                            </td>
 
                             <td>
-                                <div class="action-buttons">
 
-                                    <button type="button"
-                                        class="edit-btn"
-                                        title="Edit">
-                                        ✎
-                                    </button>
+                                <span class="application-date">
+                                    Feb 10 2024
+                                </span>
 
-                                    <button type="button"
-                                        class="delete-btn"
-                                        title="Delete">
-                                        ♜
-                                    </button>
+                            </td>
+
+
+                            <td>
+
+                                <div class="application-actions">
+
+
+                                    <a href="#"
+                                       class="application-action application-edit"
+                                       title="Edit Application">
+
+                                        <i class="bi bi-pencil"></i>
+
+                                    </a>
+
+
+                                    <a href="#"
+                                       class="application-action application-delete"
+                                       title="Delete Application">
+
+                                        <i class="bi bi-trash3"></i>
+
+                                    </a>
+
 
                                 </div>
+
                             </td>
 
                         </tr>
+
 
                     </tbody>
 
@@ -336,6 +553,106 @@
 
         </div>
 
+
     </div>
+
+
+
+    <!-- =========================================
+         SEARCH + FILTER JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            const searchInput =
+                document.getElementById("applicationSearch");
+
+
+            const statusFilter =
+                document.getElementById("applicationStatusFilter");
+
+
+            const table =
+                document.getElementById("applicationsTable");
+
+
+            const rows =
+                table.querySelectorAll("tbody tr");
+
+
+
+            function filterApplications() {
+
+
+                const search =
+                    searchInput.value
+                        .toLowerCase()
+                        .trim();
+
+
+                const selectedStatus =
+                    statusFilter.value
+                        .toLowerCase();
+
+
+
+                rows.forEach(function (row) {
+
+
+                    const rowText =
+                        row.innerText
+                            .toLowerCase();
+
+
+                    const status =
+                        row.cells[2].innerText
+                            .toLowerCase()
+                            .trim();
+
+
+
+                    const matchesSearch =
+                        search === "" ||
+                        rowText.includes(search);
+
+
+
+                    const matchesStatus =
+                        selectedStatus === "all" ||
+                        status === selectedStatus;
+
+
+
+                    row.style.display =
+                        matchesSearch && matchesStatus
+                            ? ""
+                            : "none";
+
+
+                });
+
+            }
+
+
+
+            searchInput.addEventListener(
+                "input",
+                filterApplications
+            );
+
+
+            statusFilter.addEventListener(
+                "change",
+                filterApplications
+            );
+
+
+        });
+
+    </script>
+
 
 </asp:Content>

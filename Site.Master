@@ -70,13 +70,13 @@
              LOGO
         ================================================== -->
 
-        <div class="logo">
+      <div class="logo">
 
-            <i class="bi bi-briefcase-fill"></i>
+    <img src="<%= ResolveUrl("~/Assets/images/logo.png") %>"
+         alt="HireHub Logo"
+         style="width:145px; height:auto; object-fit:contain;" />
 
-            <span>HireHub</span>
-
-        </div>
+</div>
 
 
         <!-- =================================================

@@ -4,10 +4,10 @@
 
 
 /* =========================================
-   APPLICATION PAGE
+   COMPANIES PAGE
 ========================================= */
 
-.applications-page {
+.companies-page {
     width: 100%;
 }
 
@@ -16,7 +16,7 @@
    HEADER
 ========================================= */
 
-.applications-header {
+.companies-header {
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,7 +24,8 @@
     margin-bottom: 28px;
 }
 
-.applications-title {
+
+.companies-title {
     margin: 0;
     font-size: 28px;
     font-weight: 700;
@@ -36,7 +37,7 @@
    HEADER ACTIONS
 ========================================= */
 
-.applications-actions {
+.companies-actions {
     display: flex;
     align-items: center;
     gap: 13px;
@@ -47,7 +48,7 @@
    SEARCH
 ========================================= */
 
-.application-search {
+.company-search {
     width: 262px;
     height: 37px;
     display: flex;
@@ -58,13 +59,15 @@
     border-radius: 7px;
 }
 
-.application-search-icon {
+
+.company-search-icon {
     color: #687386;
     font-size: 16px;
     margin-right: 10px;
 }
 
-.application-search input {
+
+.company-search input {
     width: 100%;
     height: 35px;
     border: none;
@@ -74,34 +77,51 @@
     color: #273247;
 }
 
-    .application-search input::placeholder {
+
+    .company-search input::placeholder {
         color: #7b8494;
     }
 
 
 /* =========================================
-   STATUS FILTER
+   ADD COMPANY BUTTON
 ========================================= */
 
-.application-filter select {
-    width: 134px;
+.add-company-btn {
+    width: 201px;
     height: 37px;
-    padding: 0 10px;
-    border: 1px solid #dce0e6;
-    border-radius: 7px;
-    background: #ffffff;
-    color: #293347;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #2864df;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
     font-size: 14px;
-    outline: none;
-    cursor: pointer;
+    font-weight: 600;
 }
+
+
+    .add-company-btn i {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+
+    .add-company-btn:hover {
+        background: #1e55c5;
+        color: #ffffff;
+        text-decoration: none;
+    }
 
 
 /* =========================================
    TABLE CARD
 ========================================= */
 
-.applications-table-card {
+.companies-table-card {
     width: 100%;
     background: #ffffff;
     border: 1px solid #dfe3e8;
@@ -112,15 +132,20 @@
 
 
 /* =========================================
-   TABLE
+   TABLE WRAPPER
 ========================================= */
 
-.applications-table-wrapper {
+.companies-table-wrapper {
     width: 100%;
     overflow-x: auto;
 }
 
-.applications-table {
+
+/* =========================================
+   TABLE
+========================================= */
+
+.companies-table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
@@ -131,11 +156,12 @@
    TABLE HEADER
 ========================================= */
 
-    .applications-table thead {
+    .companies-table thead {
         background: #f8f9fa;
     }
 
-    .applications-table th {
+
+    .companies-table th {
         height: 52px;
         padding: 0 16px;
         text-align: left;
@@ -146,47 +172,63 @@
     }
 
 
-/* Column Width */
+/* =========================================
+   COLUMN WIDTH
+   SAME AS APPLICATION PAGE
+========================================= */
 
-.application-col-applicant {
+.company-col-company {
     width: 27%;
 }
 
-.application-col-job {
+
+.company-col-industry {
     width: 25%;
 }
 
-.application-col-status {
+
+.company-col-employees {
     width: 13%;
 }
 
-.application-col-date {
+
+.company-col-status {
     width: 16%;
 }
 
-.application-col-actions {
+
+.company-col-actions {
     width: 13%;
 }
 
 
 /* =========================================
    TABLE ROW
+   SAME AS APPLICATION PAGE
 ========================================= */
 
-.applications-table tbody tr {
+.companies-table tbody tr {
     height: 69px;
     border-bottom: 1px solid #e3e6ea;
 }
 
-    .applications-table tbody tr:last-child {
+
+    .companies-table tbody tr:last-child {
         border-bottom: none;
     }
 
-    .applications-table tbody tr:nth-child(even) {
+
+    .companies-table tbody tr:nth-child(even) {
         background: #fafbfc;
     }
 
-.applications-table td {
+
+/* =========================================
+   TABLE CELL
+========================================= */
+
+.companies-table td {
+    height: 69px;
     padding: 0 16px;
     vertical-align: middle;
     color: #202a3d;
@@ -195,30 +237,32 @@
 
 
 /* =========================================
-   APPLICANT
+   COMPANY
 ========================================= */
 
-.application-applicant {
+.company-name-wrapper {
     display: flex;
     align-items: center;
     gap: 13px;
 }
 
-.application-avatar {
+
+.company-logo {
     width: 35px;
     height: 35px;
     flex-shrink: 0;
-    border-radius: 50%;
-    background: #e8edf3;
+    border-radius: 6px;
+    background: #eef5ff;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #253247;
+    color: #2164e8;
     font-size: 13px;
     font-weight: 600;
 }
 
-.applicant-name {
+
+.company-name {
     color: #202a3d;
     font-size: 16px;
     font-weight: 500;
@@ -226,21 +270,21 @@
 
 
 /* =========================================
-   JOB
+   INDUSTRY
 ========================================= */
 
-.application-job {
-    color: #263248;
+.company-industry {
+    color: #788294;
     font-size: 16px;
 }
 
 
 /* =========================================
-   DATE
+   EMPLOYEES
 ========================================= */
 
-.application-date {
-    color: #788294;
+.company-employees {
+    color: #202a3d;
     font-size: 15px;
 }
 
@@ -249,7 +293,7 @@
    STATUS
 ========================================= */
 
-.application-status {
+.company-status {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -258,35 +302,9 @@
 }
 
 
-/* Pending */
-
-.status-pending {
-    background: #fff3bd;
-    color: #d79a00;
-}
-
-
-/* Reviewed */
-
-.status-reviewed {
-    background: #dce9ff;
-    color: #2758bf;
-}
-
-
-/* Hired */
-
-.status-hired {
+.company-status-active {
     background: #d9f8e5;
     color: #159447;
-}
-
-
-/* Rejected */
-
-.status-rejected {
-    background: #fff0f0;
-    color: #e11d2e;
 }
 
 
@@ -294,37 +312,52 @@
    ACTIONS
 ========================================= */
 
-.application-actions {
+.company-actions {
     display: flex;
     align-items: center;
     gap: 18px;
 }
 
-.application-action {
+
+.company-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-size: 17px;
+    line-height: 1;
+    width: 18px;
+    height: 18px;
 }
 
 
-/* Edit */
+/* =========================================
+   EDIT
+========================================= */
 
-.application-edit {
+.company-edit {
     color: #1769ff;
 }
 
-    .application-edit:hover {
+
+    .company-edit:hover {
         color: #0752d6;
+        text-decoration: none;
     }
 
 
-/* Delete */
+/* =========================================
+   DELETE
+========================================= */
 
-.application-delete {
+.company-delete {
     color: #f01824;
 }
 
-    .application-delete:hover {
+
+    .company-delete:hover {
         color: #c9000b;
+        text-decoration: none;
     }
 
 
@@ -334,21 +367,24 @@
 
 @media screen and (max-width: 900px) {
 
-    .applications-header {
+    .companies-header {
         align-items: flex-start;
         flex-direction: column;
         gap: 18px;
     }
 
-    .applications-actions {
+
+    .companies-actions {
         width: 100%;
     }
 
-    .application-search {
+
+    .company-search {
         flex: 1;
     }
 
-    .applications-table {
+
+    .companies-table {
         min-width: 850px;
     }
 }

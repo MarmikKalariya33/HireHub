@@ -1,72 +1,105 @@
-﻿<%@ Page Title="Categories"
+﻿<%@ Page Title="Manage Categories"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
     CodeBehind="Categories.aspx.cs"
     Inherits="Job_Portal.Admin.Categories" %>
 
-<asp:Content ID="Content1"
+
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
-
-    <link href="../Assets/css/categories.css" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+    <!-- Categories CSS -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="<%= ResolveUrl("~/Assets/css/categories.css") %>" />
+
 </asp:Content>
 
 
-<asp:Content ID="Content2"
+<asp:Content
+    ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
+
+    <!-- ==============================
+         CATEGORIES PAGE
+    =============================== -->
+
     <div class="categories-page">
 
-        <!-- ================================
-             PAGE HEADER
-             ================================= -->
+
+        <!-- ==============================
+             HEADER
+        =============================== -->
 
         <div class="categories-header">
 
-            <h1>Manage Categories</h1>
 
-            <asp:Button
-                ID="btnAddCategory"
-                runat="server"
-                Text="＋ Add Category"
-                CssClass="add-category-btn"
-                OnClick="btnAddCategory_Click" />
+            <h1 class="categories-title">
+                Manage Categories
+            </h1>
+
+
+            <div class="categories-actions">
+
+                <a href="Add_Categories.aspx"
+                   class="add-category-btn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Add Category
+                    </span>
+
+                </a>
+
+            </div>
+
 
         </div>
 
 
-        <!-- ================================
-             CATEGORY CARD
-             ================================= -->
 
-        <div class="categories-card">
+        <!-- ==============================
+             TABLE CARD
+        =============================== -->
 
-            <div class="table-wrapper">
+        <div class="categories-table-card">
 
-                <table class="categories-table">
 
-                    <!-- Table Header -->
+            <div class="categories-table-wrapper">
+
+
+                <table
+                    class="categories-table"
+                    id="categoriesTable">
+
+
+                    <!-- ==============================
+                         TABLE HEADER
+                    =============================== -->
 
                     <thead>
 
                         <tr>
 
-                            <th>
+                            <th class="category-col-name">
                                 Category Name
                             </th>
 
-                            <th>
+                            <th class="category-col-jobs">
                                 Number of Jobs
                             </th>
 
-                            <th>
+                            <th class="category-col-actions">
                                 Actions
                             </th>
 
@@ -75,52 +108,62 @@
                     </thead>
 
 
-                    <!-- Table Body -->
+
+                    <!-- ==============================
+                         TABLE BODY
+                    =============================== -->
 
                     <tbody>
 
-                        <!-- IT & Software -->
+
+                        <!-- ROW 1 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     IT &amp; Software
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     234 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditIT"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category"
-                                        OnClick="btnEditIT_Click">
+
+                                    <!-- EDIT BUTTON -->
+
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteIT"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category"
-                                        OnClick="btnDeleteIT_Click">
+                                    <!-- DELETE BUTTON -->
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                    </asp:LinkButton>
+                                        <i class="fa-solid fa-trash-can"></i>
+
+                                    </a>
+
 
                                 </div>
 
@@ -129,46 +172,49 @@
                         </tr>
 
 
-                        <!-- Design -->
+
+                        <!-- ROW 2 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Design
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     89 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditDesign"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteDesign"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -177,46 +223,49 @@
                         </tr>
 
 
-                        <!-- Marketing -->
+
+                        <!-- ROW 3 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Marketing
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     67 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditMarketing"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteMarketing"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -225,46 +274,49 @@
                         </tr>
 
 
-                        <!-- Sales -->
+
+                        <!-- ROW 4 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Sales
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     112 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditSales"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteSales"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -273,46 +325,49 @@
                         </tr>
 
 
-                        <!-- Finance -->
+
+                        <!-- ROW 5 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Finance
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     78 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditFinance"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteFinance"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -321,46 +376,49 @@
                         </tr>
 
 
-                        <!-- Human Resources -->
+
+                        <!-- ROW 6 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Human Resources
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     45 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditHR"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteHR"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -369,46 +427,49 @@
                         </tr>
 
 
-                        <!-- Engineering -->
+
+                        <!-- ROW 7 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Engineering
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     156 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditEngineering"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteEngineering"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -417,46 +478,49 @@
                         </tr>
 
 
-                        <!-- Healthcare -->
+
+                        <!-- ROW 8 -->
 
                         <tr>
 
                             <td>
+
                                 <span class="category-name">
                                     Healthcare
                                 </span>
+
                             </td>
 
+
                             <td>
-                                <span class="job-count">
+
+                                <span class="category-jobs">
                                     92 jobs
                                 </span>
+
                             </td>
+
 
                             <td>
 
-                                <div class="action-buttons">
+                                <div class="category-actions">
 
-                                    <asp:LinkButton
-                                        ID="btnEditHealthcare"
-                                        runat="server"
-                                        CssClass="edit-btn"
-                                        ToolTip="Edit Category">
+                                    <a href="Edit_Categories.aspx"
+                                       class="category-action category-edit"
+                                       title="Edit Category">
 
                                         <i class="fa-solid fa-pen"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
 
-                                    <asp:LinkButton
-                                        ID="btnDeleteHealthcare"
-                                        runat="server"
-                                        CssClass="delete-btn"
-                                        ToolTip="Delete Category">
+                                    <a href="#"
+                                       class="category-action category-delete"
+                                       title="Delete Category">
 
-                                        <i class="fa-regular fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can"></i>
 
-                                    </asp:LinkButton>
+                                    </a>
 
                                 </div>
 
@@ -464,14 +528,20 @@
 
                         </tr>
 
+
                     </tbody>
+
 
                 </table>
 
+
             </div>
+
 
         </div>
 
+
     </div>
+
 
 </asp:Content>

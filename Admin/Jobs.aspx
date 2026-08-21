@@ -22,7 +22,7 @@
     <div class="jobs-page">
 
         <div class="jobs-header">
-
+                
             <h1 class="jobs-title">
                 Manage Jobs
             </h1>

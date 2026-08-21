@@ -118,6 +118,7 @@
     <Content Include="Assets\css\applications.css" />
     <Content Include="Assets\css\application_detail.css" />
     <Content Include="Assets\css\categories.css" />
+    <Content Include="Assets\css\companies.css" />
     <Content Include="Assets\css\edit_jobs.css" />
     <Content Include="Assets\css\jobs.css" />
     <Content Include="Assets\css\login.css" />
