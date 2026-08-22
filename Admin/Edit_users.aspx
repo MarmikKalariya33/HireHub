@@ -1,40 +1,54 @@
-﻿<%@ Page Title="Employers Details"
+﻿<%@ Page Title="User Details"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
-    CodeBehind="Edit_employers.aspx.cs"
-    Inherits="Job_Portal.Admin.Users" %>
+    CodeBehind="Edit_users.aspx.cs"
+    Inherits="Job_Portal.Admin.Edit_users" %>
 
-<asp:Content ID="Content1"
+
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
+
+    <link rel="stylesheet"
+        type="text/css"
+        href="<%= ResolveUrl("~/Assets/css/edit_users.css") %>" />
+
 </asp:Content>
 
 
-<asp:Content ID="Content2"
+<asp:Content
+    ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-    <div class="edit-user-page">
+    <div class="user-details-page">
 
-        <!-- BACK BUTTON -->
-        <a href="Users.aspx" class="back-users">
-            <i class="bi bi-arrow-left"></i>
-            Back to Users
-        </a>
+        <div class="back-wrapper">
+
+            <a href="Users.aspx"
+               class="back-link">
+
+                <span class="back-arrow">←</span>
+
+                Back to Users
+
+            </a>
+
+        </div>
 
 
-        <!-- USER DETAILS CARD -->
-        <div class="user-details-card">
+        <div class="user-card">
 
-            <!-- USER HEADER -->
-            <div class="user-details-header">
+            <div class="user-header">
 
-                <div class="user-profile-avatar">
+                <div class="user-avatar-large">
                     RS
                 </div>
 
-                <div class="user-profile-info">
+
+                <div class="user-title-area">
 
                     <div class="user-name-row">
 
@@ -42,13 +56,13 @@
                             Rahul Sharma
                         </h1>
 
-                        <span class="detail-status active">
+                        <span class="status-badge status-active">
                             Active
                         </span>
 
                     </div>
 
-                    <p>
+                    <p class="user-type">
                         Registered Candidate
                     </p>
 
@@ -57,158 +71,107 @@
             </div>
 
 
-            <!-- DIVIDER -->
-            <div class="detail-divider"></div>
+            <div class="divider"></div>
 
 
-            <!-- USER INFORMATION -->
             <div class="user-information">
 
-                <!-- EMAIL -->
-                <div class="detail-item">
+                <div class="information-group">
 
-                    <span class="detail-label">
+                    <label>
                         EMAIL ADDRESS
-                    </span>
+                    </label>
 
-                    <span class="detail-value">
+                    <div class="information-value">
                         rahul.sharma@email.com
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <!-- PHONE -->
-                <div class="detail-item">
+                <div class="information-group">
 
-                    <span class="detail-label">
+                    <label>
                         PHONE NUMBER
-                    </span>
+                    </label>
 
-                    <span class="detail-value">
+                    <div class="information-value">
                         +91 98765 43210
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <!-- LOCATION -->
-                <div class="detail-item">
+                <div class="information-group">
 
-                    <span class="detail-label">
+                    <label>
                         LOCATION
-                    </span>
+                    </label>
 
-                    <span class="detail-value">
+                    <div class="information-value">
                         Mumbai, Maharashtra
-                    </span>
+                    </div>
 
                 </div>
 
 
-                <!-- USER ID -->
-                <div class="detail-item">
+                <div class="information-group">
 
-                    <span class="detail-label">
-                        USER ID
-                    </span>
-
-                    <span class="detail-value">
-                        USR-001
-                    </span>
-
-                </div>
-
-
-                <!-- REGISTRATION DATE -->
-                <div class="detail-item">
-
-                    <span class="detail-label">
+                    <label>
                         REGISTRATION DATE
-                    </span>
+                    </label>
 
-                    <span class="detail-value">
+                    <div class="information-value">
                         January 15, 2024
-                    </span>
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- PERSONAL INFORMATION -->
-            <div class="detail-divider"></div>
+            <div class="divider"></div>
+
 
             <div class="personal-information">
 
-                <h3>
+                <h2>
                     Personal Information
-                </h3>
+                </h2>
 
                 <p>
                     Rahul is a seasoned Full Stack Engineer based in Mumbai.
-                    He is actively seeking job opportunities in React,
-                    Node.js, and .NET web application development.
+                    He is actively seeking job opportunities in React, Node.js,
+                    and .NET web application development.
                     Currently holds 4 completed application submissions.
                 </p>
 
             </div>
 
 
-            <!-- ACTION BUTTONS -->
-            <div class="detail-divider"></div>
+            <div class="divider"></div>
 
-            <div class="user-action-buttons">
 
-                <button type="button"
-                        class="edit-user-button"
-                        onclick="editUser()">
+            <div class="user-actions">
 
-                    <i class="bi bi-pencil"></i>
+                <a href="Edit_users.aspx"
+                   class="btn-edit">
+
                     Edit User
 
-                </button>
+                </a>
 
 
-                <button type="button"
-                        class="block-user-button"
-                        onclick="blockUser()">
-
-                    <i class="bi bi-person-x"></i>
-                    Block User
-
-                </button>
+                <asp:Button
+                    ID="btnBlockUser"
+                    runat="server"
+                    Text="Block User"
+                    CssClass="btn-block" />
 
             </div>
 
         </div>
 
     </div>
-
-
-    <!-- JAVASCRIPT -->
-    <script>
-
-        function editUser() {
-
-            alert("Edit User functionality will be added here.");
-
-        }
-
-
-        function blockUser() {
-
-            var result =
-                confirm("Are you sure you want to block Rahul Sharma?");
-
-            if (result) {
-
-                alert("Rahul Sharma has been blocked successfully.");
-
-            }
-
-        }
-
-    </script>
 
 </asp:Content>

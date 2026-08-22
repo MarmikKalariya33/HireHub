@@ -120,9 +120,12 @@
     <Content Include="Assets\css\categories.css" />
     <Content Include="Assets\css\companies.css" />
     <Content Include="Assets\css\edit_jobs.css" />
+    <Content Include="Assets\css\edit_users.css" />
+    <Content Include="Assets\css\employers.css" />
     <Content Include="Assets\css\jobs.css" />
     <Content Include="Assets\css\login.css" />
     <Content Include="Assets\css\site.css" />
+    <Content Include="Assets\css\users.css" />
     <Content Include="Assets\images\logo.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />

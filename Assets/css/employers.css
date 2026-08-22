@@ -10,10 +10,10 @@
 
 
 /* =========================================
-   JOBS PAGE
+   EMPLOYERS PAGE
 ========================================= */
 
-.jobs-page {
+.employers-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
@@ -23,10 +23,10 @@
 
 
 /* =========================================
-   PAGE HEADER
+   HEADER
 ========================================= */
 
-.jobs-header {
+.employers-header {
     width: 100%;
     height: 35px;
     display: flex;
@@ -36,37 +36,21 @@
 }
 
 
-/* =========================================
-   PAGE TITLE
-========================================= */
-
-.jobs-title {
-    margin: 0;
-    padding: 0;
-    color: #182338;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 35px;
-}
-
-
-/* =========================================
-   RIGHT SIDE
-========================================= */
-
-.jobs-actions {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-}
+    .employers-header h1 {
+        margin: 0;
+        padding: 0;
+        color: #182338;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 35px;
+    }
 
 
 /* =========================================
    SEARCH BOX
 ========================================= */
 
-.job-search {
+.search-box {
     width: 262px;
     height: 36px;
     display: flex;
@@ -78,14 +62,14 @@
 }
 
 
-.job-search-icon {
-    color: #6f7a8d;
-    font-size: 15px;
-    margin-right: 11px;
-}
+    .search-box i {
+        color: #6f7a8d;
+        font-size: 15px;
+        margin-right: 11px;
+    }
 
 
-.job-search input {
+.search-input {
     width: 100%;
     height: 34px;
     padding: 0;
@@ -98,76 +82,17 @@
 }
 
 
-    .job-search input::placeholder {
+    .search-input::placeholder {
         color: #737d8e;
         opacity: 1;
     }
 
 
 /* =========================================
-   JOB FILTER
-========================================= */
-
-.job-filter select {
-    width: 113px;
-    height: 36px;
-    padding: 0 11px;
-    border: 1px solid #d8dde5;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #202b40;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-}
-
-
-/* =========================================
-   ADD JOB BUTTON
-========================================= */
-
-.add-job-btn {
-    width: 159px;
-    height: 36px;
-    padding: 0;
-    border: none;
-    border-radius: 6px;
-    background: #2867e8;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    text-decoration: none;
-}
-
-
-    .add-job-btn:hover {
-        background: #2867e8;
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-
-/* =========================================
-   TABLE CARD
-========================================= */
-
-.jobs-table-card {
-    width: 100%;
-}
-
-
-/* =========================================
    TABLE CONTAINER
 ========================================= */
 
-.jobs-table-wrapper {
+.employers-table-container {
     width: 100%;
     background: #ffffff;
     border: 1px solid #dce1e7;
@@ -180,10 +105,9 @@
    TABLE
 ========================================= */
 
-.jobs-table {
+.employers-table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
     table-layout: fixed;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -193,12 +117,12 @@
    TABLE HEADER
 ========================================= */
 
-    .jobs-table thead {
+    .employers-table thead {
         background: #fafbfc;
     }
 
 
-    .jobs-table th {
+    .employers-table th {
         height: 52px;
         padding: 0 16px;
         text-align: left;
@@ -213,41 +137,34 @@
 
         /* =========================================
    COLUMN WIDTH
-   SAME SIZE AS EMPLOYERS
 ========================================= */
 
-        .jobs-table th:nth-child(1),
-        .jobs-table td:nth-child(1) {
+        .employers-table th:nth-child(1) {
             width: 21%;
         }
 
 
-        .jobs-table th:nth-child(2),
-        .jobs-table td:nth-child(2) {
+        .employers-table th:nth-child(2) {
             width: 19%;
         }
 
 
-        .jobs-table th:nth-child(3),
-        .jobs-table td:nth-child(3) {
+        .employers-table th:nth-child(3) {
             width: 12%;
         }
 
 
-        .jobs-table th:nth-child(4),
-        .jobs-table td:nth-child(4) {
+        .employers-table th:nth-child(4) {
             width: 12%;
         }
 
 
-        .jobs-table th:nth-child(5),
-        .jobs-table td:nth-child(5) {
+        .employers-table th:nth-child(5) {
             width: 13%;
         }
 
 
-        .jobs-table th:nth-child(6),
-        .jobs-table td:nth-child(6) {
+        .employers-table th:nth-child(6) {
             width: 11%;
         }
 
@@ -256,13 +173,13 @@
    TABLE ROW
 ========================================= */
 
-    .jobs-table tbody tr {
+    .employers-table tbody tr {
         height: 69px;
         border-bottom: 1px solid #e1e4e8;
     }
 
 
-        .jobs-table tbody tr:last-child {
+        .employers-table tbody tr:last-child {
             border-bottom: none;
         }
 
@@ -271,7 +188,7 @@
    TABLE DATA
 ========================================= */
 
-    .jobs-table td {
+    .employers-table td {
         height: 69px;
         padding: 0 16px;
         color: #1c2639;
@@ -279,15 +196,36 @@
         font-weight: 400;
         text-align: left;
         vertical-align: middle;
-        white-space: nowrap;
     }
 
 
 /* =========================================
-   JOB TITLE
+   COMPANY
 ========================================= */
 
-.job-title-text {
+.company-details {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.company-avatar {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef5ff;
+    border-radius: 6px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.company-name {
     color: #1d273b;
     font-size: 15px;
     font-weight: 500;
@@ -296,50 +234,32 @@
 
 
 /* =========================================
-   COMPANY
+   EMAIL
 ========================================= */
 
-.company-text {
-    color: #737d8e;
-    font-size: 15px;
+.email {
+    color: #737d8e !important;
+    font-size: 15px !important;
     white-space: nowrap;
 }
 
 
 /* =========================================
-   JOB TYPE
+   JOINED DATE
 ========================================= */
 
-.job-type-text {
-    color: #1c2639;
-    font-size: 15px;
+.joined-date {
+    color: #737d8e !important;
+    font-size: 15px !important;
     white-space: nowrap;
 }
-
-
-/* =========================================
-   APPLICATION LINK
-========================================= */
-
-.applications-link {
-    color: #2563eb;
-    text-decoration: none;
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-
-    .applications-link:hover {
-        color: #2563eb;
-        text-decoration: none;
-    }
 
 
 /* =========================================
    STATUS
 ========================================= */
 
-.job-status {
+.status {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -353,38 +273,48 @@
 }
 
 
-/* =========================================
+    /* =========================================
    ACTIVE
 ========================================= */
 
-.job-status-active {
-    background: #d8f7e2;
-    color: #09843e;
-}
+    .status.active {
+        background: #d8f7e2;
+        color: #09843e;
+    }
 
 
-/* =========================================
-   INACTIVE
+    /* =========================================
+   PENDING
 ========================================= */
 
-.job-status-inactive {
-    background: #ffe1e1;
-    color: #d92525;
-}
+    .status.pending {
+        background: #fff4bc;
+        color: #d49500;
+    }
+
+
+    /* =========================================
+   BLOCKED
+========================================= */
+
+    .status.blocked {
+        background: #ffe1e1;
+        color: #d92525;
+    }
 
 
 /* =========================================
    ACTIONS
 ========================================= */
 
-.job-actions {
+.actions {
     display: flex;
     align-items: center;
     gap: 18px;
 }
 
 
-.job-action {
+.edit-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -394,26 +324,30 @@
 }
 
 
-.job-edit {
-    color: #2563eb;
-}
+    .edit-icon:hover {
+        color: #2563eb;
+        text-decoration: none;
+    }
 
 
-.job-delete {
+.delete-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #ef252b;
-}
-
-
-.job-edit:hover {
-    color: #2563eb;
+    font-size: 16px;
     text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 
-.job-delete:hover {
-    color: #ef252b;
-    text-decoration: none;
-}
+    .delete-icon:hover {
+        color: #ef252b;
+        text-decoration: none;
+    }
 
 
 /* =========================================
@@ -422,15 +356,15 @@
 
 @media screen and (max-width: 1100px) {
 
-    .jobs-page {
+    .employers-page {
         padding: 30px 25px 40px 25px;
     }
 
-    .jobs-table-wrapper {
+    .employers-table-container {
         overflow-x: auto;
     }
 
-    .jobs-table {
+    .employers-table {
         min-width: 900px;
     }
 }
@@ -438,27 +372,22 @@
 
 @media screen and (max-width: 768px) {
 
-    .jobs-page {
+    .employers-page {
         padding: 25px 20px 30px 20px;
     }
 
-    .jobs-header {
+    .employers-header {
         height: auto;
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
     }
 
-    .jobs-actions {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .job-search {
+    .search-box {
         width: 100%;
     }
 
-    .jobs-table {
+    .employers-table {
         min-width: 900px;
     }
 }

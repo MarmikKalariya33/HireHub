@@ -10,23 +10,22 @@
 
 
 /* =========================================
-   JOBS PAGE
+   USERS PAGE
 ========================================= */
 
-.jobs-page {
+.users-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
     padding: 37px 34px 40px 34px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* =========================================
-   PAGE HEADER
+   HEADER
 ========================================= */
 
-.jobs-header {
+.users-header {
     width: 100%;
     height: 35px;
     display: flex;
@@ -36,37 +35,22 @@
 }
 
 
-/* =========================================
-   PAGE TITLE
-========================================= */
-
-.jobs-title {
-    margin: 0;
-    padding: 0;
-    color: #182338;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 35px;
-}
-
-
-/* =========================================
-   RIGHT SIDE
-========================================= */
-
-.jobs-actions {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-}
+    .users-header h1 {
+        margin: 0;
+        padding: 0;
+        color: #182338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 35px;
+    }
 
 
 /* =========================================
    SEARCH BOX
 ========================================= */
 
-.job-search {
+.search-box {
     width: 262px;
     height: 36px;
     display: flex;
@@ -78,14 +62,14 @@
 }
 
 
-.job-search-icon {
-    color: #6f7a8d;
-    font-size: 15px;
-    margin-right: 11px;
-}
+    .search-box i {
+        color: #6f7a8d;
+        font-size: 15px;
+        margin-right: 11px;
+    }
 
 
-.job-search input {
+.search-input {
     width: 100%;
     height: 34px;
     padding: 0;
@@ -98,76 +82,17 @@
 }
 
 
-    .job-search input::placeholder {
+    .search-input::placeholder {
         color: #737d8e;
         opacity: 1;
     }
 
 
 /* =========================================
-   JOB FILTER
-========================================= */
-
-.job-filter select {
-    width: 113px;
-    height: 36px;
-    padding: 0 11px;
-    border: 1px solid #d8dde5;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #202b40;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-}
-
-
-/* =========================================
-   ADD JOB BUTTON
-========================================= */
-
-.add-job-btn {
-    width: 159px;
-    height: 36px;
-    padding: 0;
-    border: none;
-    border-radius: 6px;
-    background: #2867e8;
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    text-decoration: none;
-}
-
-
-    .add-job-btn:hover {
-        background: #2867e8;
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-
-/* =========================================
-   TABLE CARD
-========================================= */
-
-.jobs-table-card {
-    width: 100%;
-}
-
-
-/* =========================================
    TABLE CONTAINER
 ========================================= */
 
-.jobs-table-wrapper {
+.users-table-container {
     width: 100%;
     background: #ffffff;
     border: 1px solid #dce1e7;
@@ -180,10 +105,9 @@
    TABLE
 ========================================= */
 
-.jobs-table {
+.users-table {
     width: 100%;
     border-collapse: collapse;
-    border-spacing: 0;
     table-layout: fixed;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -193,12 +117,12 @@
    TABLE HEADER
 ========================================= */
 
-    .jobs-table thead {
+    .users-table thead {
         background: #fafbfc;
     }
 
 
-    .jobs-table th {
+    .users-table th {
         height: 52px;
         padding: 0 16px;
         text-align: left;
@@ -212,57 +136,45 @@
 
 
         /* =========================================
-   COLUMN WIDTH
-   SAME SIZE AS EMPLOYERS
+   EXACT COLUMN WIDTH
 ========================================= */
 
-        .jobs-table th:nth-child(1),
-        .jobs-table td:nth-child(1) {
-            width: 21%;
+        .users-table th:nth-child(1) {
+            width: 25%;
         }
 
-
-        .jobs-table th:nth-child(2),
-        .jobs-table td:nth-child(2) {
-            width: 19%;
+        .users-table th:nth-child(2) {
+            width: 20%;
         }
 
-
-        .jobs-table th:nth-child(3),
-        .jobs-table td:nth-child(3) {
-            width: 12%;
-        }
-
-
-        .jobs-table th:nth-child(4),
-        .jobs-table td:nth-child(4) {
-            width: 12%;
-        }
-
-
-        .jobs-table th:nth-child(5),
-        .jobs-table td:nth-child(5) {
+        .users-table th:nth-child(3) {
             width: 13%;
         }
 
+        .users-table th:nth-child(4) {
+            width: 13%;
+        }
 
-        .jobs-table th:nth-child(6),
-        .jobs-table td:nth-child(6) {
+        .users-table th:nth-child(5) {
+            width: 14%;
+        }
+
+        .users-table th:nth-child(6) {
             width: 11%;
         }
 
 
     /* =========================================
-   TABLE ROW
+   TABLE ROWS
 ========================================= */
 
-    .jobs-table tbody tr {
+    .users-table tbody tr {
         height: 69px;
         border-bottom: 1px solid #e1e4e8;
     }
 
 
-        .jobs-table tbody tr:last-child {
+        .users-table tbody tr:last-child {
             border-bottom: none;
         }
 
@@ -271,7 +183,7 @@
    TABLE DATA
 ========================================= */
 
-    .jobs-table td {
+    .users-table td {
         height: 69px;
         padding: 0 16px;
         color: #1c2639;
@@ -279,15 +191,37 @@
         font-weight: 400;
         text-align: left;
         vertical-align: middle;
-        white-space: nowrap;
     }
 
 
 /* =========================================
-   JOB TITLE
+   USER
 ========================================= */
 
-.job-title-text {
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e5ebf2;
+    color: #253146;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.user-name {
     color: #1d273b;
     font-size: 15px;
     font-weight: 500;
@@ -296,50 +230,32 @@
 
 
 /* =========================================
-   COMPANY
+   EMAIL
 ========================================= */
 
-.company-text {
-    color: #737d8e;
-    font-size: 15px;
+.email {
+    color: #737d8e !important;
+    font-size: 15px !important;
     white-space: nowrap;
 }
 
 
 /* =========================================
-   JOB TYPE
+   JOINED DATE
 ========================================= */
 
-.job-type-text {
-    color: #1c2639;
-    font-size: 15px;
+.joined-date {
+    color: #737d8e !important;
+    font-size: 15px !important;
     white-space: nowrap;
 }
-
-
-/* =========================================
-   APPLICATION LINK
-========================================= */
-
-.applications-link {
-    color: #2563eb;
-    text-decoration: none;
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-
-    .applications-link:hover {
-        color: #2563eb;
-        text-decoration: none;
-    }
 
 
 /* =========================================
    STATUS
 ========================================= */
 
-.job-status {
+.status {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -347,73 +263,105 @@
     height: 25px;
     padding: 0 10px;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
 }
 
 
-/* =========================================
+    /* =========================================
    ACTIVE
 ========================================= */
 
-.job-status-active {
-    background: #d8f7e2;
-    color: #09843e;
-}
+    .status.active {
+        background: #d8f7e2;
+        color: #09843e;
+    }
 
 
-/* =========================================
+    /* =========================================
    INACTIVE
 ========================================= */
 
-.job-status-inactive {
-    background: #ffe1e1;
-    color: #d92525;
-}
+    .status.inactive {
+        background: #ffe1e1;
+        color: #d92525;
+    }
+
+
+    /* =========================================
+   PENDING
+========================================= */
+
+    .status.pending {
+        background: #fff4bc;
+        color: #d49500;
+    }
 
 
 /* =========================================
    ACTIONS
 ========================================= */
 
-.job-actions {
+.actions {
     display: flex;
     align-items: center;
     gap: 18px;
 }
 
 
-.job-action {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.edit-icon {
     color: #2563eb;
     font-size: 16px;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.job-edit {
-    color: #2563eb;
-}
+    .edit-icon:hover {
+        color: #174fc0;
+        text-decoration: none;
+    }
 
 
-.job-delete {
+.delete-icon {
     color: #ef252b;
-}
-
-
-.job-edit:hover {
-    color: #2563eb;
+    font-size: 16px;
     text-decoration: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.job-delete:hover {
-    color: #ef252b;
-    text-decoration: none;
-}
+    .delete-icon:hover {
+        color: #c91c21;
+        text-decoration: none;
+    }
+
+
+/* =========================================
+   IMPORTANT
+   MASTER PAGE SIDEBAR
+========================================= */
+
+/*
+   Aa page ma sidebar nathi.
+   Sidebar tamara Site.Master mathi aavshe.
+
+   Site.Master sidebar width:
+   272px
+
+   Main content automatically:
+   272px pachhi start thavu joiye.
+*/
 
 
 /* =========================================
@@ -422,15 +370,15 @@
 
 @media screen and (max-width: 1100px) {
 
-    .jobs-page {
-        padding: 30px 25px 40px 25px;
+    .users-page {
+        padding: 30px 25px;
     }
 
-    .jobs-table-wrapper {
+    .users-table-container {
         overflow-x: auto;
     }
 
-    .jobs-table {
+    .users-table {
         min-width: 900px;
     }
 }
@@ -438,27 +386,22 @@
 
 @media screen and (max-width: 768px) {
 
-    .jobs-page {
-        padding: 25px 20px 30px 20px;
+    .users-page {
+        padding: 25px 20px;
     }
 
-    .jobs-header {
+    .users-header {
         height: auto;
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
     }
 
-    .jobs-actions {
-        width: 100%;
-        flex-wrap: wrap;
-    }
-
-    .job-search {
+    .search-box {
         width: 100%;
     }
 
-    .jobs-table {
+    .users-table {
         min-width: 900px;
     }
 }

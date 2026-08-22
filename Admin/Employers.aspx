@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Employers"
+﻿<%@ Page Title="Manage Employers"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
@@ -6,59 +6,64 @@
     Inherits="Job_Portal.Admin.Employers" %>
 
 
-<asp:Content ID="Content1"
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
+
+    <link rel="stylesheet"
+        type="text/css"
+        href="<%= ResolveUrl("~/Assets/css/employers.css") %>" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 </asp:Content>
 
 
-<asp:Content ID="Content2"
+<asp:Content
+    ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
+    <div class="employers-page">
 
-    <!-- ================= PAGE HEADER ================= -->
 
-    <div class="employer-page-header">
+        <!-- ==============================
+             PAGE HEADER
+        =============================== -->
 
-        <div>
+        <div class="employers-header">
 
             <h1>
                 Manage Employers
             </h1>
 
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <asp:TextBox
+                    ID="txtSearch"
+                    runat="server"
+                    CssClass="search-input"
+                    placeholder="Search employers...">
+                </asp:TextBox>
+
+            </div>
+
         </div>
 
 
-        <!-- SEARCH -->
 
-        <div class="employer-search">
+        <!-- ==============================
+             EMPLOYERS TABLE
+        =============================== -->
 
-            <i class="bi bi-search"></i>
+        <div class="employers-table-container">
 
-            <input type="text"
-                   id="employerSearch"
-                   placeholder="Search employers..."
-                   onkeyup="searchEmployers()" />
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= EMPLOYERS TABLE ================= -->
-
-    <div class="employers-box">
-
-
-        <div class="table-responsive">
-
-            <table class="employers-table"
-                   id="employersTable">
-
-
-                <!-- ================= TABLE HEADER ================= -->
+            <table class="employers-table">
 
                 <thead>
 
@@ -93,24 +98,22 @@
                 </thead>
 
 
-                <!-- ================= TABLE BODY ================= -->
-
                 <tbody>
 
 
-                    <!-- ================= EMPLOYER 1 ================= -->
+                    <!-- TCS -->
 
                     <tr>
 
                         <td>
 
-                            <div class="company-info">
+                            <div class="company-details">
 
                                 <div class="company-avatar">
                                     T
                                 </div>
 
-                                <span>
+                                <span class="company-name">
                                     TCS
                                 </span>
 
@@ -119,14 +122,14 @@
                         </td>
 
 
-                        <td>
+                        <td class="email">
                             hr@tcs.com
                         </td>
 
 
                         <td>
 
-                            <span class="employer-status active">
+                            <span class="status active">
                                 Active
                             </span>
 
@@ -138,30 +141,31 @@
                         </td>
 
 
-                        <td>
+                        <td class="joined-date">
                             Jan 2024
                         </td>
 
 
                         <td>
 
-                            <div class="employer-actions">
+                            <div class="actions">
 
-                                <a href="Edit_employers.aspx"
-                                 class="employer-action edit"
-                                 title="Edit">
-                                 <i class="bi bi-pencil"></i>
-                                 </a>
+                                <a href="Edit_Employers.aspx"
+                                   class="edit-icon">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
 
 
-                                <button type="button"
-                                        class="employer-action delete"
-                                        title="Delete"
-                                        onclick="deleteEmployer('TCS')">
+                                <asp:LinkButton
+                                    ID="btnDelete1"
+                                    runat="server"
+                                    CssClass="delete-icon">
 
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                </button>
+                                </asp:LinkButton>
 
                             </div>
 
@@ -170,19 +174,20 @@
                     </tr>
 
 
-                    <!-- ================= EMPLOYER 2 ================= -->
+
+                    <!-- INFOSYS -->
 
                     <tr>
 
                         <td>
 
-                            <div class="company-info">
+                            <div class="company-details">
 
                                 <div class="company-avatar">
                                     I
                                 </div>
 
-                                <span>
+                                <span class="company-name">
                                     Infosys
                                 </span>
 
@@ -191,14 +196,14 @@
                         </td>
 
 
-                        <td>
+                        <td class="email">
                             careers@infosys.com
                         </td>
 
 
                         <td>
 
-                            <span class="employer-status active">
+                            <span class="status active">
                                 Active
                             </span>
 
@@ -210,32 +215,31 @@
                         </td>
 
 
-                        <td>
+                        <td class="joined-date">
                             Feb 2024
                         </td>
 
 
                         <td>
 
-                            <div class="employer-actions">
+                            <div class="actions">
 
-                                <button type="button"
-                                        class="employer-action edit"
-                                        title="Edit">
+                                <a href="Edit_Employers.aspx"
+                                   class="edit-icon">
 
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="fa-solid fa-pen"></i>
 
-                                </button>
+                                </a>
 
 
-                                <button type="button"
-                                        class="employer-action delete"
-                                        title="Delete"
-                                        onclick="deleteEmployer('Infosys')">
+                                <asp:LinkButton
+                                    ID="btnDelete2"
+                                    runat="server"
+                                    CssClass="delete-icon">
 
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                </button>
+                                </asp:LinkButton>
 
                             </div>
 
@@ -244,19 +248,20 @@
                     </tr>
 
 
-                    <!-- ================= EMPLOYER 3 ================= -->
+
+                    <!-- WIPRO -->
 
                     <tr>
 
                         <td>
 
-                            <div class="company-info">
+                            <div class="company-details">
 
                                 <div class="company-avatar">
                                     W
                                 </div>
 
-                                <span>
+                                <span class="company-name">
                                     Wipro
                                 </span>
 
@@ -265,14 +270,14 @@
                         </td>
 
 
-                        <td>
+                        <td class="email">
                             recruit@wipro.com
                         </td>
 
 
                         <td>
 
-                            <span class="employer-status pending">
+                            <span class="status pending">
                                 Pending
                             </span>
 
@@ -284,32 +289,31 @@
                         </td>
 
 
-                        <td>
+                        <td class="joined-date">
                             Mar 2024
                         </td>
 
 
                         <td>
 
-                            <div class="employer-actions">
+                            <div class="actions">
 
-                                <button type="button"
-                                        class="employer-action edit"
-                                        title="Edit">
+                                <a href="Edit_Employers.aspx"
+                                   class="edit-icon">
 
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="fa-solid fa-pen"></i>
 
-                                </button>
+                                </a>
 
 
-                                <button type="button"
-                                        class="employer-action delete"
-                                        title="Delete"
-                                        onclick="deleteEmployer('Wipro')">
+                                <asp:LinkButton
+                                    ID="btnDelete3"
+                                    runat="server"
+                                    CssClass="delete-icon">
 
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                </button>
+                                </asp:LinkButton>
 
                             </div>
 
@@ -318,19 +322,20 @@
                     </tr>
 
 
-                    <!-- ================= EMPLOYER 4 ================= -->
+
+                    <!-- HCL -->
 
                     <tr>
 
                         <td>
 
-                            <div class="company-info">
+                            <div class="company-details">
 
                                 <div class="company-avatar">
                                     H
                                 </div>
 
-                                <span>
+                                <span class="company-name">
                                     HCL Technologies
                                 </span>
 
@@ -339,14 +344,14 @@
                         </td>
 
 
-                        <td>
+                        <td class="email">
                             jobs@hcl.com
                         </td>
 
 
                         <td>
 
-                            <span class="employer-status active">
+                            <span class="status active">
                                 Active
                             </span>
 
@@ -358,32 +363,31 @@
                         </td>
 
 
-                        <td>
+                        <td class="joined-date">
                             Apr 2024
                         </td>
 
 
                         <td>
 
-                            <div class="employer-actions">
+                            <div class="actions">
 
-                                <button type="button"
-                                        class="employer-action edit"
-                                        title="Edit">
+                                <a href="Edit_Employers.aspx"
+                                   class="edit-icon">
 
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="fa-solid fa-pen"></i>
 
-                                </button>
+                                </a>
 
 
-                                <button type="button"
-                                        class="employer-action delete"
-                                        title="Delete"
-                                        onclick="deleteEmployer('HCL Technologies')">
+                                <asp:LinkButton
+                                    ID="btnDelete4"
+                                    runat="server"
+                                    CssClass="delete-icon">
 
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                </button>
+                                </asp:LinkButton>
 
                             </div>
 
@@ -392,19 +396,20 @@
                     </tr>
 
 
-                    <!-- ================= EMPLOYER 5 ================= -->
+
+                    <!-- TECH MAHINDRA -->
 
                     <tr>
 
                         <td>
 
-                            <div class="company-info">
+                            <div class="company-details">
 
                                 <div class="company-avatar">
                                     M
                                 </div>
 
-                                <span>
+                                <span class="company-name">
                                     Tech Mahindra
                                 </span>
 
@@ -413,14 +418,14 @@
                         </td>
 
 
-                        <td>
+                        <td class="email">
                             hire@techmahindra.com
                         </td>
 
 
                         <td>
 
-                            <span class="employer-status blocked">
+                            <span class="status blocked">
                                 Blocked
                             </span>
 
@@ -432,32 +437,31 @@
                         </td>
 
 
-                        <td>
+                        <td class="joined-date">
                             May 2024
                         </td>
 
 
                         <td>
 
-                            <div class="employer-actions">
+                            <div class="actions">
 
-                                <button type="button"
-                                        class="employer-action edit"
-                                        title="Edit">
+                                <a href="Edit_Employers.aspx"
+                                   class="edit-icon">
 
-                                    <i class="bi bi-pencil"></i>
+                                    <i class="fa-solid fa-pen"></i>
 
-                                </button>
+                                </a>
 
 
-                                <button type="button"
-                                        class="employer-action delete"
-                                        title="Delete"
-                                        onclick="deleteEmployer('Tech Mahindra')">
+                                <asp:LinkButton
+                                    ID="btnDelete5"
+                                    runat="server"
+                                    CssClass="delete-icon">
 
-                                    <i class="bi bi-trash"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                </button>
+                                </asp:LinkButton>
 
                             </div>
 
@@ -473,114 +477,6 @@
         </div>
 
 
-        <!-- ================= PAGINATION ================= -->
-
-        <div class="employers-pagination">
-
-
-            <span>
-                Showing 1-5 of 456 employers
-            </span>
-
-
-            <div class="pagination-buttons">
-
-                <button type="button">
-                    Previous
-                </button>
-
-                <button type="button"
-                        class="current-page">
-                    1
-                </button>
-
-                <button type="button">
-                    2
-                </button>
-
-                <button type="button">
-                    3
-                </button>
-
-                <button type="button">
-                    Next
-                </button>
-
-            </div>
-
-        </div>
-
-
     </div>
-
-
-    <!-- ================= JAVASCRIPT ================= -->
-
-    <script>
-
-        // SEARCH EMPLOYERS
-
-        function searchEmployers() {
-
-            var input =
-                document.getElementById("employerSearch");
-
-            var filter =
-                input.value.toLowerCase();
-
-            var table =
-                document.getElementById("employersTable");
-
-            var rows =
-                table.getElementsByTagName("tr");
-
-
-            for (var i = 1; i < rows.length; i++) {
-
-                var text =
-                    rows[i].innerText.toLowerCase();
-
-
-                if (text.indexOf(filter) > -1) {
-
-                    rows[i].style.display = "";
-
-                }
-                else {
-
-                    rows[i].style.display = "none";
-
-                }
-
-            }
-
-        }
-
-
-        // DELETE EMPLOYER
-
-        function deleteEmployer(companyName) {
-
-            var result =
-                confirm(
-                    "Are you sure you want to delete "
-                    + companyName
-                    + "?"
-                );
-
-
-            if (result) {
-
-                alert(
-                    companyName
-                    + " deleted successfully."
-                );
-
-            }
-
-        }
-
-    </script>
-
 
 </asp:Content>

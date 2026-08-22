@@ -2,123 +2,91 @@
     box-sizing: border-box;
 }
 
-
-/* =========================================
-   APPLICATION PAGE
-========================================= */
-
 .applications-page {
     width: 100%;
+    min-height: calc(100vh - 70px);
+    background: #fbf9f4;
+    padding: 48px 38px 60px 38px;
 }
 
 
-/* =========================================
+/* =========================
    HEADER
-========================================= */
+   ========================= */
 
 .applications-header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 28px;
-}
-
-.applications-title {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    color: #202a3d;
+    margin-bottom: 32px;
 }
 
 
-/* =========================================
-   HEADER ACTIONS
-========================================= */
-
-.applications-actions {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-}
-
-
-/* =========================================
-   SEARCH
-========================================= */
-
-.application-search {
-    width: 262px;
-    height: 37px;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    background: #ffffff;
-    border: 1px solid #dce0e6;
-    border-radius: 7px;
-}
-
-.application-search-icon {
-    color: #687386;
-    font-size: 16px;
-    margin-right: 10px;
-}
-
-.application-search input {
-    width: 100%;
-    height: 35px;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 14px;
-    color: #273247;
-}
-
-    .application-search input::placeholder {
-        color: #7b8494;
+    .applications-header h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 700;
+        color: #17233b;
     }
 
 
-/* =========================================
-   STATUS FILTER
-========================================= */
+/* =========================
+   SEARCH
+   ========================= */
 
-.application-filter select {
-    width: 134px;
-    height: 37px;
-    padding: 0 10px;
-    border: 1px solid #dce0e6;
-    border-radius: 7px;
+.applications-search {
+    width: 262px;
+    height: 42px;
+    display: flex;
+    align-items: center;
     background: #ffffff;
-    color: #293347;
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
+    border: 1px solid #d5dce5;
+    border-radius: 7px;
+    padding: 0 13px;
 }
 
 
-/* =========================================
-   TABLE CARD
-========================================= */
+.search-icon {
+    font-size: 25px;
+    color: #667085;
+    margin-right: 8px;
+}
 
-.applications-table-card {
+
+.applications-search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #17233b;
+}
+
+
+    .applications-search input::placeholder {
+        color: #707b8d;
+    }
+
+
+/* =========================
+   TABLE BOX
+   ========================= */
+
+.applications-table-box {
     width: 100%;
     background: #ffffff;
-    border: 1px solid #dfe3e8;
+    border: 1px solid #d9dfe7;
     border-radius: 9px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 
-/* =========================================
+/* =========================
    TABLE
-========================================= */
-
-.applications-table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-}
+   ========================= */
 
 .applications-table {
     width: 100%;
@@ -127,228 +95,204 @@
 }
 
 
-    /* =========================================
+    /* =========================
    TABLE HEADER
-========================================= */
+   ========================= */
 
     .applications-table thead {
-        background: #f8f9fa;
+        background: #ffffff;
     }
+
 
     .applications-table th {
-        height: 52px;
-        padding: 0 16px;
+        height: 59px;
+        padding: 0 18px;
         text-align: left;
-        color: #202a3d;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
-        border-bottom: 1px solid #e2e5e9;
+        color: #17233b;
+        border-bottom: 1px solid #d9dfe7;
     }
 
 
-/* Column Width */
-
-.application-col-applicant {
-    width: 27%;
-}
-
-.application-col-job {
-    width: 25%;
-}
-
-.application-col-status {
-    width: 13%;
-}
-
-.application-col-date {
-    width: 16%;
-}
-
-.application-col-actions {
-    width: 13%;
-}
-
-
-/* =========================================
+    /* =========================
    TABLE ROW
-========================================= */
+   ========================= */
 
-.applications-table tbody tr {
-    height: 69px;
-    border-bottom: 1px solid #e3e6ea;
-}
-
-    .applications-table tbody tr:last-child {
-        border-bottom: none;
+    .applications-table tbody tr {
+        height: 69px;
+        background: #ffffff;
     }
 
-    .applications-table tbody tr:nth-child(even) {
-        background: #fafbfc;
+
+        .applications-table tbody tr:not(:last-child) {
+            border-bottom: 1px solid #d9dfe7;
+        }
+
+
+    .applications-table td {
+        padding: 0 18px;
+        font-size: 16px;
+        color: #17233b;
+        vertical-align: middle;
     }
 
-.applications-table td {
-    padding: 0 16px;
-    vertical-align: middle;
-    color: #202a3d;
-    font-size: 15px;
-}
 
-
-/* =========================================
+/* =========================
    APPLICANT
-========================================= */
+   ========================= */
 
-.application-applicant {
+.applicant {
     display: flex;
     align-items: center;
-    gap: 13px;
+    gap: 14px;
 }
 
-.application-avatar {
-    width: 35px;
-    height: 35px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: #e8edf3;
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #253247;
-    font-size: 13px;
+    border-radius: 50%;
+    background: #e8edf5;
+    color: #17233b;
+    font-size: 14px;
     font-weight: 600;
 }
 
-.applicant-name {
-    color: #202a3d;
+
+.applicant span {
     font-size: 16px;
     font-weight: 500;
+    color: #17233b;
 }
 
 
-/* =========================================
-   JOB
-========================================= */
-
-.application-job {
-    color: #263248;
-    font-size: 16px;
-}
-
-
-/* =========================================
+/* =========================
    DATE
-========================================= */
+   ========================= */
 
-.application-date {
-    color: #788294;
-    font-size: 15px;
+.date {
+    color: #727d8f !important;
 }
 
 
-/* =========================================
+/* =========================
    STATUS
-========================================= */
+   ========================= */
 
-.application-status {
-    display: inline-block;
-    padding: 5px 10px;
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    padding: 0 10px;
     border-radius: 5px;
     font-size: 13px;
     font-weight: 600;
 }
 
 
-/* Pending */
+    /* Pending */
 
-.status-pending {
-    background: #fff3bd;
-    color: #d79a00;
-}
-
-
-/* Reviewed */
-
-.status-reviewed {
-    background: #dce9ff;
-    color: #2758bf;
-}
+    .status.pending {
+        background: #fff3b8;
+        color: #d79500;
+    }
 
 
-/* Hired */
+    /* Reviewed */
 
-.status-hired {
-    background: #d9f8e5;
-    color: #159447;
-}
-
-
-/* Rejected */
-
-.status-rejected {
-    background: #fff0f0;
-    color: #e11d2e;
-}
+    .status.reviewed {
+        background: #dce9ff;
+        color: #2456b8;
+    }
 
 
-/* =========================================
+    /* Hired */
+
+    .status.hired {
+        background: #d9f7e4;
+        color: #138a45;
+    }
+
+
+    /* Rejected */
+
+    .status.rejected {
+        background: #ffe1e1;
+        color: #e32626;
+    }
+
+
+/* =========================
    ACTIONS
-========================================= */
+   ========================= */
 
-.application-actions {
+.actions {
     display: flex;
     align-items: center;
     gap: 18px;
 }
 
-.application-action {
-    text-decoration: none;
-    font-size: 17px;
+
+    .actions a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+
+.edit {
+    color: #2463e8;
 }
 
 
-/* Edit */
-
-.application-edit {
-    color: #1769ff;
+.delete {
+    color: #ef2029;
 }
 
-    .application-edit:hover {
-        color: #0752d6;
+
+    .edit:hover,
+    .delete:hover {
+        text-decoration: none;
     }
 
 
-/* Delete */
+/* =========================
+   COLUMN WIDTH
+   ========================= */
 
-.application-delete {
-    color: #f01824;
+.applications-table th:nth-child(1),
+.applications-table td:nth-child(1) {
+    width: 23%;
 }
 
-    .application-delete:hover {
-        color: #c9000b;
-    }
+
+.applications-table th:nth-child(2),
+.applications-table td:nth-child(2) {
+    width: 22%;
+}
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+.applications-table th:nth-child(3),
+.applications-table td:nth-child(3) {
+    width: 16%;
+}
 
-@media screen and (max-width: 900px) {
 
-    .applications-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
-    }
+.applications-table th:nth-child(4),
+.applications-table td:nth-child(4) {
+    width: 14%;
+}
 
-    .applications-actions {
-        width: 100%;
-    }
 
-    .application-search {
-        flex: 1;
-    }
-
-    .applications-table {
-        min-width: 850px;
-    }
+.applications-table th:nth-child(5),
+.applications-table td:nth-child(5) {
+    width: 15%;
 }
