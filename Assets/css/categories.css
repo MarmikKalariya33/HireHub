@@ -1,24 +1,35 @@
-﻿* {
+﻿/* =========================================
+   RESET - ONLY CATEGORIES PAGE
+========================================= */
+
+.categories-page,
+.categories-page * {
     box-sizing: border-box;
 }
 
 
 /* =========================================
    CATEGORIES PAGE
+   SAME AS COMPANIES
 ========================================= */
 
 .categories-page {
     width: 100%;
+    min-height: 100vh;
+    background: #fbf9f4;
+    padding: 37px 34px 40px 34px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* =========================================
    HEADER
+   SAME AS COMPANIES
 ========================================= */
 
 .categories-header {
     width: 100%;
-    height: 45px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,13 +37,16 @@
 }
 
 
-.categories-title {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    color: #202a3d;
-    line-height: 1;
-}
+    .categories-header h1,
+    .categories-title {
+        margin: 0;
+        padding: 0;
+        color: #182338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 35px;
+    }
 
 
 /* =========================================
@@ -42,6 +56,7 @@
 .categories-actions {
     display: flex;
     align-items: center;
+    gap: 13px;
 }
 
 
@@ -50,30 +65,33 @@
 ========================================= */
 
 .add-category-btn {
-    height: 37px;
-    min-width: 163px;
-    padding: 0 16px;
-    display: flex;
+    width: 159px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    border-radius: 6px;
+    background: #2867e8;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    background: #2864df;
-    color: #ffffff;
+    gap: 7px;
     text-decoration: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
 }
 
 
     .add-category-btn i {
-        font-size: 20px;
+        font-size: 14px;
         line-height: 1;
     }
 
 
     .add-category-btn:hover {
-        background: #1e55c5;
+        background: #2867e8;
         color: #ffffff;
         text-decoration: none;
     }
@@ -81,45 +99,49 @@
 
 /* =========================================
    TABLE CARD
+   SAME AS COMPANIES
 ========================================= */
 
 .categories-table-card {
     width: 100%;
-    background: #ffffff;
-    border: 1px solid #dfe3e8;
-    border-radius: 9px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 
 /* =========================================
    TABLE WRAPPER
+   SAME AS COMPANIES
 ========================================= */
 
 .categories-table-wrapper {
     width: 100%;
-    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 
 /* =========================================
    TABLE
+   SAME AS COMPANIES
 ========================================= */
 
 .categories-table {
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0;
     table-layout: fixed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
     /* =========================================
    TABLE HEADER
+   SAME SIZE AS COMPANIES
 ========================================= */
 
     .categories-table thead {
-        background: #f8f9fa;
+        background: #fafbfc;
     }
 
 
@@ -127,58 +149,70 @@
         height: 52px;
         padding: 0 16px;
         text-align: left;
-        color: #202a3d;
-        font-size: 14px;
+        vertical-align: middle;
+        color: #182338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
         font-weight: 700;
-        border-bottom: 1px solid #e2e5e9;
+        border-bottom: 1px solid #dce1e7;
+        white-space: nowrap;
     }
 
 
-/* =========================================
+        /* =========================================
    COLUMN WIDTH
 ========================================= */
 
-.category-col-name {
-    width: 35%;
-}
+        .categories-table th:nth-child(1),
+        .categories-table td:nth-child(1) {
+            width: 35%;
+        }
 
 
-.category-col-jobs {
-    width: 26%;
-}
+        .categories-table th:nth-child(2),
+        .categories-table td:nth-child(2) {
+            width: 26%;
+        }
 
 
-.category-col-actions {
-    width: 39%;
-}
+        .categories-table th:nth-child(3),
+        .categories-table td:nth-child(3) {
+            width: 39%;
+        }
 
 
-/* =========================================
+    /* =========================================
    TABLE ROW
+   SAME SIZE AS COMPANIES
 ========================================= */
 
-.categories-table tbody tr {
-    height: 53px;
-    border-bottom: 1px solid #e3e6ea;
-}
-
-
-    .categories-table tbody tr:last-child {
-        border-bottom: none;
+    .categories-table tbody tr {
+        height: 69px;
+        border-bottom: 1px solid #e1e4e8;
     }
 
 
-/* =========================================
-   TABLE CELL
+        .categories-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+
+    /* =========================================
+   TABLE DATA
+   SAME SIZE AS COMPANIES
 ========================================= */
 
-.categories-table td {
-    height: 53px;
-    padding: 0 16px;
-    vertical-align: middle;
-    color: #202a3d;
-    font-size: 15px;
-}
+    .categories-table td {
+        height: 69px;
+        padding: 0 16px;
+        color: #1c2639;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
 
 
 /* =========================================
@@ -186,9 +220,11 @@
 ========================================= */
 
 .category-name {
-    color: #202a3d;
-    font-size: 16px;
+    color: #1d273b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 
@@ -197,8 +233,11 @@
 ========================================= */
 
 .category-jobs {
-    color: #788294;
-    font-size: 16px;
+    color: #737d8e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 
@@ -214,9 +253,15 @@
 
 
 .category-action {
-    text-decoration: none;
-    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
     line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -225,12 +270,13 @@
 ========================================= */
 
 .category-edit {
-    color: #1769ff;
+    color: #2563eb;
 }
 
 
     .category-edit:hover {
-        color: #0752d6;
+        color: #2563eb;
+        text-decoration: none;
     }
 
 
@@ -239,12 +285,13 @@
 ========================================= */
 
 .category-delete {
-    color: #f01824;
+    color: #ef252b;
 }
 
 
     .category-delete:hover {
-        color: #c9000b;
+        color: #ef252b;
+        text-decoration: none;
     }
 
 
@@ -252,27 +299,45 @@
    RESPONSIVE
 ========================================= */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
 
-    .categories-header {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 18px;
-        height: auto;
+    .categories-page {
+        padding: 30px 25px 40px 25px;
     }
 
-
-    .categories-actions {
-        width: 100%;
+    .categories-table-wrapper {
+        overflow-x: auto;
     }
-
-
-    .add-category-btn {
-        width: 163px;
-    }
-
 
     .categories-table {
         min-width: 850px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+
+    .categories-page {
+        padding: 25px 20px 30px 20px;
+    }
+
+    .categories-header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .categories-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .categories-table {
+        min-width: 850px;
+    }
+}
+
+
+
+

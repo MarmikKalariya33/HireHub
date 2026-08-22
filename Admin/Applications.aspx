@@ -1,10 +1,9 @@
-﻿<%@ Page Title="Applications"
+﻿<%@ Page Title="Manage Applications"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
     CodeBehind="Applications.aspx.cs"
     Inherits="Job_Portal.Admin.Applications" %>
-
 
 <asp:Content
     ID="Content1"
@@ -15,6 +14,9 @@
         type="text/css"
         href="<%= ResolveUrl("~/Assets/css/applications.css") %>" />
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
 </asp:Content>
 
 
@@ -23,636 +25,471 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
     <div class="applications-page">
 
-
-        <!-- =========================================
+        <!-- ==============================
              PAGE HEADER
-        ========================================== -->
+        =============================== -->
 
         <div class="applications-header">
 
-            <h1 class="applications-title">
+            <h1>
                 Manage Applications
             </h1>
 
 
-            <div class="applications-actions">
+            <div class="applications-header-right">
 
+                <!-- SEARCH -->
 
-                <!-- Search -->
+                <div class="search-box">
 
-                <div class="application-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <i class="bi bi-search application-search-icon"></i>
-
-                    <input
-                        type="text"
-                        id="applicationSearch"
-                        placeholder="Search applicants..."
-                        autocomplete="off" />
-
-                </div>
-
-
-                <!-- Status Filter -->
-
-                <div class="application-filter">
-
-                    <select id="applicationStatusFilter">
-
-                        <option value="all">
-                            All Statuses
-                        </option>
-
-                        <option value="pending">
-                            Pending
-                        </option>
-
-                        <option value="reviewed">
-                            Reviewed
-                        </option>
-
-                        <option value="hired">
-                            Hired
-                        </option>
-
-                        <option value="rejected">
-                            Rejected
-                        </option>
-
-                    </select>
+                    <asp:TextBox
+                        ID="txtSearch"
+                        runat="server"
+                        CssClass="search-input"
+                        placeholder="Search applicants...">
+                    </asp:TextBox>
 
                 </div>
 
+
+                <!-- STATUS FILTER -->
+
+                <asp:DropDownList
+                    ID="ddlStatus"
+                    runat="server"
+                    CssClass="status-filter">
+
+                    <asp:ListItem
+                        Text="All Statuses"
+                        Value="">
+                    </asp:ListItem>
+
+                    <asp:ListItem
+                        Text="Pending"
+                        Value="Pending">
+                    </asp:ListItem>
+
+                    <asp:ListItem
+                        Text="Reviewed"
+                        Value="Reviewed">
+                    </asp:ListItem>
+
+                    <asp:ListItem
+                        Text="Hired"
+                        Value="Hired">
+                    </asp:ListItem>
+
+                    <asp:ListItem
+                        Text="Rejected"
+                        Value="Rejected">
+                    </asp:ListItem>
+
+                </asp:DropDownList>
 
             </div>
 
         </div>
 
 
-        <!-- =========================================
-             APPLICATION TABLE
-        ========================================== -->
+        <!-- ==============================
+             APPLICATIONS TABLE
+        =============================== -->
 
-        <div class="applications-table-card">
+        <div class="applications-table-container">
 
-            <div class="applications-table-wrapper">
+            <table class="applications-table">
 
-                <table
-                    class="applications-table"
-                    id="applicationsTable">
+                <thead>
 
+                    <tr>
 
-                    <!-- TABLE HEADER -->
+                        <th>
+                            Applicant
+                        </th>
 
-                    <thead>
+                        <th>
+                            Job Title
+                        </th>
 
-                        <tr>
+                        <th>
+                            Status
+                        </th>
 
-                            <th class="application-col-applicant">
-                                Applicant
-                            </th>
+                        <th>
+                            Applied Date
+                        </th>
 
-                            <th class="application-col-job">
-                                Job Title
-                            </th>
+                        <th>
+                            Actions
+                        </th>
 
-                            <th class="application-col-status">
-                                Status
-                            </th>
+                    </tr>
 
-                            <th class="application-col-date">
-                                Applied Date
-                            </th>
-
-                            <th class="application-col-actions">
-                                Actions
-                            </th>
-
-                        </tr>
-
-                    </thead>
+                </thead>
 
 
-                    <!-- TABLE BODY -->
-
-                    <tbody>
+                <tbody>
 
 
-                        <!-- =================================
-                             ROW 1
-                        ================================== -->
+                    <!-- RAHUL SHARMA -->
 
-                        <tr>
+                    <tr>
 
-                            <td>
+                        <td>
 
-                                <div class="application-applicant">
+                            <div class="applicant-details">
 
-                                    <div class="application-avatar">
-                                        RS
-                                    </div>
-
-                                    <span class="applicant-name">
-                                        Rahul Sharma
-                                    </span>
-
+                                <div class="applicant-avatar">
+                                    RS
                                 </div>
 
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-job">
-                                    Senior React Developer
+                                <span class="applicant-name">
+                                    Rahul Sharma
                                 </span>
 
-                            </td>
+                            </div>
+
+                        </td>
 
 
-                            <td>
-
-                                <span class="application-status status-pending">
-                                    Pending
-                                </span>
-
-                            </td>
+                        <td class="job-title">
+                            Senior React Developer
+                        </td>
 
 
-                            <td>
+                        <td>
 
-                                <span class="application-date">
-                                    Jan 22 2024
-                                </span>
+                            <span class="application-status pending">
+                                Pending
+                            </span>
 
-                            </td>
-
-
-                            <td>
-
-                                <div class="application-actions">
+                        </td>
 
 
-                                    <a href="#"
-                                       class="application-action application-edit"
-                                       title="Edit Application">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
+                        <td class="applied-date">
+                            Jan 22 2024
+                        </td>
 
 
-                                    <a href="#"
-                                       class="application-action application-delete"
-                                       title="Delete Application">
+                        <td>
 
-                                        <i class="bi bi-trash3"></i>
+                            <div class="actions">
 
-                                    </a>
+                                <a href="Applications_Details.aspx"
+                                   class="edit-icon"
+                                   title="Edit">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
 
 
+                                <asp:LinkButton
+                                    ID="btnDelete1"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- PRIYA PATEL -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="applicant-details">
+
+                                <div class="applicant-avatar">
+                                    PP
                                 </div>
 
-                            </td>
+                                <span class="applicant-name">
+                                    Priya Patel
+                                </span>
 
-                        </tr>
+                            </div>
+
+                        </td>
 
 
+                        <td class="job-title">
+                            UI/UX Designer
+                        </td>
 
-                        <!-- =================================
-                             ROW 2
-                        ================================== -->
 
-                        <tr>
+                        <td>
 
-                            <td>
+                            <span class="application-status reviewed">
+                                Reviewed
+                            </span>
 
-                                <div class="application-applicant">
+                        </td>
 
-                                    <div class="application-avatar">
-                                        PP
-                                    </div>
 
-                                    <span class="applicant-name">
-                                        Priya Patel
-                                    </span>
+                        <td class="applied-date">
+                            Jan 25 2024
+                        </td>
 
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Applications_Details.aspx"
+                                   class="edit-icon"
+                                   title="Edit">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete2"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- AMIT KUMAR -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="applicant-details">
+
+                                <div class="applicant-avatar">
+                                    AK
                                 </div>
 
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-job">
-                                    UI/UX Designer
+                                <span class="applicant-name">
+                                    Amit Kumar
                                 </span>
 
-                            </td>
+                            </div>
+
+                        </td>
 
 
-                            <td>
-
-                                <span class="application-status status-reviewed">
-                                    Reviewed
-                                </span>
-
-                            </td>
+                        <td class="job-title">
+                            Data Analyst
+                        </td>
 
 
-                            <td>
+                        <td>
 
-                                <span class="application-date">
-                                    Jan 25 2024
-                                </span>
+                            <span class="application-status hired">
+                                Hired
+                            </span>
 
-                            </td>
-
-
-                            <td>
-
-                                <div class="application-actions">
+                        </td>
 
 
-                                    <a href="#"
-                                       class="application-action application-edit"
-                                       title="Edit Application">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
+                        <td class="applied-date">
+                            Feb 01 2024
+                        </td>
 
 
-                                    <a href="#"
-                                       class="application-action application-delete"
-                                       title="Delete Application">
+                        <td>
 
-                                        <i class="bi bi-trash3"></i>
+                            <div class="actions">
 
-                                    </a>
+                                <a href="Applications_Details.aspx"
+                                   class="edit-icon"
+                                   title="Edit">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
 
 
+                                <asp:LinkButton
+                                    ID="btnDelete3"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- SNEHA GUPTA -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="applicant-details">
+
+                                <div class="applicant-avatar">
+                                    SG
                                 </div>
 
-                            </td>
+                                <span class="applicant-name">
+                                    Sneha Gupta
+                                </span>
 
-                        </tr>
+                            </div>
+
+                        </td>
 
 
+                        <td class="job-title">
+                            Backend Developer
+                        </td>
 
-                        <!-- =================================
-                             ROW 3
-                        ================================== -->
 
-                        <tr>
+                        <td>
 
-                            <td>
+                            <span class="application-status rejected">
+                                Rejected
+                            </span>
 
-                                <div class="application-applicant">
+                        </td>
 
-                                    <div class="application-avatar">
-                                        AK
-                                    </div>
 
-                                    <span class="applicant-name">
-                                        Amit Kumar
-                                    </span>
+                        <td class="applied-date">
+                            Feb 05 2024
+                        </td>
 
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Applications_Details.aspx"
+                                   class="edit-icon"
+                                   title="Edit">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete4"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- VIKRAM SINGH -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="applicant-details">
+
+                                <div class="applicant-avatar">
+                                    VS
                                 </div>
 
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-job">
-                                    Data Analyst
+                                <span class="applicant-name">
+                                    Vikram Singh
                                 </span>
 
-                            </td>
+                            </div>
 
+                        </td>
 
-                            <td>
 
-                                <span class="application-status status-hired">
-                                    Hired
-                                </span>
+                        <td class="job-title">
+                            Marketing Manager
+                        </td>
 
-                            </td>
 
+                        <td>
 
-                            <td>
+                            <span class="application-status pending">
+                                Pending
+                            </span>
 
-                                <span class="application-date">
-                                    Feb 01 2024
-                                </span>
+                        </td>
 
-                            </td>
 
+                        <td class="applied-date">
+                            Feb 10 2024
+                        </td>
 
-                            <td>
 
-                                <div class="application-actions">
+                        <td>
 
+                            <div class="actions">
 
-                                    <a href="#"
-                                       class="application-action application-edit"
-                                       title="Edit Application">
+                                <a href="Applications_Details.aspx"
+                                   class="edit-icon"
+                                   title="Edit">
 
-                                        <i class="bi bi-pencil"></i>
+                                    <i class="fa-solid fa-pen"></i>
 
-                                    </a>
+                                </a>
 
 
-                                    <a href="#"
-                                       class="application-action application-delete"
-                                       title="Delete Application">
+                                <asp:LinkButton
+                                    ID="btnDelete5"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete">
 
-                                        <i class="bi bi-trash3"></i>
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                    </a>
+                                </asp:LinkButton>
 
+                            </div>
 
-                                </div>
+                        </td>
 
-                            </td>
+                    </tr>
 
-                        </tr>
+                </tbody>
 
-
-
-                        <!-- =================================
-                             ROW 4
-                        ================================== -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="application-applicant">
-
-                                    <div class="application-avatar">
-                                        SG
-                                    </div>
-
-                                    <span class="applicant-name">
-                                        Sneha Gupta
-                                    </span>
-
-                                </div>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-job">
-                                    Backend Developer
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-status status-rejected">
-                                    Rejected
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-date">
-                                    Feb 05 2024
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <div class="application-actions">
-
-
-                                    <a href="#"
-                                       class="application-action application-edit"
-                                       title="Edit Application">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
-
-
-                                    <a href="#"
-                                       class="application-action application-delete"
-                                       title="Delete Application">
-
-                                        <i class="bi bi-trash3"></i>
-
-                                    </a>
-
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-
-
-                        <!-- =================================
-                             ROW 5
-                        ================================== -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="application-applicant">
-
-                                    <div class="application-avatar">
-                                        VS
-                                    </div>
-
-                                    <span class="applicant-name">
-                                        Vikram Singh
-                                    </span>
-
-                                </div>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-job">
-                                    Marketing Manager
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-status status-pending">
-                                    Pending
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <span class="application-date">
-                                    Feb 10 2024
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <div class="application-actions">
-
-
-                                    <a href="#"
-                                       class="application-action application-edit"
-                                       title="Edit Application">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
-
-
-                                    <a href="#"
-                                       class="application-action application-delete"
-                                       title="Delete Application">
-
-                                        <i class="bi bi-trash3"></i>
-
-                                    </a>
-
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
-
-            </div>
+            </table>
 
         </div>
-
 
     </div>
-
-
-
-    <!-- =========================================
-         SEARCH + FILTER JAVASCRIPT
-    ========================================== -->
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-            const searchInput =
-                document.getElementById("applicationSearch");
-
-
-            const statusFilter =
-                document.getElementById("applicationStatusFilter");
-
-
-            const table =
-                document.getElementById("applicationsTable");
-
-
-            const rows =
-                table.querySelectorAll("tbody tr");
-
-
-
-            function filterApplications() {
-
-
-                const search =
-                    searchInput.value
-                        .toLowerCase()
-                        .trim();
-
-
-                const selectedStatus =
-                    statusFilter.value
-                        .toLowerCase();
-
-
-
-                rows.forEach(function (row) {
-
-
-                    const rowText =
-                        row.innerText
-                            .toLowerCase();
-
-
-                    const status =
-                        row.cells[2].innerText
-                            .toLowerCase()
-                            .trim();
-
-
-
-                    const matchesSearch =
-                        search === "" ||
-                        rowText.includes(search);
-
-
-
-                    const matchesStatus =
-                        selectedStatus === "all" ||
-                        status === selectedStatus;
-
-
-
-                    row.style.display =
-                        matchesSearch && matchesStatus
-                            ? ""
-                            : "none";
-
-
-                });
-
-            }
-
-
-
-            searchInput.addEventListener(
-                "input",
-                filterApplications
-            );
-
-
-            statusFilter.addEventListener(
-                "change",
-                filterApplications
-            );
-
-
-        });
-
-    </script>
-
 
 </asp:Content>

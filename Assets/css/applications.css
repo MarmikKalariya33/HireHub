@@ -1,155 +1,276 @@
-﻿* {
-    box-sizing: border-box;
-}
+﻿/* =========================================
+   APPLICATIONS PAGE
+   SAME SIZE AS COMPANIES / JOBS
+========================================= */
 
 .applications-page {
     width: 100%;
-    min-height: calc(100vh - 70px);
+    min-height: 100vh;
+    padding: 37px 34px 40px 34px;
+    box-sizing: border-box;
     background: #fbf9f4;
-    padding: 48px 38px 60px 38px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
 }
 
 
-/* =========================
-   HEADER
-   ========================= */
+/* =========================================
+   PAGE HEADER
+   SAME AS COMPANIES / JOBS
+========================================= */
 
 .applications-header {
     width: 100%;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 
     .applications-header h1 {
         margin: 0;
-        font-size: 30px;
-        line-height: 1;
+        padding: 0;
+        color: #182338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 27px;
         font-weight: 700;
-        color: #17233b;
+        line-height: 35px;
     }
 
 
-/* =========================
-   SEARCH
-   ========================= */
+/* =========================================
+   HEADER RIGHT
+========================================= */
 
-.applications-search {
-    width: 262px;
-    height: 42px;
+.applications-header-right {
     display: flex;
     align-items: center;
+    gap: 13px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-box {
+    width: 262px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
     background: #ffffff;
-    border: 1px solid #d5dce5;
-    border-radius: 7px;
+    border: 1px solid #d8dde5;
+    border-radius: 6px;
     padding: 0 13px;
 }
 
 
-.search-icon {
-    font-size: 25px;
-    color: #667085;
-    margin-right: 8px;
-}
-
-
-.applications-search input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 16px;
-    color: #17233b;
-}
-
-
-    .applications-search input::placeholder {
-        color: #707b8d;
+    .search-box i {
+        color: #6f7a8d;
+        font-size: 15px;
+        margin-right: 11px;
+        flex-shrink: 0;
     }
 
 
-/* =========================
-   TABLE BOX
-   ========================= */
-
-.applications-table-box {
+.search-input {
     width: 100%;
-    background: #ffffff;
-    border: 1px solid #d9dfe7;
-    border-radius: 9px;
-    overflow: hidden;
+    height: 34px;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #1d293d;
 }
 
 
-/* =========================
+    .search-input::placeholder {
+        color: #737d8e;
+        opacity: 1;
+    }
+
+
+/* =========================================
+   STATUS FILTER
+========================================= */
+
+.status-filter {
+    width: 113px;
+    height: 36px;
+    padding: 0 11px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #d8dde5;
+    border-radius: 6px;
+    color: #202b40;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+    .status-filter:focus {
+        border-color: #2864df;
+    }
+
+
+/* =========================================
+   TABLE CONTAINER
+   SAME AS COMPANIES / JOBS
+========================================= */
+
+.applications-table-container {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
    TABLE
-   ========================= */
+========================================= */
 
 .applications-table {
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0;
     table-layout: fixed;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-    /* =========================
+    /* =========================================
    TABLE HEADER
-   ========================= */
+   SAME SIZE AS COMPANIES / JOBS
+========================================= */
 
     .applications-table thead {
-        background: #ffffff;
+        background: #fafbfc;
     }
+
+
+        .applications-table thead tr {
+            height: 52px;
+        }
 
 
     .applications-table th {
-        height: 59px;
-        padding: 0 18px;
+        height: 52px;
+        padding: 0 16px;
         text-align: left;
-        font-size: 16px;
+        vertical-align: middle;
+        color: #182338;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
         font-weight: 700;
-        color: #17233b;
-        border-bottom: 1px solid #d9dfe7;
+        border-bottom: 1px solid #dce1e7;
+        white-space: nowrap;
     }
 
 
-    /* =========================
+        /* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+        .applications-table th:nth-child(1),
+        .applications-table td:nth-child(1) {
+            width: 24%;
+        }
+
+
+        .applications-table th:nth-child(2),
+        .applications-table td:nth-child(2) {
+            width: 25%;
+        }
+
+
+        .applications-table th:nth-child(3),
+        .applications-table td:nth-child(3) {
+            width: 13%;
+        }
+
+
+        .applications-table th:nth-child(4),
+        .applications-table td:nth-child(4) {
+            width: 16%;
+        }
+
+
+        .applications-table th:nth-child(5),
+        .applications-table td:nth-child(5) {
+            width: 22%;
+        }
+
+
+    /* =========================================
    TABLE ROW
-   ========================= */
+   SAME AS COMPANIES / JOBS
+========================================= */
 
     .applications-table tbody tr {
         height: 69px;
         background: #ffffff;
+        border-bottom: 1px solid #e1e4e8;
     }
 
 
-        .applications-table tbody tr:not(:last-child) {
-            border-bottom: 1px solid #d9dfe7;
+        .applications-table tbody tr:hover {
+            background: #fcfdff;
         }
 
 
+        .applications-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+
+    /* =========================================
+   TABLE DATA
+   SAME SIZE AS COMPANIES / JOBS
+========================================= */
+
     .applications-table td {
-        padding: 0 18px;
-        font-size: 16px;
-        color: #17233b;
+        height: 69px;
+        padding: 0 16px;
+        color: #1c2639;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: left;
         vertical-align: middle;
+        border-bottom: 1px solid #e1e4e8;
+        white-space: nowrap;
     }
 
 
-/* =========================
-   APPLICANT
-   ========================= */
+    .applications-table tbody tr:last-child td {
+        border-bottom: none;
+    }
 
-.applicant {
+
+/* =========================================
+   APPLICANT
+========================================= */
+
+.applicant-details {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
 }
 
 
-.avatar {
+.applicant-avatar {
     width: 36px;
     height: 36px;
     min-width: 36px;
@@ -157,80 +278,112 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #e8edf5;
-    color: #17233b;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-
-.applicant span {
-    font-size: 16px;
+    background: #e7ecf4;
+    color: #263248;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     font-weight: 500;
-    color: #17233b;
 }
 
 
-/* =========================
-   DATE
-   ========================= */
-
-.date {
-    color: #727d8f !important;
+.applicant-name {
+    color: #202c41;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 
-/* =========================
+/* =========================================
+   JOB TITLE
+========================================= */
+
+.job-title {
+    color: #273247 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px !important;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   APPLIED DATE
+========================================= */
+
+.applied-date {
+    color: #747e8f !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px !important;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+
+/* =========================================
    STATUS
-   ========================= */
+   SAME SCALE AS COMPANIES / JOBS
+========================================= */
 
-.status {
+.application-status {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 27px;
+    min-width: 57px;
+    height: 25px;
     padding: 0 10px;
     border-radius: 5px;
-    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 
-    /* Pending */
+    /* =========================================
+   PENDING
+========================================= */
 
-    .status.pending {
-        background: #fff3b8;
-        color: #d79500;
+    .application-status.pending {
+        background: #fff5bd;
+        color: #d59a00;
     }
 
 
-    /* Reviewed */
+    /* =========================================
+   REVIEWED
+========================================= */
 
-    .status.reviewed {
-        background: #dce9ff;
-        color: #2456b8;
+    .application-status.reviewed {
+        background: #dceaff;
+        color: #2455bb;
     }
 
 
-    /* Hired */
+    /* =========================================
+   HIRED
+========================================= */
 
-    .status.hired {
-        background: #d9f7e4;
-        color: #138a45;
+    .application-status.hired {
+        background: #d8f7e1;
+        color: #13843c;
     }
 
 
-    /* Rejected */
+    /* =========================================
+   REJECTED
+========================================= */
 
-    .status.rejected {
-        background: #ffe1e1;
-        color: #e32626;
+    .application-status.rejected {
+        background: #fff1f1;
+        color: #ed2b2b;
     }
 
 
-/* =========================
+/* =========================================
    ACTIONS
-   ========================= */
+========================================= */
 
 .actions {
     display: flex;
@@ -239,60 +392,104 @@
 }
 
 
-    .actions a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+/* =========================================
+   EDIT
+========================================= */
+
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #2563eb;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+
+    .edit-icon:hover {
+        color: #164fc0;
+        transform: scale(1.08);
         text-decoration: none;
-        font-size: 17px;
     }
 
 
-.edit {
-    color: #2463e8;
+/* =========================================
+   DELETE
+========================================= */
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    color: #ef252b;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.15s ease;
 }
 
 
-.delete {
-    color: #ef2029;
-}
-
-
-    .edit:hover,
-    .delete:hover {
+    .delete-icon:hover {
+        color: #c91d1d;
+        transform: scale(1.08);
         text-decoration: none;
     }
 
 
-/* =========================
-   COLUMN WIDTH
-   ========================= */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-.applications-table th:nth-child(1),
-.applications-table td:nth-child(1) {
-    width: 23%;
+@media screen and (max-width: 1100px) {
+
+    .applications-page {
+        padding: 30px 25px 40px 25px;
+    }
+
+    .applications-table-container {
+        overflow-x: auto;
+    }
+
+    .applications-table {
+        min-width: 900px;
+    }
 }
 
 
-.applications-table th:nth-child(2),
-.applications-table td:nth-child(2) {
-    width: 22%;
-}
+@media screen and (max-width: 768px) {
 
+    .applications-page {
+        padding: 25px 20px 30px 20px;
+    }
 
-.applications-table th:nth-child(3),
-.applications-table td:nth-child(3) {
-    width: 16%;
-}
+    .applications-header {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
 
+    .applications-header-right {
+        width: 100%;
+        flex-wrap: wrap;
+    }
 
-.applications-table th:nth-child(4),
-.applications-table td:nth-child(4) {
-    width: 14%;
-}
+    .search-box {
+        width: 100%;
+    }
 
-
-.applications-table th:nth-child(5),
-.applications-table td:nth-child(5) {
-    width: 15%;
+    .applications-table {
+        min-width: 900px;
+    }
 }

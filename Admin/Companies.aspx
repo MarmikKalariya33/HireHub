@@ -14,6 +14,9 @@
         type="text/css"
         href="<%= ResolveUrl("~/Assets/css/companies.css") %>" />
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
 </asp:Content>
 
 
@@ -24,38 +27,35 @@
 
     <div class="companies-page">
 
-        <!-- =========================================
-             HEADER
-        ========================================== -->
+        <!-- ==============================
+             PAGE HEADER
+        =============================== -->
 
         <div class="companies-header">
 
-            <h1 class="companies-title">
+            <h1>
                 Manage Companies
             </h1>
 
-            <div class="companies-actions">
+            <div class="companies-header-right">
 
-                <!-- SEARCH -->
+                <div class="search-box">
 
-                <div class="company-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
-                    <i class="bi bi-search company-search-icon"></i>
-
-                    <input type="text"
-                        id="companySearch"
-                        placeholder="Search companies..."
-                        autocomplete="off" />
+                    <asp:TextBox
+                        ID="txtSearch"
+                        runat="server"
+                        CssClass="search-input"
+                        placeholder="Search companies...">
+                    </asp:TextBox>
 
                 </div>
 
+                <a href="Add_Company.aspx"
+                   class="add-company-btn">
 
-                <!-- ADD COMPANY -->
-
-                <a href="Add_Companies.aspx"
-                    class="add-company-btn">
-
-                    <i class="bi bi-plus-lg"></i>
+                    <i class="fa-solid fa-plus"></i>
 
                     <span>
                         Add New Company
@@ -68,461 +68,410 @@
         </div>
 
 
-        <!-- =========================================
-             TABLE CARD
-        ========================================== -->
+        <!-- ==============================
+             COMPANIES TABLE
+        =============================== -->
 
-        <div class="companies-table-card">
+        <div class="companies-table-container">
 
-            <div class="companies-table-wrapper">
+            <table class="companies-table">
 
-                <table
-                    class="companies-table"
-                    id="companiesTable">
+                <thead>
 
-                    <!-- TABLE HEADER -->
+                    <tr>
 
-                    <thead>
+                        <th>
+                            Company
+                        </th>
 
-                        <tr>
+                        <th>
+                            Industry
+                        </th>
 
-                            <th class="company-col-company">
-                                Company
-                            </th>
+                        <th>
+                            Employees
+                        </th>
 
-                            <th class="company-col-industry">
-                                Industry
-                            </th>
+                        <th>
+                            Status
+                        </th>
 
-                            <th class="company-col-employees">
-                                Employees
-                            </th>
+                        <th>
+                            Actions
+                        </th>
 
-                            <th class="company-col-status">
-                                Status
-                            </th>
+                    </tr>
 
-                            <th class="company-col-actions">
-                                Actions
-                            </th>
-
-                        </tr>
-
-                    </thead>
+                </thead>
 
 
-                    <!-- TABLE BODY -->
+                <tbody>
 
-                    <tbody>
+                    <!-- ==============================
+                         TCS
+                    =============================== -->
 
-                        <!-- ROW 1 -->
+                    <tr>
 
-                        <tr>
+                        <td>
 
-                            <td>
+                            <div class="company-details">
 
-                                <div class="company-name-wrapper">
-
-                                    <div class="company-logo">
-                                        T
-                                    </div>
-
-                                    <span class="company-name">
-                                        TCS
-                                    </span>
-
+                                <div class="company-avatar">
+                                    T
                                 </div>
 
-                            </td>
-
-
-                            <td>
-                                <span class="company-industry">
-                                    IT &amp; Software
-                                </span>
-                            </td>
-
-
-                            <td>
-                                <span class="company-employees">
-                                    500,000+
-                                </span>
-                            </td>
-
-
-                            <td>
-
-                                <span class="company-status company-status-active">
-                                    Active
+                                <span class="company-name">
+                                    TCS
                                 </span>
 
-                            </td>
+                            </div>
+
+                        </td>
 
 
-                            <td>
-
-                                <div class="company-actions">
-
-                                    <a href="Edit_Companies.aspx"
-                                        class="company-action company-edit"
-                                        title="Edit Company">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
+                        <td class="industry">
+                            IT &amp; Software
+                        </td>
 
 
-                                    <a href="#"
-                                        class="company-action company-delete"
-                                        title="Delete Company">
+                        <td class="employees">
+                            500,000+
+                        </td>
 
-                                        <i class="bi bi-trash3"></i>
 
-                                    </a>
+                        <td>
 
+                            <span class="status active">
+                                Active
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Edit_Company.aspx"
+                                   class="edit-icon"
+                                   title="Edit Company">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete1"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete Company">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ==============================
+                         INFOSYS
+                    =============================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="company-details">
+
+                                <div class="company-avatar">
+                                    I
                                 </div>
 
-                            </td>
+                                <span class="company-name">
+                                    Infosys
+                                </span>
 
-                        </tr>
+                            </div>
+
+                        </td>
 
 
-                        <!-- ROW 2 -->
+                        <td class="industry">
+                            IT &amp; Software
+                        </td>
 
-                        <tr>
 
-                            <td>
+                        <td class="employees">
+                            300,000+
+                        </td>
 
-                                <div class="company-name-wrapper">
 
-                                    <div class="company-logo">
-                                        I
-                                    </div>
+                        <td>
 
-                                    <span class="company-name">
-                                        Infosys
-                                    </span>
+                            <span class="status active">
+                                Active
+                            </span>
 
+                        </td>
+
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Edit_Company.aspx"
+                                   class="edit-icon"
+                                   title="Edit Company">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete2"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete Company">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ==============================
+                         WIPRO
+                    =============================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="company-details">
+
+                                <div class="company-avatar">
+                                    W
                                 </div>
 
-                            </td>
-
-
-                            <td>
-                                <span class="company-industry">
-                                    IT &amp; Software
-                                </span>
-                            </td>
-
-
-                            <td>
-                                <span class="company-employees">
-                                    300,000+
-                                </span>
-                            </td>
-
-
-                            <td>
-
-                                <span class="company-status company-status-active">
-                                    Active
+                                <span class="company-name">
+                                    Wipro
                                 </span>
 
-                            </td>
+                            </div>
+
+                        </td>
 
 
-                            <td>
-
-                                <div class="company-actions">
-
-                                    <a href="Edit_Companies.aspx"
-                                        class="company-action company-edit"
-                                        title="Edit Company">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
+                        <td class="industry">
+                            IT &amp; Software
+                        </td>
 
 
-                                    <a href="#"
-                                        class="company-action company-delete"
-                                        title="Delete Company">
+                        <td class="employees">
+                            250,000+
+                        </td>
 
-                                        <i class="bi bi-trash3"></i>
 
-                                    </a>
+                        <td>
 
+                            <span class="status active">
+                                Active
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Edit_Company.aspx"
+                                   class="edit-icon"
+                                   title="Edit Company">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete3"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete Company">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ==============================
+                         HCL TECHNOLOGIES
+                    =============================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="company-details">
+
+                                <div class="company-avatar">
+                                    H
                                 </div>
 
-                            </td>
+                                <span class="company-name">
+                                    HCL Technologies
+                                </span>
 
-                        </tr>
+                            </div>
+
+                        </td>
 
 
-                        <!-- ROW 3 -->
+                        <td class="industry">
+                            IT Services
+                        </td>
 
-                        <tr>
 
-                            <td>
+                        <td class="employees">
+                            220,000+
+                        </td>
 
-                                <div class="company-name-wrapper">
 
-                                    <div class="company-logo">
-                                        W
-                                    </div>
+                        <td>
 
-                                    <span class="company-name">
-                                        Wipro
-                                    </span>
+                            <span class="status active">
+                                Active
+                            </span>
 
+                        </td>
+
+
+                        <td>
+
+                            <div class="actions">
+
+                                <a href="Edit_Company.aspx"
+                                   class="edit-icon"
+                                   title="Edit Company">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                </a>
+
+
+                                <asp:LinkButton
+                                    ID="btnDelete4"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete Company">
+
+                                    <i class="fa-solid fa-trash-can"></i>
+
+                                </asp:LinkButton>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- ==============================
+                         RELIANCE INDUSTRIES
+                    =============================== -->
+
+                    <tr>
+
+                        <td>
+
+                            <div class="company-details">
+
+                                <div class="company-avatar">
+                                    R
                                 </div>
 
-                            </td>
-
-
-                            <td>
-                                <span class="company-industry">
-                                    IT &amp; Software
-                                </span>
-                            </td>
-
-
-                            <td>
-                                <span class="company-employees">
-                                    250,000+
-                                </span>
-                            </td>
-
-
-                            <td>
-
-                                <span class="company-status company-status-active">
-                                    Active
+                                <span class="company-name">
+                                    Reliance Industries
                                 </span>
 
-                            </td>
+                            </div>
 
+                        </td>
 
-                            <td>
 
-                                <div class="company-actions">
+                        <td class="industry">
+                            Conglomerate
+                        </td>
 
-                                    <a href="Edit_Companies.aspx"
-                                        class="company-action company-edit"
-                                        title="Edit Company">
 
-                                        <i class="bi bi-pencil"></i>
+                        <td class="employees">
+                            340,000+
+                        </td>
 
-                                    </a>
 
+                        <td>
 
-                                    <a href="#"
-                                        class="company-action company-delete"
-                                        title="Delete Company">
+                            <span class="status active">
+                                Active
+                            </span>
 
-                                        <i class="bi bi-trash3"></i>
+                        </td>
 
-                                    </a>
 
-                                </div>
+                        <td>
 
-                            </td>
+                            <div class="actions">
 
-                        </tr>
+                                <a href="Edit_Company.aspx"
+                                   class="edit-icon"
+                                   title="Edit Company">
 
+                                    <i class="fa-solid fa-pen"></i>
 
-                        <!-- ROW 4 -->
+                                </a>
 
-                        <tr>
 
-                            <td>
+                                <asp:LinkButton
+                                    ID="btnDelete5"
+                                    runat="server"
+                                    CssClass="delete-icon"
+                                    ToolTip="Delete Company">
 
-                                <div class="company-name-wrapper">
+                                    <i class="fa-solid fa-trash-can"></i>
 
-                                    <div class="company-logo">
-                                        H
-                                    </div>
+                                </asp:LinkButton>
 
-                                    <span class="company-name">
-                                        HCL Technologies
-                                    </span>
+                            </div>
 
-                                </div>
+                        </td>
 
-                            </td>
+                    </tr>
 
+                </tbody>
 
-                            <td>
-                                <span class="company-industry">
-                                    IT Services
-                                </span>
-                            </td>
-
-
-                            <td>
-                                <span class="company-employees">
-                                    220,000+
-                                </span>
-                            </td>
-
-
-                            <td>
-
-                                <span class="company-status company-status-active">
-                                    Active
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <div class="company-actions">
-
-                                    <a href="Edit_Companies.aspx"
-                                        class="company-action company-edit"
-                                        title="Edit Company">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
-
-
-                                    <a href="#"
-                                        class="company-action company-delete"
-                                        title="Delete Company">
-
-                                        <i class="bi bi-trash3"></i>
-
-                                    </a>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-
-                        <!-- ROW 5 -->
-
-                        <tr>
-
-                            <td>
-
-                                <div class="company-name-wrapper">
-
-                                    <div class="company-logo">
-                                        R
-                                    </div>
-
-                                    <span class="company-name">
-                                        Reliance Industries
-                                    </span>
-
-                                </div>
-
-                            </td>
-
-
-                            <td>
-                                <span class="company-industry">
-                                    Conglomerate
-                                </span>
-                            </td>
-
-
-                            <td>
-                                <span class="company-employees">
-                                    340,000+
-                                </span>
-                            </td>
-
-
-                            <td>
-
-                                <span class="company-status company-status-active">
-                                    Active
-                                </span>
-
-                            </td>
-
-
-                            <td>
-
-                                <div class="company-actions">
-
-                                    <a href="Edit_Companies.aspx"
-                                        class="company-action company-edit"
-                                        title="Edit Company">
-
-                                        <i class="bi bi-pencil"></i>
-
-                                    </a>
-
-
-                                    <a href="#"
-                                        class="company-action company-delete"
-                                        title="Delete Company">
-
-                                        <i class="bi bi-trash3"></i>
-
-                                    </a>
-
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
+            </table>
 
         </div>
 
     </div>
-
-
-    <!-- =========================================
-         SEARCH
-    ========================================== -->
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const searchInput =
-                document.getElementById("companySearch");
-
-            const table =
-                document.getElementById("companiesTable");
-
-            const rows =
-                table.querySelectorAll("tbody tr");
-
-
-            searchInput.addEventListener("input", function () {
-
-                const search =
-                    this.value.toLowerCase().trim();
-
-
-                rows.forEach(function (row) {
-
-                    const text =
-                        row.innerText.toLowerCase();
-
-                    row.style.display =
-                        text.includes(search) ? "" : "none";
-
-                });
-
-            });
-
-        });
-
-    </script>
 
 </asp:Content>
