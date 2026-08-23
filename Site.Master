@@ -196,35 +196,28 @@
              ADMIN USER
         ================================================== -->
 
-        <div class="admin-user">
+       <a href="<%= ResolveUrl("~/Admin/AdminProfile.aspx") %>"
+   class="admin-user">
 
+    <!-- ADMIN ICON -->
+    <div class="admin-icon">
+        <i class="bi bi-person"></i>
+    </div>
 
-            <!-- ADMIN ICON -->
+    <!-- ADMIN INFORMATION -->
+    <div class="admin-info">
 
-            <div class="admin-icon">
-
-                <i class="bi bi-person"></i>
-
-            </div>
-
-
-            <!-- ADMIN INFORMATION -->
-
-            <div class="admin-info">
-
-                <div class="admin-name">
-                    Super Admin
-                </div>
-
-                <div class="admin-email">
-                    admin@hirehub.com
-                </div>
-
-            </div>
-
-
+        <div class="admin-name">
+            Super Admin
         </div>
 
+        <div class="admin-email">
+            admin@hirehub.com
+        </div>
+
+    </div>
+
+</a>
 
     </aside>
 

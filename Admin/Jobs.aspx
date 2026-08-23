@@ -153,7 +153,7 @@
 
                                 <div class="job-actions">
 
-                                    <a href="#"
+                                    <a href="Edit_jobs.aspx"
                                        class="job-action job-edit"
                                        title="Edit Job">
 
@@ -330,7 +330,7 @@
 
                                 <div class="job-actions">
 
-                                    <a href="#"
+                                    <a href="Edit_Jobs.aspx"
                                        class="job-action job-edit"
                                        title="Edit Job">
 
@@ -389,7 +389,7 @@
 
                                 <div class="job-actions">
 
-                                    <a href="#"
+                                    <a href="Edit_Jobs.aspx"
                                        class="job-action job-edit"
                                        title="Edit Job">
 

@@ -6,12 +6,7 @@ namespace Job_Portal.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Admin profile data can be loaded from database here later.
-            }
         }
-
 
         protected void btnEditProfile_Click(object sender, EventArgs e)
         {
