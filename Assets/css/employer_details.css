@@ -1,0 +1,585 @@
+﻿/* =========================================================
+   EMPLOYER DETAILS PAGE
+   SAME TO SAME SCREENSHOT LAYOUT
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.employer-details-page,
+.employer-details-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.employer-details-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fcfaf5;
+    padding: 37px 34px 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172238;
+}
+
+
+/* =========================================================
+   BACK TO EMPLOYERS
+========================================================= */
+
+.back-section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+    .back-link:hover {
+        color: #1d4ed8;
+    }
+
+.back-arrow {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    top: -1px;
+}
+
+
+/* =========================================================
+   MAIN WHITE CARD
+========================================================= */
+
+.employer-details-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    padding: 0;
+}
+
+
+/* =========================================================
+   COMPANY HEADER
+========================================================= */
+
+.company-header {
+    width: 100%;
+    min-height: 111px;
+    padding: 27px 34px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.company-logo {
+    width: 70px;
+    height: 38px;
+    flex-shrink: 0;
+    background: #eef4ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2864df;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   COMPANY HEADING
+========================================================= */
+
+.company-heading {
+    min-width: 0;
+    flex: 1;
+}
+
+.company-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+    .company-title-row h1 {
+        margin: 0;
+        padding: 0;
+        color: #172238;
+        font-size: 27px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.4px;
+    }
+
+.company-heading p {
+    margin: 6px 0 0;
+    padding: 0;
+    color: #737c8d;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   ACTIVE BADGE
+========================================================= */
+
+.active-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 27px;
+    padding: 0 10px;
+    background: #d9f7e4;
+    color: #15803d;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FIRST DIVIDER
+========================================================= */
+
+.details-divider {
+    width: calc(100% - 68px);
+    height: 1px;
+    margin: 0 34px;
+    background: #e2e5e9;
+}
+
+
+/* =========================================================
+   COMPANY DETAILS
+========================================================= */
+
+.company-details {
+    width: 100%;
+    padding: 43px 51px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+
+/* =========================================================
+   DETAIL ITEM
+========================================================= */
+
+.detail-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   DETAIL LABEL
+========================================================= */
+
+.detail-label {
+    margin: 0 0 6px;
+    color: #6f7888;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.15px;
+}
+
+
+/* =========================================================
+   DETAIL VALUE
+========================================================= */
+
+.detail-value {
+    margin: 0;
+    color: #172238;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   WEBSITE
+========================================================= */
+
+.website-value a {
+    color: #172238;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+    .website-value a:hover {
+        color: #2563eb;
+        text-decoration: underline;
+    }
+
+
+/* =========================================================
+   ABOUT COMPANY DIVIDER
+========================================================= */
+
+.about-divider {
+    width: calc(100% - 68px);
+    height: 1px;
+    margin: 0 34px;
+    background: #e2e5e9;
+}
+
+
+/* =========================================================
+   ABOUT COMPANY
+========================================================= */
+
+.about-company {
+    width: 100%;
+    padding: 26px 34px 25px;
+}
+
+    .about-company h2 {
+        margin: 0 0 13px;
+        padding: 0;
+        color: #172238;
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+    .about-company p {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #737c8d;
+        font-size: 15px;
+        line-height: 1.48;
+        font-weight: 400;
+    }
+
+
+/* =========================================================
+   ACTION DIVIDER
+========================================================= */
+
+.details-actions {
+    width: calc(100% - 68px);
+    min-height: 77px;
+    margin: 0 34px;
+    border-top: 1px solid #e2e5e9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13px;
+}
+
+
+/* =========================================================
+   EDIT EMPLOYER BUTTON
+========================================================= */
+
+.edit-employer-btn {
+    height: 42px;
+    min-width: 146px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    background: #2864df;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+    .edit-employer-btn:hover {
+        background: #1f56c9;
+    }
+
+    .edit-employer-btn:active {
+        transform: translateY(1px);
+    }
+
+
+/* =========================================================
+   BLOCK EMPLOYER BUTTON
+========================================================= */
+
+.block-employer-btn {
+    height: 42px;
+    min-width: 158px;
+    padding: 0 20px;
+    border: 1px solid #ef2f2f;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #ed1c24;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+    .block-employer-btn:hover {
+        background: #fff1f1;
+        color: #d71920;
+    }
+
+
+/* =========================================================
+   OPTIONAL BACK BUTTON IN ACTION AREA
+   If you are not using it, it won't affect anything.
+========================================================= */
+
+.back-employers-btn {
+    height: 42px;
+    padding: 0 18px;
+    border: 1px solid #d7dce1;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #526171;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    .back-employers-btn:hover {
+        background: #f7f8fa;
+    }
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .employer-details-page {
+        padding: 32px 28px;
+    }
+
+    .company-header {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .details-divider,
+    .about-divider {
+        width: calc(100% - 56px);
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+
+    .company-details {
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .about-company {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .details-actions {
+        width: calc(100% - 56px);
+        margin-left: 28px;
+        margin-right: 28px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .employer-details-page {
+        padding: 25px 20px 35px;
+    }
+
+    .back-section {
+        margin-bottom: 20px;
+    }
+
+    .company-header {
+        padding: 24px 22px;
+        gap: 17px;
+    }
+
+    .company-logo {
+        width: 64px;
+        height: 36px;
+        font-size: 24px;
+    }
+
+    .company-title-row h1 {
+        font-size: 23px;
+    }
+
+    .company-heading p {
+        font-size: 14px;
+    }
+
+    .details-divider,
+    .about-divider {
+        width: calc(100% - 44px);
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+
+    .company-details {
+        padding: 35px 30px;
+        gap: 17px;
+    }
+
+    .about-company {
+        padding: 24px 22px;
+    }
+
+    .details-actions {
+        width: calc(100% - 44px);
+        margin-left: 22px;
+        margin-right: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .employer-details-page {
+        padding: 20px 15px 30px;
+    }
+
+    .back-link {
+        font-size: 14px;
+    }
+
+    .company-header {
+        padding: 22px 18px;
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        width: 58px;
+        height: 34px;
+        font-size: 21px;
+    }
+
+    .company-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+        .company-title-row h1 {
+            font-size: 20px;
+        }
+
+    .company-heading p {
+        font-size: 13px;
+    }
+
+    .active-badge {
+        height: 24px;
+        padding: 0 9px;
+        font-size: 11px;
+    }
+
+    .details-divider,
+    .about-divider {
+        width: calc(100% - 36px);
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .company-details {
+        padding: 30px 22px;
+        gap: 18px;
+    }
+
+    .detail-label {
+        font-size: 11px;
+    }
+
+    .detail-value,
+    .website-value a {
+        font-size: 15px;
+    }
+
+    .about-company {
+        padding: 22px 18px;
+    }
+
+        .about-company h2 {
+            font-size: 15px;
+        }
+
+        .about-company p {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+    .details-actions {
+        width: calc(100% - 36px);
+        margin-left: 18px;
+        margin-right: 18px;
+        min-height: auto;
+        padding: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .edit-employer-btn,
+    .block-employer-btn {
+        height: 40px;
+        min-width: 0;
+    }
+}

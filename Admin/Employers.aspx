@@ -150,7 +150,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Employers.aspx"
+                                <a href="Employer_Details.aspx"
                                    class="edit-icon">
 
                                     <i class="fa-solid fa-pen"></i>

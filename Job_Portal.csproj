@@ -104,9 +104,10 @@
     <Content Include="Admin\Add_Jobs.aspx" />
     <Content Include="Admin\AdminProfile.aspx" />
     <Content Include="Admin\Applications.aspx" />
-    <Content Include="Admin\Applications_Details.aspx" />
+    <Content Include="Admin\Employer_Details.aspx" />
     <Content Include="Admin\Categories.aspx" />
     <Content Include="Admin\Companies.aspx" />
+    <Content Include="Admin\Edit_Admin_Profile.aspx" />
     <Content Include="Admin\Edit_Employers.aspx" />
     <Content Include="Admin\Edit_Jobs.aspx" />
     <Content Include="Admin\Edit_users.aspx" />
@@ -119,9 +120,11 @@
     <Content Include="Assets\css\application_detail.css" />
     <Content Include="Assets\css\categories.css" />
     <Content Include="Assets\css\companies.css" />
+    <Content Include="Assets\css\edit_admin_profile.css" />
     <Content Include="Assets\css\edit_jobs.css" />
     <Content Include="Assets\css\edit_users.css" />
     <Content Include="Assets\css\employers.css" />
+    <Content Include="Assets\css\employer_details.css" />
     <Content Include="Assets\css\jobs.css" />
     <Content Include="Assets\css\login.css" />
     <Content Include="Assets\css\site.css" />
@@ -245,12 +248,12 @@
     <Compile Include="Admin\Applications.aspx.designer.cs">
       <DependentUpon>Applications.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Applications_Details.aspx.cs">
-      <DependentUpon>Applications_Details.aspx</DependentUpon>
+    <Compile Include="Admin\Employer_Details.aspx.cs">
+      <DependentUpon>Employer_Details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Applications_Details.aspx.designer.cs">
-      <DependentUpon>Applications_Details.aspx</DependentUpon>
+    <Compile Include="Admin\Employer_Details.aspx.designer.cs">
+      <DependentUpon>Employer_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
@@ -265,6 +268,13 @@
     </Compile>
     <Compile Include="Admin\Companies.aspx.designer.cs">
       <DependentUpon>Companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Edit_Admin_Profile.aspx.cs">
+      <DependentUpon>Edit_Admin_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Edit_Admin_Profile.aspx.designer.cs">
+      <DependentUpon>Edit_Admin_Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Edit_Employers.aspx.cs">
       <DependentUpon>Edit_Employers.aspx</DependentUpon>
