@@ -224,7 +224,8 @@
                     runat="server"
                     Text="Save Changes"
                     CssClass="save-changes-btn"
-                     />
+                    PostBackUrl="~/Admin/AdminProfile.aspx" />
+                     
 
 
             </div>
