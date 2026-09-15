@@ -1,0 +1,636 @@
+﻿/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fcfaf5;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.seeker-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 267px;
+    height: 100vh;
+    background: #254d62;
+    padding: 0 17px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    color: white;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.seeker-logo-section {
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.seeker-logo-link {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+.seeker-logo {
+    width: 145px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+.seeker-role-badge {
+    position: absolute;
+    right: 1px;
+    top: 70px;
+    background: #4b778a;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.seeker-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.seeker-nav-link {
+    width: 100%;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    border-radius: 6px;
+    color: #d7e0e5;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+
+    .seeker-nav-link i {
+        width: 28px;
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+        color: #d7e0e5;
+    }
+
+
+    .seeker-nav-link span {
+        margin-left: 3px;
+    }
+
+
+    .seeker-nav-link:hover {
+        background: #315f74;
+        color: white;
+        text-decoration: none;
+    }
+
+
+        .seeker-nav-link:hover i {
+            color: white;
+        }
+
+
+    .seeker-nav-link.active {
+        background: #35677e;
+        color: white;
+        font-weight: 600;
+    }
+
+
+        .seeker-nav-link.active i {
+            color: white;
+        }
+
+
+/* =========================================================
+   USER BOTTOM
+========================================================= */
+
+.seeker-sidebar-user {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+
+.seeker-user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+
+.seeker-user-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    background: #47778c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.seeker-user-info {
+    margin-left: 13px;
+    overflow: hidden;
+}
+
+
+.seeker-user-name {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+.seeker-user-email {
+    color: #aebfc8;
+    font-size: 13px;
+    margin-top: 4px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.seeker-main-content {
+    margin-left: 267px;
+    min-height: 100vh;
+    background: #fcfaf5;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.user-dashboard {
+    min-height: 100vh;
+    padding: 32px 34px 50px 34px;
+    color: #1c273b;
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.dashboard-welcome {
+    margin-bottom: 24px;
+}
+
+
+    .dashboard-welcome h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #1c273b;
+    }
+
+
+    .dashboard-welcome p {
+        margin: 5px 0 0 0;
+        font-size: 16px;
+        color: #707b8d;
+    }
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+    min-height: 96px;
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    padding: 17px 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+
+
+    .stat-icon i {
+        font-size: 20px;
+    }
+
+
+.applications-icon {
+    background: #edf3ff;
+    color: #2463df;
+}
+
+
+.interviews-icon {
+    background: #eaf9f6;
+    color: #00b88a;
+}
+
+
+.alerts-icon {
+    background: #fff7e8;
+    color: #f49a00;
+}
+
+
+.stat-title {
+    color: #737e90;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+
+.stat-number {
+    color: #182337;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOWER SECTION
+========================================================= */
+
+.dashboard-lower-section {
+    display: grid;
+    grid-template-columns: 2.25fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   RECOMMENDED JOBS
+========================================================= */
+
+.recommended-section h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c273b;
+}
+
+
+/* =========================================================
+   JOB CARD
+========================================================= */
+
+.job-card {
+    min-height: 93px;
+    background: white;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    margin-bottom: 13px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.company-logo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    background: #edf3ff;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2463df;
+    font-size: 19px;
+    font-weight: 700;
+    margin-right: 17px;
+}
+
+
+/* =========================================================
+   JOB INFORMATION
+========================================================= */
+
+.job-information {
+    flex: 1;
+    min-width: 0;
+}
+
+
+    .job-information h3 {
+        margin: 0 0 4px 0;
+        font-size: 17px;
+        font-weight: 700;
+        color: #1b263b;
+    }
+
+
+    .job-information p {
+        margin: 0;
+        font-size: 15px;
+        color: #707b8d;
+    }
+
+
+        .job-information p span {
+            padding: 0 3px;
+        }
+
+
+/* =========================================================
+   JOB TYPE
+========================================================= */
+
+.job-type {
+    background: #edf4ff;
+    color: #2563d9;
+    border-radius: 16px;
+    padding: 6px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0 16px;
+}
+
+
+/* =========================================================
+   SALARY
+========================================================= */
+
+.job-salary {
+    width: 88px;
+    color: #1d283b;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 13px;
+}
+
+
+/* =========================================================
+   POSTED
+========================================================= */
+
+.job-posted {
+    width: 95px;
+    color: #707b8d;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTIVITY
+========================================================= */
+
+.activity-card {
+    background: white;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    padding: 24px;
+    min-height: 236px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+
+    .activity-card h2 {
+        margin: 0 0 21px 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1c273b;
+    }
+
+
+/* =========================================================
+   ACTIVITY ITEM
+========================================================= */
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 17px;
+}
+
+
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    margin-top: 7px;
+    margin-right: 13px;
+}
+
+
+.green-dot {
+    background: #08b988;
+}
+
+
+.blue-dot {
+    background: #2867e7;
+}
+
+
+.orange-dot {
+    background: #f39a00;
+}
+
+
+.activity-content h3 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 600;
+    color: #202b3e;
+}
+
+
+.activity-content p {
+    margin: 3px 0 0 0;
+    font-size: 13px;
+    color: #788294;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-lower-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 950px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .job-card {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .job-type {
+        margin-left: 69px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .seeker-sidebar {
+        width: 70px;
+        padding: 0 10px;
+    }
+
+
+    .seeker-logo {
+        width: 52px;
+    }
+
+
+    .seeker-role-badge {
+        display: none;
+    }
+
+
+    .seeker-nav-link {
+        justify-content: center;
+        padding: 0;
+    }
+
+
+        .seeker-nav-link i {
+            width: auto;
+            justify-content: center;
+        }
+
+
+        .seeker-nav-link span {
+            display: none;
+        }
+
+
+    .seeker-user-link {
+        justify-content: center;
+    }
+
+
+    .seeker-user-info {
+        display: none;
+    }
+
+
+    .seeker-main-content {
+        margin-left: 70px;
+    }
+
+
+    .user-dashboard {
+        padding: 25px 18px 40px;
+    }
+
+
+    .dashboard-welcome h1 {
+        font-size: 23px;
+    }
+
+
+    .job-card {
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+
+    .job-information h3 {
+        white-space: normal;
+    }
+
+
+    .job-type {
+        margin-left: 0;
+    }
+}

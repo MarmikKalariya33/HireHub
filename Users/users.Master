@@ -1,0 +1,254 @@
+﻿<%@ Master
+    Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="users.Master.cs"
+    Inherits="Job_Portal.Users.users" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>
+        <asp:ContentPlaceHolder
+            ID="headTitle"
+            runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+
+    <!-- User Dashboard CSS -->
+    <link rel="stylesheet"
+          href="<%= ResolveUrl("~/Assets/Userscss/dashboard.css") %>" />
+
+
+    <asp:ContentPlaceHolder
+        ID="head"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+
+<body>
+
+<form id="form1" runat="server">
+
+
+    <!-- =====================================================
+         USER / SEEKER SIDEBAR
+    ====================================================== -->
+
+    <aside class="seeker-sidebar">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="seeker-logo-section">
+
+            <a href="<%= ResolveUrl("~/Users/Dashboard.aspx") %>"
+               class="seeker-logo-link">
+
+                <img src="<%= ResolveUrl("~/Assets/images/logo.png") %>"
+                     alt="HireHub"
+                     class="seeker-logo" />
+
+            </a>
+
+
+            <span class="seeker-role-badge">
+                SEEKER
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+        ================================================== -->
+
+        <nav class="seeker-navigation">
+
+
+            <!-- Dashboard -->
+
+            <a href="<%= ResolveUrl("~/Users/Dashboard.aspx") %>"
+               class="seeker-nav-link active">
+
+                <i class="bi bi-grid-1x2-fill"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+
+            <!-- Find Jobs -->
+
+            <a href="<%= ResolveUrl("~/Users/Find_Job.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-briefcase"></i>
+
+                <span>
+                    Find Jobs
+                </span>
+
+            </a>
+
+
+
+            <!-- Applications -->
+
+            <a href="<%= ResolveUrl("~/Users/Applications.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+                    Applications
+                </span>
+
+            </a>
+
+
+
+            <!-- Saved Jobs -->
+
+            <a href="<%= ResolveUrl("~/Users/Saved_Jobs.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-bookmark"></i>
+
+                <span>
+                    Saved Jobs
+                </span>
+
+            </a>
+
+
+
+            <!-- Profile -->
+
+            <a href="<%= ResolveUrl("~/Users/Profile.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-person"></i>
+
+                <span>
+                    Profile
+                </span>
+
+            </a>
+
+
+
+            <!-- Resume -->
+
+            <a href="<%= ResolveUrl("~/Users/Reasume.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-file-earmark-text"></i>
+
+                <span>
+                    Resume
+                </span>
+
+            </a>
+
+
+
+            <!-- Settings -->
+
+            <a href="<%= ResolveUrl("~/Users/Settings.aspx") %>"
+               class="seeker-nav-link">
+
+                <i class="bi bi-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             USER PROFILE BOTTOM
+        ================================================== -->
+
+        <div class="seeker-sidebar-user">
+
+
+            <a href="<%= ResolveUrl("~/Users/Profile.aspx") %>"
+               class="seeker-user-link">
+
+
+                <div class="seeker-user-avatar">
+                    RS
+                </div>
+
+
+                <div class="seeker-user-info">
+
+                    <div class="seeker-user-name">
+                        Rahul Sharma
+                    </div>
+
+                    <div class="seeker-user-email">
+                        rahul@email.com
+                    </div>
+
+                </div>
+
+
+            </a>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="seeker-main-content">
+
+
+        <asp:ContentPlaceHolder
+            ID="ContentPlaceHolder1"
+            runat="server">
+        </asp:ContentPlaceHolder>
+
+
+    </main>
+
+
+</form>
+
+</body>
+
+</html>

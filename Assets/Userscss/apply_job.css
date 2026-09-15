@@ -1,0 +1,392 @@
+﻿/* =========================================================
+   APPLY JOB PAGE
+========================================================= */
+
+.apply-page {
+    min-height: 100vh;
+    background: #fcfaf5;
+    padding: 34px 38px 55px 38px;
+    box-sizing: border-box;
+    color: #18243a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.back-job-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #2867e7;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+
+    .back-job-link:hover {
+        text-decoration: underline;
+    }
+
+
+.back-arrow {
+    font-size: 29px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.apply-header {
+    margin-bottom: 28px;
+}
+
+
+    .apply-header h1 {
+        margin: 0 0 5px 0;
+        font-size: 29px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #17243a;
+    }
+
+
+    .apply-header p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #6f7b8e;
+    }
+
+
+
+/* =========================================================
+   APPLICATION CARD
+========================================================= */
+
+.application-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    padding: 39px 38px;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   FORM ROW
+========================================================= */
+
+.form-row {
+    display: flex;
+    gap: 29px;
+    width: 100%;
+    margin-bottom: 27px;
+}
+
+
+    .form-row .form-group {
+        width: 50%;
+    }
+
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 27px;
+}
+
+
+    .form-group.full-width {
+        width: 100%;
+    }
+
+
+
+    /* =========================================================
+   LABEL
+========================================================= */
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #202b40;
+    }
+
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-control {
+    width: 100%;
+    height: 44px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    border: 1px solid #d9dee5;
+    border-radius: 7px;
+    background: #fcfaf5;
+    color: #263247;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+
+    .form-control:focus {
+        border-color: #2867e7;
+        background: #ffffff;
+        box-shadow: 0 0 0 2px rgba(40, 103, 231, 0.08);
+    }
+
+
+    .form-control::placeholder {
+        color: #7c8697;
+    }
+
+
+
+/* =========================================================
+   COVER LETTER
+========================================================= */
+
+.cover-letter {
+    height: 132px;
+    padding: 14px 17px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+
+
+/* =========================================================
+   RESUME UPLOAD
+========================================================= */
+
+.resume-upload-box {
+    width: 100%;
+    height: 153px;
+    border: 1.5px dashed #aeb8c8;
+    border-radius: 7px;
+    background: #fcfaf5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+
+    .resume-upload-box:hover {
+        border-color: #2867e7;
+        background: #fbfcff;
+    }
+
+
+
+/* =========================================================
+   UPLOAD ICON
+========================================================= */
+
+.upload-icon {
+    color: #2867e7;
+    font-size: 39px;
+    line-height: 35px;
+    margin-bottom: 7px;
+}
+
+
+
+/* =========================================================
+   FILE INPUT
+========================================================= */
+
+.resume-file {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+/* =========================================================
+   UPLOAD LABEL
+========================================================= */
+
+.upload-label {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 !important;
+}
+
+
+.upload-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #202b40;
+    margin-bottom: 5px;
+}
+
+
+.upload-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7a8494;
+}
+
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.form-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5ea;
+    margin-top: 2px;
+    margin-bottom: 29px;
+}
+
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.application-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-application-btn {
+    height: 51px;
+    padding: 0 29px;
+    border: none;
+    border-radius: 7px;
+    background: #2867e7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+    .submit-application-btn:hover {
+        background: #1f59d0;
+    }
+
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-application-btn {
+    height: 51px;
+    padding: 0 29px;
+    border: none;
+    border-radius: 7px;
+    background: #f1f2f4;
+    color: #a1a9b7;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+    .cancel-application-btn:hover {
+        background: #e7e9ec;
+        color: #7d8796;
+    }
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .apply-page {
+        padding: 28px 22px 45px 22px;
+    }
+
+
+    .application-card {
+        padding: 30px 25px;
+    }
+
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+
+        .form-row .form-group {
+            width: 100%;
+        }
+}
+
+
+
+@media (max-width: 550px) {
+
+    .apply-page {
+        padding: 24px 15px 40px 15px;
+    }
+
+
+    .apply-header h1 {
+        font-size: 24px;
+    }
+
+
+    .application-card {
+        padding: 24px 18px;
+    }
+
+
+    .application-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .submit-application-btn,
+    .cancel-application-btn {
+        width: 100%;
+    }
+}

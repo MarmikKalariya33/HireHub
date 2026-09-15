@@ -1,0 +1,188 @@
+﻿/* =========================================================
+   MY APPLICATIONS
+========================================================= */
+
+.applications-page {
+    min-height: 100vh;
+    background: #fcfaf5;
+    padding: 32px 34px 50px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1c273b;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.applications-header {
+    margin-bottom: 24px;
+}
+
+
+    .applications-header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #1c273b;
+    }
+
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.application-filters {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+
+.application-filter {
+    height: 36px;
+    padding: 0 18px;
+    border: 1px solid #dfe3e8;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #70798a;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .application-filter.active {
+        background: #2867e7;
+        border-color: #2867e7;
+        color: #ffffff;
+    }
+
+
+
+/* =========================================================
+   APPLICATION CARD
+========================================================= */
+
+.application-card {
+    width: 100%;
+    height: 94px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    padding: 17px 20px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.application-company-logo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    margin-right: 17px;
+    border-radius: 9px;
+    background: #edf3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2867e7;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.application-information {
+    flex: 1;
+}
+
+
+    .application-information h2 {
+        margin: 0 0 5px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #1c273b;
+    }
+
+
+    .application-information p {
+        margin: 0;
+        color: #737d8e;
+        font-size: 15px;
+    }
+
+
+        .application-information p span {
+            padding: 0 5px;
+        }
+
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.application-status {
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+    .application-status.applied {
+        background: #dce9ff;
+        color: #2457c5;
+    }
+
+
+    .application-status.interview {
+        background: #d8f7e3;
+        color: #178545;
+    }
+
+
+    .application-status.shortlisted {
+        background: #fff1c9;
+        color: #e18a00;
+    }
+
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.view-all-applications {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+
+    .view-all-applications a {
+        color: #2867e7;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+
+        .view-all-applications a:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,391 @@
+﻿/* =========================================================
+   EDIT PROFILE PAGE
+========================================================= */
+
+.edit-profile-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px 34px 60px;
+    box-sizing: border-box;
+    background: #fcfaf5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d293d;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.edit-profile-heading {
+    margin-bottom: 27px;
+}
+
+
+    .edit-profile-heading h1 {
+        margin: 0 0 5px 0;
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #1d293d;
+    }
+
+
+    .edit-profile-heading p {
+        margin: 0;
+        font-size: 16px;
+        color: #727c8d;
+        line-height: 1.5;
+    }
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.edit-profile-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    padding: 38px 38px 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PHOTO SECTION
+========================================================= */
+
+.photo-section {
+    display: flex;
+    align-items: center;
+    min-height: 87px;
+}
+
+
+.profile-photo {
+    width: 78px;
+    height: 78px;
+    min-width: 78px;
+    border-radius: 50%;
+    background: #28586b;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 28px;
+}
+
+
+.photo-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 19px;
+    color: #1d293d;
+}
+
+
+.photo-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+========================================================= */
+
+.photo-upload {
+    width: 130px;
+    height: 38px;
+    font-size: 0;
+    cursor: pointer;
+}
+
+
+    .photo-upload::file-selector-button {
+        height: 38px;
+        padding: 0 15px;
+        border: 0;
+        border-radius: 6px;
+        background: #2867e7;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+
+/* =========================================================
+   REMOVE PHOTO
+========================================================= */
+
+.remove-photo-btn {
+    height: 38px;
+    padding: 0 15px;
+    background: #ffffff;
+    border: 1px solid #dce1e7;
+    border-radius: 6px;
+    color: #263348;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5e9;
+    margin: 28px 0;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+    width: 100%;
+}
+
+
+.section-title {
+    margin: 0 0 21px 0;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #1d293d;
+}
+
+
+/* =========================================================
+   TWO COLUMN GRID
+========================================================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    row-gap: 24px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+
+    .form-group.full-width {
+        width: 100%;
+    }
+
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1d293d;
+    }
+
+
+/* =========================================================
+   TEXTBOX / DROPDOWN
+========================================================= */
+
+.form-control {
+    width: 100%;
+    height: 45px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    background: #fdfaf5;
+    border: 1px solid #dce1e7;
+    border-radius: 7px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #263348;
+}
+
+
+    .form-control::placeholder {
+        color: #7b8493;
+    }
+
+
+    .form-control:focus {
+        border-color: #2867e7;
+        box-shadow: 0 0 0 2px rgba(40, 103, 231, 0.08);
+    }
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-control {
+    height: 130px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+.field-help {
+    display: block;
+    margin-top: 7px;
+    font-size: 12px;
+    color: #7b8493;
+}
+
+
+/* =========================================================
+   BOTTOM ACTIONS
+========================================================= */
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 0 28px 0;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.save-changes-btn {
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 7px;
+    background: #2867e7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .save-changes-btn:hover {
+        background: #1859d5;
+    }
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.cancel-btn {
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 7px;
+    background: #f1f2f4;
+    color: #9aa3b1;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+    .cancel-btn:hover {
+        background: #e7e9ec;
+        color: #6f7887;
+    }
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .edit-profile-page {
+        padding: 25px 22px 50px;
+    }
+
+
+    .edit-profile-card {
+        padding: 30px 25px 0;
+    }
+
+
+    .form-grid {
+        column-gap: 20px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+
+    .photo-section {
+        align-items: flex-start;
+    }
+
+
+    .photo-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .edit-profile-page {
+        padding: 20px 15px 40px;
+    }
+
+
+    .edit-profile-card {
+        padding: 25px 18px 0;
+    }
+
+
+    .edit-profile-heading h1 {
+        font-size: 25px;
+    }
+
+
+    .edit-profile-heading p {
+        font-size: 14px;
+    }
+
+
+    .profile-photo {
+        width: 65px;
+        height: 65px;
+        min-width: 65px;
+        margin-right: 17px;
+    }
+
+
+    .profile-actions {
+        flex-wrap: wrap;
+    }
+}

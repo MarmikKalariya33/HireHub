@@ -1,0 +1,113 @@
+﻿/* ==========================================
+   RESUME UPLOAD AREA
+========================================== */
+
+.resume-upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+/* Hide original file input */
+
+.resume-file-input {
+    display: none;
+}
+
+
+/* ==========================================
+   CHOOSE FILE BUTTON
+========================================== */
+
+.choose-file-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #2864e8;
+    color: #ffffff;
+
+    padding: 11px 22px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.choose-file-button:hover {
+    background: #1f55c9;
+}
+
+
+/* ==========================================
+   SUBMIT RESUME BUTTON
+========================================== */
+
+.submit-resume-button {
+    border: none;
+
+    background: #2864e8;
+    color: #ffffff;
+
+    padding: 11px 22px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.submit-resume-button:hover {
+    background: #1f55c9;
+}
+
+
+/* ==========================================
+   SELECTED FILE
+========================================== */
+
+.selected-file-name {
+    margin-top: 18px;
+
+    color: #2864e8;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.selected-file-name i {
+    margin-right: 6px;
+}
+
+
+/* ==========================================
+   SUPPORTED FORMAT
+========================================== */
+
+.supported-format {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #737d8f;
+
+    font-size: 14px;
+}

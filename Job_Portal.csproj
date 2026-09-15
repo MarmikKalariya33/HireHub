@@ -130,6 +130,16 @@
     <Content Include="Assets\css\site.css" />
     <Content Include="Assets\css\users.css" />
     <Content Include="Assets\images\logo.png" />
+    <Content Include="Assets\Userscss\applications.css" />
+    <Content Include="Assets\Userscss\apply_job.css" />
+    <Content Include="Assets\Userscss\dashboard.css" />
+    <Content Include="Assets\Userscss\edit_profile.css" />
+    <Content Include="Assets\Userscss\find_job.css" />
+    <Content Include="Assets\Userscss\job_details.css" />
+    <Content Include="Assets\Userscss\profile.css" />
+    <Content Include="Assets\Userscss\reasume.css" />
+    <Content Include="Assets\Userscss\saved_jobs.css" />
+    <Content Include="Assets\Userscss\sidebar.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -207,6 +217,15 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Users\Applications.aspx" />
+    <Content Include="Users\Apply_Job.aspx" />
+    <Content Include="Users\Dashboard.aspx" />
+    <Content Include="Users\Edit_Profile.aspx" />
+    <Content Include="Users\Find_Job.aspx" />
+    <Content Include="Users\Job_Details.aspx" />
+    <Content Include="Users\Profile.aspx" />
+    <Content Include="Users\Reasume.aspx" />
+    <Content Include="Users\Saved_Jobs.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -357,6 +376,76 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Users\Applications.aspx.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Applications.aspx.designer.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Apply_Job.aspx.cs">
+      <DependentUpon>Apply_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Apply_Job.aspx.designer.cs">
+      <DependentUpon>Apply_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Edit_Profile.aspx.cs">
+      <DependentUpon>Edit_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Edit_Profile.aspx.designer.cs">
+      <DependentUpon>Edit_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Find_Job.aspx.cs">
+      <DependentUpon>Find_Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Find_Job.aspx.designer.cs">
+      <DependentUpon>Find_Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Job_Details.aspx.cs">
+      <DependentUpon>Job_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Job_Details.aspx.designer.cs">
+      <DependentUpon>Job_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Reasume.aspx.cs">
+      <DependentUpon>Reasume.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Reasume.aspx.designer.cs">
+      <DependentUpon>Reasume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Saved_Jobs.aspx.cs">
+      <DependentUpon>Saved_Jobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Saved_Jobs.aspx.designer.cs">
+      <DependentUpon>Saved_Jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\users.Master.cs">
+      <DependentUpon>users.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\users.Master.designer.cs">
+      <DependentUpon>users.Master</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -373,6 +462,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <Content Include="Users\users.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

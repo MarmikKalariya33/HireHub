@@ -1,0 +1,297 @@
+﻿/* =========================================================
+   HIREHUB SEEKER SIDEBAR
+   ========================================================= */
+
+.seeker-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 267px;
+    height: 100vh;
+    background: #254d62;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 0 17px;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LOGO SECTION
+   ========================================================= */
+
+.seeker-logo-section {
+    width: 100%;
+    min-height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.seeker-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 150px;
+}
+
+
+.seeker-logo {
+    width: 145px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   SEEKER BADGE
+   ========================================================= */
+
+.seeker-role-badge {
+    position: absolute;
+    right: 1px;
+    top: 70px;
+    background: #4b778a;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.seeker-navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   NAVIGATION LINK
+   ========================================================= */
+
+.seeker-nav-link {
+    width: 100%;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    padding: 0 13px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #d7e0e5;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-bottom: 2px;
+}
+
+
+    /* Icon */
+
+    .seeker-nav-link i {
+        width: 28px;
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #d7e0e5;
+        flex-shrink: 0;
+    }
+
+
+    /* Text */
+
+    .seeker-nav-link span {
+        margin-left: 3px;
+        white-space: nowrap;
+    }
+
+
+    /* =========================================================
+   ACTIVE LINK
+   ========================================================= */
+
+    .seeker-nav-link.active {
+        background: #35677e;
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+
+        .seeker-nav-link.active i {
+            color: #ffffff;
+        }
+
+
+    /* =========================================================
+   HOVER
+   ========================================================= */
+
+    .seeker-nav-link:hover {
+        background: #315f74;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+
+        .seeker-nav-link:hover i {
+            color: #ffffff;
+        }
+
+
+/* =========================================================
+   SIDEBAR USER SECTION
+   ========================================================= */
+
+.seeker-sidebar-user {
+    width: 100%;
+    margin-top: auto;
+    padding-top: 17px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-sizing: border-box;
+}
+
+
+/* User Link */
+
+.seeker-user-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   USER AVATAR
+   ========================================================= */
+
+.seeker-user-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    background: #47778c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   USER INFORMATION
+   ========================================================= */
+
+.seeker-user-info {
+    margin-left: 13px;
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+
+.seeker-user-name {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.seeker-user-email {
+    color: #aebfc8;
+    font-size: 13px;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .seeker-sidebar {
+        width: 230px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .seeker-sidebar {
+        width: 70px;
+        padding: 0 10px;
+    }
+
+
+    .seeker-logo {
+        width: 52px;
+    }
+
+
+    .seeker-role-badge {
+        display: none;
+    }
+
+
+    .seeker-nav-link {
+        justify-content: center;
+        padding: 0;
+    }
+
+
+        .seeker-nav-link i {
+            width: auto;
+            justify-content: center;
+        }
+
+
+        .seeker-nav-link span {
+            display: none;
+        }
+
+
+    .seeker-user-link {
+        justify-content: center;
+    }
+
+
+    .seeker-user-info {
+        display: none;
+    }
+
+
+    .seeker-user-avatar {
+        width: 38px;
+        height: 38px;
+    }
+}

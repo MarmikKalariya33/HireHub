@@ -1,0 +1,456 @@
+﻿/* =========================================================
+   HIREHUB - FIND JOBS
+========================================================= */
+
+.find-jobs-page {
+    min-height: 100vh;
+    padding: 32px 34px 50px 34px;
+    background: #fcfaf5;
+    color: #1c273b;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.find-jobs-header {
+    margin-bottom: 24px;
+}
+
+
+    .find-jobs-header h1 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 700;
+        color: #1c273b;
+    }
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.job-search-box {
+    width: 100%;
+    min-height: 74px;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.search-input-wrapper {
+    position: relative;
+    flex: 1;
+    height: 40px;
+}
+
+
+.search-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 17px;
+    color: #7b8493;
+    pointer-events: none;
+}
+
+
+.job-search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px 0 46px;
+    background: #fcfaf5;
+    border: 1px solid #e0e4e8;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    color: #1c273b;
+    box-sizing: border-box;
+}
+
+
+    .job-search-input::placeholder {
+        color: #7b8493;
+    }
+
+
+    .job-search-input:focus {
+        border-color: #2867e7;
+        background: #ffffff;
+    }
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-jobs-button {
+    height: 40px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2867e7;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+
+    .search-jobs-button:hover {
+        background: #1f59d0;
+    }
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.job-filters {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+
+.job-filter {
+    height: 36px;
+    padding: 0 17px;
+    border-radius: 20px;
+    border: 1px solid #dfe3e8;
+    background: #ffffff;
+    color: #70798a;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+    .job-filter:hover {
+        border-color: #2867e7;
+        color: #2867e7;
+    }
+
+
+    .job-filter.active {
+        background: #2867e7;
+        border-color: #2867e7;
+        color: #ffffff;
+    }
+
+
+/* =========================================================
+   JOB LIST
+========================================================= */
+
+.jobs-list {
+    width: 100%;
+}
+
+
+/* =========================================================
+   JOB CARD
+========================================================= */
+
+.find-job-card {
+    width: 100%;
+    height: 94px;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    margin-bottom: 13px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+    .find-job-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        border-color: #d5dce5;
+        transform: translateY(-1px);
+    }
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.find-company-logo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 9px;
+    background: #edf3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2867e7;
+    font-size: 19px;
+    font-weight: 700;
+    margin-right: 17px;
+}
+
+
+/* =========================================================
+   JOB INFORMATION
+========================================================= */
+
+.find-job-information {
+    flex: 1;
+    min-width: 0;
+}
+
+
+    .find-job-information h2 {
+        margin: 0 0 5px 0;
+        color: #1c273b;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+
+    .find-job-information p {
+        margin: 0;
+        color: #737d8e;
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+
+        .find-job-information p span {
+            padding: 0 4px;
+        }
+
+
+/* =========================================================
+   JOB TYPE
+========================================================= */
+
+.find-job-type {
+    background: #edf4ff;
+    color: #2867e7;
+    border-radius: 18px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-right: 17px;
+}
+
+
+/* =========================================================
+   SALARY
+========================================================= */
+
+.find-job-salary {
+    width: 87px;
+    color: #1d283b;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 13px;
+}
+
+
+/* =========================================================
+   POSTED
+========================================================= */
+
+.find-job-posted {
+    width: 95px;
+    color: #737d8e;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   NO JOBS
+========================================================= */
+
+.no-jobs-message {
+    display: none;
+    width: 100%;
+    padding: 30px;
+    margin-top: 10px;
+    background: #ffffff;
+    border: 1px solid #e0e4e8;
+    border-radius: 9px;
+    text-align: center;
+    color: #737d8e;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VIEW ALL JOBS
+========================================================= */
+
+.view-all-jobs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+    .view-all-jobs a {
+        color: #2867e7;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+        .view-all-jobs a:hover {
+            text-decoration: underline;
+        }
+
+
+        .view-all-jobs a span {
+            margin-left: 4px;
+            font-size: 18px;
+        }
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .find-job-card {
+        height: auto;
+        min-height: 94px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .find-job-information {
+        min-width: 300px;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .find-jobs-page {
+        padding: 25px 20px 40px;
+    }
+
+
+    .job-search-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .search-input-wrapper {
+        width: 100%;
+    }
+
+
+    .search-jobs-button {
+        width: 100%;
+    }
+
+
+    .job-filters {
+        flex-wrap: wrap;
+    }
+
+
+    .find-job-card {
+        height: auto;
+        min-height: 94px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+
+    .find-job-information {
+        min-width: 200px;
+    }
+
+
+        .find-job-information h2 {
+            white-space: normal;
+        }
+
+
+    .find-job-type {
+        margin-left: 69px;
+    }
+
+
+    .find-job-salary {
+        margin-left: 69px;
+    }
+
+
+    .find-job-posted {
+        margin-left: 69px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .find-jobs-header h1 {
+        font-size: 24px;
+    }
+
+
+    .find-job-card {
+        padding: 15px;
+    }
+
+
+    .find-company-logo {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+    }
+
+
+    .find-job-information {
+        min-width: calc(100% - 65px);
+    }
+
+
+    .find-job-type,
+    .find-job-salary,
+    .find-job-posted {
+        margin-left: 0;
+    }
+}

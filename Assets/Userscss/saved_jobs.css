@@ -1,0 +1,239 @@
+﻿/* =========================================================
+   SAVED JOBS PAGE
+========================================================= */
+
+.saved-jobs-page {
+    min-height: 100vh;
+    background: #fcfaf5;
+    padding: 32px 34px 50px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d293d;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.saved-jobs-header {
+    margin-bottom: 25px;
+}
+
+
+    .saved-jobs-header h1 {
+        margin: 0;
+        font-size: 28px;
+        font-weight: 700;
+        color: #1d293d;
+    }
+
+
+
+/* =========================================================
+   SAVED JOB CARD
+========================================================= */
+
+.saved-job-card {
+    width: 100%;
+    min-height: 94px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    margin-bottom: 13px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.company-logo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 9px;
+    background: #edf3ff;
+    color: #2867e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+    margin-right: 17px;
+}
+
+
+
+/* =========================================================
+   JOB INFORMATION
+========================================================= */
+
+.job-information {
+    width: 42%;
+}
+
+
+    .job-information h2 {
+        margin: 0 0 5px;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1d293d;
+    }
+
+
+    .job-information p {
+        margin: 0;
+        font-size: 15px;
+        color: #727c8d;
+    }
+
+
+        .job-information p span {
+            padding: 0 5px;
+        }
+
+
+
+/* =========================================================
+   JOB DETAILS
+========================================================= */
+
+.job-details {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex: 1;
+}
+
+
+    .job-details strong {
+        font-size: 15px;
+        color: #1d293d;
+        white-space: nowrap;
+    }
+
+
+    .job-details span {
+        font-size: 13px;
+        color: #727c8d;
+        white-space: nowrap;
+    }
+
+
+
+/* =========================================================
+   VIEW JOB BUTTON
+========================================================= */
+
+.job-action {
+    margin-left: auto;
+}
+
+
+.view-job-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 84px;
+    height: 38px;
+    padding: 0 14px;
+    border-radius: 7px;
+    background: #2867e7;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+
+    .view-job-btn:hover {
+        background: #1859d5;
+        color: #ffffff;
+    }
+
+
+
+/* =========================================================
+   VIEW ALL
+========================================================= */
+
+.view-all-saved {
+    text-align: center;
+    margin-top: 27px;
+}
+
+
+    .view-all-saved a {
+        color: #2867e7;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+
+        .view-all-saved a:hover {
+            text-decoration: underline;
+        }
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .saved-job-card {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+
+    .job-information {
+        width: auto;
+        flex: 1;
+    }
+
+
+    .job-details {
+        width: 100%;
+        padding-left: 69px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .saved-jobs-page {
+        padding: 25px 18px;
+    }
+
+
+    .saved-job-card {
+        align-items: flex-start;
+    }
+
+
+    .company-logo {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+    }
+
+
+    .job-information h2 {
+        font-size: 16px;
+    }
+
+
+    .job-details {
+        padding-left: 0;
+    }
+}
