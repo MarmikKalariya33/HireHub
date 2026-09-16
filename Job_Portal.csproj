@@ -139,6 +139,7 @@
     <Content Include="Assets\Userscss\profile.css" />
     <Content Include="Assets\Userscss\reasume.css" />
     <Content Include="Assets\Userscss\saved_jobs.css" />
+    <Content Include="Assets\Userscss\settings.css" />
     <Content Include="Assets\Userscss\sidebar.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -226,6 +227,7 @@
     <Content Include="Users\Profile.aspx" />
     <Content Include="Users\Reasume.aspx" />
     <Content Include="Users\Saved_Jobs.aspx" />
+    <Content Include="Users\Settings.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -438,6 +440,13 @@
     </Compile>
     <Compile Include="Users\Saved_Jobs.aspx.designer.cs">
       <DependentUpon>Saved_Jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Users\users.Master.cs">
       <DependentUpon>users.Master</DependentUpon>

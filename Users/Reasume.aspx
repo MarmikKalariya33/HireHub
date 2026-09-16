@@ -11,10 +11,9 @@
     ContentPlaceHolderID="head"
     runat="server">
 
-    <!-- Resume CSS -->
     <link href="<%= ResolveUrl("~/Assets/Userscss/reasume.css") %>"
-          rel="stylesheet"
-          type="text/css" />
+      rel="stylesheet"
+      type="text/css" />
 
 </asp:Content>
 
@@ -25,14 +24,12 @@
     runat="server">
 
 
-    <!-- ==========================================
-         RESUME PAGE
-    =========================================== -->
-
     <div class="resume-page">
 
 
-        <!-- PAGE TITLE -->
+        <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
 
         <div class="page-header">
 
@@ -42,12 +39,11 @@
 
 
 
-        <!-- ==========================================
+        <!-- =================================================
              CURRENT RESUME
-        =========================================== -->
+        ================================================== -->
 
         <div class="resume-card">
-
 
             <div class="resume-file-info">
 
@@ -79,6 +75,7 @@
                 </div>
 
 
+
                 <!-- RIGHT SIDE -->
 
                 <div class="resume-file-action">
@@ -97,14 +94,13 @@
 
             </div>
 
-
         </div>
 
 
 
-        <!-- ==========================================
+        <!-- =================================================
              UPLOAD NEW RESUME
-        =========================================== -->
+        ================================================== -->
 
         <div class="upload-resume-card">
 
@@ -138,12 +134,14 @@
 
 
 
-            <!-- ======================================
-                 FILE UPLOAD
-            ======================================= -->
+            <!-- =================================================
+                 BUTTONS
+            ================================================== -->
 
             <div class="resume-upload-area">
 
+
+                <!-- ASP.NET FILE UPLOAD -->
 
                 <asp:FileUpload
                     ID="fuResume"
@@ -153,20 +151,38 @@
                     onchange="showSelectedFile(this);" />
 
 
+
+                <!-- CHOOSE FILE BUTTON -->
+
                 <label
                     for="<%= fuResume.ClientID %>"
                     class="choose-file-button">
+
+                    <i class="bi bi-folder2-open"></i>
 
                     Choose File
 
                 </label>
 
 
+
+                <!-- SUBMIT RESUME BUTTON -->
+
+                <asp:Button
+                    ID="btnSubmitResume"
+                    runat="server"
+                    Text="Submit Resume"
+                    CssClass="submit-resume-button"
+                    OnClientClick="return validateResume();" />
+
+
             </div>
 
 
 
-            <!-- SELECTED FILE -->
+            <!-- =================================================
+                 SELECTED FILE
+            ================================================== -->
 
             <div
                 id="selectedFileName"
@@ -176,7 +192,9 @@
 
 
 
-            <!-- SUPPORTED FORMAT -->
+            <!-- =================================================
+                 SUPPORTED FORMAT
+            ================================================== -->
 
             <p class="supported-format">
 
@@ -192,9 +210,9 @@
 
 
 
-    <!-- ==========================================
+    <!-- =====================================================
          JAVASCRIPT
-    =========================================== -->
+    ===================================================== -->
 
     <script type="text/javascript">
 
@@ -203,31 +221,36 @@
             var fileNameBox =
                 document.getElementById("selectedFileName");
 
+
             if (input.files && input.files.length > 0) {
 
                 var file = input.files[0];
 
                 var fileName = file.name;
 
-                var fileSize = file.size / (1024 * 1024);
+                var fileSize =
+                    file.size / (1024 * 1024);
 
 
-                // Check file size
+
+                /* FILE SIZE CHECK */
 
                 if (fileSize > 5) {
 
-                    alert("Resume file size must be less than 5 MB.");
+                    alert(
+                        "Resume file size must be less than 5 MB."
+                    );
 
                     input.value = "";
 
                     fileNameBox.innerHTML = "";
 
                     return;
-
                 }
 
 
-                // Check extension
+
+                /* FILE EXTENSION CHECK */
 
                 var allowedExtensions =
                     /(\.pdf|\.doc|\.docx)$/i;
@@ -244,9 +267,11 @@
                     fileNameBox.innerHTML = "";
 
                     return;
-
                 }
 
+
+
+                /* SHOW FILE NAME */
 
                 fileNameBox.innerHTML =
                     '<i class="bi bi-file-earmark-text"></i> '
@@ -259,6 +284,82 @@
                 fileNameBox.innerHTML = "";
 
             }
+
+        }
+
+
+
+        /* =================================================
+           SUBMIT VALIDATION
+        ================================================== */
+
+        function validateResume() {
+
+            var fileInput =
+                document.getElementById(
+                    "<%= fuResume.ClientID %>"
+                );
+
+
+            /* CHECK FILE */
+
+            if (
+                !fileInput.files ||
+                fileInput.files.length === 0
+            ) {
+
+                alert("Please choose your resume first.");
+
+                return false;
+
+            }
+
+
+
+            var file =
+                fileInput.files[0];
+
+            var fileName =
+                file.name;
+
+            var fileSize =
+                file.size / (1024 * 1024);
+
+
+
+            /* CHECK SIZE */
+
+            if (fileSize > 5) {
+
+                alert(
+                    "Resume file size must be less than 5 MB."
+                );
+
+                return false;
+
+            }
+
+
+
+            /* CHECK EXTENSION */
+
+            var allowedExtensions =
+                /(\.pdf|\.doc|\.docx)$/i;
+
+
+            if (!allowedExtensions.exec(fileName)) {
+
+                alert(
+                    "Only PDF, DOC and DOCX files are allowed."
+                );
+
+                return false;
+
+            }
+
+
+
+            return true;
 
         }
 

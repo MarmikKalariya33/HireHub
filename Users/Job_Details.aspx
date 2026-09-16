@@ -30,7 +30,7 @@
 
         <div class="back-to-jobs">
 
-            <a href="<%= ResolveUrl("~/Users/Find_Jobs.aspx") %>">
+            <a href="<%= ResolveUrl("~/Users/Find_Job.aspx") %>">
 
                 <span>←</span>
                 Back to Jobs

@@ -1,0 +1,322 @@
+﻿/* =========================================================
+   SETTINGS PAGE
+========================================================= */
+
+.settings-page {
+    width: 100%;
+    min-height: calc(100vh - 40px);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.settings-header {
+    margin-bottom: 24px;
+}
+
+
+    .settings-header h1 {
+        margin: 0;
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #1d2939;
+    }
+
+
+/* =========================================================
+   SETTINGS GRID
+========================================================= */
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.15fr) minmax(320px, 1fr);
+    gap: 26px;
+    width: 100%;
+    align-items: start;
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.settings-card {
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PASSWORD CARD
+========================================================= */
+
+.password-card {
+    padding: 26px 25px 25px 25px;
+}
+
+
+    .password-card h2,
+    .account-card h2 {
+        margin: 0 0 22px 0;
+        color: #1d2939;
+        font-size: 20px;
+        line-height: 1.3;
+        font-weight: 700;
+    }
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 1.3;
+        font-weight: 500;
+        color: #1d2939;
+    }
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.settings-input {
+    width: 100% !important;
+    height: 45px;
+    padding: 0 48px 0 13px;
+    border: 1px solid #d9dee5;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+    .settings-input:focus {
+        border-color: #2864e8;
+        box-shadow: 0 0 0 3px rgba(40, 100, 232, 0.10);
+    }
+
+
+    .settings-input::placeholder {
+        color: #98a2b3;
+    }
+
+
+/* =========================================================
+   PASSWORD INPUT WRAPPER
+========================================================= */
+
+.password-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+/* =========================================================
+   PASSWORD EYE BUTTON
+========================================================= */
+
+.password-eye {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #667085;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+
+    .password-eye:hover {
+        color: #2864e8;
+    }
+
+
+/* =========================================================
+   UPDATE PASSWORD BUTTON
+========================================================= */
+
+.update-password-btn {
+    height: 41px;
+    padding: 0 17px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 6px;
+    background: #2864e8;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+
+    .update-password-btn:hover {
+        background: #1f55cf;
+    }
+
+
+    .update-password-btn:active {
+        transform: translateY(1px);
+    }
+
+
+/* =========================================================
+   ACCOUNT ACTIONS CARD
+========================================================= */
+
+.account-card {
+    padding: 26px 25px;
+    min-height: 128px;
+}
+
+
+/* =========================================================
+   ACCOUNT BUTTONS
+========================================================= */
+
+.account-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-btn {
+    height: 40px;
+    padding: 0 17px;
+    border: 1px solid #f04438;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #f04438;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+    .logout-btn:hover {
+        background: #fff3f2;
+    }
+
+
+/* =========================================================
+   DELETE ACCOUNT BUTTON
+========================================================= */
+
+.delete-account-btn {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #f04438;
+    border-radius: 6px;
+    background: #f04438;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+
+    .delete-account-btn:hover {
+        background: #d9362e;
+        border-color: #d9362e;
+    }
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .account-card {
+        min-height: auto;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .settings-header {
+        margin-bottom: 18px;
+    }
+
+
+        .settings-header h1 {
+            font-size: 27px;
+        }
+
+
+    .password-card,
+    .account-card {
+        padding: 21px 18px;
+    }
+
+
+        .password-card h2,
+        .account-card h2 {
+            font-size: 18px;
+            margin-bottom: 19px;
+        }
+
+
+    .form-group label {
+        font-size: 15px;
+    }
+
+
+    .account-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .logout-btn,
+    .delete-account-btn {
+        width: 100%;
+    }
+}
