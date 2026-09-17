@@ -1,0 +1,639 @@
+﻿/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #172033;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.register-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================================================
+   LEFT SECTION
+========================================================= */
+
+.left-section {
+    width: 36.2%;
+    min-height: 100vh;
+    background: #1d2f54;
+    position: relative;
+    padding: 0 51px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-section {
+    position: absolute;
+    top: 34px;
+    left: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.hirehub-logo {
+    width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.left-content {
+    position: absolute;
+    left: 51px;
+    right: 45px;
+    top: 397px;
+}
+
+
+    .left-content h1 {
+        color: #ffffff;
+        font-size: 43px;
+        line-height: 1.18;
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-bottom: 27px;
+    }
+
+
+.description {
+    color: #a9bce9;
+    font-size: 18px;
+    line-height: 1.45;
+    max-width: 390px;
+    margin-bottom: 28px;
+}
+
+
+.features {
+    color: #a9bce9;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+    .features span {
+        padding: 0 6px;
+    }
+
+
+/* =========================================================
+   RIGHT SECTION
+========================================================= */
+
+.right-section {
+    width: 63.8%;
+    min-height: 100vh;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 87px;
+}
+
+
+/* =========================================================
+   REGISTER CONTAINER
+========================================================= */
+
+.register-container {
+    width: 470px;
+    max-width: calc(100% - 40px);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.heading-section {
+    margin-bottom: 24px;
+}
+
+
+    .heading-section h2 {
+        color: #151d2f;
+        font-size: 34px;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.7px;
+        margin-bottom: 8px;
+    }
+
+
+    .heading-section p {
+        color: #56667f;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+
+/* =========================================================
+   ACCOUNT TABS
+========================================================= */
+
+.account-tabs {
+    width: 100%;
+    height: 49px;
+    background: #f7f9fc;
+    border: 1px solid #dce3ec;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    margin-bottom: 26px;
+}
+
+
+.account-tab {
+    width: 33.333%;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4c5d76;
+    font-size: 15.5px;
+    font-weight: 500;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+
+    .account-tab.active {
+        background: #2864e8;
+        color: #ffffff;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(40, 100, 232, 0.25);
+    }
+
+
+/* =========================================================
+   FORM GROUP
+========================================================= */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+
+    .form-group label {
+        display: block;
+        color: #182237;
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 7px;
+    }
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+    width: 100%;
+    height: 52px;
+    position: relative;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #d9e1eb;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #182237;
+    font-size: 16px;
+    outline: none;
+    padding: 0 16px 0 48px;
+    transition: all 0.2s ease;
+}
+
+
+    .form-input::placeholder {
+        color: #94a8c6;
+        opacity: 1;
+    }
+
+
+    .form-input:focus {
+        border-color: #2864e8;
+        box-shadow: 0 0 0 3px rgba(40, 100, 232, 0.08);
+    }
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8da3c2;
+    font-size: 19px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PASSWORD INPUT
+========================================================= */
+
+.password-input {
+    padding-right: 48px;
+}
+
+
+/* =========================================================
+   PASSWORD EYE
+========================================================= */
+
+.password-eye {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8da3c2;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+/* =========================================================
+   TERMS
+========================================================= */
+
+.terms-section {
+    width: 100%;
+    margin-top: 21px;
+    margin-bottom: 24px;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+
+    /* Hide default checkbox */
+
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+
+/* Custom checkbox */
+
+.custom-checkbox {
+    width: 21px;
+    height: 21px;
+    min-width: 21px;
+    border-radius: 5px;
+    background: #2864e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 13px;
+}
+
+
+    .custom-checkbox i {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+
+/* =========================================================
+   TERMS TEXT
+========================================================= */
+
+.terms-text {
+    color: #53627a;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+    .terms-text a {
+        color: #2864e8;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-button {
+    width: 100%;
+    height: 54px;
+    border: none;
+    border-radius: 8px;
+    background: #2864e8;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(40, 100, 232, 0.18);
+    transition: all 0.2s ease;
+}
+
+
+    .register-button:hover {
+        background: #2058d5;
+    }
+
+
+    .register-button:active {
+        transform: translateY(1px);
+    }
+
+
+/* =========================================================
+   LOGIN
+========================================================= */
+
+.login-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 17px;
+    color: #596982;
+    font-size: 15px;
+}
+
+
+    .login-section a {
+        color: #2864e8;
+        font-weight: 600;
+        text-decoration: none;
+        margin-left: 4px;
+    }
+
+
+        .login-section a:hover {
+            text-decoration: underline;
+        }
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .left-section {
+        width: 38%;
+        padding-left: 35px;
+        padding-right: 30px;
+    }
+
+    .right-section {
+        width: 62%;
+        padding-top: 70px;
+    }
+
+    .logo-section {
+        left: 70px;
+    }
+
+    .hirehub-logo {
+        width: 190px;
+    }
+
+    .left-content {
+        left: 35px;
+        top: 350px;
+    }
+
+        .left-content h1 {
+            font-size: 36px;
+        }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .features {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .register-page {
+        display: block;
+    }
+
+
+    .left-section {
+        width: 100%;
+        min-height: 330px;
+        height: 330px;
+        padding: 0 30px;
+    }
+
+
+    .logo-section {
+        position: absolute;
+        top: 28px;
+        left: 30px;
+    }
+
+
+    .hirehub-logo {
+        width: 180px;
+    }
+
+
+    .left-content {
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 145px;
+    }
+
+
+        .left-content h1 {
+            font-size: 31px;
+            line-height: 1.2;
+            margin-bottom: 17px;
+        }
+
+
+    .description {
+        font-size: 15px;
+        line-height: 1.45;
+        max-width: 600px;
+        margin-bottom: 15px;
+    }
+
+
+    .features {
+        font-size: 14px;
+    }
+
+
+    .right-section {
+        width: 100%;
+        min-height: auto;
+        padding: 45px 0 50px;
+    }
+
+
+    .register-container {
+        width: 470px;
+        max-width: calc(100% - 40px);
+    }
+
+
+    .heading-section h2 {
+        font-size: 29px;
+    }
+
+
+    .heading-section p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .left-section {
+        min-height: 310px;
+        height: 310px;
+    }
+
+
+    .hirehub-logo {
+        width: 160px;
+    }
+
+
+    .left-content {
+        top: 135px;
+    }
+
+
+        .left-content h1 {
+            font-size: 27px;
+        }
+
+
+    .description {
+        font-size: 14px;
+    }
+
+
+    .features {
+        font-size: 13px;
+    }
+
+
+    .right-section {
+        padding-top: 35px;
+    }
+
+
+    .register-container {
+        max-width: calc(100% - 30px);
+    }
+
+
+    .heading-section h2 {
+        font-size: 27px;
+    }
+
+
+    .account-tabs {
+        height: 48px;
+    }
+
+
+    .account-tab {
+        font-size: 14px;
+    }
+
+
+    .form-input,
+    .input-wrapper {
+        height: 51px;
+    }
+
+
+    .terms-text {
+        font-size: 13px;
+    }
+
+
+    .register-button {
+        height: 52px;
+        font-size: 16px;
+    }
+}

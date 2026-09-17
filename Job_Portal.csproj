@@ -101,6 +101,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Accounts\Login.aspx" />
+    <Content Include="Accounts\Registration.aspx" />
     <Content Include="Admin\Add_Jobs.aspx" />
     <Content Include="Admin\AdminProfile.aspx" />
     <Content Include="Admin\Applications.aspx" />
@@ -127,6 +128,7 @@
     <Content Include="Assets\css\employer_details.css" />
     <Content Include="Assets\css\jobs.css" />
     <Content Include="Assets\css\login.css" />
+    <Content Include="Assets\css\register.css" />
     <Content Include="Assets\css\site.css" />
     <Content Include="Assets\css\users.css" />
     <Content Include="Assets\images\logo.png" />
@@ -247,6 +249,13 @@
     </Compile>
     <Compile Include="Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Add_Jobs.aspx.cs">
       <DependentUpon>Add_Jobs.aspx</DependentUpon>
