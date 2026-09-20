@@ -14,6 +14,27 @@
     <link rel="stylesheet"
         href="<%= ResolveUrl("~/Assets/Userscss/apply_job.css") %>" />
 
+    <style>
+
+        /* Red * beside required field */
+
+        .required-star {
+            color: red;
+            font-weight: bold;
+            margin-left: 3px;
+        }
+
+        /* Validation message */
+
+        .validation-error {
+            color: red;
+            font-size: 13px;
+            display: block;
+            margin-top: 5px;
+        }
+
+    </style>
+
 </asp:Content>
 
 
@@ -23,8 +44,13 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
+
     <div class="apply-page">
 
+
+        <!-- ==============================
+             BACK TO JOB DETAILS
+        =============================== -->
 
         <a class="back-job-link"
            href="javascript:history.back();">
@@ -35,6 +61,11 @@
 
         </a>
 
+
+
+        <!-- ==============================
+             HEADER
+        =============================== -->
 
         <div class="apply-header">
 
@@ -50,26 +81,29 @@
 
 
 
-        <!-- =================================================
+        <!-- ==============================
              APPLICATION FORM
-        ================================================== -->
+        =============================== -->
 
         <div class="application-card">
 
 
-            <!-- =================================================
+            <!-- ==============================
                  ROW 1
-            ================================================== -->
+            =============================== -->
 
             <div class="form-row">
 
 
-                <!-- FULL NAME -->
+                <!-- ==============================
+                     FULL NAME
+                =============================== -->
 
                 <div class="form-group">
 
                     <label>
                         Full Name
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -79,16 +113,48 @@
                         Text="Rahul Sharma">
                     </asp:TextBox>
 
+
+                    <!-- RequiredFieldValidator -->
+
+                    <asp:RequiredFieldValidator
+                        ID="namevalidate"
+                        runat="server"
+                        ControlToValidate="txtFullName"
+                        Text="Name is Required"
+                        ErrorMessage="Name is Required"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- Name Format -->
+
+                    <asp:RegularExpressionValidator
+                        ID="NameFormatValidator"
+                        runat="server"
+                        ControlToValidate="txtFullName"
+                        ValidationExpression="^[a-zA-Z ]+$"
+                        Text="Name can contain letters and spaces only"
+                        ErrorMessage="Name can contain letters and spaces only"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
 
 
-                <!-- EMAIL -->
+                <!-- ==============================
+                     EMAIL
+                =============================== -->
 
                 <div class="form-group">
 
                     <label>
                         Email Address
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -99,52 +165,146 @@
                         TextMode="Email">
                     </asp:TextBox>
 
+
+                    <!-- RequiredFieldValidator -->
+
+                    <asp:RequiredFieldValidator
+                        ID="EmailRequiredValidator"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        Text="Email is Required"
+                        ErrorMessage="Email is Required"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- Email Format -->
+
+                    <asp:RegularExpressionValidator
+                        ID="EmailFormatValidator"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                        Text="Please enter a valid email address"
+                        ErrorMessage="Please enter a valid email address"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
             </div>
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  ROW 2
-            ================================================== -->
+            =============================== -->
 
             <div class="form-row">
 
 
-                <!-- PHONE -->
+                <!-- ==============================
+                     PHONE
+                =============================== -->
 
                 <div class="form-group">
 
                     <label>
                         Phone Number
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
                         ID="txtPhone"
                         runat="server"
                         CssClass="form-control"
-                        Text="+91 98765 43210">
+                        Text="9876543210"
+                        MaxLength="10">
                     </asp:TextBox>
+
+
+                    <!-- RequiredFieldValidator -->
+
+                    <asp:RequiredFieldValidator
+                        ID="PhoneRequiredValidator"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        Text="Phone Number is Required"
+                        ErrorMessage="Phone Number is Required"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- 10 Digit Validation -->
+
+                    <asp:RegularExpressionValidator
+                        ID="PhoneFormatValidator"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        ValidationExpression="^[6-9][0-9]{9}$"
+                        Text="Enter a valid 10 digit phone number"
+                        ErrorMessage="Enter a valid 10 digit phone number"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
 
 
-                <!-- EXPECTED SALARY -->
+                <!-- ==============================
+                     EXPECTED SALARY
+                =============================== -->
 
                 <div class="form-group">
 
                     <label>
                         Expected Salary (LPA)
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
                         ID="txtSalary"
                         runat="server"
                         CssClass="form-control"
-                        placeholder="e.g. 15 LPA">
+                        placeholder="e.g. 15">
                     </asp:TextBox>
+
+
+                    <!-- RequiredFieldValidator -->
+
+                    <asp:RequiredFieldValidator
+                        ID="SalaryRequiredValidator"
+                        runat="server"
+                        ControlToValidate="txtSalary"
+                        Text="Salary is Required"
+                        ErrorMessage="Salary is Required"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- Number Validation -->
+
+                    <asp:RegularExpressionValidator
+                        ID="SalaryNumberValidator"
+                        runat="server"
+                        ControlToValidate="txtSalary"
+                        ValidationExpression="^[0-9]+$"
+                        Text="Please enter numbers only"
+                        ErrorMessage="Please enter numbers only"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
@@ -152,14 +312,15 @@
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  AVAILABLE START DATE
-            ================================================== -->
+            =============================== -->
 
             <div class="form-group full-width">
 
                 <label>
                     Available Start Date
+                    <span class="required-star">*</span>
                 </label>
 
                 <asp:TextBox
@@ -169,18 +330,31 @@
                     placeholder="DD/MM/YYYY">
                 </asp:TextBox>
 
+
+                <asp:RequiredFieldValidator
+                    ID="StartDateRequiredValidator"
+                    runat="server"
+                    ControlToValidate="txtStartDate"
+                    Text="Start Date is Required"
+                    ErrorMessage="Start Date is Required"
+                    ForeColor="Red"
+                    CssClass="validation-error"
+                    Display="Dynamic">
+                </asp:RequiredFieldValidator>
+
             </div>
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  COVER LETTER
-            ================================================== -->
+            =============================== -->
 
             <div class="form-group full-width">
 
                 <label>
                     Cover Letter
+                    <span class="required-star">*</span>
                 </label>
 
                 <asp:TextBox
@@ -191,22 +365,36 @@
                     placeholder="Write your cover letter here to introduce yourself to the hiring team...">
                 </asp:TextBox>
 
+
+                <asp:RequiredFieldValidator
+                    ID="CoverLetterRequiredValidator"
+                    runat="server"
+                    ControlToValidate="txtCoverLetter"
+                    Text="Cover Letter is Required"
+                    ErrorMessage="Cover Letter is Required"
+                    ForeColor="Red"
+                    CssClass="validation-error"
+                    Display="Dynamic">
+                </asp:RequiredFieldValidator>
+
             </div>
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  RESUME UPLOAD
-            ================================================== -->
+            =============================== -->
 
             <div class="form-group full-width">
 
                 <label>
                     Resume Upload
+                    <span class="required-star">*</span>
                 </label>
 
 
                 <div class="resume-upload-box">
+
 
                     <div class="upload-icon">
                         ☁
@@ -217,6 +405,18 @@
                         ID="fuResume"
                         runat="server"
                         CssClass="resume-file" />
+
+
+                    <asp:RequiredFieldValidator
+                        ID="ResumeRequiredValidator"
+                        runat="server"
+                        ControlToValidate="fuResume"
+                        Text="Resume is Required"
+                        ErrorMessage="Resume is Required"
+                        ForeColor="Red"
+                        CssClass="validation-error"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
 
 
                     <label
@@ -239,33 +439,30 @@
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  DIVIDER
-            ================================================== -->
+            =============================== -->
 
             <div class="form-divider">
             </div>
 
 
 
-            <!-- =================================================
+            <!-- ==============================
                  ACTION BUTTONS
-            ================================================== -->
+            =============================== -->
 
             <div class="application-actions">
 
 
-                <!-- SUBMIT -->
+               <asp:Button
+    ID="btnSubmitApplication"
+    runat="server"
+    Text="Submit Application"
+    CssClass="submit-application-btn"
+    CausesValidation="true"
+    PostBackUrl="~/Users/Applications.aspx" />
 
-                <asp:Button
-                    ID="btnSubmitApplication"
-                    runat="server"
-                    Text="Submit Application"
-                    CssClass="submit-application-btn"
-                    OnClientClick="btnSubmitApplications_Click" />
-
-
-                <!-- CANCEL -->
 
                 <asp:Button
                     ID="btnCancel"
@@ -281,165 +478,6 @@
         </div>
 
     </div>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script type="text/javascript">
-
-        function submitApplication() {
-
-            var name =
-                document.getElementById('<%= txtFullName.ClientID %>').value.trim();
-
-            var email =
-                document.getElementById('<%= txtEmail.ClientID %>').value.trim();
-
-            var phone =
-                document.getElementById('<%= txtPhone.ClientID %>').value.trim();
-
-            var salary =
-                document.getElementById('<%= txtSalary.ClientID %>').value.trim();
-
-            var startDate =
-                document.getElementById('<%= txtStartDate.ClientID %>').value.trim();
-
-            var coverLetter =
-                document.getElementById('<%= txtCoverLetter.ClientID %>').value.trim();
-
-
-            /* Full Name */
-
-            if (name === "") {
-
-                alert("Please enter your full name.");
-
-                return false;
-
-            }
-
-
-            /* Email */
-
-            if (email === "") {
-
-                alert("Please enter your email address.");
-
-                return false;
-
-            }
-
-
-            /* Phone */
-
-            if (phone === "") {
-
-                alert("Please enter your phone number.");
-
-                return false;
-
-            }
-
-
-            /* Salary */
-
-            if (salary === "") {
-
-                alert("Please enter your expected salary.");
-
-                return false;
-
-            }
-
-
-            /* Start Date */
-
-            if (startDate === "") {
-
-                alert("Please enter your available start date.");
-
-                return false;
-
-            }
-
-
-            /* Cover Letter */
-
-            if (coverLetter === "") {
-
-                alert("Please enter your cover letter.");
-
-                return false;
-
-            }
-
-
-            /* Resume */
-
-            var fileInput =
-                document.getElementById('<%= fuResume.ClientID %>');
-
-
-            if (fileInput.files.length === 0) {
-
-                alert("Please upload your resume.");
-
-                return false;
-
-            }
-
-
-            var file =
-                fileInput.files[0];
-
-
-            /* Maximum 5 MB */
-
-            if (file.size > 5 * 1024 * 1024) {
-
-                alert("Resume size must be less than 5MB.");
-
-                return false;
-
-            }
-
-
-            /* Allowed extensions */
-
-            var fileName =
-                file.name.toLowerCase();
-
-
-            var allowed =
-                fileName.endsWith(".pdf") ||
-                fileName.endsWith(".doc") ||
-                fileName.endsWith(".docx");
-
-
-            if (!allowed) {
-
-                alert("Please upload PDF, DOC or DOCX file.");
-
-                return false;
-
-            }
-
-
-            /*
-                Frontend only:
-                Prevent postback because there is no backend/database yet.
-            */
-
-            alert("Application submitted successfully!");
-
-            return false;
-
-        }
-
-    </script>
 
 
 </asp:Content>

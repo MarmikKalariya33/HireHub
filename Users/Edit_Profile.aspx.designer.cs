@@ -42,6 +42,24 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtFullName;
 
         /// <summary>
+        /// NameRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator NameRequiredValidator;
+
+        /// <summary>
+        /// NameFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator NameFormatValidator;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,24 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        /// <summary>
+        /// EmailRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator EmailRequiredValidator;
+
+        /// <summary>
+        /// EmailFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailFormatValidator;
 
         /// <summary>
         /// txtPhone control.
@@ -60,6 +96,24 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtPhone;
 
         /// <summary>
+        /// PhoneRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PhoneRequiredValidator;
+
+        /// <summary>
+        /// PhoneFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator PhoneFormatValidator;
+
+        /// <summary>
         /// txtDateOfBirth control.
         /// </summary>
         /// <remarks>
@@ -67,6 +121,24 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDateOfBirth;
+
+        /// <summary>
+        /// DOBRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator DOBRequiredValidator;
+
+        /// <summary>
+        /// DOBFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator DOBFormatValidator;
 
         /// <summary>
         /// ddlGender control.
@@ -87,6 +159,24 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtCountry;
 
         /// <summary>
+        /// CountryRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CountryRequiredValidator;
+
+        /// <summary>
+        /// CountryFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CountryFormatValidator;
+
+        /// <summary>
         /// txtCity control.
         /// </summary>
         /// <remarks>
@@ -94,6 +184,24 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCity;
+
+        /// <summary>
+        /// CityRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CityRequiredValidator;
+
+        /// <summary>
+        /// CityFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator CityFormatValidator;
 
         /// <summary>
         /// txtState control.
@@ -105,6 +213,24 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtState;
 
         /// <summary>
+        /// StateRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator StateRequiredValidator;
+
+        /// <summary>
+        /// StateFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator StateFormatValidator;
+
+        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
@@ -112,6 +238,15 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
+
+        /// <summary>
+        /// AddressRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AddressRequiredValidator;
 
         /// <summary>
         /// txtAboutMe control.
@@ -123,6 +258,15 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtAboutMe;
 
         /// <summary>
+        /// AboutMeRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator AboutMeRequiredValidator;
+
+        /// <summary>
         /// txtJobTitle control.
         /// </summary>
         /// <remarks>
@@ -130,6 +274,15 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtJobTitle;
+
+        /// <summary>
+        /// JobTitleRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator JobTitleRequiredValidator;
 
         /// <summary>
         /// ddlExperience control.
@@ -150,6 +303,24 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtExpectedSalary;
 
         /// <summary>
+        /// SalaryRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator SalaryRequiredValidator;
+
+        /// <summary>
+        /// SalaryFormatValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator SalaryFormatValidator;
+
+        /// <summary>
         /// ddlJobType control.
         /// </summary>
         /// <remarks>
@@ -168,6 +339,15 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtQualification;
 
         /// <summary>
+        /// QualificationRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator QualificationRequiredValidator;
+
+        /// <summary>
         /// txtUniversity control.
         /// </summary>
         /// <remarks>
@@ -175,6 +355,15 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUniversity;
+
+        /// <summary>
+        /// UniversityRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UniversityRequiredValidator;
 
         /// <summary>
         /// txtTechnicalSkills control.
@@ -186,6 +375,15 @@ namespace Job_Portal.Users
         protected global::System.Web.UI.WebControls.TextBox txtTechnicalSkills;
 
         /// <summary>
+        /// SkillsRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator SkillsRequiredValidator;
+
+        /// <summary>
         /// txtLanguages control.
         /// </summary>
         /// <remarks>
@@ -193,6 +391,15 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLanguages;
+
+        /// <summary>
+        /// LanguagesRequiredValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LanguagesRequiredValidator;
 
         /// <summary>
         /// txtLinkedIn control.
@@ -220,5 +427,14 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+
+        /// <summary>
+        /// btnSaveChanges control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveChanges;
     }
 }

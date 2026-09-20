@@ -26,8 +26,6 @@
 
     <div class="find-jobs-page">
 
-
-
         <div class="find-jobs-header">
 
             <h1>
@@ -35,7 +33,6 @@
             </h1>
 
         </div>
-
 
 
         <!-- =================================================
@@ -67,7 +64,6 @@
             </button>
 
         </div>
-
 
 
         <!-- =================================================
@@ -118,7 +114,6 @@
         </div>
 
 
-
         <!-- =================================================
              JOB LIST
         ================================================== -->
@@ -135,7 +130,6 @@
                 data-job-type="Full Time"
                 data-search="Senior React Developer TCS Mumbai Full Time React Developer"
                 onclick="openJob(1)">
-
 
                 <div class="find-company-logo">
                     TCS
@@ -171,9 +165,7 @@
                     Posted 2 days ago
                 </div>
 
-
             </div>
-
 
 
             <!-- =================================================
@@ -185,7 +177,6 @@
                 data-job-type="Full Time"
                 data-search="UI UX Designer Infosys Bangalore Full Time Designer"
                 onclick="openJob(2)">
-
 
                 <div class="find-company-logo">
                     INF
@@ -221,9 +212,7 @@
                     Posted 3 days ago
                 </div>
 
-
             </div>
-
 
 
             <!-- =================================================
@@ -235,7 +224,6 @@
                 data-job-type="Part Time"
                 data-search="Data Analyst Wipro Pune Part Time Analyst"
                 onclick="openJob(3)">
-
 
                 <div class="find-company-logo">
                     WIP
@@ -271,9 +259,7 @@
                     Posted 5 days ago
                 </div>
 
-
             </div>
-
 
 
             <!-- =================================================
@@ -285,7 +271,6 @@
                 data-job-type="Remote"
                 data-search="Backend Developer HCL Hyderabad Remote Backend"
                 onclick="openJob(4)">
-
 
                 <div class="find-company-logo">
                     HCL
@@ -321,9 +306,7 @@
                     Posted 1 week ago
                 </div>
 
-
             </div>
-
 
 
             <!-- =================================================
@@ -335,7 +318,6 @@
                 data-job-type="Full Time"
                 data-search="Marketing Manager Tech Mahindra Chennai Full Time Marketing"
                 onclick="openJob(5)">
-
 
                 <div class="find-company-logo">
                     TEM
@@ -371,12 +353,10 @@
                     Posted 1 week ago
                 </div>
 
-
             </div>
 
 
         </div>
-
 
 
         <!-- =================================================
@@ -390,7 +370,6 @@
             No jobs found.
 
         </div>
-
 
 
         <!-- =================================================
@@ -412,7 +391,6 @@
     </div>
 
 
-
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
@@ -431,7 +409,6 @@
         }
 
 
-
         /* =================================================
            FILTER JOBS
         ================================================= */
@@ -448,7 +425,6 @@
                 document.getElementById("noJobsMessage");
 
 
-
             /* Remove active class */
 
             filterButtons.forEach(function (button) {
@@ -458,15 +434,12 @@
             });
 
 
-
             /* Add active class */
 
             selectedButton.classList.add("active");
 
 
-
             var visibleJobs = 0;
-
 
 
             /* Check every job */
@@ -475,7 +448,6 @@
 
                 var currentJobType =
                     jobCard.getAttribute("data-job-type");
-
 
 
                 if (jobType === "all") {
@@ -503,7 +475,6 @@
             });
 
 
-
             /* Show / hide no jobs message */
 
             if (visibleJobs === 0) {
@@ -520,18 +491,29 @@
         }
 
 
-
         /* =================================================
            SEARCH JOBS
         ================================================= */
 
         function searchJobs() {
 
+            var searchInput =
+                document.getElementById("jobSearchInput");
+
             var searchText =
-                document.getElementById("jobSearchInput")
-                    .value
+                searchInput.value
                     .toLowerCase()
                     .trim();
+
+
+            /* Split search text into multiple words */
+
+            var searchWords =
+                searchText.split(/\s+/).filter(function (word) {
+
+                    return word.length > 0;
+
+                });
 
 
             var jobCards =
@@ -545,16 +527,55 @@
             var visibleJobs = 0;
 
 
+            /* Check every job */
 
             jobCards.forEach(function (jobCard) {
 
                 var jobData =
-                    jobCard.getAttribute("data-search")
+                    (jobCard.getAttribute("data-search") || "")
                         .toLowerCase();
 
 
-                if (searchText === "" ||
-                    jobData.includes(searchText)) {
+                var jobTitle =
+                    (jobCard.querySelector(".find-job-information h2")?.textContent || "")
+                        .toLowerCase();
+
+
+                var company =
+                    (jobCard.querySelector(".find-job-information p")?.textContent || "")
+                        .toLowerCase();
+
+
+                var jobType =
+                    (jobCard.getAttribute("data-job-type") || "")
+                        .toLowerCase();
+
+
+                var completeJobData =
+                    jobData +
+                    " " +
+                    jobTitle +
+                    " " +
+                    company +
+                    " " +
+                    jobType;
+
+
+                /*
+                 * Every word entered by the user
+                 * must be available in the job data.
+                 */
+
+                var isMatch =
+                    searchWords.length === 0 ||
+                    searchWords.every(function (word) {
+
+                        return completeJobData.includes(word);
+
+                    });
+
+
+                if (isMatch) {
 
                     jobCard.style.display = "flex";
 
@@ -570,7 +591,6 @@
             });
 
 
-
             /* Remove active filter */
 
             document.querySelectorAll(".job-filter")
@@ -579,7 +599,6 @@
                     button.classList.remove("active");
 
                 });
-
 
 
             /* No jobs */
@@ -598,7 +617,6 @@
         }
 
 
-
         /* =================================================
            ENTER KEY SEARCH
         ================================================= */
@@ -608,12 +626,25 @@
 
                 if (event.key === "Enter") {
 
+                    event.preventDefault();
+
                     searchJobs();
 
                 }
 
             });
 
+
+        /* =================================================
+           SEARCH WHILE TYPING
+        ================================================= */
+
+        document.getElementById("jobSearchInput")
+            .addEventListener("input", function () {
+
+                searchJobs();
+
+            });
 
 
         /* =================================================
@@ -632,6 +663,5 @@
         }
 
     </script>
-
 
 </asp:Content>

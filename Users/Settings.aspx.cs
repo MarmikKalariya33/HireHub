@@ -13,5 +13,17 @@ namespace Job_Portal.Users
         {
 
         }
+        protected void btnUpdatePassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Users/Dashboard.aspx");
+        }
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Accounts/Login.aspx");
+        }
+        protected void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Accounts/Login.aspx");
+        }
     }
 }

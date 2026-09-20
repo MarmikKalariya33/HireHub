@@ -133,7 +133,14 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
+
+
+    .remove-photo-btn:hover {
+        background: #f5f6f7;
+        border-color: #c9ced5;
+    }
 
 
 /* =========================================================
@@ -203,6 +210,30 @@
 
 
 /* =========================================================
+   REQUIRED STAR
+========================================================= */
+
+.required-star {
+    color: red;
+    font-weight: 700;
+    margin-left: 3px;
+}
+
+
+/* =========================================================
+   VALIDATION ERROR
+========================================================= */
+
+.validation-error {
+    display: block;
+    margin-top: 5px;
+    color: red !important;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
    TEXTBOX / DROPDOWN
 ========================================================= */
 
@@ -262,33 +293,14 @@
 ========================================================= */
 
 .profile-actions {
+    width: 100%;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 14px;
     padding: 0 0 28px 0;
+    box-sizing: border-box;
 }
-
-
-/* =========================================================
-   SAVE BUTTON
-========================================================= */
-
-.save-changes-btn {
-    height: 50px;
-    padding: 0 30px;
-    border: none;
-    border-radius: 7px;
-    background: #2867e7;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-
-    .save-changes-btn:hover {
-        background: #1859d5;
-    }
 
 
 /* =========================================================
@@ -297,25 +309,67 @@
 
 .cancel-btn {
     height: 50px;
+    min-width: 110px;
     padding: 0 30px;
-    border: none;
+    box-sizing: border-box;
+    border: 1px solid #dce1e7;
     border-radius: 7px;
     background: #f1f2f4;
-    color: #9aa3b1;
+    color: #555f6f;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 
     .cancel-btn:hover {
         background: #e7e9ec;
-        color: #6f7887;
+        border-color: #d0d5db;
+        color: #3f4855;
+    }
+
+
+    .cancel-btn:active {
+        transform: translateY(1px);
     }
 
 
 /* =========================================================
-   RESPONSIVE
+   SAVE CHANGES BUTTON
+========================================================= */
+
+.save-btn {
+    height: 50px;
+    min-width: 140px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border: 1px solid #2867e7;
+    border-radius: 7px;
+    background: #2867e7;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+    .save-btn:hover {
+        background: #1859d5;
+        border-color: #1859d5;
+    }
+
+
+    .save-btn:active {
+        transform: translateY(1px);
+    }
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -336,6 +390,10 @@
 }
 
 
+/* =========================================================
+   RESPONSIVE - SMALL TABLET
+========================================================= */
+
 @media (max-width: 700px) {
 
     .form-grid {
@@ -355,7 +413,11 @@
 }
 
 
-@media (max-width: 500px) {
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
 
     .edit-profile-page {
         padding: 20px 15px 40px;
@@ -382,10 +444,81 @@
         height: 65px;
         min-width: 65px;
         margin-right: 17px;
+        font-size: 21px;
     }
 
 
     .profile-actions {
-        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .edit-profile-page {
+        padding: 15px 10px 30px;
+    }
+
+
+    .edit-profile-card {
+        padding: 20px 14px 0;
+    }
+
+
+    .photo-section {
+        flex-direction: column;
+    }
+
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+
+    .photo-content {
+        width: 100%;
+    }
+
+
+    .photo-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .photo-upload {
+        width: 100%;
+    }
+
+
+    .remove-photo-btn {
+        width: 100%;
+    }
+
+
+    .form-control {
+        font-size: 15px;
+    }
+
+
+    .section-title {
+        font-size: 17px;
     }
 }

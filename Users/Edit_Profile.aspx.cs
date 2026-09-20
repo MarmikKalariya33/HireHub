@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Job_Portal.Users
 {
@@ -12,6 +7,19 @@ namespace Job_Portal.Users
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        protected void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            // Check all ASP.NET validators
+            if (Page.IsValid)
+            {
+                // Profile data save logic can be added here later.
+
+                // Redirect to Profile page
+                Response.Redirect("~/Users/Profile.aspx");
+            }
         }
     }
 }

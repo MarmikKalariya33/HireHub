@@ -47,6 +47,7 @@
         </div>
 
 
+
         <!-- ==========================================
              SETTINGS GRID
         =========================================== -->
@@ -64,13 +65,20 @@
                 <h2>Change Password</h2>
 
 
-                <!-- CURRENT PASSWORD -->
+
+                <!-- ==================================
+                     CURRENT PASSWORD
+                =================================== -->
 
                 <div class="form-group">
 
                     <label for="<%= txtCurrentPassword.ClientID %>">
+
                         Current Password
+                        <span class="required-star">*</span>
+
                     </label>
+
 
                     <div class="password-input-wrapper">
 
@@ -81,6 +89,7 @@
                             TextMode="Password"
                             placeholder="Enter current password">
                         </asp:TextBox>
+
 
                         <button
                             type="button"
@@ -93,16 +102,35 @@
 
                     </div>
 
+
+                    <!-- REQUIRED VALIDATION -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCurrentPassword"
+                        runat="server"
+                        ControlToValidate="txtCurrentPassword"
+                        ErrorMessage="Current Password is Required"
+                        CssClass="validation-error"
+                        Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
                 </div>
 
 
-                <!-- NEW PASSWORD -->
+
+                <!-- ==================================
+                     NEW PASSWORD
+                =================================== -->
 
                 <div class="form-group">
 
                     <label for="<%= txtNewPassword.ClientID %>">
+
                         New Password
+                        <span class="required-star">*</span>
+
                     </label>
+
 
                     <div class="password-input-wrapper">
 
@@ -113,6 +141,7 @@
                             TextMode="Password"
                             placeholder="Enter new password">
                         </asp:TextBox>
+
 
                         <button
                             type="button"
@@ -125,16 +154,47 @@
 
                     </div>
 
+
+                    <!-- REQUIRED VALIDATION -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvNewPassword"
+                        runat="server"
+                        ControlToValidate="txtNewPassword"
+                        ErrorMessage="New Password is Required"
+                        CssClass="validation-error"
+                        Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+                    <!-- PASSWORD LENGTH VALIDATION -->
+
+                    <asp:RegularExpressionValidator
+                        ID="revNewPassword"
+                        runat="server"
+                        ControlToValidate="txtNewPassword"
+                        ValidationExpression="^.{6,}$"
+                        ErrorMessage="Password must contain at least 6 characters"
+                        CssClass="validation-error"
+                        Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
+
+
                 </div>
 
 
-                <!-- CONFIRM PASSWORD -->
+
+                <!-- ==================================
+                     CONFIRM PASSWORD
+                =================================== -->
 
                 <div class="form-group">
 
                     <label for="<%= txtConfirmPassword.ClientID %>">
+
                         Confirm Password
+                        <span class="required-star">*</span>
+
                     </label>
+
 
                     <div class="password-input-wrapper">
 
@@ -145,6 +205,7 @@
                             TextMode="Password"
                             placeholder="Confirm new password">
                         </asp:TextBox>
+
 
                         <button
                             type="button"
@@ -157,20 +218,51 @@
 
                     </div>
 
+
+                    <!-- REQUIRED VALIDATION -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvConfirmPassword"
+                        runat="server"
+                        ControlToValidate="txtConfirmPassword"
+                        ErrorMessage="Confirm Password is Required"
+                        CssClass="validation-error"
+                        Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+                    <!-- PASSWORD MATCH VALIDATION -->
+
+                    <asp:CompareValidator
+                        ID="cvConfirmPassword"
+                        runat="server"
+                        ControlToValidate="txtConfirmPassword"
+                        ControlToCompare="txtNewPassword"
+                        Operator="Equal"
+                        Type="String"
+                        ErrorMessage="New Password and Confirm Password must be same"
+                        CssClass="validation-error"
+                        Display="Dynamic" ForeColor="Red"></asp:CompareValidator>
+
+
                 </div>
 
 
-                <!-- UPDATE PASSWORD -->
 
-                <asp:Button
-                    ID="btnUpdatePassword"
-                    runat="server"
-                    Text="Update Password"
-                    CssClass="update-password-btn"
-                    OnClientClick="return validatePassword();" />
+                <!-- ==================================
+                     UPDATE PASSWORD BUTTON
+                =================================== -->
+
+               <asp:Button
+    ID="btnUpdatePassword"
+    runat="server"
+    Text="Update Password"
+    CssClass="update-password-btn"
+    CausesValidation="true"
+    OnClick="btnUpdatePassword_Click" />
 
 
             </div>
+            <!-- END CHANGE PASSWORD CARD -->
 
 
 
@@ -189,13 +281,14 @@
 
                     <!-- LOGOUT -->
 
-                    <asp:Button
-                        ID="btnLogout"
-                        runat="server"
-                        Text="Logout"
-                        CssClass="logout-btn"
-                        CausesValidation="false"
-                        OnClientClick="return confirmLogout();" />
+                  <asp:Button
+                    ID="btnLogout"
+                    runat="server"
+                    Text="Logout"
+                    CssClass="logout-btn"
+                    CausesValidation="false"
+                    PostBackUrl="~/Accounts/Login.aspx" />
+
 
 
                     <!-- DELETE ACCOUNT -->
@@ -206,31 +299,30 @@
                         Text="Delete Account"
                         CssClass="delete-account-btn"
                         CausesValidation="false"
-                        OnClientClick="return confirmDeleteAccount();" />
+                        PostBackUrl="~/Accounts/Login.aspx"/>
 
 
                 </div>
 
 
             </div>
+            <!-- END ACCOUNT ACTIONS CARD -->
 
 
         </div>
+        <!-- END SETTINGS GRID -->
 
 
     </div>
+    <!-- END SETTINGS PAGE -->
 
 
 
     <!-- ==========================================
-         JAVASCRIPT
+         PASSWORD SHOW / HIDE
     =========================================== -->
 
     <script type="text/javascript">
-
-        // ==========================================
-        // SHOW / HIDE PASSWORD
-        // ==========================================
 
         function togglePassword(inputId, button) {
 
@@ -257,107 +349,6 @@
                 icon.classList.add("bi-eye");
 
             }
-
-        }
-
-
-
-        // ==========================================
-        // PASSWORD VALIDATION
-        // ==========================================
-
-        function validatePassword() {
-
-            var currentPassword =
-                document.getElementById(
-                    "<%= txtCurrentPassword.ClientID %>"
-                ).value;
-
-            var newPassword =
-                document.getElementById(
-                    "<%= txtNewPassword.ClientID %>"
-                ).value;
-
-            var confirmPassword =
-                document.getElementById(
-                    "<%= txtConfirmPassword.ClientID %>"
-                ).value;
-
-
-            if (currentPassword.trim() === "") {
-
-                alert("Please enter your current password.");
-
-                return false;
-
-            }
-
-
-            if (newPassword.trim() === "") {
-
-                alert("Please enter your new password.");
-
-                return false;
-
-            }
-
-
-            if (newPassword.length < 6) {
-
-                alert("New password must contain at least 6 characters.");
-
-                return false;
-
-            }
-
-
-            if (confirmPassword.trim() === "") {
-
-                alert("Please confirm your new password.");
-
-                return false;
-
-            }
-
-
-            if (newPassword !== confirmPassword) {
-
-                alert("New password and confirm password do not match.");
-
-                return false;
-
-            }
-
-
-            return true;
-
-        }
-
-
-
-        // ==========================================
-        // LOGOUT CONFIRMATION
-        // ==========================================
-
-        function confirmLogout() {
-
-            return confirm(
-                "Are you sure you want to logout?"
-            );
-
-        }
-
-
-
-        // ==========================================
-        // DELETE ACCOUNT CONFIRMATION
-        // ==========================================
-
-        function confirmDeleteAccount() {
-
-            return confirm(
-                "Are you sure you want to delete your account? This action cannot be undone."
-            );
 
         }
 
