@@ -461,7 +461,7 @@
     Text="Submit Application"
     CssClass="submit-application-btn"
     CausesValidation="true"
-    PostBackUrl="~/Users/Applications.aspx" />
+    PostBackUrl="~/Users/Applications.aspx" OnClick="btnSubmitApplication_Click" />
 
 
                 <asp:Button

@@ -53,10 +53,12 @@
                     ID="txtSearch"
                     runat="server"
                     CssClass="search-input"
-                    placeholder="Search users...">
+                    placeholder="Search users..."
+                    onkeyup="searchUsers()">
                 </asp:TextBox>
 
             </div>
+
 
         </div>
 
@@ -557,9 +559,43 @@
 
             </table>
 
+
         </div>
 
 
     </div>
+
+
+    <!-- ================= SEARCH SCRIPT ================= -->
+
+    <script type="text/javascript">
+
+        function searchUsers() {
+
+            var searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+
+            var searchText = searchBox.value.toLowerCase().trim();
+
+            var table = document.querySelector('.users-table');
+
+            var rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+            for (var i = 0; i < rows.length; i++) {
+
+                var rowText = rows[i].innerText.toLowerCase();
+
+                if (rowText.indexOf(searchText) > -1) {
+                    rows[i].style.display = '';
+                }
+                else {
+                    rows[i].style.display = 'none';
+                }
+
+            }
+
+        }
+
+    </script>
+
 
 </asp:Content>

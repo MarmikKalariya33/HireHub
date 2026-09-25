@@ -47,18 +47,19 @@
                         ID="txtSearch"
                         runat="server"
                         CssClass="search-input"
-                        placeholder="Search companies...">
+                        placeholder="Search companies..."
+                        onkeyup="searchCompanies()">
                     </asp:TextBox>
 
                 </div>
 
-                <a href="Add_Company.aspx"
+                <a href="Add_Jobs.aspx"
                    class="add-company-btn">
 
                     <i class="fa-solid fa-plus"></i>
 
                     <span>
-                        Add New Company
+                        Add New Job
                     </span>
 
                 </a>
@@ -473,5 +474,46 @@
         </div>
 
     </div>
+
+
+    <!-- ==============================
+         SEARCH FUNCTION
+    =============================== -->
+
+    <script type="text/javascript">
+
+        function searchCompanies() {
+
+            var searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+
+            var searchText = searchBox.value.toLowerCase().trim();
+
+            var table = document.querySelector('.companies-table');
+
+            var rows = table
+                .getElementsByTagName('tbody')[0]
+                .getElementsByTagName('tr');
+
+
+            for (var i = 0; i < rows.length; i++) {
+
+                var rowText = rows[i].innerText.toLowerCase();
+
+                if (rowText.indexOf(searchText) > -1) {
+
+                    rows[i].style.display = '';
+
+                }
+                else {
+
+                    rows[i].style.display = 'none';
+
+                }
+
+            }
+
+        }
+
+    </script>
 
 </asp:Content>

@@ -50,7 +50,8 @@
                         ID="txtSearch"
                         runat="server"
                         CssClass="search-input"
-                        placeholder="Search applicants...">
+                        placeholder="Search applicants..."
+                        onkeyup="searchApplications()">
                     </asp:TextBox>
 
                 </div>
@@ -61,7 +62,8 @@
                 <asp:DropDownList
                     ID="ddlStatus"
                     runat="server"
-                    CssClass="status-filter">
+                    CssClass="status-filter"
+                    onchange="filterApplications()">
 
                     <asp:ListItem
                         Text="All Statuses"
@@ -133,7 +135,6 @@
 
 
                 <tbody>
-
 
                     <!-- RAHUL SHARMA -->
 
@@ -491,5 +492,49 @@
         </div>
 
     </div>
+
+
+    <!-- ==============================
+         SEARCH + STATUS FILTER
+    =============================== -->
+
+    <script type="text/javascript">
+
+        function filterApplications() {
+
+            var searchBox = document.getElementById('<%= txtSearch.ClientID %>');
+            var statusBox = document.getElementById('<%= ddlStatus.ClientID %>');
+
+            var searchText = searchBox.value.toLowerCase().trim();
+            var selectedStatus = statusBox.value.toLowerCase().trim();
+
+            var table = document.querySelector('.applications-table');
+            var rows = table.querySelector('tbody').getElementsByTagName('tr');
+
+            for (var i = 0; i < rows.length; i++) {
+
+                var rowText = rows[i].innerText.toLowerCase();
+
+                var searchMatch = rowText.indexOf(searchText) > -1;
+
+                var statusMatch =
+                    selectedStatus === "" ||
+                    rowText.indexOf(selectedStatus) > -1;
+
+                if (searchMatch && statusMatch) {
+                    rows[i].style.display = "";
+                }
+                else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+
+
+        function searchApplications() {
+            filterApplications();
+        }
+
+    </script>
 
 </asp:Content>

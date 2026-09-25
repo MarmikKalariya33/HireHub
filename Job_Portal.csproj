@@ -115,6 +115,10 @@
     <Content Include="Admin\Employers.aspx" />
     <Content Include="Admin\Jobs.aspx" />
     <Content Include="Admin\Users.aspx" />
+    <Content Include="App_Data\job_portal.mdf" />
+    <Content Include="App_Data\job_portal_log.ldf">
+      <DependentUpon>job_portal.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\css\add_jobs.css" />
     <Content Include="Assets\css\admin_profile.css" />
     <Content Include="Assets\css\applications.css" />
@@ -473,7 +477,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="App_Start\" />
   </ItemGroup>
   <ItemGroup>

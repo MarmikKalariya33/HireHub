@@ -35,6 +35,14 @@
     }
 
 
+.companies-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: -20px;
+}
+
+
 /* =========================================
    SEARCH BOX
 ========================================= */
@@ -391,6 +399,7 @@
     .companies-header-right {
         flex-wrap: wrap;
         justify-content: flex-end;
+        margin-left: 0;
     }
 
     .search-box {
