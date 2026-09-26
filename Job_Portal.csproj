@@ -135,6 +135,7 @@
     <Content Include="Assets\css\register.css" />
     <Content Include="Assets\css\site.css" />
     <Content Include="Assets\css\users.css" />
+    <Content Include="Assets\Employee\employee_master.css" />
     <Content Include="Assets\images\logo.png" />
     <Content Include="Assets\Userscss\applications.css" />
     <Content Include="Assets\Userscss\apply_job.css" />
