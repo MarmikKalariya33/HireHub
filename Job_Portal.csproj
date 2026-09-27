@@ -135,7 +135,8 @@
     <Content Include="Assets\css\register.css" />
     <Content Include="Assets\css\site.css" />
     <Content Include="Assets\css\users.css" />
-    <Content Include="Assets\Employee\employee_master.css" />
+    <Content Include="Assets\Employeecss\dashboard.css" />
+    <Content Include="Assets\Employeecss\employee.css" />
     <Content Include="Assets\images\logo.png" />
     <Content Include="Assets\Userscss\applications.css" />
     <Content Include="Assets\Userscss\apply_job.css" />
@@ -167,6 +168,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Employee\Dashboard.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -197,6 +199,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Employee\Employee.Master" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -373,6 +376,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee.Master.cs">
+      <DependentUpon>Employee.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee.Master.designer.cs">
+      <DependentUpon>Employee.Master</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
