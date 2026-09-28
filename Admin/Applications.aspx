@@ -12,7 +12,7 @@
 
     <link rel="stylesheet"
         type="text/css"
-        href="<%= ResolveUrl("~/Assets/css/applications.css") %>" />
+        href="<%= ResolveUrl("~/Assets/Admincss/applications.css") %>" />
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />

@@ -9,7 +9,7 @@
     ContentPlaceHolderID="head"
     runat="server">
 
-    <link href="../Assets/css/admin_profile.css" rel="stylesheet" />
+    <link href="../Assets/Admincss/admin_profile.css" rel="stylesheet" />
 
 </asp:Content>
 

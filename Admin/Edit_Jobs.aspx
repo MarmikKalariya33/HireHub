@@ -11,7 +11,7 @@
 
     <link rel="stylesheet"
         type="text/css"
-        href="<%= ResolveUrl("~/Assets/css/edit_jobs.css") %>" />
+        href="<%= ResolveUrl("~/Assets/Admincss/edit_jobs.css") %>" />
 
 </asp:Content>
 

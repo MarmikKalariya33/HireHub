@@ -22,7 +22,7 @@
 
     <link rel="stylesheet"
           type="text/css"
-          href="<%= ResolveUrl("~/Assets/css/login.css") %>" />
+          href="<%= ResolveUrl("~/Assets/Admincss/login.css") %>" />
 
 </head>
 

@@ -13,7 +13,7 @@
 
     <link rel="stylesheet"
         type="text/css"
-        href="<%= ResolveUrl("~/Assets/css/edit_users.css") %>" />
+        href="<%= ResolveUrl("~/Assets/Admincss/edit_users.css") %>" />
 
 </asp:Content>
 

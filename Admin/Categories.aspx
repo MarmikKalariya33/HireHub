@@ -18,7 +18,7 @@
     <!-- Categories CSS -->
     <link rel="stylesheet"
           type="text/css"
-          href="<%= ResolveUrl("~/Assets/css/categories.css") %>" />
+          href="<%= ResolveUrl("~/Assets/Admincss/categories.css") %>" />
 
 </asp:Content>
 
