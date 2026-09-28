@@ -40,7 +40,7 @@
 
     <link rel="stylesheet"
         type="text/css"
-        href="<%= ResolveUrl("~/Assets/css/site.css") %>" />
+        href="<%= ResolveUrl("~/Assets/Admincss/site.css") %>" />
 
 
     <!-- =====================================================
