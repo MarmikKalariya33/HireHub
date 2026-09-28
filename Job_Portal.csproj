@@ -137,6 +137,8 @@
     <Content Include="Assets\css\users.css" />
     <Content Include="Assets\Employeecss\dashboard.css" />
     <Content Include="Assets\Employeecss\employee.css" />
+    <Content Include="Assets\Employeecss\myjob.css" />
+    <Content Include="Assets\Employeecss\postnewjob.css" />
     <Content Include="Assets\images\logo.png" />
     <Content Include="Assets\Userscss\applications.css" />
     <Content Include="Assets\Userscss\apply_job.css" />
@@ -169,6 +171,8 @@
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Employee\Dashboard.aspx" />
+    <Content Include="Employee\MyJob.aspx" />
+    <Content Include="Employee\PostNewJob.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -390,6 +394,20 @@
     </Compile>
     <Compile Include="Employee\Employee.Master.designer.cs">
       <DependentUpon>Employee.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\MyJob.aspx.cs">
+      <DependentUpon>MyJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\MyJob.aspx.designer.cs">
+      <DependentUpon>MyJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\PostNewJob.aspx.cs">
+      <DependentUpon>PostNewJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\PostNewJob.aspx.designer.cs">
+      <DependentUpon>PostNewJob.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

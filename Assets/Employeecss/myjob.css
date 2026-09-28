@@ -1,0 +1,466 @@
+﻿/* =========================================
+   MY JOBS PAGE
+   ========================================= */
+
+.my-jobs-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 34px 35px 50px 35px;
+    box-sizing: border-box;
+    background-color: #fffcf7;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.jobs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+
+.jobs-title {
+    margin: 0;
+    color: #17233b;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* Right Header */
+
+.jobs-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================
+   SEARCH
+   ========================================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 262px;
+    height: 38px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #dfe3e8;
+    border-radius: 7px;
+    background-color: #ffffff;
+}
+
+
+.search-icon {
+    margin-right: 10px;
+    color: #737b87;
+    font-size: 17px;
+}
+
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #17233b;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+    .search-input::placeholder {
+        color: #737b87;
+    }
+
+
+/* =========================================
+   POST NEW JOB BUTTON
+   ========================================= */
+
+.post-job-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    height: 38px;
+    padding: 0 17px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #2864e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.2s ease;
+}
+
+
+    .post-job-button:hover {
+        background-color: #1e55cc;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+
+.plus-icon {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+
+/* =========================================
+   FILTER TABS
+   ========================================= */
+
+.job-filter-tabs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+
+.job-filter {
+    height: 37px;
+    padding: 0 17px;
+    border: 1px solid #dfe3e8;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #737b87;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+    .job-filter:hover {
+        border-color: #2864e8;
+        color: #2864e8;
+    }
+
+
+    .job-filter.active {
+        border-color: #286078;
+        background-color: #286078;
+        color: #ffffff;
+    }
+
+
+/* =========================================
+   JOB CARD
+   ========================================= */
+
+.job-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 96px;
+    margin-bottom: 13px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   COMPANY LOGO
+   ========================================= */
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 53px;
+    height: 53px;
+    margin-right: 17px;
+    border-radius: 7px;
+    background-color: #244c61;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   JOB INFORMATION
+   ========================================= */
+
+.job-information {
+    flex: 1;
+    min-width: 0;
+}
+
+
+.job-name {
+    margin: 0 0 5px 0;
+    color: #17233b;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+.job-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #737b87;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+
+.dot {
+    color: #737b87;
+}
+
+
+.applications-link {
+    color: #2864e8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+    .applications-link:hover {
+        text-decoration: underline;
+    }
+
+
+/* =========================================
+   JOB ACTIONS
+   ========================================= */
+
+.job-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    margin-left: 20px;
+}
+
+
+/* =========================================
+   STATUS
+   ========================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 26px;
+    padding: 0 9px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Active */
+
+.active-status {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+
+/* Inactive */
+
+.inactive-status {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+
+/* Draft */
+
+.draft-status {
+    background-color: #fff4bf;
+    color: #d69e00;
+}
+
+
+/* =========================================
+   EDIT
+   ========================================= */
+
+.edit-action {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #2864e8;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+    .edit-action:hover {
+        color: #1e55cc;
+        text-decoration: none;
+    }
+
+
+.action-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   DANGER / PUBLISH
+   ========================================= */
+
+.danger-action {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #f04444;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+    .danger-action:hover {
+        color: #d93636;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .my-jobs-page {
+        padding: 28px 25px 40px 25px;
+    }
+
+    .job-actions {
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 220px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .jobs-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .jobs-header-actions {
+        width: 100%;
+    }
+
+    .search-box {
+        flex: 1;
+        width: auto;
+    }
+
+    .job-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .job-information {
+        padding-top: 3px;
+    }
+
+    .job-actions {
+        width: 100%;
+        margin-top: 16px;
+        margin-left: 70px;
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .my-jobs-page {
+        padding: 22px 15px 30px 15px;
+    }
+
+    .jobs-title {
+        font-size: 25px;
+    }
+
+    .jobs-header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .post-job-button {
+        width: 100%;
+    }
+
+    .job-filter-tabs {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .job-filter {
+        flex-shrink: 0;
+    }
+
+    .job-card {
+        padding: 16px;
+    }
+
+    .company-logo {
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+    }
+
+    .job-name {
+        font-size: 16px;
+    }
+
+    .job-meta {
+        font-size: 13px;
+    }
+
+    .job-actions {
+        margin-left: 60px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
