@@ -1,0 +1,370 @@
+﻿/* =========================================
+   CANDIDATES PAGE
+========================================= */
+
+.candidates-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf8f2;
+    padding: 38px 34px 50px 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.candidates-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.candidates-title {
+    margin: 0;
+    color: #1d293f;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.candidates-subtitle {
+    margin: 8px 0 0 0;
+    color: #7a8494;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   TOTAL CANDIDATES
+========================================= */
+
+.candidate-count {
+    min-width: 145px;
+    padding: 12px 18px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count-number {
+    color: #315f78;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.count-text {
+    margin-top: 3px;
+    color: #7a8494;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SEARCH AND FILTER
+========================================= */
+
+.candidate-tools {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 27px;
+    margin-bottom: 22px;
+}
+
+.candidate-search {
+    width: 350px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #dce1e8;
+    border-radius: 7px;
+    padding: 0 13px;
+}
+
+    .candidate-search i {
+        color: #8791a1;
+        font-size: 16px;
+    }
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #263449;
+    font-size: 14px;
+    background: transparent;
+}
+
+    .search-input::placeholder {
+        color: #9aa2ae;
+    }
+
+.position-filter {
+    height: 42px;
+    min-width: 190px;
+    padding: 0 13px;
+    border: 1px solid #dce1e8;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #657084;
+    font-size: 14px;
+    outline: none;
+}
+
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.candidates-table-container {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.candidates-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+    /* =========================================
+   TABLE HEADER
+========================================= */
+
+    .candidates-table thead th {
+        height: 52px;
+        padding: 0 16px;
+        background: #fafbfc;
+        color: #202b40;
+        border-bottom: 1px solid #dfe3e8;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.candidate-column {
+    width: 22%;
+}
+
+.email-column {
+    width: 21%;
+}
+
+.position-column {
+    width: 20%;
+}
+
+.experience-column {
+    width: 11%;
+}
+
+.status-column {
+    width: 12%;
+}
+
+.action-column {
+    width: 10%;
+}
+
+
+/* =========================================
+   TABLE ROWS
+========================================= */
+
+.candidates-table tbody tr {
+    height: 76px;
+}
+
+.candidates-table tbody td {
+    padding: 0 16px;
+    border-bottom: 1px solid #e0e3e7;
+    color: #707a8b;
+    font-size: 14px;
+}
+
+.candidates-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   CANDIDATE INFO
+========================================= */
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.candidate-avatar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e7ecf2;
+    color: #25334a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.candidate-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.candidate-name {
+    color: #202b40;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.candidate-location {
+    color: #8a93a2;
+    font-size: 12px;
+}
+
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.candidate-email {
+    color: #707a8b;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   POSITION
+========================================= */
+
+.position-text {
+    color: #707a8b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.candidate-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #d9f7e5;
+    color: #16853e;
+}
+
+.status-interview {
+    background: #dceaff;
+    color: #2456bd;
+}
+
+.status-pending {
+    background: #fff2bd;
+    color: #d18a00;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.candidate-action {
+    color: #1764e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    .candidate-action:hover {
+        color: #0d4fc4;
+        text-decoration: none;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .candidates-page {
+        padding: 30px 24px;
+    }
+
+    .candidates-table {
+        min-width: 1050px;
+    }
+
+    .candidates-table-container {
+        overflow-x: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .candidates-page {
+        padding: 25px 18px;
+    }
+
+    .candidates-header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .candidate-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .candidate-search {
+        width: 100%;
+    }
+
+    .position-filter {
+        width: 100%;
+    }
+
+    .candidates-title {
+        font-size: 24px;
+    }
+}

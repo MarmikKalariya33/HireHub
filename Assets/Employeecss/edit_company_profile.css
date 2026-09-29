@@ -1,0 +1,421 @@
+﻿/* =========================================
+   EDIT COMPANY PROFILE PAGE
+========================================= */
+
+.edit-company-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf8f2;
+    padding: 38px 38px 50px 38px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.edit-company-header {
+    margin-bottom: 28px;
+}
+
+    .edit-company-header h1 {
+        margin: 0 0 5px 0;
+        color: #1d293f;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .edit-company-header p {
+        margin: 0;
+        color: #697586;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.edit-company-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    padding: 38px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   COMPANY LOGO SECTION
+========================================= */
+
+.company-logo-section {
+    display: flex;
+    align-items: center;
+    min-height: 105px;
+}
+
+
+/* =========================================
+   COMPANY LOGO
+========================================= */
+
+.edit-company-logo {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #28586f;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   LOGO CONTENT
+========================================= */
+
+.logo-content {
+    margin-left: 28px;
+}
+
+    .logo-content h2 {
+        margin: 0 0 10px 0;
+        color: #1d293f;
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   LOGO BUTTONS
+========================================= */
+
+.logo-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+/* =========================================
+   CHANGE LOGO BUTTON
+========================================= */
+
+.change-logo-button {
+    height: 36px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 5px;
+    background: #2864e8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .change-logo-button:hover {
+        background: #1f56cf;
+    }
+
+
+/* =========================================
+   REMOVE LOGO BUTTON
+========================================= */
+
+.remove-logo-button {
+    height: 36px;
+    padding: 0 15px;
+    border: 1px solid #dfe3e8;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #273248;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .remove-logo-button:hover {
+        background: #f7f8fa;
+    }
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.edit-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e5ea;
+    margin: 28px 0 30px 0;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.company-form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 27px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #1d293f;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.form-input {
+    width: 100%;
+    height: 45px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #d8dee6;
+    border-radius: 6px;
+    outline: none;
+    background: #ffffff;
+    color: #29354a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+    .form-input:focus {
+        border-color: #2864e8;
+        box-shadow: 0 0 0 2px rgba(40, 100, 232, 0.08);
+    }
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-select {
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   FULL WIDTH
+========================================= */
+
+.full-width {
+    width: 100%;
+    margin-top: 27px;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.form-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    border: 1px solid #d8dee6;
+    border-radius: 6px;
+    outline: none;
+    resize: vertical;
+    background: #ffffff;
+    color: #29354a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+    .form-textarea:focus {
+        border-color: #2864e8;
+        box-shadow: 0 0 0 2px rgba(40, 100, 232, 0.08);
+    }
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 42px;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-button {
+    height: 50px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 6px;
+    background: #2864e8;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .save-button:hover {
+        background: #1f56cf;
+    }
+
+
+/* =========================================
+   CANCEL BUTTON
+========================================= */
+
+.cancel-button {
+    height: 50px;
+    padding: 0 28px;
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #697586;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+    .cancel-button:hover {
+        background: #fafafa;
+    }
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .edit-company-page {
+        padding: 30px 24px 40px 24px;
+    }
+
+    .edit-company-card {
+        padding: 28px;
+    }
+
+    .company-form-grid {
+        grid-template-columns: 1fr;
+        row-gap: 22px;
+    }
+
+    .full-width {
+        margin-top: 22px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    .edit-company-page {
+        padding: 25px 18px 35px 18px;
+    }
+
+    .edit-company-header h1 {
+        font-size: 24px;
+    }
+
+    .edit-company-header p {
+        font-size: 14px;
+    }
+
+    .edit-company-card {
+        padding: 22px;
+    }
+
+    .company-logo-section {
+        align-items: flex-start;
+    }
+
+    .edit-company-logo {
+        width: 65px;
+        height: 65px;
+        font-size: 21px;
+    }
+
+    .logo-content {
+        margin-left: 18px;
+    }
+
+        .logo-content h2 {
+            font-size: 17px;
+        }
+
+    .logo-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .company-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-input {
+        height: 44px;
+        font-size: 15px;
+    }
+
+    .form-textarea {
+        font-size: 15px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+    }
+}

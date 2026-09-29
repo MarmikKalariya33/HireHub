@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -94,11 +97,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Registration.aspx" />
@@ -135,7 +133,13 @@
     <Content Include="Assets\Admincss\register.css" />
     <Content Include="Assets\Admincss\site.css" />
     <Content Include="Assets\Admincss\users.css" />
+    <Content Include="Assets\Employeecss\applications.css" />
+    <Content Include="Assets\Employeecss\application_dedtails.css" />
+    <Content Include="Assets\Employeecss\candidates.css" />
+    <Content Include="Assets\Employeecss\candidate_details.css" />
+    <Content Include="Assets\Employeecss\company_profile.css" />
     <Content Include="Assets\Employeecss\dashboard.css" />
+    <Content Include="Assets\Employeecss\edit_company_profile.css" />
     <Content Include="Assets\Employeecss\employee.css" />
     <Content Include="Assets\Employeecss\myjob.css" />
     <Content Include="Assets\Employeecss\postnewjob.css" />
@@ -170,7 +174,13 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Employee\Applications.aspx" />
+    <Content Include="Employee\Application_Details.aspx" />
+    <Content Include="Employee\Candidates.aspx" />
+    <Content Include="Employee\Candidate_Details.aspx" />
+    <Content Include="Employee\Company_Profile.aspx" />
     <Content Include="Employee\Dashboard.aspx" />
+    <Content Include="Employee\Edit_Company_Profile.aspx" />
     <Content Include="Employee\MyJob.aspx" />
     <Content Include="Employee\PostNewJob.aspx" />
     <Content Include="favicon.ico" />
@@ -381,12 +391,54 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Employee\Applications.aspx.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Applications.aspx.designer.cs">
+      <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Application_Details.aspx.cs">
+      <DependentUpon>Application_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Application_Details.aspx.designer.cs">
+      <DependentUpon>Application_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Candidates.aspx.cs">
+      <DependentUpon>Candidates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Candidates.aspx.designer.cs">
+      <DependentUpon>Candidates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Candidate_Details.aspx.cs">
+      <DependentUpon>Candidate_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Candidate_Details.aspx.designer.cs">
+      <DependentUpon>Candidate_Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Company_Profile.aspx.cs">
+      <DependentUpon>Company_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Company_Profile.aspx.designer.cs">
+      <DependentUpon>Company_Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Employee\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Employee\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Edit_Company_Profile.aspx.cs">
+      <DependentUpon>Edit_Company_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Edit_Company_Profile.aspx.designer.cs">
+      <DependentUpon>Edit_Company_Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Employee\Employee.Master.cs">
       <DependentUpon>Employee.Master</DependentUpon>

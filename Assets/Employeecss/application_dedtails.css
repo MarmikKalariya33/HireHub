@@ -1,0 +1,417 @@
+﻿/* =========================================
+   APPLICATION DETAILS PAGE
+========================================= */
+
+.application-details-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf8f2;
+    padding: 38px 34px 50px 34px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #1764e8;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .back-link:hover {
+        color: #0d4fc4;
+        text-decoration: none;
+    }
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.application-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    padding: 34px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CANDIDATE HEADER
+========================================= */
+
+.candidate-header {
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+}
+
+
+.candidate-avatar {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #28586f;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+.candidate-heading {
+    margin-left: 18px;
+}
+
+
+    .candidate-heading h1 {
+        margin: 0 0 6px 0;
+        color: #1d293f;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+
+/* =========================================
+   POSITION
+========================================= */
+
+.candidate-position {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: #707a8b;
+    font-size: 15px;
+}
+
+
+.applied-label {
+    color: #737d8e;
+}
+
+
+.position-link {
+    color: #1764e8;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+    .position-link:hover {
+        color: #0d4fc4;
+    }
+
+
+.dot {
+    color: #667085;
+    font-size: 18px;
+    margin: 0 2px;
+}
+
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25px;
+    padding: 4px 9px;
+    background: #dceaff;
+    color: #2456bd;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: #e1e4e8;
+    margin: 25px 0;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-section h2,
+.resume-section h2 {
+    margin: 0 0 18px 0;
+    color: #1d293f;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.contact-label {
+    color: #7b8494;
+    font-size: 13px;
+}
+
+
+.contact-value {
+    color: #202b40;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   RESUME
+========================================= */
+
+.resume-section h2 {
+    margin-bottom: 12px;
+}
+
+
+.resume-box {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    background: #f8fafc;
+    border: 1px solid #dfe3e8;
+    border-radius: 7px;
+}
+
+
+.resume-left {
+    display: flex;
+    align-items: center;
+}
+
+
+.resume-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1764e8;
+    font-size: 19px;
+}
+
+
+.resume-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 4px;
+}
+
+
+.resume-name {
+    color: #202b40;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.resume-size {
+    color: #7b8494;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 13px;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 5px;
+    color: #1764e8;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+    .download-button:hover {
+        background: #f5f8fc;
+        color: #0d4fc4;
+        text-decoration: none;
+    }
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.application-actions {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+/* COMMON HTML BUTTON */
+
+.shortlist-button,
+.reject-button {
+    height: 41px;
+    padding: 0 21px;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   SHORTLIST BUTTON
+========================================= */
+
+.shortlist-button {
+    background: #10b981;
+    min-width: 187px;
+}
+
+
+    .shortlist-button:hover {
+        background: #0ca678;
+    }
+
+
+    .shortlist-button:active {
+        background: #09966e;
+    }
+
+
+/* =========================================
+   REJECT BUTTON
+========================================= */
+
+.reject-button {
+    background: #f04444;
+    min-width: 170px;
+}
+
+
+    .reject-button:hover {
+        background: #dc3535;
+    }
+
+
+    .reject-button:active {
+        background: #ca2f2f;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .application-details-page {
+        padding: 30px 24px 40px 24px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .application-details-page {
+        padding: 25px 18px 35px 18px;
+    }
+
+    .application-card {
+        padding: 24px;
+    }
+
+    .candidate-header {
+        align-items: flex-start;
+    }
+
+    .candidate-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 23px;
+    }
+
+    .candidate-heading {
+        margin-left: 14px;
+    }
+
+        .candidate-heading h1 {
+            font-size: 21px;
+        }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .resume-box {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .application-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .shortlist-button,
+    .reject-button {
+        width: 100%;
+        min-width: 0;
+    }
+}

@@ -9,7 +9,7 @@
 
     <link
      rel="stylesheet"
-     href="<%= ResolveUrl("~/Assets/Employeecss/myjob.css") %>" />
+     href="<%= ResolveUrl("~/Assets/Employeecss/MyJob.css") %>" />
 
 </asp:Content>
 

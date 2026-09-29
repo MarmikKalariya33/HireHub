@@ -1,0 +1,310 @@
+﻿/* =========================================
+   JOB APPLICATIONS PAGE
+========================================= */
+
+.applications-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf8f2;
+    padding: 38px 34px 50px 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE TITLE
+========================================= */
+
+.applications-title {
+    margin: 0;
+    color: #1d293f;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.application-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 27px;
+    margin-bottom: 26px;
+}
+
+.filter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 18px;
+    border: 1px solid #dce1e8;
+    border-radius: 20px;
+    background: #ffffff;
+    color: #687386;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+    .filter-button:hover {
+        background: #f1f4f7;
+        color: #263449;
+        text-decoration: none;
+    }
+
+    .filter-button.active {
+        background: #315f78;
+        border-color: #315f78;
+        color: #ffffff;
+    }
+
+
+/* =========================================
+   TABLE CONTAINER
+========================================= */
+
+.applications-table-container {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+    /* =========================================
+   TABLE HEADER
+========================================= */
+
+    .applications-table thead th {
+        height: 51px;
+        background: #fafbfc;
+        color: #202b40;
+        text-align: left;
+        padding: 0 16px;
+        border-bottom: 1px solid #dfe3e8;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.candidate-column {
+    width: 25%;
+}
+
+.position-column {
+    width: 20%;
+}
+
+.date-column {
+    width: 16%;
+}
+
+.status-column {
+    width: 13%;
+}
+
+.actions-column {
+    width: 20%;
+}
+
+
+/* =========================================
+   TABLE ROW
+========================================= */
+
+.applications-table tbody tr {
+    height: 69px;
+}
+
+.applications-table tbody td {
+    padding: 0 16px;
+    border-bottom: 1px solid #e0e3e7;
+    color: #6f7889;
+    font-size: 15px;
+}
+
+.applications-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   CANDIDATE
+========================================= */
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.candidate-avatar {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #e7ecf2;
+    color: #25334a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.candidate-name {
+    color: #202b40;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   POSITION
+========================================= */
+
+.position-text {
+    color: #707a8b;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date-text {
+    color: #707a8b;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    padding: 4px 9px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* SHORTLISTED */
+
+.status-shortlisted {
+    background: #dceaff;
+    color: #2456bd;
+}
+
+
+/* INTERVIEW */
+
+.status-interview {
+    background: #d9f7e5;
+    color: #16853e;
+}
+
+
+/* REJECTED */
+
+.status-rejected {
+    background: #ffe0e0;
+    color: #d71919;
+}
+
+
+/* PENDING */
+
+.status-pending {
+    background: #fff2bd;
+    color: #d18a00;
+}
+
+
+/* =========================================
+   VIEW DETAILS
+========================================= */
+
+.view-details {
+    color: #1764e8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+    .view-details:hover {
+        color: #0d4fc4;
+        text-decoration: none;
+    }
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .applications-page {
+        padding: 30px 24px;
+    }
+
+    .applications-table {
+        min-width: 850px;
+    }
+
+    .applications-table-container {
+        overflow-x: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .applications-page {
+        padding: 25px 18px;
+    }
+
+    .applications-title {
+        font-size: 24px;
+    }
+
+    .application-filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        height: 34px;
+        padding: 0 15px;
+        font-size: 14px;
+    }
+}

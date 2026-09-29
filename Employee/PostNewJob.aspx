@@ -7,9 +7,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
- <link
-     rel="stylesheet"
-     href="<%= ResolveUrl("~/Assets/Employeecss/postnewjob.css") %>" />
+    <link
+        rel="stylesheet"
+        href="<%= ResolveUrl("~/Assets/Employeecss/postnewjob.css") %>" />
 
 </asp:Content>
 
@@ -17,6 +17,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="post-job-page">
+
+        <!-- Back Button -->
+        <a href="javascript:history.back();"
+           class="back-button">
+            ← Back
+        </a>
+
 
         <!-- Page Header -->
         <h1 class="post-job-title">
@@ -295,18 +302,14 @@
 
 
             <!-- Publish Button -->
-          <!-- Publish Button -->
-<asp:Button
-    ID="btnPublishJob"
-    runat="server"
-    Text="Publish Job"
-    CssClass="publish-button" />
+            <asp:Button
+                ID="btnPublishJob"
+                runat="server"
+                Text="Publish Job"
+                CssClass="publish-button" />
 
         </div>
 
     </div>
 
 </asp:Content>
-
-
-
