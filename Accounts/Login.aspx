@@ -32,6 +32,11 @@
 
     <div class="login-page">
 
+
+        <!-- =========================================
+             LEFT SIDE
+        ========================================= -->
+
         <div class="login-left">
 
             <div class="brand-area">
@@ -41,6 +46,7 @@
                      alt="HireHub" />
 
             </div>
+
 
             <div class="left-content">
 
@@ -64,13 +70,24 @@
         </div>
 
 
+        <!-- =========================================
+             RIGHT SIDE
+        ========================================= -->
+
         <div class="login-right">
 
             <div class="login-box">
 
+
+                <!-- =========================================
+                     WELCOME
+                ========================================= -->
+
                 <div class="welcome-section">
 
-                    <h2>Welcome</h2>
+                    <h2>
+                        Welcome
+                    </h2>
 
                     <p>
                         Select your role and enter your details to sign in
@@ -79,31 +96,52 @@
                 </div>
 
 
+                <!-- =========================================
+                     ROLE TABS
+                ========================================= -->
+
                 <div class="role-tabs">
 
-                    <button type="button"
-                            class="role-tab active"
-                            data-role="Admin">
+                    <button
+                        type="button"
+                        class="role-tab active"
+                        data-role="Admin">
+
                         Admin
+
                     </button>
 
-                    <button type="button"
-                            class="role-tab"
-                            data-role="Employer">
+
+                    <button
+                        type="button"
+                        class="role-tab"
+                        data-role="Employer">
+
                         Employer
+
                     </button>
 
-                    <button type="button"
-                            class="role-tab"
-                            data-role="Job Seeker">
+
+                    <button
+                        type="button"
+                        class="role-tab"
+                        data-role="Job Seeker">
+
                         Job Seeker
+
                     </button>
 
                 </div>
 
 
+                <!-- =========================================
+                     LOGIN FORM
+                ========================================= -->
+
                 <div class="login-form">
 
+
+                    <!-- EMAIL -->
                     <div class="form-group">
 
                         <label for="email">
@@ -119,7 +157,7 @@
                                 id="email"
                                 class="login-input"
                                 placeholder="Enter your email"
-                                value="sumitkumar12@gmail.com"
+                                value="admin@gmail.com"
                                 autocomplete="email" />
 
                         </div>
@@ -127,6 +165,7 @@
                     </div>
 
 
+                    <!-- PASSWORD -->
                     <div class="form-group">
 
                         <label for="password">
@@ -142,16 +181,19 @@
                                 id="password"
                                 class="login-input password-input"
                                 placeholder="Enter your password"
-                                value="Password123"
+                                value="admin123"
                                 autocomplete="current-password" />
+
 
                             <button
                                 type="button"
                                 class="password-toggle"
                                 id="passwordToggle">
 
-                                <i class="bi bi-eye"
-                                   id="passwordIcon"></i>
+                                <i
+                                    class="bi bi-eye"
+                                    id="passwordIcon">
+                                </i>
 
                             </button>
 
@@ -160,39 +202,44 @@
                     </div>
 
 
-                    <div class="login-options">
+                    <!-- LOGIN OPTIONS -->
+                   <div class="login-options">
 
-                        <label class="remember-option">
+    <label class="remember-option">
 
-                            <input
-                                type="checkbox"
-                                id="rememberMe" />
+        <input
+            type="checkbox"
+            id="rememberMe" />
 
-                            <span class="custom-checkbox"></span>
+        <span class="custom-checkbox"></span>
 
-                            <span class="remember-text">
-                                Keep me signed in
-                            </span>
+        <span class="remember-text">
+            Keep me signed in
+        </span>
 
-                        </label>
+    </label>
+
+    <a
+        href="ForgotPassword.aspx"
+        class="forgot-link">
+
+        Forgot Password?
+
+    </a>
+
+</div>
 
 
-                        <a href="#"
-                           class="forgot-link">
-                            Forgot Password?
-                        </a>
-
-                    </div>
-
-
+                    <!-- LOGIN BUTTON -->
                     <button
-    type="button"
-    class="login-button"
-    onclick="window.location.href='<%= ResolveUrl("~/Admin/Dashboard.aspx") %>'">
+                        type="button"
+                        id="loginButton"
+                        class="login-button">
 
-    Login to Account
+                        Login to Account
 
-</button>
+                    </button>
+
 
                 </div>
 
@@ -205,14 +252,26 @@
 </form>
 
 
+<!-- =========================================
+     LOGIN SCRIPT
+========================================= -->
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
 
+
+        /* =========================================
+           GET ELEMENTS
+        ========================================= */
+
         const roleTabs =
             document.querySelectorAll(".role-tab");
 
-        const password =
+        const emailInput =
+            document.getElementById("email");
+
+        const passwordInput =
             document.getElementById("password");
 
         const passwordToggle =
@@ -225,35 +284,99 @@
             document.getElementById("loginButton");
 
 
+        /* =========================================
+           DEFAULT ROLE
+        ========================================= */
+
+        let selectedRole = "Admin";
+
+
+        /* =========================================
+           ROLE TAB CLICK
+        ========================================= */
+
         roleTabs.forEach(function (tab) {
 
             tab.addEventListener("click", function () {
 
+
+                /* Remove active from all */
                 roleTabs.forEach(function (item) {
+
                     item.classList.remove("active");
+
                 });
 
+
+                /* Add active to clicked role */
                 tab.classList.add("active");
+
+
+                /* Get selected role */
+                selectedRole =
+                    tab.getAttribute("data-role");
+
+
+                /* =========================================
+                   SET DEFAULT LOGIN DETAILS
+                ========================================= */
+
+                if (selectedRole === "Admin") {
+
+                    emailInput.value =
+                        "admin@gmail.com";
+
+                    passwordInput.value =
+                        "admin123";
+
+                }
+
+
+                else if (selectedRole === "Employer") {
+
+                    emailInput.value =
+                        "employer@gmail.com";
+
+                    passwordInput.value =
+                        "employer123";
+
+                }
+
+
+                else if (selectedRole === "Job Seeker") {
+
+                    emailInput.value =
+                        "user@gmail.com";
+
+                    passwordInput.value =
+                        "user123";
+
+                }
 
             });
 
         });
 
 
+        /* =========================================
+           SHOW / HIDE PASSWORD
+        ========================================= */
+
         passwordToggle.addEventListener("click", function () {
 
-            if (password.type === "password") {
+            if (passwordInput.type === "password") {
 
-                password.type = "text";
+                passwordInput.type = "text";
 
                 passwordIcon.classList.remove("bi-eye");
 
                 passwordIcon.classList.add("bi-eye-slash");
 
             }
+
             else {
 
-                password.type = "password";
+                passwordInput.type = "password";
 
                 passwordIcon.classList.remove("bi-eye-slash");
 
@@ -264,35 +387,129 @@
         });
 
 
+        /* =========================================
+           LOGIN BUTTON
+        ========================================= */
+
         loginButton.addEventListener("click", function () {
 
-            const email =
-                document.getElementById("email").value.trim();
 
-            const passwordValue =
-                password.value.trim();
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value.trim();
+
+
+            /* =========================================
+               EMAIL VALIDATION
+            ========================================= */
 
             if (email === "") {
 
                 alert("Please enter your email address.");
 
-                document.getElementById("email").focus();
+                emailInput.focus();
 
                 return;
 
             }
 
-            if (passwordValue === "") {
+
+            /* =========================================
+               PASSWORD VALIDATION
+            ========================================= */
+
+            if (password === "") {
 
                 alert("Please enter your password.");
 
-                password.focus();
+                passwordInput.focus();
 
                 return;
 
             }
 
-            alert("Login functionality will be connected to the backend later.");
+
+            /* =========================================
+               ADMIN LOGIN
+            ========================================= */
+
+            if (selectedRole === "Admin") {
+
+                if (
+                    email === "admin@gmail.com" &&
+                    password === "admin123"
+                ) {
+
+                    window.location.href =
+                        '<%= ResolveUrl("~/Admin/Dashboard.aspx") %>';
+
+                }
+
+                else {
+
+                    alert(
+                        "Invalid Admin Email or Password."
+                    );
+
+                }
+
+            }
+
+
+            /* =========================================
+               EMPLOYER LOGIN
+            ========================================= */
+
+            else if (selectedRole === "Employer") {
+
+                if (
+                    email === "employer@gmail.com" &&
+                    password === "employer123"
+                ) {
+
+                    window.location.href =
+                        '<%= ResolveUrl("~/Employee/Dashboard.aspx") %>';
+
+                }
+
+                else {
+
+                    alert(
+                        "Invalid Employer Email or Password."
+                    );
+
+                }
+
+            }
+
+
+            /* =========================================
+               JOB SEEKER LOGIN
+            ========================================= */
+
+            else if (selectedRole === "Job Seeker") {
+
+                if (
+                    email === "user@gmail.com" &&
+                    password === "user123"
+                ) {
+
+                    window.location.href =
+                        '<%= ResolveUrl("~/Users/Dashboard.aspx") %>';
+
+                }
+
+                else {
+
+                    alert(
+                        "Invalid Job Seeker Email or Password."
+                    );
+
+                }
+
+            }
 
         });
 

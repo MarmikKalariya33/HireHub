@@ -306,7 +306,8 @@
                 ID="btnPublishJob"
                 runat="server"
                 Text="Publish Job"
-                CssClass="publish-button" />
+                CssClass="publish-button"
+                PostBackUrl="~/Employee/MyJob.aspx" />
 
         </div>
 

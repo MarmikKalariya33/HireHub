@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Job_Portal.Employee
+namespace Job_Portal.Accounts
 {
-    public partial class Candidate_Details : System.Web.UI.Page
+    public partial class NewPassword : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

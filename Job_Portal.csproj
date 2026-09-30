@@ -98,7 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Accounts\ForgotPassword.aspx" />
     <Content Include="Accounts\Login.aspx" />
+    <Content Include="Accounts\NewPassword.aspx" />
     <Content Include="Accounts\Registration.aspx" />
     <Content Include="Admin\Add_Jobs.aspx" />
     <Content Include="Admin\AdminProfile.aspx" />
@@ -128,6 +130,7 @@
     <Content Include="Assets\Admincss\edit_users.css" />
     <Content Include="Assets\Admincss\employers.css" />
     <Content Include="Assets\Admincss\employer_details.css" />
+    <Content Include="Assets\Admincss\forgotpassword.css" />
     <Content Include="Assets\Admincss\jobs.css" />
     <Content Include="Assets\Admincss\login.css" />
     <Content Include="Assets\Admincss\register.css" />
@@ -265,12 +268,26 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Accounts\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Accounts\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\NewPassword.aspx.cs">
+      <DependentUpon>NewPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\NewPassword.aspx.designer.cs">
+      <DependentUpon>NewPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounts\Registration.aspx.cs">
       <DependentUpon>Registration.aspx</DependentUpon>

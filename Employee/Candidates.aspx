@@ -157,7 +157,7 @@
                         </td>
 
                         <td>
-                            <a href="Applications_Details.aspx"
+                            <a href="Candidate_Details.aspx"
                                class="candidate-action">
                                 View
                             </a>
@@ -214,7 +214,7 @@
                         </td>
 
                         <td>
-                            <a href="Applications_Details.aspx"
+                            <a href="Candidate_Details.aspx"
                                class="candidate-action">
                                 View
                             </a>
@@ -271,7 +271,7 @@
                         </td>
 
                         <td>
-                            <a href="Applications_Details.aspx"
+                            <a href="Candidate_Details.aspx"
                                class="candidate-action">
                                 View
                             </a>
@@ -328,7 +328,7 @@
                         </td>
 
                         <td>
-                            <a href="Applications_Details.aspx"
+                            <a href="Candidate_Details.aspx"
                                class="candidate-action">
                                 View
                             </a>
@@ -386,9 +386,9 @@
 
                         <td>
                             <a href="Candidate_Details.aspx"
-                               class="candidate-action">
-                                View
-                            </a>
+                             class="candidate-action">
+                                    View
+                             </a>
                         </td>
 
                     </tr>

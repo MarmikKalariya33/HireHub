@@ -23,17 +23,22 @@
     <div class="candidate-details-page">
 
         <!-- BACK -->
+
         <a href="Candidates.aspx"
            class="back-link">
+
             ← Back to Candidates
+
         </a>
 
 
         <!-- MAIN CARD -->
+
         <div class="candidate-details-card">
 
 
             <!-- CANDIDATE HEADER -->
+
             <div class="candidate-header">
 
                 <div class="candidate-avatar">
@@ -63,6 +68,7 @@
 
 
             <!-- PERSONAL INFORMATION -->
+
             <div class="details-section">
 
                 <h2>
@@ -131,6 +137,7 @@
 
 
             <!-- PROFESSIONAL INFORMATION -->
+
             <div class="details-section">
 
                 <h2>
@@ -199,6 +206,7 @@
 
 
             <!-- SKILLS -->
+
             <div class="details-section">
 
                 <h2>
@@ -244,6 +252,7 @@
 
 
             <!-- RESUME -->
+
             <div class="details-section">
 
                 <h2>
@@ -255,7 +264,9 @@
                     <div class="resume-left">
 
                         <div class="resume-icon">
+
                             <i class="bi bi-file-earmark-text"></i>
+
                         </div>
 
                         <div class="resume-info">
@@ -275,31 +286,12 @@
 
                     <a href="#"
                        class="download-button">
+
                         Download
+
                     </a>
 
                 </div>
-
-            </div>
-
-
-            <div class="section-divider"></div>
-
-
-            <!-- ACTIONS -->
-            <div class="candidate-actions">
-
-                <button
-                    type="button"
-                    class="shortlist-button">
-                    Shortlist Candidate
-                </button>
-
-                <button
-                    type="button"
-                    class="reject-button">
-                    Reject Candidate
-                </button>
 
             </div>
 

@@ -359,22 +359,24 @@
                  FORM ACTIONS
             ========================================= -->
 
-            <div class="form-actions">
+         <div class="form-actions">
 
-                <button
-                    type="button"
-                    class="save-button">
-                    Save Changes
-                </button>
+    <asp:Button
+        ID="btnSaveChanges"
+        runat="server"
+        Text="Save Changes"
+        CssClass="save-button"
+        PostBackUrl="~/Employee/Company_Profile.aspx" />
 
+    <asp:Button
+        ID="btnCancel"
+        runat="server"
+        Text="Cancel"
+        CssClass="cancel-button"
+        PostBackUrl="~/Employee/Company_Profile.aspx" />
 
-                <button
-                    type="button"
-                    class="cancel-button">
-                    Cancel
-                </button>
-
-            </div>
+</div>
+</div>
 
 
         </div>

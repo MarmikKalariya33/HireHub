@@ -166,13 +166,19 @@
            <!-- ACTION BUTTONS -->
 <div class="application-actions">
 
-    <button type="button" class="shortlist-button">
-        Shortlist Candidate
-    </button>
+    <asp:Button
+        ID="btnShortlist"
+        runat="server"
+        Text="Shortlist Candidate"
+        CssClass="shortlist-button"
+        PostBackUrl="~/Employee/Applications.aspx" />
 
-    <button type="button" class="reject-button">
-        Reject Candidate
-    </button>
+    <asp:Button
+        ID="btnReject"
+        runat="server"
+        Text="Reject Candidate"
+        CssClass="reject-button"
+        PostBackUrl="~/Employee/Applications.aspx" />
 
 </div>
 

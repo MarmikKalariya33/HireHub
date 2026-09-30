@@ -124,7 +124,7 @@
                 runat="server"
                 Text="Logout"
                 CssClass="employee-logout"
-                PostBackUrl="~/Users/Login.aspx" />
+                PostBackUrl="~/Accounts/Login.aspx" />
 
 
             <!-- COMPANY USER -->
