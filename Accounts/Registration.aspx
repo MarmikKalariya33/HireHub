@@ -1,5 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="Job_Portal.Accounts.Registration" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="Registration.aspx.cs"
+    Inherits="Job_Portal.Accounts.Registration" %>
 
 <!DOCTYPE html>
 
@@ -201,13 +202,8 @@
                             <i class="bi bi-lock input-icon"></i>
 
                             <input type="password"
-                                   id="password"
                                    class="form-input password-input"
                                    placeholder="Minimum 8 characters" />
-
-                            <i class="bi bi-eye password-eye"
-                               onclick="togglePassword('password', this)">
-                            </i>
 
                         </div>
 
@@ -229,13 +225,8 @@
                             <i class="bi bi-lock input-icon"></i>
 
                             <input type="password"
-                                   id="confirmPassword"
                                    class="form-input password-input"
                                    placeholder="Re-enter your password" />
-
-                            <i class="bi bi-eye password-eye"
-                               onclick="togglePassword('confirmPassword', this)">
-                            </i>
 
                         </div>
 
@@ -254,7 +245,9 @@
                                    checked="checked" />
 
                             <span class="custom-checkbox">
+
                                 <i class="bi bi-check"></i>
+
                             </span>
 
                             <span class="terms-text">
@@ -300,7 +293,7 @@
                             Already have an account?
                         </span>
 
-                        <a href="Login.aspx">
+                        <a href="login.aspx">
                             Login
                         </a>
 
@@ -313,40 +306,6 @@
         </div>
 
     </form>
-
-
-    <!-- =========================================================
-         PASSWORD SHOW / HIDE
-    ========================================================== -->
-
-    <script>
-
-        function togglePassword(inputId, icon) {
-
-            var input = document.getElementById(inputId);
-
-            if (input.type === "password") {
-
-                input.type = "text";
-
-                icon.classList.remove("bi-eye");
-
-                icon.classList.add("bi-eye-slash");
-
-            }
-            else {
-
-                input.type = "password";
-
-                icon.classList.remove("bi-eye-slash");
-
-                icon.classList.add("bi-eye");
-
-            }
-
-        }
-
-    </script>
 
 </body>
 
