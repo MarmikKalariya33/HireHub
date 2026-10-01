@@ -21,7 +21,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet"
           type="text/css"
-          href="../Assets/css/register.css" />
+          href="../Assets/Admincss/register.css" />
 
 </head>
 
@@ -300,7 +300,7 @@
                             Already have an account?
                         </span>
 
-                        <a href="#">
+                        <a href="Login.aspx">
                             Login
                         </a>
 

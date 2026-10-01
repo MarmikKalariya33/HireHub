@@ -14,15 +14,46 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1" />
 
+    <!-- Bootstrap -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
+    <!-- Login CSS -->
     <link rel="stylesheet"
           type="text/css"
           href="<%= ResolveUrl("~/Assets/Admincss/login.css") %>" />
+
+    <style>
+
+        /* =========================================
+           REGISTRATION LINK
+        ========================================= */
+
+        .register-section {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .register-link {
+            margin-left: 5px;
+            color: #456276;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .register-link:hover {
+            color: #6096BA;
+            text-decoration: underline;
+        }
+
+    </style>
 
 </head>
 
@@ -62,7 +93,13 @@
                 </p>
 
                 <div class="left-features">
-                    Find jobs <span>•</span> Apply Easily <span>•</span> Grow Professionally
+
+                    Find jobs
+                    <span>•</span>
+                    Apply Easily
+                    <span>•</span>
+                    Grow Professionally
+
                 </div>
 
             </div>
@@ -142,6 +179,7 @@
 
 
                     <!-- EMAIL -->
+
                     <div class="form-group">
 
                         <label for="email">
@@ -166,6 +204,7 @@
 
 
                     <!-- PASSWORD -->
+
                     <div class="form-group">
 
                         <label for="password">
@@ -185,6 +224,8 @@
                                 autocomplete="current-password" />
 
 
+                            <!-- PASSWORD SHOW/HIDE -->
+
                             <button
                                 type="button"
                                 class="password-toggle"
@@ -202,35 +243,42 @@
                     </div>
 
 
-                    <!-- LOGIN OPTIONS -->
-                   <div class="login-options">
+                    <!-- =========================================
+                         LOGIN OPTIONS
+                    ========================================= -->
 
-    <label class="remember-option">
+                    <div class="login-options">
 
-        <input
-            type="checkbox"
-            id="rememberMe" />
+                        <label class="remember-option">
 
-        <span class="custom-checkbox"></span>
+                            <input
+                                type="checkbox"
+                                id="rememberMe" />
 
-        <span class="remember-text">
-            Keep me signed in
-        </span>
+                            <span class="custom-checkbox"></span>
 
-    </label>
+                            <span class="remember-text">
+                                Keep me signed in
+                            </span>
 
-    <a
-        href="ForgotPassword.aspx"
-        class="forgot-link">
-
-        Forgot Password?
-
-    </a>
-
-</div>
+                        </label>
 
 
-                    <!-- LOGIN BUTTON -->
+                        <a
+                            href="ForgotPassword.aspx"
+                            class="forgot-link">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         LOGIN BUTTON
+                    ========================================= -->
+
                     <button
                         type="button"
                         id="loginButton"
@@ -239,6 +287,27 @@
                         Login to Account
 
                     </button>
+
+
+                    <!-- =========================================
+                         REGISTRATION LINK
+                    ========================================= -->
+
+                    <div class="register-section">
+
+                        <span>
+                            Don't have an account?
+                        </span>
+
+                        <a
+                            href="Registration.aspx"
+                            class="register-link">
+
+                            Register Now
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -301,6 +370,7 @@
 
 
                 /* Remove active from all */
+
                 roleTabs.forEach(function (item) {
 
                     item.classList.remove("active");
@@ -309,10 +379,12 @@
 
 
                 /* Add active to clicked role */
+
                 tab.classList.add("active");
 
 
                 /* Get selected role */
+
                 selectedRole =
                     tab.getAttribute("data-role");
 
@@ -516,6 +588,7 @@
     });
 
 </script>
+
 
 </body>
 </html>
