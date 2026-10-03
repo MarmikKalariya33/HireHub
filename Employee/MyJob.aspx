@@ -9,7 +9,7 @@
 
     <link
      rel="stylesheet"
-     href="<%= ResolveUrl("~/Assets/Employeecss/MyJob.css") %>" />
+     href="<%= ResolveUrl("~/Assets/Employeecss/myjob.css") %>" />
 
 </asp:Content>
 
@@ -148,7 +148,7 @@
                     Active
                 </span>
 
-                <a href="#" class="edit-action">
+                <a href="EditJob.aspx" class="edit-action">
                     <span class="action-icon">✎</span>
                     Edit
                 </a>
@@ -215,7 +215,7 @@
                     Active
                 </span>
 
-                <a href="#" class="edit-action">
+                <a href="EditJob.aspx" class="edit-action">
                     <span class="action-icon">✎</span>
                     Edit
                 </a>
@@ -282,7 +282,7 @@
                     Inactive
                 </span>
 
-                <a href="#" class="edit-action">
+                <a href="EditJob.aspx" class="edit-action">
                     <span class="action-icon">✎</span>
                     Edit
                 </a>
@@ -349,7 +349,7 @@
                     Draft
                 </span>
 
-                <a href="#" class="edit-action">
+                <a href="EditJob.aspx" class="edit-action">
                     <span class="action-icon">✎</span>
                     Edit
                 </a>

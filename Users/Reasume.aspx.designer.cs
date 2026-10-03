@@ -15,6 +15,24 @@ namespace Job_Portal.Users
     {
 
         /// <summary>
+        /// rfvResume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvResume;
+
+        /// <summary>
+        /// revResume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revResume;
+
+        /// <summary>
         /// fuResume control.
         /// </summary>
         /// <remarks>
@@ -22,14 +40,5 @@ namespace Job_Portal.Users
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fuResume;
-
-        /// <summary>
-        /// btnSubmitResume control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitResume;
     }
 }

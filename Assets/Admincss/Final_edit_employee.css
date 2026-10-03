@@ -1,0 +1,582 @@
+﻿```css
+/* =========================================
+   EMPLOYER DETAILS PAGE
+========================================= */
+.employer-details-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf9f4;
+    padding: 35px 40px 50px 40px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   BACK SECTION
+========================================= */
+
+.back-section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #475467;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    .back-link:hover {
+        color: #2563eb;
+    }
+
+.back-arrow {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   MAIN EMPLOYER CARD
+========================================= */
+
+.employer-details-card {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
+}
+
+
+/* =========================================
+   COMPANY HEADER
+========================================= */
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+
+/* =========================================
+   COMPANY LOGO
+========================================= */
+
+.company-logo {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8efff;
+    color: #2563eb;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   COMPANY HEADING
+========================================= */
+
+.company-heading {
+    flex: 1;
+}
+
+    .company-heading h1 {
+        margin: 0;
+        color: #101828;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .company-heading p {
+        margin: 7px 0 0 0;
+        color: #667085;
+        font-size: 14px;
+    }
+
+
+/* =========================================
+   COMPANY TITLE ROW
+========================================= */
+
+.company-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+/* =========================================
+   ACTIVE BADGE
+========================================= */
+
+.active-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 11px;
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DETAILS DIVIDER
+========================================= */
+
+.details-divider {
+    width: 100%;
+    height: 1px;
+    background: #eaecf0;
+    margin: 28px 0;
+}
+
+
+/* =========================================
+   COMPANY DETAILS
+   2 COLUMN LAYOUT
+========================================= */
+
+.company-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 24px;
+    width: 100%;
+}
+
+
+/* =========================================
+   DETAIL ITEM
+========================================= */
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+
+/* =========================================
+   DETAIL LABEL
+========================================= */
+
+.detail-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #667085;
+    letter-spacing: 0.7px;
+}
+
+
+/* =========================================
+   NORMAL DETAIL VALUE
+========================================= */
+
+.detail-value {
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #344054;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   WEBSITE
+========================================= */
+
+.website-value a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+    .website-value a:hover {
+        text-decoration: underline;
+    }
+
+
+/* =========================================
+   EDIT INPUT
+========================================= */
+
+.employer-edit-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+
+    /* =========================================
+   INPUT FOCUS
+========================================= */
+
+    .employer-edit-input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    }
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+select.employer-edit-input {
+    cursor: pointer;
+    appearance: auto;
+}
+
+
+/* =========================================
+   ABOUT COMPANY DIVIDER
+========================================= */
+
+.about-divider {
+    width: 100%;
+    height: 1px;
+    background: #eaecf0;
+    margin: 28px 0;
+}
+
+
+/* =========================================
+   ABOUT COMPANY
+========================================= */
+
+.about-company {
+    width: 100%;
+}
+
+    .about-company h2 {
+        margin: 0 0 15px 0;
+        color: #101828;
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+
+    /* =========================================
+   ABOUT COMPANY NORMAL TEXT
+========================================= */
+
+    .about-company p {
+        margin: 0 0 14px 0;
+        color: #667085;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+/* =========================================
+   EDIT TEXTAREA
+========================================= */
+
+.employer-edit-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 13px;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    outline: none;
+    resize: vertical;
+    transition: all 0.2s ease;
+}
+
+
+    /* =========================================
+   TEXTAREA FOCUS
+========================================= */
+
+    .employer-edit-textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    }
+
+
+/* =========================================
+   ACTION SECTION
+========================================= */
+
+.details-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   EDIT / SAVE BUTTON
+========================================= */
+
+.edit-employer-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.2s ease;
+}
+
+    .edit-employer-btn:hover {
+        background: #1d4ed8;
+    }
+
+
+/* =========================================
+   BACK / CANCEL BUTTON
+========================================= */
+
+.back-employers-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 0 22px;
+    border-radius: 7px;
+    background: #f2f4f7;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .back-employers-btn:hover {
+        background: #e4e7ec;
+        color: #344054;
+    }
+
+
+/* =========================================
+   BLOCK BUTTON
+========================================= */
+
+.btn-block {
+    min-height: 43px;
+    padding: 0 22px;
+    border: 1px solid #f04438;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #d92d20;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .btn-block:hover {
+        background: #fef3f2;
+    }
+
+
+/* =========================================
+   NORMAL DETAILS ACTIONS
+========================================= */
+
+.details-actions .back-employers-btn {
+    min-width: 150px;
+}
+
+
+/* =========================================
+   NORMAL DETAILS PAGE BUTTON
+========================================= */
+
+.details-actions .edit-employer-btn {
+    min-width: 145px;
+}
+
+
+/* =========================================
+   EDIT PAGE INPUT PLACEHOLDER
+========================================= */
+
+.employer-edit-input::placeholder {
+    color: #98a2b3;
+}
+
+
+/* =========================================
+   TEXTAREA PLACEHOLDER
+========================================= */
+
+.employer-edit-textarea::placeholder {
+    color: #98a2b3;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .employer-details-page {
+        padding: 30px 25px 45px 25px;
+    }
+
+    .employer-details-card {
+        padding: 28px;
+    }
+
+    .company-details {
+        column-gap: 25px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .employer-details-page {
+        padding: 25px 18px 40px 18px;
+    }
+
+    .employer-details-card {
+        padding: 24px;
+    }
+
+    .company-details {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .company-header {
+        align-items: flex-start;
+    }
+
+    .company-logo {
+        width: 62px;
+        height: 62px;
+        min-width: 62px;
+        font-size: 19px;
+    }
+
+    .company-heading h1 {
+        font-size: 21px;
+    }
+
+    .details-actions {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .employer-details-page {
+        padding: 20px 12px 30px 12px;
+    }
+
+    .employer-details-card {
+        padding: 20px;
+        border-radius: 9px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-heading {
+        width: 100%;
+    }
+
+    .company-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .details-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .edit-employer-btn,
+    .back-employers-btn {
+        width: 100%;
+        min-width: 0 !important;
+    }
+}
+
+
+/* =========================================
+   PREVENT INPUT OVERFLOW
+========================================= */
+
+.company-details input,
+.company-details select,
+.about-company textarea {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   BOX SIZING
+========================================= */
+
+.employer-details-page *,
+.employer-details-page *::before,
+.employer-details-page *::after {
+    box-sizing: border-box;
+}
+
+```

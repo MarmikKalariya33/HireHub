@@ -277,12 +277,13 @@
 
                 </a>
 
-                <button type="button"
-                        class="edit-employer-btn">
+                <a href="Final_Edit_Employee.aspx"
+                class="edit-employer-btn">
 
-                    Edit Employer
+                Edit Employer
 
-                </button>
+            </a>
+
 
             </div>
 

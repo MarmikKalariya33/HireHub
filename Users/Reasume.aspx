@@ -1,4 +1,5 @@
-﻿<%@ Page Title="My Resume"
+﻿
+<%@ Page Title="My Resume"
     Language="C#"
     MasterPageFile="~/Users/users.Master"
     AutoEventWireup="true"
@@ -131,6 +132,30 @@
                 or click to browse
 
             </p>
+            <p class="upload-description">
+
+                <asp:RequiredFieldValidator
+                    ID="rfvResume"
+                    runat="server"
+                    ControlToValidate="fuResume"
+                    ErrorMessage="Please choose your resume."
+                    Display="Dynamic"
+                    CssClass="validation-error" ForeColor="Red"></asp:RequiredFieldValidator>
+
+
+
+                <asp:RegularExpressionValidator
+                    ID="revResume"
+                    runat="server"
+                    ControlToValidate="fuResume"
+                    ValidationExpression="^.*\.(pdf|doc|docx)$"
+                    ErrorMessage="Only PDF, DOC and DOCX files are allowed."
+                    Display="Dynamic"
+                    CssClass="validation-error" ForeColor="Red"></asp:RegularExpressionValidator>
+
+
+
+            </p>
 
 
 
@@ -147,8 +172,7 @@
                     ID="fuResume"
                     runat="server"
                     CssClass="resume-file-input"
-                    accept=".pdf,.doc,.docx"
-                    onchange="showSelectedFile(this);" />
+                    accept=".pdf,.doc,.docx" />
 
 
 
@@ -166,14 +190,23 @@
 
 
 
+                <!-- REQUIRED VALIDATION -->
+
+
+
+                <!-- FILE TYPE VALIDATION -->
+
+
+
                 <!-- SUBMIT RESUME BUTTON -->
 
-                <asp:Button
-                    ID="btnSubmitResume"
-                    runat="server"
-                    Text="Submit Resume"
-                    CssClass="submit-resume-button"
-                    OnClientClick="return validateResume();" />
+                <button
+                    type="submit"
+                    class="submit-resume-button">
+
+                    Submit Resume
+
+                </button>
 
 
             </div>
@@ -207,163 +240,6 @@
 
 
     </div>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ===================================================== -->
-
-    <script type="text/javascript">
-
-        function showSelectedFile(input) {
-
-            var fileNameBox =
-                document.getElementById("selectedFileName");
-
-
-            if (input.files && input.files.length > 0) {
-
-                var file = input.files[0];
-
-                var fileName = file.name;
-
-                var fileSize =
-                    file.size / (1024 * 1024);
-
-
-
-                /* FILE SIZE CHECK */
-
-                if (fileSize > 5) {
-
-                    alert(
-                        "Resume file size must be less than 5 MB."
-                    );
-
-                    input.value = "";
-
-                    fileNameBox.innerHTML = "";
-
-                    return;
-                }
-
-
-
-                /* FILE EXTENSION CHECK */
-
-                var allowedExtensions =
-                    /(\.pdf|\.doc|\.docx)$/i;
-
-
-                if (!allowedExtensions.exec(fileName)) {
-
-                    alert(
-                        "Only PDF, DOC and DOCX files are allowed."
-                    );
-
-                    input.value = "";
-
-                    fileNameBox.innerHTML = "";
-
-                    return;
-                }
-
-
-
-                /* SHOW FILE NAME */
-
-                fileNameBox.innerHTML =
-                    '<i class="bi bi-file-earmark-text"></i> '
-                    + fileName;
-
-            }
-
-            else {
-
-                fileNameBox.innerHTML = "";
-
-            }
-
-        }
-
-
-
-        /* =================================================
-           SUBMIT VALIDATION
-        ================================================== */
-
-        function validateResume() {
-
-            var fileInput =
-                document.getElementById(
-                    "<%= fuResume.ClientID %>"
-                );
-
-
-            /* CHECK FILE */
-
-            if (
-                !fileInput.files ||
-                fileInput.files.length === 0
-            ) {
-
-                alert("Please choose your resume first.");
-
-                return false;
-
-            }
-
-
-
-            var file =
-                fileInput.files[0];
-
-            var fileName =
-                file.name;
-
-            var fileSize =
-                file.size / (1024 * 1024);
-
-
-
-            /* CHECK SIZE */
-
-            if (fileSize > 5) {
-
-                alert(
-                    "Resume file size must be less than 5 MB."
-                );
-
-                return false;
-
-            }
-
-
-
-            /* CHECK EXTENSION */
-
-            var allowedExtensions =
-                /(\.pdf|\.doc|\.docx)$/i;
-
-
-            if (!allowedExtensions.exec(fileName)) {
-
-                alert(
-                    "Only PDF, DOC and DOCX files are allowed."
-                );
-
-                return false;
-
-            }
-
-
-
-            return true;
-
-        }
-
-    </script>
 
 
 </asp:Content>
