@@ -375,6 +375,21 @@ select.edit-input {
 
 
 /* =========================================
+   ASP.NET WEB FORMS TOOLBOX VALIDATION
+========================================= */
+
+.information-group span,
+.personal-information span {
+    display: block;
+    margin-top: 1px;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* =========================================
    RESPONSIVE DESIGN
 ========================================= */
 

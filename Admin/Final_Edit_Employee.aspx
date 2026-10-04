@@ -44,7 +44,6 @@
         </div>
 
 
-
         <!-- =========================================
              EDIT EMPLOYER CARD
         ========================================== -->
@@ -78,13 +77,7 @@
             </div>
 
 
-
-            <!-- =========================================
-                 DIVIDER
-            ========================================== -->
-
             <div class="details-divider"></div>
-
 
 
             <!-- =========================================
@@ -95,7 +88,7 @@
 
 
                 <!-- =====================================
-                     ROW 1 - COMPANY NAME
+                     COMPANY NAME
                 ====================================== -->
 
                 <div class="detail-item">
@@ -104,6 +97,7 @@
                         COMPANY NAME
                     </div>
 
+
                     <asp:TextBox
                         ID="txtCompanyName"
                         runat="server"
@@ -111,12 +105,23 @@
                         Text="Tata Consultancy Services">
                     </asp:TextBox>
 
+
+                    <!-- ASP.NET TOOLBOX VALIDATION -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCompanyName"
+                        runat="server"
+                        ControlToValidate="txtCompanyName"
+                        ErrorMessage="Company name is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 1 - CONTACT EMAIL
+                     CONTACT EMAIL
                 ====================================== -->
 
                 <div class="detail-item">
@@ -125,6 +130,7 @@
                         CONTACT EMAIL
                     </div>
 
+
                     <asp:TextBox
                         ID="txtEmail"
                         runat="server"
@@ -132,12 +138,32 @@
                         Text="hr@tcs.com">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvEmail"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        ErrorMessage="Email address is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revEmail"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        ErrorMessage="Please enter a valid email address."
+                        ForeColor="Red"
+                        Display="Dynamic"
+                        ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 2 - CONTACT PHONE
+                     CONTACT PHONE
                 ====================================== -->
 
                 <div class="detail-item">
@@ -146,6 +172,7 @@
                         CONTACT PHONE
                     </div>
 
+
                     <asp:TextBox
                         ID="txtPhone"
                         runat="server"
@@ -153,12 +180,32 @@
                         Text="+91 22 6778 9999">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvPhone"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        ErrorMessage="Phone number is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revPhone"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        ErrorMessage="Please enter a valid phone number."
+                        ForeColor="Red"
+                        Display="Dynamic"
+                        ValidationExpression="^(\+91[\s-]?)?[0-9]{2,5}[\s-]?[0-9]{6,8}$">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 2 - LOCATION
+                     LOCATION
                 ====================================== -->
 
                 <div class="detail-item">
@@ -167,6 +214,7 @@
                         LOCATION
                     </div>
 
+
                     <asp:TextBox
                         ID="txtLocation"
                         runat="server"
@@ -174,12 +222,21 @@
                         Text="Mumbai, India">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvLocation"
+                        runat="server"
+                        ControlToValidate="txtLocation"
+                        ErrorMessage="Location is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 3 - INDUSTRY
+                     INDUSTRY
                 ====================================== -->
 
                 <div class="detail-item">
@@ -188,6 +245,7 @@
                         INDUSTRY
                     </div>
 
+
                     <asp:TextBox
                         ID="txtIndustry"
                         runat="server"
@@ -195,12 +253,21 @@
                         Text="IT &amp; Software">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvIndustry"
+                        runat="server"
+                        ControlToValidate="txtIndustry"
+                        ErrorMessage="Industry is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 3 - COMPANY SIZE
+                     COMPANY SIZE
                 ====================================== -->
 
                 <div class="detail-item">
@@ -209,6 +276,7 @@
                         COMPANY SIZE
                     </div>
 
+
                     <asp:TextBox
                         ID="txtCompanySize"
                         runat="server"
@@ -216,12 +284,21 @@
                         Text="500,000+ employees">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCompanySize"
+                        runat="server"
+                        ControlToValidate="txtCompanySize"
+                        ErrorMessage="Company size is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 4 - WEBSITE
+                     WEBSITE
                 ====================================== -->
 
                 <div class="detail-item">
@@ -230,6 +307,7 @@
                         WEBSITE
                     </div>
 
+
                     <asp:TextBox
                         ID="txtWebsite"
                         runat="server"
@@ -237,12 +315,32 @@
                         Text="www.tcs.com">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvWebsite"
+                        runat="server"
+                        ControlToValidate="txtWebsite"
+                        ErrorMessage="Website is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revWebsite"
+                        runat="server"
+                        ControlToValidate="txtWebsite"
+                        ErrorMessage="Please enter a valid website."
+                        ForeColor="Red"
+                        Display="Dynamic"
+                        ValidationExpression="^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 4 - REGISTRATION DATE
+                     REGISTRATION DATE
                 ====================================== -->
 
                 <div class="detail-item">
@@ -251,6 +349,7 @@
                         REGISTRATION DATE
                     </div>
 
+
                     <asp:TextBox
                         ID="txtRegistrationDate"
                         runat="server"
@@ -258,12 +357,21 @@
                         Text="January 10, 2024">
                     </asp:TextBox>
 
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvRegistrationDate"
+                        runat="server"
+                        ControlToValidate="txtRegistrationDate"
+                        ErrorMessage="Registration date is required."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
+
                 </div>
 
 
-
                 <!-- =====================================
-                     ROW 5 - STATUS
+                     STATUS
                 ====================================== -->
 
                 <div class="detail-item">
@@ -272,27 +380,49 @@
                         STATUS
                     </div>
 
+
                     <asp:DropDownList
                         ID="ddlStatus"
                         runat="server"
                         CssClass="employer-edit-input">
+
+
+                        <asp:ListItem
+                            Text="-- Select Status --"
+                            Value="">
+                        </asp:ListItem>
+
 
                         <asp:ListItem
                             Text="Active"
                             Value="Active">
                         </asp:ListItem>
 
+
                         <asp:ListItem
                             Text="Inactive"
                             Value="Inactive">
                         </asp:ListItem>
+
 
                         <asp:ListItem
                             Text="Pending"
                             Value="Pending">
                         </asp:ListItem>
 
+
                     </asp:DropDownList>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvStatus"
+                        runat="server"
+                        ControlToValidate="ddlStatus"
+                        InitialValue=""
+                        ErrorMessage="Please select a status."
+                        ForeColor="Red"
+                        Display="Dynamic">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -300,13 +430,11 @@
             </div>
 
 
-
             <!-- =========================================
                  ABOUT COMPANY DIVIDER
             ========================================== -->
 
             <div class="about-divider"></div>
-
 
 
             <!-- =========================================
@@ -319,6 +447,7 @@
                     About Company
                 </h2>
 
+
                 <asp:TextBox
                     ID="txtAboutCompany"
                     runat="server"
@@ -328,8 +457,17 @@
 
 TCS helps businesses transform their operations through innovative technology solutions, cloud services, consulting, and digital engineering.</asp:TextBox>
 
-            </div>
 
+                <asp:RequiredFieldValidator
+                    ID="rfvAboutCompany"
+                    runat="server"
+                    ControlToValidate="txtAboutCompany"
+                    ErrorMessage="About company information is required."
+                    ForeColor="Red"
+                    Display="Dynamic">
+                </asp:RequiredFieldValidator>
+
+            </div>
 
 
             <!-- =========================================
@@ -337,7 +475,6 @@ TCS helps businesses transform their operations through innovative technology so
             ========================================== -->
 
             <div class="about-divider"></div>
-
 
 
             <!-- =========================================
@@ -352,6 +489,7 @@ TCS helps businesses transform their operations through innovative technology so
                     runat="server"
                     Text="Save Changes"
                     CssClass="edit-employer-btn"
+                    CausesValidation="true"
                     OnClick="btnSave_Click" />
 
 
