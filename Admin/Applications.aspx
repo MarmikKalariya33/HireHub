@@ -180,7 +180,7 @@
 
                             <div class="actions">
 
-                                <a href="Applications_Details.aspx"
+                                <a href="Final_Edit_Applications.aspx"
                                    class="edit-icon"
                                    title="Edit">
 
@@ -250,7 +250,7 @@
 
                             <div class="actions">
 
-                                <a href="Applications_Details.aspx"
+                                <a href="Final_Edit_Applications.aspx"
                                    class="edit-icon"
                                    title="Edit">
 
@@ -320,7 +320,7 @@
 
                             <div class="actions">
 
-                                <a href="Applications_Details.aspx"
+                                <a href="Final_Edit_Applications.aspx"
                                    class="edit-icon"
                                    title="Edit">
 
@@ -390,7 +390,7 @@
 
                             <div class="actions">
 
-                                <a href="Applications_Details.aspx"
+                                <a href="Final_Edit_Applicaations.aspx"
                                    class="edit-icon"
                                    title="Edit">
 
@@ -460,7 +460,7 @@
 
                             <div class="actions">
 
-                                <a href="Applications_Details.aspx"
+                                <a href="Final_Edit_Applications.aspx"
                                    class="edit-icon"
                                    title="Edit">
 

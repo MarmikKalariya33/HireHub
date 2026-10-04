@@ -154,7 +154,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Company.aspx"
+                                <a href="Final_Edit_Company.aspx"
                                    class="edit-icon"
                                    title="Edit Company">
 
@@ -226,7 +226,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Company.aspx"
+                                <a href="Final_Edit_Company.aspx"
                                    class="edit-icon"
                                    title="Edit Company">
 
@@ -298,7 +298,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Company.aspx"
+                                <a href="Final_Edit_Company.aspx"
                                    class="edit-icon"
                                    title="Edit Company">
 
@@ -370,7 +370,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Company.aspx"
+                                <a href="Final_Edit_Company.aspx"
                                    class="edit-icon"
                                    title="Edit Company">
 
@@ -442,7 +442,7 @@
 
                             <div class="actions">
 
-                                <a href="Edit_Company.aspx"
+                                <a href="Final_Edit_Company.aspx"
                                    class="edit-icon"
                                    title="Edit Company">
 

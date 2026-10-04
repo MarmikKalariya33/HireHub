@@ -1,0 +1,338 @@
+﻿/* =========================================================
+   ADD CATEGORY PAGE
+========================================================= */
+
+.add-category-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fbf9f4;
+    padding: 35px 40px 50px 40px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   BACK SECTION
+========================================================= */
+
+.back-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 25px auto;
+}
+
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #475467;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+    .back-link:hover {
+        color: #2563eb;
+    }
+
+
+    .back-link i {
+        font-size: 14px;
+    }
+
+
+/* =========================================================
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e4e7ec;
+    border-radius: 12px;
+    padding: 32px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.category-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+    background: #e8efff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    .category-icon i {
+        font-size: 25px;
+    }
+
+
+.category-header-text {
+    flex: 1;
+}
+
+
+    .category-header-text h1 {
+        margin: 0;
+        font-size: 25px;
+        font-weight: 700;
+        color: #101828;
+    }
+
+
+    .category-header-text p {
+        margin: 7px 0 0;
+        color: #667085;
+        font-size: 14px;
+    }
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: #eaecf0;
+    margin: 28px 0;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.category-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 34px;
+}
+
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+    .form-group label {
+        font-size: 11px;
+        font-weight: 700;
+        color: #667085;
+        letter-spacing: 0.7px;
+    }
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.form-input {
+    width: 100%;
+    min-height: 52px;
+    padding: 11px 15px;
+    box-sizing: border-box;
+    border: 1px solid #d0d5dd;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #344054;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+
+    .form-input:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    }
+
+
+    .form-input::placeholder {
+        color: #98a2b3;
+    }
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+select.form-input {
+    cursor: pointer;
+    appearance: auto;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-input {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FULL WIDTH
+========================================================= */
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.category-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+
+.save-button {
+    min-height: 43px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+    .save-button:hover {
+        background: #1d4ed8;
+    }
+
+
+.cancel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 0 22px;
+    border-radius: 7px;
+    background: #f2f4f7;
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+
+    .cancel-button:hover {
+        background: #e4e7ec;
+        color: #344054;
+    }
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .add-category-page {
+        padding: 25px 20px 40px;
+    }
+
+    .category-card {
+        padding: 28px;
+    }
+
+    .category-form {
+        gap: 20px 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .category-form {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .category-header {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .add-category-page {
+        padding: 20px 12px 30px;
+    }
+
+    .category-card {
+        padding: 20px;
+        border-radius: 9px;
+    }
+
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

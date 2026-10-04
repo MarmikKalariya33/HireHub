@@ -102,6 +102,7 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\NewPassword.aspx" />
     <Content Include="Accounts\Registration.aspx" />
+    <Content Include="Admin\Add_Categories.aspx" />
     <Content Include="Admin\Add_Jobs.aspx" />
     <Content Include="Admin\AdminProfile.aspx" />
     <Content Include="Admin\Applications.aspx" />
@@ -113,6 +114,9 @@
     <Content Include="Admin\Edit_Jobs.aspx" />
     <Content Include="Admin\Edit_users.aspx" />
     <Content Include="Admin\Employers.aspx" />
+    <Content Include="Admin\Final_Edit_Applications.aspx" />
+    <Content Include="Admin\Final_Edit_Categories.aspx" />
+    <Content Include="Admin\Final_Edit_Company.aspx" />
     <Content Include="Admin\Final_Edit_Employee.aspx" />
     <Content Include="Admin\Final_Edit_Jobs.aspx" />
     <Content Include="Admin\Final_User_Edit.aspx" />
@@ -122,6 +126,7 @@
     <Content Include="App_Data\job_portal_log.ldf">
       <DependentUpon>job_portal.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\Admincss\add_categories.css" />
     <Content Include="Assets\Admincss\add_jobs.css" />
     <Content Include="Assets\Admincss\admin_profile.css" />
     <Content Include="Assets\Admincss\applications.css" />
@@ -133,6 +138,9 @@
     <Content Include="Assets\Admincss\edit_users.css" />
     <Content Include="Assets\Admincss\employers.css" />
     <Content Include="Assets\Admincss\employer_details.css" />
+    <Content Include="Assets\Admincss\final_edit_applications.css" />
+    <Content Include="Assets\Admincss\final_edit_categories.css" />
+    <Content Include="Assets\Admincss\final_edit_company.css" />
     <Content Include="Assets\Admincss\Final_edit_employee.css" />
     <Content Include="Assets\Admincss\final_edit_jobs.css" />
     <Content Include="Assets\Admincss\final_user_edit.css" />
@@ -304,6 +312,13 @@
     <Compile Include="Accounts\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Add_Categories.aspx.cs">
+      <DependentUpon>Add_Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Add_Categories.aspx.designer.cs">
+      <DependentUpon>Add_Categories.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Add_Jobs.aspx.cs">
       <DependentUpon>Add_Jobs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -380,6 +395,27 @@
     </Compile>
     <Compile Include="Admin\Employers.aspx.designer.cs">
       <DependentUpon>Employers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Applications.aspx.cs">
+      <DependentUpon>Final_Edit_Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Applications.aspx.designer.cs">
+      <DependentUpon>Final_Edit_Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Categories.aspx.cs">
+      <DependentUpon>Final_Edit_Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Categories.aspx.designer.cs">
+      <DependentUpon>Final_Edit_Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Company.aspx.cs">
+      <DependentUpon>Final_Edit_Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Final_Edit_Company.aspx.designer.cs">
+      <DependentUpon>Final_Edit_Company.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Final_Edit_Employee.aspx.cs">
       <DependentUpon>Final_Edit_Employee.aspx</DependentUpon>

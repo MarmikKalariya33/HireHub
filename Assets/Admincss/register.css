@@ -168,26 +168,28 @@ body {
 ========================================================= */
 
 .account-tabs {
-    width: 100%;
+    width: 75%;
     height: 49px;
     background: #f7f9fc;
     border: 1px solid #dce3ec;
     border-radius: 11px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 3px;
-    margin-bottom: 26px;
+    margin: 0 auto 26px auto;
 }
 
 
 .account-tab {
-    width: 33.333%;
+    width: 150px;
     height: 41px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #4c5d76;
-    font-size: 15.5px;
+    font-size: 15px;
     font-weight: 500;
     border-radius: 9px;
     cursor: pointer;
@@ -473,6 +475,14 @@ body {
     .features {
         font-size: 15px;
     }
+
+    .account-tabs {
+        width: 80%;
+    }
+
+    .account-tab {
+        width: 135px;
+    }
 }
 
 
@@ -556,6 +566,16 @@ body {
     .heading-section p {
         font-size: 15px;
     }
+
+
+    .account-tabs {
+        width: 80%;
+    }
+
+
+    .account-tab {
+        width: 130px;
+    }
 }
 
 
@@ -612,11 +632,16 @@ body {
 
 
     .account-tabs {
+        width: 85%;
         height: 48px;
+        justify-content: center;
+        gap: 5px;
     }
 
 
     .account-tab {
+        width: 125px;
+        height: 40px;
         font-size: 14px;
     }
 

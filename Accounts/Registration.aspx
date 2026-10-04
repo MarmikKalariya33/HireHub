@@ -103,15 +103,13 @@
 
                     <div class="account-tabs">
 
-                        <div class="account-tab">
-                            Admin
+                        <div class="account-tab active"
+                             onclick="selectAccountType(this)">
+                            Employee
                         </div>
 
-                        <div class="account-tab">
-                            Employer
-                        </div>
-
-                        <div class="account-tab active">
+                        <div class="account-tab"
+                             onclick="selectAccountType(this)">
                             Job Seeker
                         </div>
 
@@ -306,6 +304,32 @@
         </div>
 
     </form>
+
+
+    <!-- =========================================================
+         ACCOUNT TYPE TAB SCRIPT
+    ========================================================== -->
+
+    <script>
+
+        function selectAccountType(selectedTab) {
+
+            // Get all account tabs
+            var tabs = document.querySelectorAll(".account-tab");
+
+            // Remove active class from all tabs
+            tabs.forEach(function (tab) {
+
+                tab.classList.remove("active");
+
+            });
+
+            // Add active class to selected tab
+            selectedTab.classList.add("active");
+
+        }
+
+    </script>
 
 </body>
 
