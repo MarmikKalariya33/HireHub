@@ -1,13 +1,17 @@
-﻿```css
-/* =========================================
+﻿/* =========================================
    EMPLOYER DETAILS PAGE
 ========================================= */
+
 .employer-details-page {
     width: 100%;
     min-height: 100vh;
+
     background: #fbf9f4;
+
     padding: 35px 40px 50px 40px;
+
     box-sizing: border-box;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -18,25 +22,33 @@
 
 .back-section {
     width: 100%;
+
     margin-bottom: 25px;
 }
 
 .back-link {
     display: inline-flex;
+
     align-items: center;
+
     gap: 8px;
+
     color: #475467;
+
     text-decoration: none;
+
     font-size: 14px;
+
     font-weight: 600;
 }
 
-    .back-link:hover {
-        color: #2563eb;
-    }
+.back-link:hover {
+    color: #2563eb;
+}
 
 .back-arrow {
     font-size: 20px;
+
     line-height: 1;
 }
 
@@ -47,13 +59,21 @@
 
 .employer-details-card {
     width: 100%;
+
     max-width: 1050px;
+
     margin: 0 auto;
+
     padding: 32px;
+
     box-sizing: border-box;
+
     background: #ffffff;
+
     border: 1px solid #e4e7ec;
+
     border-radius: 12px;
+
     box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
 }
 
@@ -64,8 +84,11 @@
 
 .company-header {
     display: flex;
+
     align-items: center;
+
     gap: 18px;
+
     width: 100%;
 }
 
@@ -76,15 +99,25 @@
 
 .company-logo {
     width: 72px;
+
     height: 72px;
+
     min-width: 72px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     background: #e8efff;
+
     color: #2563eb;
+
     border-radius: 12px;
+
     font-size: 22px;
+
     font-weight: 700;
 }
 
@@ -97,19 +130,25 @@
     flex: 1;
 }
 
-    .company-heading h1 {
-        margin: 0;
-        color: #101828;
-        font-size: 25px;
-        font-weight: 700;
-        line-height: 1.3;
-    }
+.company-heading h1 {
+    margin: 0;
 
-    .company-heading p {
-        margin: 7px 0 0 0;
-        color: #667085;
-        font-size: 14px;
-    }
+    color: #101828;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.company-heading p {
+    margin: 7px 0 0 0;
+
+    color: #667085;
+
+    font-size: 14px;
+}
 
 
 /* =========================================
@@ -118,7 +157,9 @@
 
 .company-title-row {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
@@ -129,13 +170,21 @@
 
 .active-badge {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     padding: 5px 11px;
+
     background: #dcfce7;
+
     color: #15803d;
+
     border-radius: 20px;
+
     font-size: 12px;
+
     font-weight: 700;
 }
 
@@ -146,22 +195,28 @@
 
 .details-divider {
     width: 100%;
+
     height: 1px;
+
     background: #eaecf0;
+
     margin: 28px 0;
 }
 
 
 /* =========================================
    COMPANY DETAILS
-   2 COLUMN LAYOUT
 ========================================= */
 
 .company-details {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     column-gap: 35px;
+
     row-gap: 24px;
+
     width: 100%;
 }
 
@@ -172,8 +227,11 @@
 
 .detail-item {
     display: flex;
+
     flex-direction: column;
+
     gap: 8px;
+
     width: 100%;
 }
 
@@ -184,22 +242,30 @@
 
 .detail-label {
     font-size: 11px;
+
     font-weight: 700;
+
     color: #667085;
+
     letter-spacing: 0.7px;
 }
 
 
 /* =========================================
-   NORMAL DETAIL VALUE
+   DETAIL VALUE
 ========================================= */
 
 .detail-value {
     min-height: 24px;
+
     display: flex;
+
     align-items: center;
+
     color: #344054;
+
     font-size: 14px;
+
     line-height: 1.5;
 }
 
@@ -210,12 +276,13 @@
 
 .website-value a {
     color: #2563eb;
+
     text-decoration: none;
 }
 
-    .website-value a:hover {
-        text-decoration: underline;
-    }
+.website-value a:hover {
+    text-decoration: underline;
+}
 
 
 /* =========================================
@@ -224,28 +291,40 @@
 
 .employer-edit-input {
     width: 100%;
+
     height: 44px;
+
     padding: 0 13px;
+
     box-sizing: border-box;
+
     border: 1px solid #d0d5dd;
+
     border-radius: 7px;
+
     background: #ffffff;
+
     color: #344054;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
+
     outline: none;
+
     transition: all 0.2s ease;
 }
 
 
-    /* =========================================
+/* =========================================
    INPUT FOCUS
 ========================================= */
 
-    .employer-edit-input:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
+.employer-edit-input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
 
 
 /* =========================================
@@ -254,6 +333,7 @@
 
 select.employer-edit-input {
     cursor: pointer;
+
     appearance: auto;
 }
 
@@ -264,8 +344,11 @@ select.employer-edit-input {
 
 .about-divider {
     width: 100%;
+
     height: 1px;
+
     background: #eaecf0;
+
     margin: 28px 0;
 }
 
@@ -278,56 +361,81 @@ select.employer-edit-input {
     width: 100%;
 }
 
-    .about-company h2 {
-        margin: 0 0 15px 0;
-        color: #101828;
-        font-size: 19px;
-        font-weight: 700;
-    }
+.about-company h2 {
+    margin: 0 0 15px 0;
 
+    color: #101828;
 
-    /* =========================================
-   ABOUT COMPANY NORMAL TEXT
-========================================= */
+    font-size: 19px;
 
-    .about-company p {
-        margin: 0 0 14px 0;
-        color: #667085;
-        font-size: 14px;
-        line-height: 1.7;
-    }
+    font-weight: 700;
+}
 
 
 /* =========================================
-   EDIT TEXTAREA
+   ABOUT COMPANY TEXTAREA
 ========================================= */
 
 .employer-edit-textarea {
     width: 100%;
+
     min-height: 150px;
+
     padding: 13px;
+
     box-sizing: border-box;
+
     border: 1px solid #d0d5dd;
+
     border-radius: 7px;
+
     background: #ffffff;
+
     color: #344054;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
+
     line-height: 1.6;
+
     outline: none;
+
     resize: vertical;
+
     transition: all 0.2s ease;
 }
 
 
-    /* =========================================
+/* =========================================
    TEXTAREA FOCUS
 ========================================= */
 
-    .employer-edit-textarea:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
+.employer-edit-textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================
+   ASP.NET TOOLBOX VALIDATION
+========================================= */
+
+.detail-item span,
+.about-company span {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #ff0000 !important;
+
+    font-size: 12px !important;
+
+    font-weight: 500;
+
+    line-height: 1.4;
+}
 
 
 /* =========================================
@@ -336,120 +444,354 @@ select.employer-edit-input {
 
 .details-actions {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
     margin-top: 5px;
 }
 
 
 /* =========================================
-   EDIT / SAVE BUTTON
+   SAVE BUTTON
 ========================================= */
 
 .edit-employer-btn {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     min-height: 43px;
+
+    min-width: 145px;
+
     padding: 0 22px;
+
     border: none;
+
     border-radius: 7px;
+
     background: #2563eb;
+
     color: #ffffff;
+
     font-size: 14px;
+
     font-weight: 600;
+
     text-decoration: none;
+
     cursor: pointer;
+
     box-sizing: border-box;
+
     transition: background 0.2s ease;
 }
 
-    .edit-employer-btn:hover {
-        background: #1d4ed8;
-    }
+.edit-employer-btn:hover {
+    background: #1d4ed8;
+}
 
 
 /* =========================================
-   BACK / CANCEL BUTTON
+   CANCEL BUTTON
 ========================================= */
 
 .back-employers-btn {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     min-height: 43px;
+
+    min-width: 150px;
+
     padding: 0 22px;
+
     border-radius: 7px;
+
     background: #f2f4f7;
+
     color: #344054;
+
     font-size: 14px;
+
     font-weight: 600;
+
     text-decoration: none;
+
     box-sizing: border-box;
+
     cursor: pointer;
+
     transition: background 0.2s ease;
 }
 
-    .back-employers-btn:hover {
-        background: #e4e7ec;
-        color: #344054;
-    }
+.back-employers-btn:hover {
+    background: #e4e7ec;
+
+    color: #344054;
+}
 
 
 /* =========================================
-   BLOCK BUTTON
+   DELETE BUTTON
 ========================================= */
 
-.btn-block {
+.delete-employer-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
     min-height: 43px;
+
+    min-width: 100px;
+
     padding: 0 22px;
+
     border: 1px solid #f04438;
+
     border-radius: 7px;
+
     background: #ffffff;
+
     color: #d92d20;
+
+    font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
+
     font-weight: 600;
+
     cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: all 0.2s ease;
 }
 
-    .btn-block:hover {
-        background: #fef3f2;
+.delete-employer-btn:hover {
+    background: #fef3f2;
+
+    color: #b42318;
+
+    border-color: #d92d20;
+}
+
+
+/* =========================================
+   DELETE POPUP OVERLAY
+========================================= */
+
+.delete-popup-overlay {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(16, 24, 40, 0.45);
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 99999;
+}
+
+
+/* =========================================
+   DELETE POPUP BOX
+========================================= */
+
+.delete-popup-box {
+    width: 90%;
+
+    max-width: 420px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(16, 24, 40, 0.20);
+
+    animation: deletePopupShow 0.2s ease;
+}
+
+
+/* =========================================
+   POPUP ANIMATION
+========================================= */
+
+@keyframes deletePopupShow {
+
+    from {
+        opacity: 0;
+
+        transform: scale(0.95);
     }
 
+    to {
+        opacity: 1;
 
-/* =========================================
-   NORMAL DETAILS ACTIONS
-========================================= */
+        transform: scale(1);
+    }
 
-.details-actions .back-employers-btn {
-    min-width: 150px;
 }
 
 
 /* =========================================
-   NORMAL DETAILS PAGE BUTTON
+   DELETE POPUP ICON
 ========================================= */
 
-.details-actions .edit-employer-btn {
-    min-width: 145px;
+.delete-popup-icon {
+    width: 52px;
+
+    height: 52px;
+
+    margin: 0 auto 18px auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fef3f2;
+
+    color: #d92d20;
+
+    font-size: 25px;
+
+    font-weight: 700;
 }
 
 
 /* =========================================
-   EDIT PAGE INPUT PLACEHOLDER
+   POPUP TITLE
 ========================================= */
 
-.employer-edit-input::placeholder {
-    color: #98a2b3;
+.delete-popup-box h2 {
+    margin: 0 0 10px 0;
+
+    color: #101828;
+
+    font-size: 21px;
+
+    font-weight: 700;
 }
 
 
 /* =========================================
-   TEXTAREA PLACEHOLDER
+   POPUP DESCRIPTION
 ========================================= */
 
-.employer-edit-textarea::placeholder {
-    color: #98a2b3;
+.delete-popup-box p {
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   POPUP ACTIONS
+========================================= */
+
+.delete-popup-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   POPUP CANCEL BUTTON
+========================================= */
+
+.delete-cancel-btn {
+    min-height: 42px;
+
+    padding: 0 22px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.delete-cancel-btn:hover {
+    background: #f2f4f7;
+}
+
+
+/* =========================================
+   POPUP DELETE BUTTON
+========================================= */
+
+.delete-confirm-btn {
+    min-height: 42px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #d92d20;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.delete-confirm-btn:hover {
+    background: #b42318;
 }
 
 
@@ -489,7 +831,9 @@ select.employer-edit-input {
 
     .company-details {
         grid-template-columns: 1fr;
+
         column-gap: 0;
+
         row-gap: 20px;
     }
 
@@ -499,8 +843,11 @@ select.employer-edit-input {
 
     .company-logo {
         width: 62px;
+
         height: 62px;
+
         min-width: 62px;
+
         font-size: 19px;
     }
 
@@ -526,11 +873,13 @@ select.employer-edit-input {
 
     .employer-details-card {
         padding: 20px;
+
         border-radius: 9px;
     }
 
     .company-header {
         flex-direction: column;
+
         align-items: flex-start;
     }
 
@@ -538,34 +887,36 @@ select.employer-edit-input {
         width: 100%;
     }
 
-    .company-title-row {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-    }
-
     .details-actions {
         flex-direction: column;
+
         align-items: stretch;
+
         width: 100%;
     }
 
     .edit-employer-btn,
-    .back-employers-btn {
+    .back-employers-btn,
+    .delete-employer-btn {
         width: 100%;
-        min-width: 0 !important;
+
+        min-width: 0;
     }
-}
 
+    .delete-popup-box {
+        width: calc(100% - 30px);
 
-/* =========================================
-   PREVENT INPUT OVERFLOW
-========================================= */
+        padding: 25px 20px;
+    }
 
-.company-details input,
-.company-details select,
-.about-company textarea {
-    max-width: 100%;
+    .delete-popup-actions {
+        flex-direction: column;
+    }
+
+    .delete-cancel-btn,
+    .delete-confirm-btn {
+        width: 100%;
+    }
 }
 
 
@@ -578,5 +929,3 @@ select.employer-edit-input {
 .employer-details-page *::after {
     box-sizing: border-box;
 }
-
-```
