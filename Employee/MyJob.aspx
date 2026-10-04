@@ -8,8 +8,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
     <link
-     rel="stylesheet"
-     href="<%= ResolveUrl("~/Assets/Employeecss/myjob.css") %>" />
+        rel="stylesheet"
+        href="<%= ResolveUrl("~/Assets/Employeecss/myjob.css") %>" />
 
 </asp:Content>
 
@@ -39,8 +39,10 @@
 
                     <input
                         type="text"
+                        id="jobSearch"
                         class="search-input"
-                        placeholder="Search jobs..." />
+                        placeholder="Search jobs..."
+                        autocomplete="off" />
 
                 </div>
 
@@ -73,25 +75,29 @@
 
             <button
                 type="button"
-                class="job-filter active">
+                class="job-filter active"
+                data-filter="all">
                 All Jobs
             </button>
 
             <button
                 type="button"
-                class="job-filter">
+                class="job-filter"
+                data-filter="active">
                 Active
             </button>
 
             <button
                 type="button"
-                class="job-filter">
+                class="job-filter"
+                data-filter="inactive">
                 Inactive
             </button>
 
             <button
                 type="button"
-                class="job-filter">
+                class="job-filter"
+                data-filter="draft">
                 Draft
             </button>
 
@@ -102,7 +108,7 @@
              JOB 1
              ========================================= -->
 
-        <div class="job-card">
+        <div class="job-card" data-status="active">
 
             <div class="company-logo">
                 TCS
@@ -169,7 +175,7 @@
              JOB 2
              ========================================= -->
 
-        <div class="job-card">
+        <div class="job-card" data-status="active">
 
             <div class="company-logo">
                 TCS
@@ -236,7 +242,7 @@
              JOB 3
              ========================================= -->
 
-        <div class="job-card">
+        <div class="job-card" data-status="inactive">
 
             <div class="company-logo">
                 TCS
@@ -303,7 +309,7 @@
              JOB 4
              ========================================= -->
 
-        <div class="job-card">
+        <div class="job-card" data-status="draft">
 
             <div class="company-logo">
                 TCS
@@ -365,6 +371,21 @@
 
         </div>
 
+
+        <!-- =========================================
+             NO RESULTS MESSAGE
+             ========================================= -->
+
+        <div
+            id="noJobsMessage"
+            class="no-jobs-message"
+            style="display: none;">
+
+            No jobs found.
+
+        </div>
+
     </div>
 
 </asp:Content>
+
