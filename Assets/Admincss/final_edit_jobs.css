@@ -1,20 +1,16 @@
-﻿/* =========================================
-   EDIT JOB PAGE
-========================================= */
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .edit-job-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
-    padding: 35px 40px 50px 40px;
-    box-sizing: border-box;
+    padding: 35px 40px 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-/* =========================================
-   BACK LINK
-========================================= */
 
 .back-wrapper {
     margin-bottom: 25px;
@@ -38,27 +34,16 @@
         font-size: 16px;
     }
 
-
-/* =========================================
-   MAIN CARD
-========================================= */
-
 .edit-job-card {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 32px 40px;
-    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #e4e7ec;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
 
 .job-header {
     display: flex;
@@ -97,22 +82,12 @@
         font-size: 14px;
     }
 
-
-/* =========================================
-   DIVIDER
-========================================= */
-
 .divider {
     width: 100%;
     height: 1px;
     background: #eaecf0;
     margin: 28px 0;
 }
-
-
-/* =========================================
-   SECTION TITLE
-========================================= */
 
 .section-title {
     width: 100%;
@@ -126,11 +101,6 @@
         font-weight: 700;
     }
 
-
-/* =========================================
-   JOB INFORMATION
-========================================= */
-
 .job-information {
     width: 100%;
     display: grid;
@@ -138,11 +108,6 @@
     column-gap: 35px;
     row-gap: 22px;
 }
-
-
-/* =========================================
-   FORM GROUP
-========================================= */
 
 .form-group {
     width: 100%;
@@ -158,16 +123,10 @@
         letter-spacing: 0.7px;
     }
 
-
-/* =========================================
-   INPUT
-========================================= */
-
 .edit-input {
     width: 100%;
     min-height: 50px;
     padding: 11px 15px;
-    box-sizing: border-box;
     border: 1px solid #d0d5dd;
     border-radius: 7px;
     background: #ffffff;
@@ -183,19 +142,9 @@
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
     }
 
-
-/* =========================================
-   DROPDOWN
-========================================= */
-
 select.edit-input {
     cursor: pointer;
 }
-
-
-/* =========================================
-   FULL SECTION
-========================================= */
 
 .full-section {
     width: 100%;
@@ -209,16 +158,10 @@ select.edit-input {
         font-weight: 700;
     }
 
-
-/* =========================================
-   TEXTAREA
-========================================= */
-
 .edit-textarea {
     width: 100%;
     min-height: 150px;
     padding: 13px 15px;
-    box-sizing: border-box;
     resize: vertical;
     border: 1px solid #d0d5dd;
     border-radius: 7px;
@@ -236,10 +179,15 @@ select.edit-input {
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
     }
 
-
-/* =========================================
-   BUTTONS
-========================================= */
+.form-group span,
+.full-section span {
+    display: block;
+    margin-top: 1px;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
 
 .job-actions {
     display: flex;
@@ -248,19 +196,18 @@ select.edit-input {
     margin-top: 5px;
 }
 
-
-/* SAVE */
-
 .save-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 43px;
     padding: 0 23px;
+    border: none;
     border-radius: 7px;
     background: #2563eb;
     color: #ffffff;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -271,9 +218,6 @@ select.edit-input {
         background: #1d4ed8;
         color: #ffffff;
     }
-
-
-/* CANCEL */
 
 .cancel-button {
     display: inline-flex;
@@ -296,11 +240,6 @@ select.edit-input {
         color: #344054;
     }
 
-
-/* =========================================
-   RESPONSIVE
-========================================= */
-
 @media (max-width: 900px) {
 
     .edit-job-page {
@@ -315,7 +254,6 @@ select.edit-input {
         column-gap: 25px;
     }
 }
-
 
 @media (max-width: 700px) {
 
@@ -337,7 +275,6 @@ select.edit-input {
         font-size: 23px;
     }
 }
-
 
 @media (max-width: 500px) {
 
@@ -375,15 +312,4 @@ select.edit-input {
         width: 100%;
         box-sizing: border-box;
     }
-}
-
-
-/* =========================================
-   BOX SIZING
-========================================= */
-
-.edit-job-page *,
-.edit-job-page *::before,
-.edit-job-page *::after {
-    box-sizing: border-box;
 }
