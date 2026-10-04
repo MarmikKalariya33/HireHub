@@ -1,17 +1,8 @@
-﻿/* =========================================
-   RESET
-========================================= */
-
-* {
+﻿* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/* =========================================
-   EMPLOYERS PAGE
-========================================= */
 
 .employers-page {
     width: 100%;
@@ -20,11 +11,6 @@
     padding: 37px 34px 40px 34px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-/* =========================================
-   HEADER
-========================================= */
 
 .employers-header {
     width: 100%;
@@ -35,7 +21,6 @@
     margin-bottom: 28px;
 }
 
-
     .employers-header h1 {
         margin: 0;
         padding: 0;
@@ -44,11 +29,6 @@
         font-weight: 700;
         line-height: 35px;
     }
-
-
-/* =========================================
-   SEARCH BOX
-========================================= */
 
 .search-box {
     width: 262px;
@@ -61,13 +41,11 @@
     padding: 0 13px;
 }
 
-
     .search-box i {
         color: #6f7a8d;
         font-size: 15px;
         margin-right: 11px;
     }
-
 
 .search-input {
     width: 100%;
@@ -81,16 +59,10 @@
     font-size: 14px;
 }
 
-
     .search-input::placeholder {
         color: #737d8e;
         opacity: 1;
     }
-
-
-/* =========================================
-   TABLE CONTAINER
-========================================= */
 
 .employers-table-container {
     width: 100%;
@@ -100,11 +72,6 @@
     overflow: hidden;
 }
 
-
-/* =========================================
-   TABLE
-========================================= */
-
 .employers-table {
     width: 100%;
     border-collapse: collapse;
@@ -112,15 +79,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-    /* =========================================
-   TABLE HEADER
-========================================= */
-
     .employers-table thead {
         background: #fafbfc;
     }
-
 
     .employers-table th {
         height: 52px;
@@ -134,59 +95,38 @@
         white-space: nowrap;
     }
 
-
-        /* =========================================
-   COLUMN WIDTH
-========================================= */
-
         .employers-table th:nth-child(1) {
             width: 21%;
         }
-
 
         .employers-table th:nth-child(2) {
             width: 19%;
         }
 
-
         .employers-table th:nth-child(3) {
             width: 12%;
         }
-
 
         .employers-table th:nth-child(4) {
             width: 12%;
         }
 
-
         .employers-table th:nth-child(5) {
             width: 13%;
         }
 
-
         .employers-table th:nth-child(6) {
             width: 11%;
         }
-
-
-    /* =========================================
-   TABLE ROW
-========================================= */
 
     .employers-table tbody tr {
         height: 69px;
         border-bottom: 1px solid #e1e4e8;
     }
 
-
         .employers-table tbody tr:last-child {
             border-bottom: none;
         }
-
-
-    /* =========================================
-   TABLE DATA
-========================================= */
 
     .employers-table td {
         height: 69px;
@@ -198,17 +138,11 @@
         vertical-align: middle;
     }
 
-
-/* =========================================
-   COMPANY
-========================================= */
-
 .company-details {
     display: flex;
     align-items: center;
     gap: 13px;
 }
-
 
 .company-avatar {
     width: 35px;
@@ -224,7 +158,6 @@
     font-weight: 700;
 }
 
-
 .company-name {
     color: #1d273b;
     font-size: 15px;
@@ -232,32 +165,17 @@
     white-space: nowrap;
 }
 
-
-/* =========================================
-   EMAIL
-========================================= */
-
 .email {
     color: #737d8e !important;
     font-size: 15px !important;
     white-space: nowrap;
 }
 
-
-/* =========================================
-   JOINED DATE
-========================================= */
-
 .joined-date {
     color: #737d8e !important;
     font-size: 15px !important;
     white-space: nowrap;
 }
-
-
-/* =========================================
-   STATUS
-========================================= */
 
 .status {
     display: inline-flex;
@@ -272,47 +190,26 @@
     white-space: nowrap;
 }
 
-
-    /* =========================================
-   ACTIVE
-========================================= */
-
     .status.active {
         background: #d8f7e2;
         color: #09843e;
     }
-
-
-    /* =========================================
-   PENDING
-========================================= */
 
     .status.pending {
         background: #fff4bc;
         color: #d49500;
     }
 
-
-    /* =========================================
-   BLOCKED
-========================================= */
-
     .status.blocked {
         background: #ffe1e1;
         color: #d92525;
     }
-
-
-/* =========================================
-   ACTIONS
-========================================= */
 
 .actions {
     display: flex;
     align-items: center;
     gap: 18px;
 }
-
 
 .edit-icon {
     display: inline-flex;
@@ -323,12 +220,10 @@
     text-decoration: none;
 }
 
-
     .edit-icon:hover {
         color: #2563eb;
         text-decoration: none;
     }
-
 
 .delete-icon {
     display: inline-flex;
@@ -343,16 +238,10 @@
     cursor: pointer;
 }
 
-
     .delete-icon:hover {
         color: #ef252b;
         text-decoration: none;
     }
-
-
-/* =========================================
-   RESPONSIVE
-========================================= */
 
 @media screen and (max-width: 1100px) {
 
@@ -368,7 +257,6 @@
         min-width: 900px;
     }
 }
-
 
 @media screen and (max-width: 768px) {
 
