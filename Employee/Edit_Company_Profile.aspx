@@ -61,6 +61,19 @@
 
 
             <!-- =========================================
+                 VALIDATION SUMMARY
+            ========================================= -->
+
+            <asp:ValidationSummary
+                ID="vsCompanyProfile"
+                runat="server"
+                ValidationGroup="CompanyProfile"
+                CssClass="validation-summary"
+                HeaderText="Please correct the following errors:"
+                DisplayMode="BulletList" />
+
+
+            <!-- =========================================
                  COMPANY LOGO SECTION
             ========================================= -->
 
@@ -125,14 +138,40 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Company Name
-                    </label>
+                    <asp:Label
+                        ID="lblCompanyName"
+                        runat="server"
+                        Text="Company Name"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="text"
-                        class="form-input"
-                        value="Tata Consultancy Services" />
+                    <asp:Label
+                        ID="lblCompanyNameRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtCompanyName"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="Tata Consultancy Services">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCompanyName"
+                        runat="server"
+                        ControlToValidate="txtCompanyName"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Company Name is required."
+                        Text="Company Name is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -143,14 +182,40 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Contact Person
-                    </label>
+                    <asp:Label
+                        ID="lblContactPerson"
+                        runat="server"
+                        Text="Contact Person"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="text"
-                        class="form-input"
-                        value="Priya Patel" />
+                    <asp:Label
+                        ID="lblContactPersonRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtContactPerson"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="Priya Patel">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvContactPerson"
+                        runat="server"
+                        ControlToValidate="txtContactPerson"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Contact Person is required."
+                        Text="Contact Person is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -161,14 +226,54 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Email Address
-                    </label>
+                    <asp:Label
+                        ID="lblEmail"
+                        runat="server"
+                        Text="Email Address"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="email"
-                        class="form-input"
-                        value="recruitment@tcs.com" />
+                    <asp:Label
+                        ID="lblEmailRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtEmail"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="recruitment@tcs.com">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvEmail"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Email Address is required."
+                        Text="Email Address is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revEmail"
+                        runat="server"
+                        ControlToValidate="txtEmail"
+                        ValidationGroup="CompanyProfile"
+                        ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                        ErrorMessage="Please enter a valid Email Address."
+                        Text="Please enter a valid Email Address."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
@@ -179,14 +284,54 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Phone Number
-                    </label>
+                    <asp:Label
+                        ID="lblPhone"
+                        runat="server"
+                        Text="Phone Number"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="text"
-                        class="form-input"
-                        value="+91 22 6778 9999" />
+                    <asp:Label
+                        ID="lblPhoneRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtPhone"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="+91 22 6778 9999">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvPhone"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Phone Number is required."
+                        Text="Phone Number is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revPhone"
+                        runat="server"
+                        ControlToValidate="txtPhone"
+                        ValidationGroup="CompanyProfile"
+                        ValidationExpression="^[0-9+\-\s]{10,15}$"
+                        ErrorMessage="Please enter a valid Phone Number."
+                        Text="Please enter a valid Phone Number."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
@@ -197,14 +342,40 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Website
-                    </label>
+                    <asp:Label
+                        ID="lblWebsite"
+                        runat="server"
+                        Text="Website"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="text"
-                        class="form-input"
-                        value="www.tcs.com" />
+                    <asp:Label
+                        ID="lblWebsiteRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtWebsite"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="www.tcs.com">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvWebsite"
+                        runat="server"
+                        ControlToValidate="txtWebsite"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Website is required."
+                        Text="Website is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -215,14 +386,54 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Founded Year
-                    </label>
+                    <asp:Label
+                        ID="lblFoundedYear"
+                        runat="server"
+                        Text="Founded Year"
+                        CssClass="field-label">
+                    </asp:Label>
 
-                    <input
-                        type="text"
-                        class="form-input"
-                        value="1968" />
+                    <asp:Label
+                        ID="lblFoundedYearRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
+
+                    <asp:TextBox
+                        ID="txtFoundedYear"
+                        runat="server"
+                        CssClass="form-input"
+                        Text="1968">
+                    </asp:TextBox>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvFoundedYear"
+                        runat="server"
+                        ControlToValidate="txtFoundedYear"
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Founded Year is required."
+                        Text="Founded Year is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+
+
+                    <asp:RegularExpressionValidator
+                        ID="revFoundedYear"
+                        runat="server"
+                        ControlToValidate="txtFoundedYear"
+                        ValidationGroup="CompanyProfile"
+                        ValidationExpression="^[0-9]{4}$"
+                        ErrorMessage="Founded Year must contain exactly 4 digits."
+                        Text="Enter a valid 4-digit year."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
@@ -233,41 +444,76 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Industry
-                    </label>
+                    <asp:Label
+                        ID="lblIndustry"
+                        runat="server"
+                        Text="Industry"
+                        CssClass="field-label">
+                    </asp:Label>
+
+                    <asp:Label
+                        ID="lblIndustryRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
 
                     <div class="select-wrapper">
 
-                        <select class="form-input form-select">
+                        <asp:DropDownList
+                            ID="ddlIndustry"
+                            runat="server"
+                            CssClass="form-input form-select">
 
-                            <option selected>
-                                IT Consulting &amp; Enterprise Solutions
-                            </option>
+                            <asp:ListItem
+                                Text="IT Consulting &amp; Enterprise Solutions"
+                                Value="IT Consulting &amp; Enterprise Solutions"
+                                Selected="True">
+                            </asp:ListItem>
 
-                            <option>
-                                Information Technology
-                            </option>
+                            <asp:ListItem
+                                Text="Information Technology"
+                                Value="Information Technology">
+                            </asp:ListItem>
 
-                            <option>
-                                Software Development
-                            </option>
+                            <asp:ListItem
+                                Text="Software Development"
+                                Value="Software Development">
+                            </asp:ListItem>
 
-                            <option>
-                                Consulting
-                            </option>
+                            <asp:ListItem
+                                Text="Consulting"
+                                Value="Consulting">
+                            </asp:ListItem>
 
-                            <option>
-                                Finance
-                            </option>
+                            <asp:ListItem
+                                Text="Finance"
+                                Value="Finance">
+                            </asp:ListItem>
 
-                            <option>
-                                Healthcare
-                            </option>
+                            <asp:ListItem
+                                Text="Healthcare"
+                                Value="Healthcare">
+                            </asp:ListItem>
 
-                        </select>
+                        </asp:DropDownList>
 
                     </div>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvIndustry"
+                        runat="server"
+                        ControlToValidate="ddlIndustry"
+                        InitialValue=""
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Industry is required."
+                        Text="Industry is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -278,41 +524,76 @@
 
                 <div class="form-group">
 
-                    <label>
-                        Company Size
-                    </label>
+                    <asp:Label
+                        ID="lblCompanySize"
+                        runat="server"
+                        Text="Company Size"
+                        CssClass="field-label">
+                    </asp:Label>
+
+                    <asp:Label
+                        ID="lblCompanySizeRequired"
+                        runat="server"
+                        Text="*"
+                        ForeColor="Red">
+                    </asp:Label>
+
 
                     <div class="select-wrapper">
 
-                        <select class="form-input form-select">
+                        <asp:DropDownList
+                            ID="ddlCompanySize"
+                            runat="server"
+                            CssClass="form-input form-select">
 
-                            <option>
-                                1-50 Employees
-                            </option>
+                            <asp:ListItem
+                                Text="1-50 Employees"
+                                Value="1-50 Employees">
+                            </asp:ListItem>
 
-                            <option>
-                                51-200 Employees
-                            </option>
+                            <asp:ListItem
+                                Text="51-200 Employees"
+                                Value="51-200 Employees">
+                            </asp:ListItem>
 
-                            <option>
-                                201-500 Employees
-                            </option>
+                            <asp:ListItem
+                                Text="201-500 Employees"
+                                Value="201-500 Employees">
+                            </asp:ListItem>
 
-                            <option>
-                                501-1000 Employees
-                            </option>
+                            <asp:ListItem
+                                Text="501-1000 Employees"
+                                Value="501-1000 Employees">
+                            </asp:ListItem>
 
-                            <option>
-                                1000-5000 Employees
-                            </option>
+                            <asp:ListItem
+                                Text="1000-5000 Employees"
+                                Value="1000-5000 Employees">
+                            </asp:ListItem>
 
-                            <option selected>
-                                500,000+ Employees
-                            </option>
+                            <asp:ListItem
+                                Text="500,000+ Employees"
+                                Value="500,000+ Employees"
+                                Selected="True">
+                            </asp:ListItem>
 
-                        </select>
+                        </asp:DropDownList>
 
                     </div>
+
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCompanySize"
+                        runat="server"
+                        ControlToValidate="ddlCompanySize"
+                        InitialValue=""
+                        ValidationGroup="CompanyProfile"
+                        ErrorMessage="Company Size is required."
+                        Text="Company Size is required."
+                        CssClass="validation-error"
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -326,13 +607,56 @@
 
             <div class="form-group full-width">
 
-                <label>
-                    About Tata Consultancy Services
-                </label>
+                <asp:Label
+                    ID="lblAboutCompany"
+                    runat="server"
+                    Text="About Tata Consultancy Services"
+                    CssClass="field-label">
+                </asp:Label>
 
-                <textarea
-                    class="form-textarea"
-                    rows="4">Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many</textarea>
+                <asp:Label
+                    ID="lblAboutCompanyRequired"
+                    runat="server"
+                    Text="*"
+                    ForeColor="Red">
+                </asp:Label>
+
+
+                <asp:TextBox
+                    ID="txtAboutCompany"
+                    runat="server"
+                    TextMode="MultiLine"
+                    CssClass="form-textarea"
+                    Rows="4"
+                    Text="Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many">
+                </asp:TextBox>
+
+
+                <asp:RequiredFieldValidator
+                    ID="rfvAboutCompany"
+                    runat="server"
+                    ControlToValidate="txtAboutCompany"
+                    ValidationGroup="CompanyProfile"
+                    ErrorMessage="About Company is required."
+                    Text="About Company is required."
+                    CssClass="validation-error"
+                    Display="Dynamic"
+                    ForeColor="Red">
+                </asp:RequiredFieldValidator>
+
+
+                <asp:RegularExpressionValidator
+                    ID="revAboutCompany"
+                    runat="server"
+                    ControlToValidate="txtAboutCompany"
+                    ValidationGroup="CompanyProfile"
+                    ValidationExpression="^[\s\S]{20,}$"
+                    ErrorMessage="About Company must contain at least 20 characters."
+                    Text="Minimum 20 characters required."
+                    CssClass="validation-error"
+                    Display="Dynamic"
+                    ForeColor="Red">
+                </asp:RegularExpressionValidator>
 
             </div>
 
@@ -343,14 +667,40 @@
 
             <div class="form-group full-width">
 
-                <label>
-                    Address
-                </label>
+                <asp:Label
+                    ID="lblAddress"
+                    runat="server"
+                    Text="Address"
+                    CssClass="field-label">
+                </asp:Label>
 
-                <input
-                    type="text"
-                    class="form-input"
-                    value="TCS House, Raveline Street, Fort" />
+                <asp:Label
+                    ID="lblAddressRequired"
+                    runat="server"
+                    Text="*"
+                    ForeColor="Red">
+                </asp:Label>
+
+
+                <asp:TextBox
+                    ID="txtAddress"
+                    runat="server"
+                    CssClass="form-input"
+                    Text="TCS House, Raveline Street, Fort">
+                </asp:TextBox>
+
+
+                <asp:RequiredFieldValidator
+                    ID="rfvAddress"
+                    runat="server"
+                    ControlToValidate="txtAddress"
+                    ValidationGroup="CompanyProfile"
+                    ErrorMessage="Address is required."
+                    Text="Address is required."
+                    CssClass="validation-error"
+                    Display="Dynamic"
+                    ForeColor="Red">
+                </asp:RequiredFieldValidator>
 
             </div>
 
@@ -359,24 +709,27 @@
                  FORM ACTIONS
             ========================================= -->
 
-         <div class="form-actions">
+            <div class="form-actions">
 
-    <asp:Button
-        ID="btnSaveChanges"
-        runat="server"
-        Text="Save Changes"
-        CssClass="save-button"
-        PostBackUrl="~/Employee/Company_Profile.aspx" />
+                <asp:Button
+                    ID="btnSaveChanges"
+                    runat="server"
+                    Text="Save Changes"
+                    CssClass="save-button"
+                    ValidationGroup="CompanyProfile"
+                    CausesValidation="true"
+                    PostBackUrl="~/Employee/Company_Profile.aspx" />
 
-    <asp:Button
-        ID="btnCancel"
-        runat="server"
-        Text="Cancel"
-        CssClass="cancel-button"
-        PostBackUrl="~/Employee/Company_Profile.aspx" />
 
-</div>
-</div>
+                <asp:Button
+                    ID="btnCancel"
+                    runat="server"
+                    Text="Cancel"
+                    CssClass="cancel-button"
+                    CausesValidation="false"
+                    PostBackUrl="~/Employee/Company_Profile.aspx" />
+
+            </div>
 
 
         </div>

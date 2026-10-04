@@ -24,19 +24,27 @@
         <!-- FILTER BUTTONS -->
         <div class="application-filters">
 
-            <a href="#" class="filter-button active">
+            <a href="#"
+                class="filter-button active"
+                data-filter="all">
                 All
             </a>
 
-            <a href="#" class="filter-button">
+            <a href="#"
+                class="filter-button"
+                data-filter="shortlisted">
                 Shortlisted
             </a>
 
-            <a href="#" class="filter-button">
+            <a href="#"
+                class="filter-button"
+                data-filter="interview">
                 Interview
             </a>
 
-            <a href="#" class="filter-button">
+            <a href="#"
+                class="filter-button"
+                data-filter="rejected">
                 Rejected
             </a>
 
@@ -78,7 +86,7 @@
                 <tbody>
 
                     <!-- Rahul Sharma -->
-                    <tr>
+                    <tr data-status="shortlisted">
 
                         <td>
                             <div class="candidate-info">
@@ -123,7 +131,7 @@
 
 
                     <!-- Priya Patel -->
-                    <tr>
+                    <tr data-status="interview">
 
                         <td>
                             <div class="candidate-info">
@@ -168,7 +176,7 @@
 
 
                     <!-- Amit Kumar -->
-                    <tr>
+                    <tr data-status="rejected">
 
                         <td>
                             <div class="candidate-info">
@@ -213,7 +221,7 @@
 
 
                     <!-- Sneha Gupta -->
-                    <tr>
+                    <tr data-status="shortlisted">
 
                         <td>
                             <div class="candidate-info">
@@ -258,7 +266,7 @@
 
 
                     <!-- Vikram Singh -->
-                    <tr>
+                    <tr data-status="pending">
 
                         <td>
                             <div class="candidate-info">
@@ -305,8 +313,19 @@
 
             </table>
 
+
+            <!-- NO RESULT MESSAGE -->
+            <div
+                id="noApplications"
+                style="display: none; text-align: center; padding: 30px;">
+
+                No applications found.
+
+            </div>
+
         </div>
 
     </div>
 
 </asp:Content>
+
