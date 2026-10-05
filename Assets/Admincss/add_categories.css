@@ -11,6 +11,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+    .add-category-page *,
+    .add-category-page *::before,
+    .add-category-page *::after {
+        box-sizing: border-box;
+    }
+
 
 /* =========================================================
    BACK SECTION
@@ -22,7 +28,6 @@
     margin: 0 auto 25px auto;
 }
 
-
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -33,11 +38,9 @@
     font-weight: 600;
 }
 
-
     .back-link:hover {
         color: #2563eb;
     }
-
 
     .back-link i {
         font-size: 14px;
@@ -71,7 +74,6 @@
     gap: 18px;
 }
 
-
 .category-icon {
     width: 64px;
     height: 64px;
@@ -84,16 +86,13 @@
     justify-content: center;
 }
 
-
     .category-icon i {
         font-size: 25px;
     }
 
-
 .category-header-text {
     flex: 1;
 }
-
 
     .category-header-text h1 {
         margin: 0;
@@ -101,7 +100,6 @@
         font-weight: 700;
         color: #101828;
     }
-
 
     .category-header-text p {
         margin: 7px 0 0;
@@ -133,7 +131,6 @@
     gap: 22px 34px;
 }
 
-
 .form-group {
     width: 100%;
     display: flex;
@@ -141,13 +138,31 @@
     gap: 8px;
 }
 
-
     .form-group label {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         font-size: 11px;
         font-weight: 700;
         color: #667085;
         letter-spacing: 0.7px;
+        line-height: 16px;
     }
+
+
+/* =========================================================
+   REQUIRED STAR
+========================================================= */
+
+.required-star {
+    display: inline;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
 
 
 /* =========================================================
@@ -169,12 +184,10 @@
     transition: 0.2s ease;
 }
 
-
     .form-input:focus {
         border-color: #2563eb;
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
     }
-
 
     .form-input::placeholder {
         color: #98a2b3;
@@ -212,6 +225,21 @@ select.form-input {
 
 
 /* =========================================================
+   VALIDATION
+========================================================= */
+
+.validation-error {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
    BUTTONS
 ========================================================= */
 
@@ -222,25 +250,26 @@ select.form-input {
     margin-top: 5px;
 }
 
-
 .save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-height: 43px;
     padding: 0 22px;
     border: none;
     border-radius: 7px;
     background: #2563eb;
     color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s ease;
 }
 
-
     .save-button:hover {
         background: #1d4ed8;
     }
-
 
 .cancel-button {
     display: inline-flex;
@@ -257,7 +286,6 @@ select.form-input {
     cursor: pointer;
     transition: 0.2s ease;
 }
-
 
     .cancel-button:hover {
         background: #e4e7ec;

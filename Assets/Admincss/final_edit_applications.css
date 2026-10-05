@@ -1,21 +1,11 @@
-﻿/* =========================================
-   EDIT APPLICATION PAGE
-   USER EDIT PAGE જેવી SAME DESIGN
-========================================= */
-
-.edit-application-page {
+﻿.edit-application-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
-    padding: 35px 40px 50px 40px;
+    padding: 35px 40px 50px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-/* =========================================
-   BACK LINK
-========================================= */
 
 .back-wrapper {
     margin-bottom: 25px;
@@ -31,18 +21,13 @@
     font-weight: 600;
 }
 
-    .back-link:hover {
-        color: #1d4ed8;
-    }
+.back-link:hover {
+    color: #1d4ed8;
+}
 
-    .back-link i {
-        font-size: 16px;
-    }
-
-
-/* =========================================
-   MAIN CARD
-========================================= */
+.back-link i {
+    font-size: 16px;
+}
 
 .application-card {
     width: 100%;
@@ -56,22 +41,12 @@
     box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
 }
 
-
-/* =========================================
-   APPLICATION HEADER
-========================================= */
-
 .application-header {
     display: flex;
     align-items: center;
     gap: 18px;
     width: 100%;
 }
-
-
-/* =========================================
-   APPLICANT AVATAR
-========================================= */
 
 .applicant-avatar-large {
     width: 72px;
@@ -87,32 +62,22 @@
     font-weight: 700;
 }
 
-
-/* =========================================
-   APPLICATION TITLE
-========================================= */
-
 .application-title-area {
     flex: 1;
 }
 
-    .application-title-area h1 {
-        margin: 0;
-        color: #101828;
-        font-size: 25px;
-        font-weight: 700;
-    }
+.application-title-area h1 {
+    margin: 0;
+    color: #101828;
+    font-size: 25px;
+    font-weight: 700;
+}
 
-    .application-title-area p {
-        margin: 7px 0 0 0;
-        color: #667085;
-        font-size: 14px;
-    }
-
-
-/* =========================================
-   DIVIDER
-========================================= */
+.application-title-area p {
+    margin: 7px 0 0;
+    color: #667085;
+    font-size: 14px;
+}
 
 .divider {
     width: 100%;
@@ -121,27 +86,18 @@
     margin: 28px 0;
 }
 
-
-/* =========================================
-   SECTION TITLE
-========================================= */
-
 .section-title {
     width: 100%;
     margin-bottom: 22px;
 }
 
-    .section-title h2 {
-        margin: 0;
-        color: #101828;
-        font-size: 19px;
-        font-weight: 700;
-    }
-
-
-/* =========================================
-   INFORMATION GRID
-========================================= */
+.section-title h2,
+.full-section h2 {
+    margin: 0;
+    color: #101828;
+    font-size: 19px;
+    font-weight: 700;
+}
 
 .application-information {
     width: 100%;
@@ -150,11 +106,6 @@
     gap: 22px 34px;
 }
 
-
-/* =========================================
-   FORM GROUP
-========================================= */
-
 .form-group {
     width: 100%;
     display: flex;
@@ -162,22 +113,18 @@
     gap: 8px;
 }
 
+.form-group label {
+    color: #667085;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
 
-    /* =========================================
-   LABEL
-========================================= */
-
-    .form-group label {
-        color: #667085;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.7px;
-    }
-
-
-/* =========================================
-   INPUT
-========================================= */
+.required-star {
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 700;
+}
 
 .edit-input {
     width: 100%;
@@ -194,47 +141,86 @@
     transition: 0.2s ease;
 }
 
-
-    /* =========================================
-   INPUT FOCUS
-========================================= */
-
-    .edit-input:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
-
-
-/* =========================================
-   DROPDOWN
-========================================= */
+.edit-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
 
 select.edit-input {
     cursor: pointer;
-    appearance: auto;
 }
 
+.profile-upload-group {
+    grid-column: span 2;
+}
 
-/* =========================================
-   FULL WIDTH SECTION
-========================================= */
+.profile-upload-box {
+    width: 100%;
+    min-height: 95px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.profile-preview {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e8efff;
+    color: #2563eb;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.profile-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-upload-content {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profile-upload {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #344054;
+}
+
+.upload-help {
+    color: #667085;
+    font-size: 12px;
+}
+
+.validation-error {
+    display: block;
+    margin-top: 1px;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
 
 .full-section {
     width: 100%;
     margin-bottom: 30px;
 }
 
-    .full-section h2 {
-        margin: 0 0 15px 0;
-        color: #101828;
-        font-size: 19px;
-        font-weight: 700;
-    }
-
-
-/* =========================================
-   TEXTAREA
-========================================= */
+.full-section h2 {
+    margin-bottom: 15px;
+}
 
 .edit-textarea {
     width: 100%;
@@ -250,23 +236,12 @@ select.edit-input {
     font-size: 15px;
     line-height: 1.6;
     outline: none;
-    transition: 0.2s ease;
 }
 
-
-    /* =========================================
-   TEXTAREA FOCUS
-========================================= */
-
-    .edit-textarea:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
-
-
-/* =========================================
-   RESUME BOX
-========================================= */
+.edit-textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
 
 .resume-box {
     width: 100%;
@@ -281,11 +256,6 @@ select.edit-input {
     background: #fafafa;
 }
 
-
-/* =========================================
-   RESUME ICON
-========================================= */
-
 .resume-icon {
     width: 45px;
     height: 45px;
@@ -299,11 +269,6 @@ select.edit-input {
     font-size: 21px;
 }
 
-
-/* =========================================
-   RESUME INFORMATION
-========================================= */
-
 .resume-information {
     flex: 1;
     display: flex;
@@ -311,21 +276,16 @@ select.edit-input {
     gap: 5px;
 }
 
-    .resume-information strong {
-        color: #344054;
-        font-size: 14px;
-        font-weight: 600;
-    }
+.resume-information strong {
+    color: #344054;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-    .resume-information span {
-        color: #667085;
-        font-size: 12px;
-    }
-
-
-/* =========================================
-   VIEW RESUME
-========================================= */
+.resume-information span {
+    color: #667085;
+    font-size: 12px;
+}
 
 .view-resume {
     color: #2563eb;
@@ -334,30 +294,10 @@ select.edit-input {
     font-weight: 600;
 }
 
-    .view-resume:hover {
-        color: #1d4ed8;
-        text-decoration: underline;
-    }
-
-
-/* =========================================
-   VALIDATION
-========================================= */
-
-.form-group span,
-.full-section span {
-    display: block;
-    margin-top: 1px;
-    color: #ff0000 !important;
-    font-size: 12px !important;
-    font-weight: 500;
-    line-height: 1.4;
+.view-resume:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
 }
-
-
-/* =========================================
-   ACTION BUTTONS
-========================================= */
 
 .application-actions {
     display: flex;
@@ -366,38 +306,25 @@ select.edit-input {
     margin-top: 5px;
 }
 
-
-/* =========================================
-   SAVE BUTTON
-========================================= */
-
 .save-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     min-height: 43px;
     padding: 0 22px;
     border: none;
     border-radius: 7px;
     background: #2563eb;
     color: #ffffff;
-    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: 0.2s ease;
 }
 
-    .save-button:hover {
-        background: #1d4ed8;
-        color: #ffffff;
-    }
-
-
-/* =========================================
-   CANCEL BUTTON
-========================================= */
+.save-button:hover {
+    background: #1d4ed8;
+}
 
 .cancel-button {
     display: inline-flex;
@@ -411,32 +338,16 @@ select.edit-input {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
 }
 
-    .cancel-button:hover {
-        background: #e4e7ec;
-        color: #344054;
-    }
-
-
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
-
-@media (max-width: 1200px) {
-
-    .application-card {
-        max-width: 100%;
-    }
+.cancel-button:hover {
+    background: #e4e7ec;
 }
-
 
 @media (max-width: 900px) {
 
     .edit-application-page {
-        padding: 25px 20px 40px 20px;
+        padding: 25px 20px 40px;
     }
 
     .application-card {
@@ -448,15 +359,14 @@ select.edit-input {
     }
 }
 
-
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
-
 @media (max-width: 700px) {
 
     .application-information {
         grid-template-columns: 1fr;
+    }
+
+    .profile-upload-group {
+        grid-column: span 1;
     }
 
     .application-header {
@@ -475,20 +385,14 @@ select.edit-input {
     }
 }
 
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
 @media (max-width: 500px) {
 
     .edit-application-page {
-        padding: 20px 12px 30px 12px;
+        padding: 20px 12px 30px;
     }
 
     .application-card {
         padding: 20px;
-        border-radius: 9px;
     }
 
     .application-header {
@@ -500,14 +404,10 @@ select.edit-input {
         width: 100%;
     }
 
-    .resume-box {
+    .resume-box,
+    .profile-upload-box {
         align-items: flex-start;
         flex-wrap: wrap;
-    }
-
-    .view-resume {
-        width: 100%;
-        margin-left: 60px;
     }
 
     .application-actions {
@@ -521,11 +421,6 @@ select.edit-input {
         box-sizing: border-box;
     }
 }
-
-
-/* =========================================
-   BOX SIZING
-========================================= */
 
 .edit-application-page *,
 .edit-application-page *::before,

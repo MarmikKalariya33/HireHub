@@ -198,6 +198,8 @@
 
 .profile-form-group {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -211,6 +213,7 @@
         color: #202c41;
         font-size: 16px;
         font-weight: 600;
+        line-height: 20px;
     }
 
 .required {
@@ -241,6 +244,20 @@
         border-color: #2864e8;
         box-shadow: 0 0 0 2px rgba(40, 100, 232, 0.10);
     }
+
+
+/* =========================================
+   VALIDATION
+========================================= */
+
+.validation-error {
+    display: block;
+    margin-top: 6px;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
 
 
 /* =========================================

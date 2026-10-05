@@ -5,7 +5,6 @@
     CodeBehind="Edit_Admin_Profile.aspx.cs"
     Inherits="Job_Portal.Admin.Edit_Admin_Profile" %>
 
-
 <asp:Content
     ID="Content1"
     ContentPlaceHolderID="head"
@@ -23,13 +22,8 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
     <div class="admin-profile-page">
 
-
-        <!-- ==============================
-             PAGE HEADER
-        ============================== -->
 
         <div class="profile-page-header">
 
@@ -40,10 +34,6 @@
         </div>
 
 
-        <!-- ==============================
-             EDIT PROFILE CARD
-        ============================== -->
-
         <div class="profile-card">
 
 
@@ -51,11 +41,9 @@
 
             <div class="profile-header">
 
-
                 <div class="profile-avatar">
                     A
                 </div>
-
 
                 <div class="profile-heading">
 
@@ -63,40 +51,33 @@
                         Profile Photo
                     </h2>
 
-
                     <div class="profile-photo-actions">
-
 
                         <asp:Button
                             ID="btnChangePhoto"
                             runat="server"
                             Text="Change Photo"
-                            CssClass="change-photo-btn" />
-
+                            CssClass="change-photo-btn"
+                            CausesValidation="false" />
 
                         <asp:Button
                             ID="btnRemovePhoto"
                             runat="server"
                             Text="Remove"
-                            CssClass="remove-photo-btn" />
-
+                            CssClass="remove-photo-btn"
+                            CausesValidation="false" />
 
                     </div>
 
                 </div>
 
-
             </div>
 
-
-            <!-- DIVIDER -->
 
             <div class="profile-divider"></div>
 
 
-            <!-- ==============================
-                 PROFILE FORM
-            ============================== -->
+            <!-- PROFILE FORM -->
 
             <div class="profile-information">
 
@@ -115,13 +96,22 @@
                             <span class="required">*</span>
                         </label>
 
-
                         <asp:TextBox
                             ID="txtFullName"
                             runat="server"
                             CssClass="profile-input"
                             Text="Super Admin">
                         </asp:TextBox>
+
+                        <asp:RequiredFieldValidator
+                            ID="rfvFullName"
+                            runat="server"
+                            ControlToValidate="txtFullName"
+                            ErrorMessage="Full name is required."
+                            ValidationGroup="ProfileValidation"
+                            Display="Dynamic"
+                            CssClass="validation-error">
+                        </asp:RequiredFieldValidator>
 
                     </div>
 
@@ -135,13 +125,33 @@
                             <span class="required">*</span>
                         </label>
 
-
                         <asp:TextBox
                             ID="txtEmail"
                             runat="server"
                             CssClass="profile-input"
                             Text="admin@hirehub.com">
                         </asp:TextBox>
+
+                        <asp:RequiredFieldValidator
+                            ID="rfvEmail"
+                            runat="server"
+                            ControlToValidate="txtEmail"
+                            ErrorMessage="Email address is required."
+                            ValidationGroup="ProfileValidation"
+                            Display="Dynamic"
+                            CssClass="validation-error">
+                        </asp:RequiredFieldValidator>
+
+                        <asp:RegularExpressionValidator
+                            ID="revEmail"
+                            runat="server"
+                            ControlToValidate="txtEmail"
+                            ErrorMessage="Enter a valid email address."
+                            ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                            ValidationGroup="ProfileValidation"
+                            Display="Dynamic"
+                            CssClass="validation-error">
+                        </asp:RegularExpressionValidator>
 
                     </div>
 
@@ -162,13 +172,23 @@
                             Phone Number
                         </label>
 
-
                         <asp:TextBox
                             ID="txtPhone"
                             runat="server"
                             CssClass="profile-input"
                             Text="+91 99887 76655">
                         </asp:TextBox>
+
+                        <asp:RegularExpressionValidator
+                            ID="revPhone"
+                            runat="server"
+                            ControlToValidate="txtPhone"
+                            ErrorMessage="Enter a valid phone number."
+                            ValidationExpression="^[0-9+\-\s()]{10,20}$"
+                            ValidationGroup="ProfileValidation"
+                            Display="Dynamic"
+                            CssClass="validation-error">
+                        </asp:RegularExpressionValidator>
 
                     </div>
 
@@ -182,13 +202,22 @@
                             <span class="required">*</span>
                         </label>
 
-
                         <asp:TextBox
                             ID="txtRole"
                             runat="server"
                             CssClass="profile-input"
                             Text="Super Admin">
                         </asp:TextBox>
+
+                        <asp:RequiredFieldValidator
+                            ID="rfvRole"
+                            runat="server"
+                            ControlToValidate="txtRole"
+                            ErrorMessage="Role/Position is required."
+                            ValidationGroup="ProfileValidation"
+                            Display="Dynamic"
+                            CssClass="validation-error">
+                        </asp:RequiredFieldValidator>
 
                     </div>
 
@@ -199,34 +228,28 @@
             </div>
 
 
-            <!-- BOTTOM DIVIDER -->
-
             <div class="profile-bottom-divider"></div>
 
 
-            <!-- ==============================
-                 ACTION BUTTONS
-            ============================== -->
+            <!-- ACTION BUTTONS -->
 
             <div class="profile-actions">
 
-
                 <asp:Button
-                    ID="btnCancel_Click"
+                    ID="btnCancel"
                     runat="server"
                     Text="Cancel"
                     CssClass="cancel-btn"
-                     />
-
+                    CausesValidation="false"
+                    PostBackUrl="~/Admin/AdminProfile.aspx" />
 
                 <asp:Button
                     ID="btnSaveChanges"
                     runat="server"
                     Text="Save Changes"
                     CssClass="save-changes-btn"
+                    ValidationGroup="ProfileValidation"
                     PostBackUrl="~/Admin/AdminProfile.aspx" />
-                     
-
 
             </div>
 
@@ -235,6 +258,5 @@
 
 
     </div>
-
 
 </asp:Content>
