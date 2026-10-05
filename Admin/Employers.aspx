@@ -297,38 +297,4 @@
 
     </div>
 
-    <script type="text/javascript">
-
-        function searchEmployers() {
-
-            var searchBox =
-                document.getElementById('<%= txtSearch.ClientID %>');
-
-            var searchText =
-                searchBox.value.toLowerCase().trim();
-
-            var table =
-                document.querySelector('.employers-table');
-
-            var rows =
-                table.getElementsByTagName('tbody')[0]
-                    .getElementsByTagName('tr');
-
-            for (var i = 0; i < rows.length; i++) {
-
-                var rowText =
-                    rows[i].innerText.toLowerCase();
-
-                if (rowText.indexOf(searchText) > -1) {
-                    rows[i].style.display = '';
-                }
-                else {
-                    rows[i].style.display = 'none';
-                }
-
-            }
-        }
-
-    </script>
-
 </asp:Content>

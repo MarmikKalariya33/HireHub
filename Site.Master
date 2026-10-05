@@ -64,7 +64,7 @@
 
     <!-- =====================================================
          SIDEBAR
-    ====================================================== -->
+    ===================================================== -->
 
     <aside class="sidebar">
 
@@ -180,9 +180,14 @@
             </a>
 
 
-            <!-- LOGOUT -->
+        </div>
 
-            <div class="logout-container">
+
+        <!-- =================================================
+             LOGOUT
+        ================================================== -->
+
+        <div class="logout-container">
 
             <asp:LinkButton
                 ID="btnLogout"
@@ -191,12 +196,12 @@
                 OnClick="btnLogout_Click">
 
                 <i class="bi bi-box-arrow-right"></i>
-                <span>LogOut</span>
+
+                <span>
+                    LogOut
+                </span>
 
             </asp:LinkButton>
-
-            </div>
-
 
         </div>
 
@@ -282,9 +287,7 @@
 
         </section>
 
-
     </main>
-
 
 </form>
 
