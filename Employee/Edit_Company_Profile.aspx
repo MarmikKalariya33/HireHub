@@ -5,7 +5,6 @@
     CodeBehind="Edit_Company_Profile.aspx.cs"
     Inherits="Job_Portal.Employee.Edit_Company_Profile" %>
 
-
 <asp:Content ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
@@ -15,99 +14,43 @@
 
 </asp:Content>
 
-
 <asp:Content ID="Content2"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
-    <!-- =========================================
-         EDIT EMPLOYER PROFILE PAGE
-    ========================================= -->
-
     <div class="edit-company-page">
 
-
-        <!-- BACK BUTTON -->
-
-        <a href="Company_Profile.aspx"
-           class="back-button">
+        <a href="Company_Profile.aspx" class="back-button">
             ← Back to Company Profile
         </a>
 
-
-        <!-- =========================================
-             PAGE HEADER
-        ========================================= -->
-
         <div class="edit-company-header">
-
-            <h1>
-                Edit Employer Profile
-            </h1>
+            <h1>Edit Employer Profile</h1>
 
             <p>
                 Update your company details, contact information, and business coordinates.
             </p>
-
         </div>
-
-
-        <!-- =========================================
-             MAIN FORM CARD
-        ========================================= -->
 
         <div class="edit-company-card">
 
-
-            <!-- =========================================
-                 VALIDATION SUMMARY
-            ========================================= -->
-
-            <asp:ValidationSummary
-                ID="vsCompanyProfile"
-                runat="server"
-                ValidationGroup="CompanyProfile"
-                CssClass="validation-summary"
-                HeaderText="Please correct the following errors:"
-                DisplayMode="BulletList" />
-
-
-            <!-- =========================================
-                 COMPANY LOGO SECTION
-            ========================================= -->
-
             <div class="company-logo-section">
-
-
-                <!-- COMPANY LOGO -->
 
                 <div class="edit-company-logo">
                     TCS
                 </div>
 
-
-                <!-- LOGO CONTENT -->
-
                 <div class="logo-content">
 
-                    <h2>
-                        Company Logo
-                    </h2>
-
+                    <h2>Company Logo</h2>
 
                     <div class="logo-buttons">
 
-                        <button
-                            type="button"
-                            class="change-logo-button">
+                        <button type="button" class="change-logo-button">
                             Change Logo
                         </button>
 
-
-                        <button
-                            type="button"
-                            class="remove-logo-button">
+                        <button type="button" class="remove-logo-button">
                             Remove
                         </button>
 
@@ -117,25 +60,11 @@
 
             </div>
 
-
-            <!-- =========================================
-                 DIVIDER
-            ========================================= -->
-
             <div class="edit-divider"></div>
-
-
-            <!-- =========================================
-                 FORM FIELDS
-            ========================================= -->
 
             <div class="company-form-grid">
 
-
-                <!-- =====================================
-                     COMPANY NAME
-                ====================================== -->
-
+                <!-- COMPANY NAME -->
                 <div class="form-group">
 
                     <asp:Label
@@ -144,14 +73,7 @@
                         Text="Company Name"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblCompanyNameRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtCompanyName"
@@ -159,7 +81,6 @@
                         CssClass="form-input"
                         Text="Tata Consultancy Services">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvCompanyName"
@@ -169,17 +90,12 @@
                         ErrorMessage="Company Name is required."
                         Text="Company Name is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     CONTACT PERSON
-                ====================================== -->
-
+                <!-- CONTACT PERSON -->
                 <div class="form-group">
 
                     <asp:Label
@@ -188,14 +104,7 @@
                         Text="Contact Person"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblContactPersonRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtContactPerson"
@@ -203,7 +112,6 @@
                         CssClass="form-input"
                         Text="Priya Patel">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvContactPerson"
@@ -213,17 +121,12 @@
                         ErrorMessage="Contact Person is required."
                         Text="Contact Person is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     EMAIL ADDRESS
-                ====================================== -->
-
+                <!-- EMAIL -->
                 <div class="form-group">
 
                     <asp:Label
@@ -232,14 +135,7 @@
                         Text="Email Address"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblEmailRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtEmail"
@@ -247,7 +143,6 @@
                         CssClass="form-input"
                         Text="recruitment@tcs.com">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvEmail"
@@ -257,10 +152,8 @@
                         ErrorMessage="Email Address is required."
                         Text="Email Address is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
-
 
                     <asp:RegularExpressionValidator
                         ID="revEmail"
@@ -271,17 +164,12 @@
                         ErrorMessage="Please enter a valid Email Address."
                         Text="Please enter a valid Email Address."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RegularExpressionValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     PHONE NUMBER
-                ====================================== -->
-
+                <!-- PHONE -->
                 <div class="form-group">
 
                     <asp:Label
@@ -290,14 +178,7 @@
                         Text="Phone Number"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblPhoneRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtPhone"
@@ -305,7 +186,6 @@
                         CssClass="form-input"
                         Text="+91 22 6778 9999">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvPhone"
@@ -315,31 +195,24 @@
                         ErrorMessage="Phone Number is required."
                         Text="Phone Number is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
-
 
                     <asp:RegularExpressionValidator
                         ID="revPhone"
                         runat="server"
                         ControlToValidate="txtPhone"
                         ValidationGroup="CompanyProfile"
-                        ValidationExpression="^[0-9+\-\s]{10,15}$"
+                        ValidationExpression="^[0-9+\-\s()]{10,20}$"
                         ErrorMessage="Please enter a valid Phone Number."
                         Text="Please enter a valid Phone Number."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RegularExpressionValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     WEBSITE
-                ====================================== -->
-
+                <!-- WEBSITE -->
                 <div class="form-group">
 
                     <asp:Label
@@ -348,14 +221,7 @@
                         Text="Website"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblWebsiteRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtWebsite"
@@ -363,7 +229,6 @@
                         CssClass="form-input"
                         Text="www.tcs.com">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvWebsite"
@@ -373,17 +238,12 @@
                         ErrorMessage="Website is required."
                         Text="Website is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     FOUNDED YEAR
-                ====================================== -->
-
+                <!-- FOUNDED YEAR -->
                 <div class="form-group">
 
                     <asp:Label
@@ -392,14 +252,7 @@
                         Text="Founded Year"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblFoundedYearRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <asp:TextBox
                         ID="txtFoundedYear"
@@ -407,7 +260,6 @@
                         CssClass="form-input"
                         Text="1968">
                     </asp:TextBox>
-
 
                     <asp:RequiredFieldValidator
                         ID="rfvFoundedYear"
@@ -417,10 +269,8 @@
                         ErrorMessage="Founded Year is required."
                         Text="Founded Year is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
-
 
                     <asp:RegularExpressionValidator
                         ID="revFoundedYear"
@@ -428,20 +278,15 @@
                         ControlToValidate="txtFoundedYear"
                         ValidationGroup="CompanyProfile"
                         ValidationExpression="^[0-9]{4}$"
-                        ErrorMessage="Founded Year must contain exactly 4 digits."
+                        ErrorMessage="Enter a valid 4-digit year."
                         Text="Enter a valid 4-digit year."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RegularExpressionValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     INDUSTRY
-                ====================================== -->
-
+                <!-- INDUSTRY -->
                 <div class="form-group">
 
                     <asp:Label
@@ -450,14 +295,7 @@
                         Text="Industry"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblIndustryRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <div class="select-wrapper">
 
@@ -501,7 +339,6 @@
 
                     </div>
 
-
                     <asp:RequiredFieldValidator
                         ID="rfvIndustry"
                         runat="server"
@@ -511,17 +348,12 @@
                         ErrorMessage="Industry is required."
                         Text="Industry is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
 
                 </div>
 
-
-                <!-- =====================================
-                     COMPANY SIZE
-                ====================================== -->
-
+                <!-- COMPANY SIZE -->
                 <div class="form-group">
 
                     <asp:Label
@@ -530,14 +362,7 @@
                         Text="Company Size"
                         CssClass="field-label">
                     </asp:Label>
-
-                    <asp:Label
-                        ID="lblCompanySizeRequired"
-                        runat="server"
-                        Text="*"
-                        ForeColor="Red">
-                    </asp:Label>
-
+                    <span class="required-star">*</span>
 
                     <div class="select-wrapper">
 
@@ -581,7 +406,6 @@
 
                     </div>
 
-
                     <asp:RequiredFieldValidator
                         ID="rfvCompanySize"
                         runat="server"
@@ -591,20 +415,14 @@
                         ErrorMessage="Company Size is required."
                         Text="Company Size is required."
                         CssClass="validation-error"
-                        Display="Dynamic"
-                        ForeColor="Red">
+                        Display="Dynamic">
                     </asp:RequiredFieldValidator>
 
                 </div>
 
-
             </div>
 
-
-            <!-- =========================================
-                 ABOUT COMPANY
-            ========================================= -->
-
+            <!-- ABOUT COMPANY -->
             <div class="form-group full-width">
 
                 <asp:Label
@@ -613,14 +431,7 @@
                     Text="About Tata Consultancy Services"
                     CssClass="field-label">
                 </asp:Label>
-
-                <asp:Label
-                    ID="lblAboutCompanyRequired"
-                    runat="server"
-                    Text="*"
-                    ForeColor="Red">
-                </asp:Label>
-
+                <span class="required-star">*</span>
 
                 <asp:TextBox
                     ID="txtAboutCompany"
@@ -631,7 +442,6 @@
                     Text="Tata Consultancy Services is an IT services, consulting and business solutions organization that has been partnering with many">
                 </asp:TextBox>
 
-
                 <asp:RequiredFieldValidator
                     ID="rfvAboutCompany"
                     runat="server"
@@ -640,10 +450,8 @@
                     ErrorMessage="About Company is required."
                     Text="About Company is required."
                     CssClass="validation-error"
-                    Display="Dynamic"
-                    ForeColor="Red">
+                    Display="Dynamic">
                 </asp:RequiredFieldValidator>
-
 
                 <asp:RegularExpressionValidator
                     ID="revAboutCompany"
@@ -651,20 +459,15 @@
                     ControlToValidate="txtAboutCompany"
                     ValidationGroup="CompanyProfile"
                     ValidationExpression="^[\s\S]{20,}$"
-                    ErrorMessage="About Company must contain at least 20 characters."
+                    ErrorMessage="Minimum 20 characters required."
                     Text="Minimum 20 characters required."
                     CssClass="validation-error"
-                    Display="Dynamic"
-                    ForeColor="Red">
+                    Display="Dynamic">
                 </asp:RegularExpressionValidator>
 
             </div>
 
-
-            <!-- =========================================
-                 ADDRESS
-            ========================================= -->
-
+            <!-- ADDRESS -->
             <div class="form-group full-width">
 
                 <asp:Label
@@ -673,14 +476,7 @@
                     Text="Address"
                     CssClass="field-label">
                 </asp:Label>
-
-                <asp:Label
-                    ID="lblAddressRequired"
-                    runat="server"
-                    Text="*"
-                    ForeColor="Red">
-                </asp:Label>
-
+                <span class="required-star">*</span>
 
                 <asp:TextBox
                     ID="txtAddress"
@@ -688,7 +484,6 @@
                     CssClass="form-input"
                     Text="TCS House, Raveline Street, Fort">
                 </asp:TextBox>
-
 
                 <asp:RequiredFieldValidator
                     ID="rfvAddress"
@@ -698,17 +493,12 @@
                     ErrorMessage="Address is required."
                     Text="Address is required."
                     CssClass="validation-error"
-                    Display="Dynamic"
-                    ForeColor="Red">
+                    Display="Dynamic">
                 </asp:RequiredFieldValidator>
 
             </div>
 
-
-            <!-- =========================================
-                 FORM ACTIONS
-            ========================================= -->
-
+            <!-- BUTTONS -->
             <div class="form-actions">
 
                 <asp:Button
@@ -720,7 +510,6 @@
                     CausesValidation="true"
                     PostBackUrl="~/Employee/Company_Profile.aspx" />
 
-
                 <asp:Button
                     ID="btnCancel"
                     runat="server"
@@ -730,7 +519,6 @@
                     PostBackUrl="~/Employee/Company_Profile.aspx" />
 
             </div>
-
 
         </div>
 

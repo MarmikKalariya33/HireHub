@@ -15,15 +15,6 @@ namespace Job_Portal.Employee
     {
 
         /// <summary>
-        /// vsCompanyProfile control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary vsCompanyProfile;
-
-        /// <summary>
         /// lblCompanyName control.
         /// </summary>
         /// <remarks>
@@ -31,15 +22,6 @@ namespace Job_Portal.Employee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCompanyName;
-
-        /// <summary>
-        /// lblCompanyNameRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompanyNameRequired;
 
         /// <summary>
         /// txtCompanyName control.
@@ -69,15 +51,6 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.Label lblContactPerson;
 
         /// <summary>
-        /// lblContactPersonRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblContactPersonRequired;
-
-        /// <summary>
         /// txtContactPerson control.
         /// </summary>
         /// <remarks>
@@ -103,15 +76,6 @@ namespace Job_Portal.Employee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
-
-        /// <summary>
-        /// lblEmailRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailRequired;
 
         /// <summary>
         /// txtEmail control.
@@ -150,15 +114,6 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.Label lblPhone;
 
         /// <summary>
-        /// lblPhoneRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPhoneRequired;
-
-        /// <summary>
         /// txtPhone control.
         /// </summary>
         /// <remarks>
@@ -195,15 +150,6 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.Label lblWebsite;
 
         /// <summary>
-        /// lblWebsiteRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWebsiteRequired;
-
-        /// <summary>
         /// txtWebsite control.
         /// </summary>
         /// <remarks>
@@ -229,15 +175,6 @@ namespace Job_Portal.Employee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblFoundedYear;
-
-        /// <summary>
-        /// lblFoundedYearRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFoundedYearRequired;
 
         /// <summary>
         /// txtFoundedYear control.
@@ -276,15 +213,6 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.Label lblIndustry;
 
         /// <summary>
-        /// lblIndustryRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIndustryRequired;
-
-        /// <summary>
         /// ddlIndustry control.
         /// </summary>
         /// <remarks>
@@ -312,15 +240,6 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.Label lblCompanySize;
 
         /// <summary>
-        /// lblCompanySizeRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCompanySizeRequired;
-
-        /// <summary>
         /// ddlCompanySize control.
         /// </summary>
         /// <remarks>
@@ -346,15 +265,6 @@ namespace Job_Portal.Employee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAboutCompany;
-
-        /// <summary>
-        /// lblAboutCompanyRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAboutCompanyRequired;
 
         /// <summary>
         /// txtAboutCompany control.
@@ -391,15 +301,6 @@ namespace Job_Portal.Employee
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddress;
-
-        /// <summary>
-        /// lblAddressRequired control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAddressRequired;
 
         /// <summary>
         /// txtAddress control.

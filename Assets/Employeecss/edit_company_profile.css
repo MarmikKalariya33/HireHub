@@ -13,6 +13,24 @@
 
 
 /* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #2864e8;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .back-button:hover {
+        text-decoration: underline;
+    }
+
+
+/* =========================================
    PAGE HEADER
 ========================================= */
 
@@ -52,7 +70,7 @@
 
 
 /* =========================================
-   COMPANY LOGO SECTION
+   COMPANY LOGO
 ========================================= */
 
 .company-logo-section {
@@ -60,11 +78,6 @@
     align-items: center;
     min-height: 105px;
 }
-
-
-/* =========================================
-   COMPANY LOGO
-========================================= */
 
 .edit-company-logo {
     width: 78px;
@@ -79,11 +92,6 @@
     font-size: 25px;
     font-weight: 700;
 }
-
-
-/* =========================================
-   LOGO CONTENT
-========================================= */
 
 .logo-content {
     margin-left: 28px;
@@ -107,11 +115,6 @@
     gap: 14px;
 }
 
-
-/* =========================================
-   CHANGE LOGO BUTTON
-========================================= */
-
 .change-logo-button {
     height: 36px;
     padding: 0 15px;
@@ -127,11 +130,6 @@
     .change-logo-button:hover {
         background: #1f56cf;
     }
-
-
-/* =========================================
-   REMOVE LOGO BUTTON
-========================================= */
 
 .remove-logo-button {
     height: 36px;
@@ -185,12 +183,40 @@
 }
 
     .form-group label {
-        display: block;
+        display: inline;
         margin-bottom: 8px;
         color: #1d293f;
         font-size: 16px;
         font-weight: 700;
     }
+
+.field-label {
+    color: #1d293f;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.required-star {
+    display: inline;
+    margin-left: 3px;
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   VALIDATION
+========================================= */
+
+.validation-error {
+    display: block;
+    margin-top: 5px;
+    color: #dc2626 !important;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+}
 
 
 /* =========================================
@@ -200,6 +226,7 @@
 .form-input {
     width: 100%;
     height: 45px;
+    margin-top: 8px;
     padding: 0 15px;
     box-sizing: border-box;
     border: 1px solid #d8dee6;
@@ -251,6 +278,7 @@
 .form-textarea {
     width: 100%;
     min-height: 120px;
+    margin-top: 8px;
     padding: 13px 15px;
     box-sizing: border-box;
     border: 1px solid #d8dee6;
