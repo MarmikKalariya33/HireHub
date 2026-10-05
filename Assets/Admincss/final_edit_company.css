@@ -1,5 +1,6 @@
 ﻿/* =========================================
    EDIT COMPANY PAGE
+   SAME DESIGN AS EDIT USER PAGE
 ========================================= */
 
 .edit-company-page {
@@ -20,7 +21,6 @@
     margin-bottom: 25px;
 }
 
-
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -31,11 +31,9 @@
     font-weight: 600;
 }
 
-
     .back-link:hover {
-        color: #2563eb;
+        color: #1d4ed8;
     }
-
 
     .back-link i {
         font-size: 16px;
@@ -48,27 +46,32 @@
 
 .company-card {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1478px;
     margin: 0 auto;
-    padding: 32px 40px;
-    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #e4e7ec;
     border-radius: 12px;
+    padding: 32px 40px;
+    box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
 }
 
 
 /* =========================================
-   HEADER
+   COMPANY HEADER
 ========================================= */
 
 .company-header {
     display: flex;
     align-items: center;
     gap: 18px;
+    width: 100%;
 }
 
+
+/* =========================================
+   COMPANY AVATAR
+========================================= */
 
 .company-avatar-large {
     width: 72px;
@@ -80,26 +83,28 @@
     border-radius: 50%;
     background: #e8efff;
     color: #2563eb;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 700;
 }
 
+
+/* =========================================
+   COMPANY TITLE
+========================================= */
 
 .company-title-area {
     flex: 1;
 }
 
-
     .company-title-area h1 {
         margin: 0;
         color: #101828;
-        font-size: 26px;
+        font-size: 25px;
         font-weight: 700;
     }
 
-
     .company-title-area p {
-        margin: 7px 0 0;
+        margin: 7px 0 0 0;
         color: #667085;
         font-size: 14px;
     }
@@ -126,7 +131,6 @@
     margin-bottom: 22px;
 }
 
-
     .section-title h2 {
         margin: 0;
         color: #101828;
@@ -136,15 +140,14 @@
 
 
 /* =========================================
-   INFORMATION GRID
+   COMPANY INFORMATION
 ========================================= */
 
 .company-information {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 35px;
-    row-gap: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 34px;
 }
 
 
@@ -160,6 +163,10 @@
 }
 
 
+    /* =========================================
+   LABEL
+========================================= */
+
     .form-group label {
         color: #667085;
         font-size: 11px;
@@ -174,7 +181,7 @@
 
 .edit-input {
     width: 100%;
-    min-height: 50px;
+    min-height: 52px;
     padding: 11px 15px;
     box-sizing: border-box;
     border: 1px solid #d0d5dd;
@@ -188,14 +195,23 @@
 }
 
 
+    /* =========================================
+   INPUT FOCUS
+========================================= */
+
     .edit-input:focus {
         border-color: #2563eb;
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
     }
 
 
+/* =========================================
+   DROPDOWN
+========================================= */
+
 select.edit-input {
     cursor: pointer;
+    appearance: auto;
 }
 
 
@@ -208,9 +224,8 @@ select.edit-input {
     margin-bottom: 30px;
 }
 
-
     .full-section h2 {
-        margin: 0 0 15px;
+        margin: 0 0 15px 0;
         color: #101828;
         font-size: 19px;
         font-weight: 700;
@@ -218,7 +233,7 @@ select.edit-input {
 
 
 /* =========================================
-   TEXT AREA
+   TEXTAREA
 ========================================= */
 
 .edit-textarea {
@@ -239,6 +254,10 @@ select.edit-input {
 }
 
 
+    /* =========================================
+   TEXTAREA FOCUS
+========================================= */
+
     .edit-textarea:focus {
         border-color: #2563eb;
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
@@ -246,7 +265,22 @@ select.edit-input {
 
 
 /* =========================================
-   BUTTONS
+   VALIDATION
+========================================= */
+
+.form-group span,
+.full-section span {
+    display: block;
+    margin-top: 1px;
+    color: #ff0000 !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   COMPANY ACTIONS
 ========================================= */
 
 .company-actions {
@@ -257,7 +291,9 @@ select.edit-input {
 }
 
 
-/* SAVE */
+/* =========================================
+   SAVE BUTTON
+========================================= */
 
 .save-button {
     display: inline-flex;
@@ -265,17 +301,18 @@ select.edit-input {
     justify-content: center;
     gap: 8px;
     min-height: 43px;
-    padding: 0 23px;
+    padding: 0 22px;
+    border: none;
     border-radius: 7px;
     background: #2563eb;
     color: #ffffff;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.2s ease;
 }
-
 
     .save-button:hover {
         background: #1d4ed8;
@@ -283,14 +320,16 @@ select.edit-input {
     }
 
 
-/* CANCEL */
+/* =========================================
+   CANCEL BUTTON
+========================================= */
 
 .cancel-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-height: 43px;
-    padding: 0 23px;
+    padding: 0 22px;
     border-radius: 7px;
     background: #f2f4f7;
     color: #344054;
@@ -301,7 +340,6 @@ select.edit-input {
     transition: 0.2s ease;
 }
 
-
     .cancel-button:hover {
         background: #e4e7ec;
         color: #344054;
@@ -309,13 +347,25 @@ select.edit-input {
 
 
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE - LARGE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .company-card {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
 ========================================= */
 
 @media (max-width: 900px) {
 
     .edit-company-page {
-        padding: 28px 25px 40px;
+        padding: 25px 20px 40px 20px;
     }
 
     .company-card {
@@ -323,42 +373,19 @@ select.edit-input {
     }
 
     .company-information {
-        column-gap: 25px;
+        gap: 20px 25px;
     }
 }
 
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
 
 @media (max-width: 700px) {
 
-    .edit-company-page {
-        padding: 25px 18px 40px;
-    }
-
-    .company-card {
-        padding: 24px;
-    }
-
     .company-information {
         grid-template-columns: 1fr;
-        column-gap: 0;
-        row-gap: 20px;
-    }
-
-    .company-title-area h1 {
-        font-size: 23px;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .edit-company-page {
-        padding: 20px 12px 30px;
-    }
-
-    .company-card {
-        padding: 20px;
-        border-radius: 9px;
     }
 
     .company-header {
@@ -369,11 +396,37 @@ select.edit-input {
         width: 60px;
         height: 60px;
         min-width: 60px;
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .company-title-area h1 {
         font-size: 21px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .edit-company-page {
+        padding: 20px 12px 30px 12px;
+    }
+
+    .company-card {
+        padding: 20px;
+        border-radius: 9px;
+    }
+
+    .company-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-title-area {
+        width: 100%;
     }
 
     .company-actions {
