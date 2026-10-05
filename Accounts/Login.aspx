@@ -27,34 +27,6 @@
           type="text/css"
           href="<%= ResolveUrl("~/Assets/Admincss/login.css") %>" />
 
-    <style>
-
-        /* =========================================
-           REGISTRATION LINK
-        ========================================= */
-
-        .register-section {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-
-        .register-link {
-            margin-left: 5px;
-            color: #456276;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .register-link:hover {
-            color: #6096BA;
-            text-decoration: underline;
-        }
-
-    </style>
-
 </head>
 
 <body>
@@ -178,50 +150,112 @@
                 <div class="login-form">
 
 
-                    <!-- EMAIL -->
+                    <!-- =========================================
+                         EMAIL
+                    ========================================= -->
 
                     <div class="form-group">
 
-                        <label for="email">
+                        <label>
+
                             Email Address
+
+                            <asp:RequiredFieldValidator
+                                ID="rfvEmailStar"
+                                runat="server"
+                                ControlToValidate="txtEmail"
+                                Text="*"
+                                ErrorMessage="Email is required."
+                                ForeColor="Red"
+                                CssClass="required-star"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+
                         </label>
+
 
                         <div class="input-wrapper">
 
                             <i class="bi bi-envelope input-icon"></i>
 
-                            <input
-                                type="email"
-                                id="email"
-                                class="login-input"
+                            <asp:TextBox
+                                ID="txtEmail"
+                                runat="server"
+                                CssClass="login-input"
+                                TextMode="Email"
                                 placeholder="Enter your email"
-                                value="admin@gmail.com"
-                                autocomplete="email" />
+                                Text="admin@gmail.com">
+                            </asp:TextBox>
 
                         </div>
+
+
+                        <!-- Email Required Message -->
+
+                        <asp:RequiredFieldValidator
+                            ID="rfvEmail"
+                            runat="server"
+                            ControlToValidate="txtEmail"
+                            ErrorMessage="Email is required."
+                            ForeColor="Red"
+                            CssClass="validation-message"
+                            Display="Dynamic">
+                        </asp:RequiredFieldValidator>
+
+
+                        <!-- Email Format Validation -->
+
+                        <asp:RegularExpressionValidator
+                            ID="revEmail"
+                            runat="server"
+                            ControlToValidate="txtEmail"
+                            ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                            ErrorMessage="Enter a valid email address."
+                            ForeColor="Red"
+                            CssClass="validation-message"
+                            Display="Dynamic">
+                        </asp:RegularExpressionValidator>
 
                     </div>
 
 
-                    <!-- PASSWORD -->
+                    <!-- =========================================
+                         PASSWORD
+                    ========================================= -->
 
                     <div class="form-group">
 
-                        <label for="password">
+                        <label>
+
                             Password
+
+                            <asp:RequiredFieldValidator
+                                ID="rfvPasswordStar"
+                                runat="server"
+                                ControlToValidate="txtPassword"
+                                Text="*"
+                                ErrorMessage="Password is required."
+                                ForeColor="Red"
+                                CssClass="required-star"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+
                         </label>
+
 
                         <div class="input-wrapper">
 
                             <i class="bi bi-lock input-icon"></i>
 
-                            <input
-                                type="password"
-                                id="password"
-                                class="login-input password-input"
+
+                            <asp:TextBox
+                                ID="txtPassword"
+                                runat="server"
+                                CssClass="login-input password-input"
+                                TextMode="Password"
                                 placeholder="Enter your password"
-                                value="admin123"
-                                autocomplete="current-password" />
+                                Text="admin123">
+                            </asp:TextBox>
 
 
                             <!-- PASSWORD SHOW/HIDE -->
@@ -239,6 +273,19 @@
                             </button>
 
                         </div>
+
+
+                        <!-- Password Required Message -->
+
+                        <asp:RequiredFieldValidator
+                            ID="rfvPassword"
+                            runat="server"
+                            ControlToValidate="txtPassword"
+                            ErrorMessage="Password is required."
+                            ForeColor="Red"
+                            CssClass="validation-message"
+                            Display="Dynamic">
+                        </asp:RequiredFieldValidator>
 
                     </div>
 
@@ -279,14 +326,14 @@
                          LOGIN BUTTON
                     ========================================= -->
 
-                    <button
-                        type="button"
-                        id="loginButton"
-                        class="login-button">
-
-                        Login to Account
-
-                    </button>
+                    <asp:Button
+                        ID="btnLogin"
+                        runat="server"
+                        Text="Login to Account"
+                        CssClass="login-button"
+                        CausesValidation="true"
+                        UseSubmitBehavior="false"
+                        OnClientClick="return validateLogin();" />
 
 
                     <!-- =========================================
@@ -338,19 +385,16 @@
             document.querySelectorAll(".role-tab");
 
         const emailInput =
-            document.getElementById("email");
+            document.getElementById("<%= txtEmail.ClientID %>");
 
         const passwordInput =
-            document.getElementById("password");
+            document.getElementById("<%= txtPassword.ClientID %>");
 
         const passwordToggle =
             document.getElementById("passwordToggle");
 
         const passwordIcon =
             document.getElementById("passwordIcon");
-
-        const loginButton =
-            document.getElementById("loginButton");
 
 
         /* =========================================
@@ -460,10 +504,24 @@
 
 
         /* =========================================
-           LOGIN BUTTON
+           LOGIN ROLE FUNCTION
         ========================================= */
 
-        loginButton.addEventListener("click", function () {
+        window.validateLogin = function () {
+
+            /*
+               First run ASP.NET Toolbox validation
+            */
+
+            if (typeof Page_ClientValidate === "function") {
+
+                if (!Page_ClientValidate()) {
+
+                    return false;
+
+                }
+
+            }
 
 
             const email =
@@ -471,36 +529,6 @@
 
             const password =
                 passwordInput.value.trim();
-
-
-            /* =========================================
-               EMAIL VALIDATION
-            ========================================= */
-
-            if (email === "") {
-
-                alert("Please enter your email address.");
-
-                emailInput.focus();
-
-                return;
-
-            }
-
-
-            /* =========================================
-               PASSWORD VALIDATION
-            ========================================= */
-
-            if (password === "") {
-
-                alert("Please enter your password.");
-
-                passwordInput.focus();
-
-                return;
-
-            }
 
 
             /* =========================================
@@ -517,6 +545,8 @@
                     window.location.href =
                         '<%= ResolveUrl("~/Admin/Dashboard.aspx") %>';
 
+                    return false;
+
                 }
 
                 else {
@@ -524,6 +554,8 @@
                     alert(
                         "Invalid Admin Email or Password."
                     );
+
+                    return false;
 
                 }
 
@@ -544,6 +576,8 @@
                     window.location.href =
                         '<%= ResolveUrl("~/Employee/Dashboard.aspx") %>';
 
+                    return false;
+
                 }
 
                 else {
@@ -551,6 +585,8 @@
                     alert(
                         "Invalid Employer Email or Password."
                     );
+
+                    return false;
 
                 }
 
@@ -571,6 +607,8 @@
                     window.location.href =
                         '<%= ResolveUrl("~/Users/Dashboard.aspx") %>';
 
+                    return false;
+
                 }
 
                 else {
@@ -579,16 +617,20 @@
                         "Invalid Job Seeker Email or Password."
                     );
 
+                    return false;
+
                 }
 
             }
 
-        });
+
+            return false;
+
+        };
 
     });
 
 </script>
-
 
 </body>
 </html>
