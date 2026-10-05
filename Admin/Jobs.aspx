@@ -336,44 +336,6 @@
 
         </div>
 
-    </div>
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const searchInput = document.getElementById("jobSearch");
-            const typeFilter = document.getElementById("jobTypeFilter");
-            const rows = document.querySelectorAll("#jobsTable tbody tr");
-
-            function filterJobs() {
-
-                const search = searchInput.value.toLowerCase().trim();
-                const selectedType = typeFilter.value.toLowerCase();
-
-                rows.forEach(function (row) {
-
-                    const rowText = row.innerText.toLowerCase();
-                    const jobType = row.cells[2].innerText.toLowerCase().trim();
-
-                    const matchesSearch =
-                        search === "" || rowText.includes(search);
-
-                    const matchesType =
-                        selectedType === "all" || jobType === selectedType;
-
-                    row.style.display =
-                        matchesSearch && matchesType ? "" : "none";
-
-                });
-
-            }
-
-            searchInput.addEventListener("input", filterJobs);
-            typeFilter.addEventListener("change", filterJobs);
-
-        });
-
-    </script>
+    </div>   
 
 </asp:Content>

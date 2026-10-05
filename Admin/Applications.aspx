@@ -493,48 +493,4 @@
 
     </div>
 
-
-    <!-- ==============================
-         SEARCH + STATUS FILTER
-    =============================== -->
-
-    <script type="text/javascript">
-
-        function filterApplications() {
-
-            var searchBox = document.getElementById('<%= txtSearch.ClientID %>');
-            var statusBox = document.getElementById('<%= ddlStatus.ClientID %>');
-
-            var searchText = searchBox.value.toLowerCase().trim();
-            var selectedStatus = statusBox.value.toLowerCase().trim();
-
-            var table = document.querySelector('.applications-table');
-            var rows = table.querySelector('tbody').getElementsByTagName('tr');
-
-            for (var i = 0; i < rows.length; i++) {
-
-                var rowText = rows[i].innerText.toLowerCase();
-
-                var searchMatch = rowText.indexOf(searchText) > -1;
-
-                var statusMatch =
-                    selectedStatus === "" ||
-                    rowText.indexOf(selectedStatus) > -1;
-
-                if (searchMatch && statusMatch) {
-                    rows[i].style.display = "";
-                }
-                else {
-                    rows[i].style.display = "none";
-                }
-            }
-        }
-
-
-        function searchApplications() {
-            filterApplications();
-        }
-
-    </script>
-
 </asp:Content>
