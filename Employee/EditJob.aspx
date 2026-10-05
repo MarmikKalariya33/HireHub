@@ -1,117 +1,40 @@
-﻿<%@ Page Title="Edit Job" 
-    Language="C#" 
-    MasterPageFile="~/Employee/Employee.Master" 
-    AutoEventWireup="true" 
-    CodeBehind="EditJob.aspx.cs" 
+﻿<%@ Page Title="Edit Job"
+    Language="C#"
+    MasterPageFile="~/Employee/Employee.Master"
+    AutoEventWireup="true"
+    CodeBehind="EditJob.aspx.cs"
     Inherits="Job_Portal.Employee.EditJob" %>
 
-
-<asp:Content 
-    ID="Content3" 
-    ContentPlaceHolderID="head" 
+<asp:Content
+    ID="Content3"
+    ContentPlaceHolderID="head"
     runat="server">
 
-    <link 
-        rel="stylesheet" 
+    <link
+        rel="stylesheet"
         href="<%= ResolveUrl("~/Assets/Employeecss/postnewjob.css") %>" />
-
-    <style>
-
-        /* =========================================
-           REQUIRED STAR
-        ========================================== */
-
-        .required-star {
-            color: red;
-            font-size: 18px;
-            font-weight: bold;
-            margin-left: 5px;
-        }
-
-
-        /* =========================================
-           VALIDATION MESSAGE
-        ========================================== */
-
-        .validation-message {
-            display: block;
-            color: red;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-
-
-        /* =========================================
-           INPUT + STAR
-        ========================================== */
-
-        .input-with-star {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-
-
-        /* =========================================
-           SALARY
-        ========================================== */
-
-        .salary-input-row {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-
-    </style>
 
 </asp:Content>
 
-
-<asp:Content 
-    ID="Content4" 
-    ContentPlaceHolderID="ContentPlaceHolder1" 
+<asp:Content
+    ID="Content4"
+    ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
-
 
     <div class="post-job-page">
 
-
-        <!-- =========================================
-             BACK BUTTON
-        ========================================== -->
-
         <a href="MyJob.aspx"
            class="back-button">
-
             ← Back
-
         </a>
 
-
-
-        <!-- =========================================
-             PAGE HEADER
-        ========================================== -->
-
         <h1 class="post-job-title">
-
             Edit Job
-
         </h1>
-
-
-
-        <!-- =========================================
-             MAIN FORM CARD
-        ========================================== -->
 
         <div class="post-job-card">
 
-
-            <!-- =========================================
-                 JOB TITLE
-            ========================================== -->
-
+            <!-- JOB TITLE -->
             <div class="job-form-group">
 
                 <div class="input-with-star">
@@ -127,14 +50,12 @@
 
                 </div>
 
-
                 <asp:TextBox
                     ID="txtJobTitle"
                     runat="server"
                     CssClass="job-input"
                     Text="Senior React Developer">
                 </asp:TextBox>
-
 
                 <asp:RequiredFieldValidator
                     ID="rfvJobTitle"
@@ -149,18 +70,10 @@
             </div>
 
 
-
-            <!-- =========================================
-                 CATEGORY + JOB TYPE
-            ========================================== -->
-
+            <!-- CATEGORY + JOB TYPE -->
             <div class="job-row">
 
-
-                <!-- =====================================
-                     JOB CATEGORY
-                ====================================== -->
-
+                <!-- JOB CATEGORY -->
                 <div class="job-form-group">
 
                     <div class="input-with-star">
@@ -175,7 +88,6 @@
                         <span class="required-star">*</span>
 
                     </div>
-
 
                     <asp:DropDownList
                         ID="ddlCategory"
@@ -210,7 +122,6 @@
 
                     </asp:DropDownList>
 
-
                     <asp:RequiredFieldValidator
                         ID="rfvCategory"
                         runat="server"
@@ -225,11 +136,7 @@
                 </div>
 
 
-
-                <!-- =====================================
-                     JOB TYPE
-                ====================================== -->
-
+                <!-- JOB TYPE -->
                 <div class="job-form-group">
 
                     <div class="input-with-star">
@@ -244,7 +151,6 @@
                         <span class="required-star">*</span>
 
                     </div>
-
 
                     <asp:DropDownList
                         ID="ddlJobType"
@@ -274,7 +180,6 @@
 
                     </asp:DropDownList>
 
-
                     <asp:RequiredFieldValidator
                         ID="rfvJobType"
                         runat="server"
@@ -291,22 +196,14 @@
             </div>
 
 
-
-            <!-- =========================================
-                 WORK MODE
-            ========================================== -->
-
+            <!-- WORK MODE -->
             <div class="work-mode-group">
 
                 <span class="field-label">
                     Work Mode
                 </span>
 
-
                 <div class="work-mode-buttons">
-
-
-                    <!-- On-site -->
 
                     <asp:RadioButton
                         ID="rbOnsite"
@@ -315,18 +212,12 @@
                         CssClass="work-mode-radio"
                         Checked="true" />
 
-
                     <label
                         for="<%= rbOnsite.ClientID %>"
                         class="work-mode-label">
-
                         On-site
-
                     </label>
 
-
-
-                    <!-- Hybrid -->
 
                     <asp:RadioButton
                         ID="rbHybrid"
@@ -334,18 +225,12 @@
                         GroupName="WorkMode"
                         CssClass="work-mode-radio" />
 
-
                     <label
                         for="<%= rbHybrid.ClientID %>"
                         class="work-mode-label">
-
                         Hybrid
-
                     </label>
 
-
-
-                    <!-- Remote -->
 
                     <asp:RadioButton
                         ID="rbRemote"
@@ -353,13 +238,10 @@
                         GroupName="WorkMode"
                         CssClass="work-mode-radio" />
 
-
                     <label
                         for="<%= rbRemote.ClientID %>"
                         class="work-mode-label">
-
                         Remote
-
                     </label>
 
                 </div>
@@ -367,41 +249,27 @@
             </div>
 
 
-
-            <!-- =========================================
-                 ANNUAL SALARY
-            ========================================== -->
-
+            <!-- ANNUAL SALARY -->
             <div class="job-form-group">
 
                 <div class="input-with-star">
 
                     <span class="field-label">
-
                         Annual Salary Range (INR)
-
                     </span>
 
                     <span class="required-star">*</span>
 
                 </div>
 
-
                 <div class="job-row">
 
-
-                    <!-- =================================
-                         MINIMUM SALARY
-                    ================================== -->
-
+                    <!-- MINIMUM SALARY -->
                     <div class="salary-box">
 
                         <span class="salary-prefix">
-
                             Min (₹)
-
                         </span>
-
 
                         <asp:TextBox
                             ID="txtMinSalary"
@@ -409,7 +277,6 @@
                             CssClass="job-input salary-input"
                             Text="8,00,000">
                         </asp:TextBox>
-
 
                         <asp:RequiredFieldValidator
                             ID="rfvMinSalary"
@@ -421,14 +288,13 @@
                             Display="Dynamic">
                         </asp:RequiredFieldValidator>
 
-
                         <asp:RegularExpressionValidator
                             ID="revMinSalary"
                             runat="server"
                             ControlToValidate="txtMinSalary"
                             ValidationExpression="^[0-9,]+$"
                             ErrorMessage="Minimum Salary must contain only numbers."
-                            Text="Minimum Salary must contain only numbers."
+                            Text="Enter a valid salary."
                             CssClass="validation-message"
                             Display="Dynamic">
                         </asp:RegularExpressionValidator>
@@ -436,19 +302,12 @@
                     </div>
 
 
-
-                    <!-- =================================
-                         MAXIMUM SALARY
-                    ================================== -->
-
+                    <!-- MAXIMUM SALARY -->
                     <div class="salary-box">
 
                         <span class="salary-prefix">
-
                             Max (₹)
-
                         </span>
-
 
                         <asp:TextBox
                             ID="txtMaxSalary"
@@ -456,7 +315,6 @@
                             CssClass="job-input salary-input"
                             Text="15,00,000">
                         </asp:TextBox>
-
 
                         <asp:RequiredFieldValidator
                             ID="rfvMaxSalary"
@@ -468,14 +326,13 @@
                             Display="Dynamic">
                         </asp:RequiredFieldValidator>
 
-
                         <asp:RegularExpressionValidator
                             ID="revMaxSalary"
                             runat="server"
                             ControlToValidate="txtMaxSalary"
                             ValidationExpression="^[0-9,]+$"
                             ErrorMessage="Maximum Salary must contain only numbers."
-                            Text="Maximum Salary must contain only numbers."
+                            Text="Enter a valid salary."
                             CssClass="validation-message"
                             Display="Dynamic">
                         </asp:RegularExpressionValidator>
@@ -487,11 +344,7 @@
             </div>
 
 
-
-            <!-- =========================================
-                 JOB DESCRIPTION
-            ========================================== -->
-
+            <!-- JOB DESCRIPTION -->
             <div class="job-form-group">
 
                 <div class="input-with-star">
@@ -507,7 +360,6 @@
 
                 </div>
 
-
                 <asp:TextBox
                     ID="txtDescription"
                     runat="server"
@@ -515,7 +367,6 @@
                     CssClass="job-textarea"
                     Text="We are looking for a Senior React Developer to join our team at TCS. You will design, build and optimize modular user interfaces using React, TypeScript, and Tailwind CSS.">
                 </asp:TextBox>
-
 
                 <asp:RequiredFieldValidator
                     ID="rfvDescription"
@@ -527,14 +378,13 @@
                     Display="Dynamic">
                 </asp:RequiredFieldValidator>
 
-
                 <asp:RegularExpressionValidator
                     ID="revDescription"
                     runat="server"
                     ControlToValidate="txtDescription"
                     ValidationExpression="^[\s\S]{20,}$"
                     ErrorMessage="Job Description must contain at least 20 characters."
-                    Text="Job Description must contain at least 20 characters."
+                    Text="Minimum 20 characters required."
                     CssClass="validation-message"
                     Display="Dynamic">
                 </asp:RegularExpressionValidator>
@@ -542,19 +392,12 @@
             </div>
 
 
-
-            <!-- =========================================
-                 REQUIRED SKILLS
-            ========================================== -->
-
+            <!-- REQUIRED SKILLS -->
             <div class="job-form-group">
 
                 <span class="field-label">
-
                     Required Skills
-
                 </span>
-
 
                 <div class="skills-container">
 
@@ -583,57 +426,27 @@
             </div>
 
 
-
-            <!-- =========================================
-                 VALIDATION SUMMARY
-            ========================================== -->
-
-            <asp:ValidationSummary
-                ID="ValidationSummary1"
-                runat="server"
-                CssClass="validation-message"
-                HeaderText=""
-                DisplayMode="BulletList" />
-
-
-
-            <!-- =========================================
-                 BUTTONS
-            ========================================== -->
-
+            <!-- BUTTONS -->
             <div class="edit-job-buttons">
 
-
-                <!-- Update Job Button -->
-
-                <button
-                    type="button"
-                    class="publish-button"
-                    onclick="window.location.href='MyJob.aspx';">
-
-                    Update Job
-
-                </button>
-
-
-
-                <!-- Cancel Button -->
+                <asp:Button
+                    ID="btnUpdateJob"
+                    runat="server"
+                    Text="Update Job"
+                    CssClass="publish-button"
+                    CausesValidation="true"
+                    PostBackUrl="~/Employee/MyJob.aspx" />
 
                 <a
                     href="MyJob.aspx"
                     class="back-button">
-
                     Cancel
-
                 </a>
 
-
             </div>
-
 
         </div>
 
     </div>
-
 
 </asp:Content>

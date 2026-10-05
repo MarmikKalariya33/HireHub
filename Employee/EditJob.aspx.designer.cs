@@ -213,12 +213,12 @@ namespace Job_Portal.Employee
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revDescription;
 
         /// <summary>
-        /// ValidationSummary1 control.
+        /// btnUpdateJob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
+        protected global::System.Web.UI.WebControls.Button btnUpdateJob;
     }
 }
