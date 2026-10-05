@@ -20,7 +20,7 @@
 
         <!-- =========================================
              HEADER
-             ========================================= -->
+        ========================================= -->
 
         <div class="jobs-header">
 
@@ -69,7 +69,7 @@
 
         <!-- =========================================
              FILTER TABS
-             ========================================= -->
+        ========================================= -->
 
         <div class="job-filter-tabs">
 
@@ -106,7 +106,7 @@
 
         <!-- =========================================
              JOB 1
-             ========================================= -->
+        ========================================= -->
 
         <div class="job-card" data-status="active">
 
@@ -161,9 +161,15 @@
 
                 <button
                     type="button"
-                    class="danger-action">
-                    <span class="action-icon">♙</span>
+                    class="danger-action"
+                    onclick="return confirm('Are you sure you want to deactivate this job?');">
+
+                    <span class="action-icon">
+                        ♙
+                    </span>
+
                     Deactivate
+
                 </button>
 
             </div>
@@ -173,7 +179,7 @@
 
         <!-- =========================================
              JOB 2
-             ========================================= -->
+        ========================================= -->
 
         <div class="job-card" data-status="active">
 
@@ -228,9 +234,15 @@
 
                 <button
                     type="button"
-                    class="danger-action">
-                    <span class="action-icon">♙</span>
+                    class="danger-action"
+                    onclick="return confirm('Are you sure you want to deactivate this job?');">
+
+                    <span class="action-icon">
+                        ♙
+                    </span>
+
                     Deactivate
+
                 </button>
 
             </div>
@@ -240,7 +252,7 @@
 
         <!-- =========================================
              JOB 3
-             ========================================= -->
+        ========================================= -->
 
         <div class="job-card" data-status="inactive">
 
@@ -296,8 +308,13 @@
                 <button
                     type="button"
                     class="danger-action">
-                    <span class="action-icon">♙</span>
+
+                    <span class="action-icon">
+                        ♙
+                    </span>
+
                     Publish
+
                 </button>
 
             </div>
@@ -307,7 +324,7 @@
 
         <!-- =========================================
              JOB 4
-             ========================================= -->
+        ========================================= -->
 
         <div class="job-card" data-status="draft">
 
@@ -363,8 +380,13 @@
                 <button
                     type="button"
                     class="danger-action">
-                    <span class="action-icon">♙</span>
+
+                    <span class="action-icon">
+                        ♙
+                    </span>
+
                     Publish
+
                 </button>
 
             </div>
@@ -374,7 +396,7 @@
 
         <!-- =========================================
              NO RESULTS MESSAGE
-             ========================================= -->
+        ========================================= -->
 
         <div
             id="noJobsMessage"
@@ -388,4 +410,3 @@
     </div>
 
 </asp:Content>
-
