@@ -24,6 +24,15 @@ namespace Job_Portal.Admin
         protected global::System.Web.UI.WebControls.TextBox txtCategoryName;
 
         /// <summary>
+        /// rfvCategoryName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCategoryName;
+
+        /// <summary>
         /// txtNumberOfJobs control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,24 @@ namespace Job_Portal.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumberOfJobs;
+
+        /// <summary>
+        /// rfvNumberOfJobs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNumberOfJobs;
+
+        /// <summary>
+        /// revNumberOfJobs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNumberOfJobs;
 
         /// <summary>
         /// ddlStatus control.
@@ -49,6 +76,15 @@ namespace Job_Portal.Admin
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
+
+        /// <summary>
+        /// rfvDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDescription;
 
         /// <summary>
         /// btnSaveCategory control.

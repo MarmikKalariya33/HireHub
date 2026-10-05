@@ -136,7 +136,9 @@
 
                 <tbody>
 
-                    <!-- RAHUL SHARMA -->
+                    <!-- ==============================
+                         RAHUL SHARMA
+                    =============================== -->
 
                     <tr>
 
@@ -193,7 +195,8 @@
                                     ID="btnDelete1"
                                     runat="server"
                                     CssClass="delete-icon"
-                                    ToolTip="Delete">
+                                    ToolTip="Delete"
+                                    OnClientClick="return confirm('Are you sure you want to delete this application?');">
 
                                     <i class="fa-solid fa-trash-can"></i>
 
@@ -206,7 +209,9 @@
                     </tr>
 
 
-                    <!-- PRIYA PATEL -->
+                    <!-- ==============================
+                         PRIYA PATEL
+                    =============================== -->
 
                     <tr>
 
@@ -263,7 +268,8 @@
                                     ID="btnDelete2"
                                     runat="server"
                                     CssClass="delete-icon"
-                                    ToolTip="Delete">
+                                    ToolTip="Delete"
+                                    OnClientClick="return confirm('Are you sure you want to delete this application?');">
 
                                     <i class="fa-solid fa-trash-can"></i>
 
@@ -276,7 +282,9 @@
                     </tr>
 
 
-                    <!-- AMIT KUMAR -->
+                    <!-- ==============================
+                         AMIT KUMAR
+                    =============================== -->
 
                     <tr>
 
@@ -333,7 +341,8 @@
                                     ID="btnDelete3"
                                     runat="server"
                                     CssClass="delete-icon"
-                                    ToolTip="Delete">
+                                    ToolTip="Delete"
+                                    OnClientClick="return confirm('Are you sure you want to delete this application?');">
 
                                     <i class="fa-solid fa-trash-can"></i>
 
@@ -346,7 +355,9 @@
                     </tr>
 
 
-                    <!-- SNEHA GUPTA -->
+                    <!-- ==============================
+                         SNEHA GUPTA
+                    =============================== -->
 
                     <tr>
 
@@ -403,7 +414,8 @@
                                     ID="btnDelete4"
                                     runat="server"
                                     CssClass="delete-icon"
-                                    ToolTip="Delete">
+                                    ToolTip="Delete"
+                                    OnClientClick="return confirm('Are you sure you want to delete this application?');">
 
                                     <i class="fa-solid fa-trash-can"></i>
 
@@ -416,7 +428,9 @@
                     </tr>
 
 
-                    <!-- VIKRAM SINGH -->
+                    <!-- ==============================
+                         VIKRAM SINGH
+                    =============================== -->
 
                     <tr>
 
@@ -473,7 +487,8 @@
                                     ID="btnDelete5"
                                     runat="server"
                                     CssClass="delete-icon"
-                                    ToolTip="Delete">
+                                    ToolTip="Delete"
+                                    OnClientClick="return confirm('Are you sure you want to delete this application?');">
 
                                     <i class="fa-solid fa-trash-can"></i>
 
@@ -502,37 +517,58 @@
 
         function filterApplications() {
 
-            var searchBox = document.getElementById('<%= txtSearch.ClientID %>');
-            var statusBox = document.getElementById('<%= ddlStatus.ClientID %>');
+            var searchBox =
+                document.getElementById('<%= txtSearch.ClientID %>');
 
-            var searchText = searchBox.value.toLowerCase().trim();
-            var selectedStatus = statusBox.value.toLowerCase().trim();
+            var statusBox =
+                document.getElementById('<%= ddlStatus.ClientID %>');
 
-            var table = document.querySelector('.applications-table');
-            var rows = table.querySelector('tbody').getElementsByTagName('tr');
+            var searchText =
+                searchBox.value.toLowerCase().trim();
+
+            var selectedStatus =
+                statusBox.value.toLowerCase().trim();
+
+            var table =
+                document.querySelector('.applications-table');
+
+            var rows =
+                table.querySelector('tbody').getElementsByTagName('tr');
+
 
             for (var i = 0; i < rows.length; i++) {
 
-                var rowText = rows[i].innerText.toLowerCase();
+                var rowText =
+                    rows[i].innerText.toLowerCase();
 
-                var searchMatch = rowText.indexOf(searchText) > -1;
+                var searchMatch =
+                    rowText.indexOf(searchText) > -1;
 
                 var statusMatch =
                     selectedStatus === "" ||
                     rowText.indexOf(selectedStatus) > -1;
 
+
                 if (searchMatch && statusMatch) {
+
                     rows[i].style.display = "";
+
                 }
                 else {
+
                     rows[i].style.display = "none";
+
                 }
+
             }
+
         }
 
 
         function searchApplications() {
+
             filterApplications();
+
         }
 
     </script>

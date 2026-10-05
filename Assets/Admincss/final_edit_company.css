@@ -1,9 +1,4 @@
-﻿/* =========================================
-   EDIT COMPANY PAGE
-   SAME DESIGN AS EDIT USER PAGE
-========================================= */
-
-.edit-company-page {
+﻿.edit-company-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
@@ -11,6 +6,12 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+    .edit-company-page *,
+    .edit-company-page *::before,
+    .edit-company-page *::after {
+        box-sizing: border-box;
+    }
 
 
 /* =========================================
@@ -172,7 +173,17 @@
         font-size: 11px;
         font-weight: 700;
         letter-spacing: 0.7px;
+        line-height: 16px;
     }
+
+.required-star {
+    display: inline;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
 
 
 /* =========================================
@@ -193,11 +204,6 @@
     outline: none;
     transition: 0.2s ease;
 }
-
-
-    /* =========================================
-   INPUT FOCUS
-========================================= */
 
     .edit-input:focus {
         border-color: #2563eb;
@@ -253,11 +259,6 @@ select.edit-input {
     transition: 0.2s ease;
 }
 
-
-    /* =========================================
-   TEXTAREA FOCUS
-========================================= */
-
     .edit-textarea:focus {
         border-color: #2563eb;
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
@@ -268,10 +269,10 @@ select.edit-input {
    VALIDATION
 ========================================= */
 
-.form-group span,
-.full-section span {
+.validation-error {
     display: block;
-    margin-top: 1px;
+    margin: 0;
+    padding: 0;
     color: #ff0000 !important;
     font-size: 12px !important;
     font-weight: 500;
@@ -439,15 +440,4 @@ select.edit-input {
         width: 100%;
         box-sizing: border-box;
     }
-}
-
-
-/* =========================================
-   BOX SIZING
-========================================= */
-
-.edit-company-page *,
-.edit-company-page *::before,
-.edit-company-page *::after {
-    box-sizing: border-box;
 }

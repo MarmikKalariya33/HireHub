@@ -16,7 +16,6 @@
 
 /* =========================================
    PAGE HEADER
-   SAME AS COMPANIES / JOBS
 ========================================= */
 
 .applications-header {
@@ -124,7 +123,6 @@
 
 /* =========================================
    TABLE CONTAINER
-   SAME AS COMPANIES / JOBS
 ========================================= */
 
 .applications-table-container {
@@ -152,7 +150,6 @@
 
     /* =========================================
    TABLE HEADER
-   SAME SIZE AS COMPANIES / JOBS
 ========================================= */
 
     .applications-table thead {
@@ -215,7 +212,6 @@
 
     /* =========================================
    TABLE ROW
-   SAME AS COMPANIES / JOBS
 ========================================= */
 
     .applications-table tbody tr {
@@ -237,7 +233,6 @@
 
     /* =========================================
    TABLE DATA
-   SAME SIZE AS COMPANIES / JOBS
 ========================================= */
 
     .applications-table td {
@@ -323,7 +318,6 @@
 
 /* =========================================
    STATUS
-   SAME SCALE AS COMPANIES / JOBS
 ========================================= */
 
 .application-status {

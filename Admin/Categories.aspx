@@ -5,17 +5,14 @@
     CodeBehind="Categories.aspx.cs"
     Inherits="Job_Portal.Admin.Categories" %>
 
-
 <asp:Content
     ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Categories CSS -->
     <link rel="stylesheet"
           type="text/css"
           href="<%= ResolveUrl("~/Assets/Admincss/categories.css") %>" />
@@ -28,25 +25,13 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
-    <!-- ==============================
-         CATEGORIES PAGE
-    =============================== -->
-
     <div class="categories-page">
 
-
-        <!-- ==============================
-             HEADER
-        =============================== -->
-
         <div class="categories-header">
-
 
             <h1 class="categories-title">
                 Manage Categories
             </h1>
-
 
             <div class="categories-actions">
 
@@ -63,29 +48,16 @@
 
             </div>
 
-
         </div>
 
 
-
-        <!-- ==============================
-             TABLE CARD
-        =============================== -->
-
         <div class="categories-table-card">
 
-
             <div class="categories-table-wrapper">
-
 
                 <table
                     class="categories-table"
                     id="categoriesTable">
-
-
-                    <!-- ==============================
-                         TABLE HEADER
-                    =============================== -->
 
                     <thead>
 
@@ -108,11 +80,6 @@
                     </thead>
 
 
-
-                    <!-- ==============================
-                         TABLE BODY
-                    =============================== -->
-
                     <tbody>
 
 
@@ -128,7 +95,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -137,13 +103,9 @@
 
                             </td>
 
-
                             <td>
 
                                 <div class="category-actions">
-
-
-                                    <!-- EDIT BUTTON -->
 
                                     <a href="Final_Edit_Categories.aspx"
                                        class="category-action category-edit"
@@ -153,24 +115,20 @@
 
                                     </a>
 
-
-                                    <!-- DELETE BUTTON -->
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
                                     </a>
-
 
                                 </div>
 
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 2 -->
@@ -185,7 +143,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -193,7 +150,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -207,10 +163,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -221,7 +177,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 3 -->
@@ -236,7 +191,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -244,7 +198,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -258,10 +211,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -272,7 +225,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 4 -->
@@ -287,7 +239,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -295,7 +246,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -309,10 +259,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -323,7 +273,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 5 -->
@@ -338,7 +287,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -346,7 +294,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -360,10 +307,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -374,7 +321,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 6 -->
@@ -389,7 +335,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -397,7 +342,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -411,10 +355,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -425,7 +369,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 7 -->
@@ -440,7 +383,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -448,7 +390,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -462,10 +403,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -476,7 +417,6 @@
                             </td>
 
                         </tr>
-
 
 
                         <!-- ROW 8 -->
@@ -491,7 +431,6 @@
 
                             </td>
 
-
                             <td>
 
                                 <span class="category-jobs">
@@ -499,7 +438,6 @@
                                 </span>
 
                             </td>
-
 
                             <td>
 
@@ -513,10 +451,10 @@
 
                                     </a>
 
-
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category">
+                                       title="Delete Category"
+                                       onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>
 
@@ -531,17 +469,12 @@
 
                     </tbody>
 
-
                 </table>
-
 
             </div>
 
-
         </div>
 
-
     </div>
-
 
 </asp:Content>

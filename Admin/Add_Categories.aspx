@@ -5,17 +5,14 @@
     CodeBehind="Add_Categories.aspx.cs"
     Inherits="Job_Portal.Admin.Add_Categories" %>
 
-
 <asp:Content
     ID="Content3"
     ContentPlaceHolderID="head"
     runat="server">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Add Category CSS -->
     <link rel="stylesheet"
           type="text/css"
           href="<%= ResolveUrl("~/Assets/Admincss/add_categories.css") %>" />
@@ -28,17 +25,7 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
-    <!-- ==============================
-         ADD CATEGORY PAGE
-    =============================== -->
-
     <div class="add-category-page">
-
-
-        <!-- ==============================
-             BACK BUTTON
-        =============================== -->
 
         <div class="back-section">
 
@@ -47,25 +34,14 @@
 
                 <i class="fa-solid fa-arrow-left"></i>
 
-                <span>
-                    Back to Categories
-                </span>
+                <span>Back to Categories</span>
 
             </a>
 
         </div>
 
 
-        <!-- ==============================
-             CATEGORY CARD
-        =============================== -->
-
         <div class="category-card">
-
-
-            <!-- ==============================
-                 HEADER
-            =============================== -->
 
             <div class="category-header">
 
@@ -75,16 +51,11 @@
 
                 </div>
 
-
                 <div class="category-header-text">
 
-                    <h1>
-                        Add New Category
-                    </h1>
+                    <h1>Add New Category</h1>
 
-                    <p>
-                        Create a new job category
-                    </p>
+                    <p>Create a new job category</p>
 
                 </div>
 
@@ -93,10 +64,6 @@
 
             <div class="divider"></div>
 
-
-            <!-- ==============================
-                 CATEGORY INFORMATION
-            =============================== -->
 
             <div class="category-form">
 
@@ -107,6 +74,7 @@
 
                     <label>
                         CATEGORY NAME
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -115,6 +83,16 @@
                         CssClass="form-input"
                         placeholder="e.g. Information Technology">
                     </asp:TextBox>
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvCategoryName"
+                        runat="server"
+                        ControlToValidate="txtCategoryName"
+                        ErrorMessage="Category name is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
@@ -125,6 +103,7 @@
 
                     <label>
                         NUMBER OF JOBS
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -134,6 +113,27 @@
                         Text="0"
                         placeholder="Enter number of jobs">
                     </asp:TextBox>
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvNumberOfJobs"
+                        runat="server"
+                        ControlToValidate="txtNumberOfJobs"
+                        ErrorMessage="Number of jobs is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
+
+                    <asp:RegularExpressionValidator
+                        ID="revNumberOfJobs"
+                        runat="server"
+                        ControlToValidate="txtNumberOfJobs"
+                        ErrorMessage="Enter numbers only."
+                        ValidationExpression="^[0-9]+$"
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RegularExpressionValidator>
 
                 </div>
 
@@ -173,6 +173,7 @@
 
                     <label>
                         CATEGORY DESCRIPTION
+                        <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -184,8 +185,17 @@
                         placeholder="Enter category description...">
                     </asp:TextBox>
 
-                </div>
+                    <asp:RequiredFieldValidator
+                        ID="rfvDescription"
+                        runat="server"
+                        ControlToValidate="txtDescription"
+                        ErrorMessage="Category description is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
 
+                </div>
 
             </div>
 
@@ -193,27 +203,20 @@
             <div class="divider"></div>
 
 
-            <!-- ==============================
-                 BUTTONS
-            =============================== -->
-
             <div class="category-actions">
-
 
                 <a href="Categories.aspx"
                    class="cancel-button">
-
                     Cancel
-
                 </a>
-
 
                 <asp:Button
                     ID="btnSaveCategory"
                     runat="server"
                     Text="Save Category"
-                    CssClass="save-button" />
-
+                    CssClass="save-button"
+                    ValidationGroup="CategoryValidation"
+                    PostBackUrl="Categories.aspx" />
 
             </div>
 
@@ -221,6 +224,5 @@
         </div>
 
     </div>
-
 
 </asp:Content>

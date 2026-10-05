@@ -5,126 +5,82 @@
     CodeBehind="Final_Edit_Categories.aspx.cs"
     Inherits="Job_Portal.Admin.Final_Edit_Categories" %>
 
-
-<asp:Content
-    ID="Content3"
+<asp:Content ID="Content3"
     ContentPlaceHolderID="head"
     runat="server">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <!-- Edit Category CSS -->
     <link rel="stylesheet"
-          type="text/css"
-          href="<%= ResolveUrl("~/Assets/Admincss/final_edit_categories.css") %>" />
+        type="text/css"
+        href="<%= ResolveUrl("~/Assets/Admincss/final_edit_categories.css") %>" />
 
 </asp:Content>
 
-
-<asp:Content
-    ID="Content4"
+<asp:Content ID="Content4"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
-    <!-- ==============================
-         EDIT CATEGORY PAGE
-    =============================== -->
-
     <div class="edit-category-page">
-
-
-        <!-- ==============================
-             BACK BUTTON
-        =============================== -->
 
         <div class="back-section">
 
-            <a href="Categories.aspx"
-               class="back-link">
-
+            <a href="Categories.aspx" class="back-link">
                 <i class="fa-solid fa-arrow-left"></i>
-
-                <span>
-                    Back to Categories
-                </span>
-
+                <span>Back to Categories</span>
             </a>
 
         </div>
 
-
-        <!-- ==============================
-             CATEGORY CARD
-        =============================== -->
-
         <div class="category-card">
-
-
-            <!-- ==============================
-                 HEADER
-            =============================== -->
 
             <div class="category-header">
 
                 <div class="category-icon">
-
                     <i class="fa-solid fa-folder"></i>
-
                 </div>
 
-
                 <div class="category-header-text">
-
-                    <h1>
-                        Edit Category
-                    </h1>
-
-                    <p>
-                        Update category information
-                    </p>
-
+                    <h1>Edit Category</h1>
+                    <p>Update category information</p>
                 </div>
 
             </div>
 
-
             <div class="divider"></div>
 
-
-            <!-- ==============================
-                 CATEGORY INFORMATION
-            =============================== -->
-
             <div class="category-form">
-
-
-                <!-- CATEGORY NAME -->
 
                 <div class="form-group">
 
                     <label>
-                        CATEGORY NAME
+                        CATEGORY NAME <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
                         ID="txtCategoryName"
                         runat="server"
                         CssClass="form-input"
-                        Text="IT & Software">
+                        Text="IT &amp; Software">
                     </asp:TextBox>
 
+                    <asp:RequiredFieldValidator
+                        ID="rfvCategoryName"
+                        runat="server"
+                        ControlToValidate="txtCategoryName"
+                        ErrorMessage="Category name is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
+
                 </div>
-
-
-                <!-- NUMBER OF JOBS -->
 
                 <div class="form-group">
 
                     <label>
-                        NUMBER OF JOBS
+                        NUMBER OF JOBS <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -134,16 +90,32 @@
                         Text="234">
                     </asp:TextBox>
 
+                    <asp:RequiredFieldValidator
+                        ID="rfvNumberOfJobs"
+                        runat="server"
+                        ControlToValidate="txtNumberOfJobs"
+                        ErrorMessage="Number of jobs is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
+
+                    <asp:RegularExpressionValidator
+                        ID="revNumberOfJobs"
+                        runat="server"
+                        ControlToValidate="txtNumberOfJobs"
+                        ErrorMessage="Enter numbers only."
+                        ValidationExpression="^[0-9]+$"
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RegularExpressionValidator>
+
                 </div>
-
-
-                <!-- STATUS -->
 
                 <div class="form-group">
 
-                    <label>
-                        STATUS
-                    </label>
+                    <label>STATUS</label>
 
                     <asp:DropDownList
                         ID="ddlStatus"
@@ -170,13 +142,10 @@
 
                 </div>
 
-
-                <!-- CATEGORY DESCRIPTION -->
-
                 <div class="form-group full-width">
 
                     <label>
-                        CATEGORY DESCRIPTION
+                        CATEGORY DESCRIPTION <span class="required-star">*</span>
                     </label>
 
                     <asp:TextBox
@@ -184,46 +153,42 @@
                         runat="server"
                         CssClass="form-input textarea-input"
                         TextMode="MultiLine"
-                        Rows="6">IT & Software is a category for jobs related to information technology, software development, web development, database management and other technical roles.</asp:TextBox>
+                        Rows="6">IT &amp; Software is a category for jobs related to information technology, software development, web development, database management and other technical roles.</asp:TextBox>
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvDescription"
+                        runat="server"
+                        ControlToValidate="txtDescription"
+                        ErrorMessage="Category description is required."
+                        ValidationGroup="CategoryValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
 
                 </div>
 
-
             </div>
-
 
             <div class="divider"></div>
 
-
-            <!-- ==============================
-                 BUTTONS
-            =============================== -->
-
             <div class="category-actions">
 
-
-                <a href="Categories.aspx"
-                   class="cancel-button">
-
+                <a href="Categories.aspx" class="cancel-button">
                     Cancel
-
                 </a>
 
-
-                <a href="Categories.aspx"
-                   class="save-button">
-
-                    Save Changes
-
-                </a>
-
+                <asp:Button
+                    ID="btnSave"
+                    runat="server"
+                    Text="Save Changes"
+                    CssClass="save-button"
+                    ValidationGroup="CategoryValidation"
+                    PostBackUrl="Categories.aspx" />
 
             </div>
-
 
         </div>
 
     </div>
-
 
 </asp:Content>

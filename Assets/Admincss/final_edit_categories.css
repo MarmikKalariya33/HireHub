@@ -1,25 +1,21 @@
-﻿/* =========================================================
-   EDIT CATEGORY PAGE
-   SAME DESIGN AS EDIT USER PAGE
-========================================================= */
-
-.edit-category-page {
+﻿.edit-category-page {
     width: 100%;
     min-height: 100vh;
     background: #fbf9f4;
-    padding: 35px 40px 50px 40px;
+    padding: 35px 40px 50px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================================================
-   BACK SECTION
-========================================================= */
+    .edit-category-page *,
+    .edit-category-page *::before,
+    .edit-category-page *::after {
+        box-sizing: border-box;
+    }
 
 .back-section {
     width: 100%;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 25px;
 }
 
 .back-link {
@@ -40,11 +36,6 @@
         font-size: 16px;
     }
 
-
-/* =========================================================
-   CATEGORY CARD
-========================================================= */
-
 .category-card {
     width: 100%;
     max-width: 1478px;
@@ -53,14 +44,8 @@
     border: 1px solid #e4e7ec;
     border-radius: 12px;
     padding: 32px 40px;
-    box-sizing: border-box;
     box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
 }
-
-
-/* =========================================================
-   CATEGORY HEADER
-========================================================= */
 
 .category-header {
     display: flex;
@@ -68,11 +53,6 @@
     gap: 18px;
     width: 100%;
 }
-
-
-/* =========================================================
-   CATEGORY ICON
-========================================================= */
 
 .category-icon {
     width: 72px;
@@ -90,11 +70,6 @@
         font-size: 24px;
     }
 
-
-/* =========================================================
-   HEADER TEXT
-========================================================= */
-
 .category-header-text {
     flex: 1;
 }
@@ -107,15 +82,10 @@
     }
 
     .category-header-text p {
-        margin: 7px 0 0 0;
+        margin: 7px 0 0;
         color: #667085;
         font-size: 14px;
     }
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
 
 .divider {
     width: 100%;
@@ -124,22 +94,12 @@
     margin: 28px 0;
 }
 
-
-/* =========================================================
-   CATEGORY FORM
-========================================================= */
-
 .category-form {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px 34px;
 }
-
-
-/* =========================================================
-   FORM GROUP
-========================================================= */
 
 .form-group {
     width: 100%;
@@ -148,28 +108,31 @@
     gap: 8px;
 }
 
-
-    /* =========================================================
-   LABEL
-========================================================= */
-
     .form-group label {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
         font-size: 11px;
         font-weight: 700;
         color: #667085;
         letter-spacing: 0.7px;
+        line-height: 16px;
     }
 
-
-/* =========================================================
-   INPUT
-========================================================= */
+.required-star {
+    display: inline;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
 
 .form-input {
     width: 100%;
     min-height: 52px;
     padding: 11px 15px;
-    box-sizing: border-box;
     border: 1px solid #d0d5dd;
     border-radius: 7px;
     background: #ffffff;
@@ -180,30 +143,15 @@
     transition: 0.2s ease;
 }
 
-
-    /* =========================================================
-   INPUT FOCUS
-========================================================= */
-
     .form-input:focus {
         border-color: #2563eb;
         box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
     }
 
-
-/* =========================================================
-   SELECT
-========================================================= */
-
 select.form-input {
     cursor: pointer;
     appearance: auto;
 }
-
-
-/* =========================================================
-   TEXTAREA
-========================================================= */
 
 .textarea-input {
     min-height: 150px;
@@ -211,33 +159,19 @@ select.form-input {
     line-height: 1.6;
 }
 
-
-/* =========================================================
-   FULL WIDTH
-========================================================= */
-
 .full-width {
     grid-column: 1 / -1;
 }
 
-
-/* =========================================================
-   VALIDATION
-========================================================= */
-
-.form-group span {
+.validation-error {
     display: block;
-    margin-top: 1px;
+    margin: 0;
+    padding: 0;
     color: #ff0000 !important;
     font-size: 12px !important;
     font-weight: 500;
     line-height: 1.4;
 }
-
-
-/* =========================================================
-   CATEGORY ACTIONS
-========================================================= */
 
 .category-actions {
     display: flex;
@@ -245,11 +179,6 @@ select.form-input {
     gap: 12px;
     margin-top: 5px;
 }
-
-
-/* =========================================================
-   SAVE BUTTON
-========================================================= */
 
 .save-button {
     display: inline-flex;
@@ -274,11 +203,6 @@ select.form-input {
         color: #ffffff;
     }
 
-
-/* =========================================================
-   CANCEL BUTTON
-========================================================= */
-
 .cancel-button {
     display: inline-flex;
     align-items: center;
@@ -300,11 +224,6 @@ select.form-input {
         color: #344054;
     }
 
-
-/* =========================================================
-   RESPONSIVE - LARGE
-========================================================= */
-
 @media (max-width: 1200px) {
 
     .category-card {
@@ -312,15 +231,10 @@ select.form-input {
     }
 }
 
-
-/* =========================================================
-   RESPONSIVE - TABLET
-========================================================= */
-
 @media (max-width: 900px) {
 
     .edit-category-page {
-        padding: 25px 20px 40px 20px;
+        padding: 25px 20px 40px;
     }
 
     .category-card {
@@ -331,11 +245,6 @@ select.form-input {
         gap: 20px 25px;
     }
 }
-
-
-/* =========================================================
-   RESPONSIVE - MOBILE
-========================================================= */
 
 @media (max-width: 700px) {
 
@@ -366,15 +275,10 @@ select.form-input {
     }
 }
 
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
 @media (max-width: 500px) {
 
     .edit-category-page {
-        padding: 20px 12px 30px 12px;
+        padding: 20px 12px 30px;
     }
 
     .category-card {
@@ -399,17 +303,5 @@ select.form-input {
     .save-button,
     .cancel-button {
         width: 100%;
-        box-sizing: border-box;
     }
-}
-
-
-/* =========================================================
-   BOX SIZING
-========================================================= */
-
-.edit-category-page *,
-.edit-category-page *::before,
-.edit-category-page *::after {
-    box-sizing: border-box;
 }

@@ -30,11 +30,13 @@
 
         </a>
 
+
         <div class="job-card">
+
 
             <div class="job-header">
 
-                <div>
+                <div class="job-header-info">
 
                     <h1>
                         Senior React Developer
@@ -217,7 +219,8 @@
 
 
                 <a href="#"
-                   class="deactivate-button">
+                   class="deactivate-button"
+                   onclick="return confirm('Are you sure you want to deactivate this job?');">
 
                     Deactivate Job
 
