@@ -312,7 +312,7 @@
 
 
                         <a
-                            href="ForgotPassword.aspx"
+                            href="NewPassword.aspx"
                             class="forgot-link">
 
                             Forgot Password?

@@ -31,7 +31,9 @@
 
     <div class="forgot-page">
 
-        <!-- LEFT SIDE -->
+        <!-- =====================================================
+             LEFT SIDE
+        ====================================================== -->
 
         <div class="forgot-left">
 
@@ -43,6 +45,7 @@
                     alt="HireHub" />
 
             </div>
+
 
             <div class="left-content">
 
@@ -73,11 +76,19 @@
         </div>
 
 
-        <!-- RIGHT SIDE -->
+        <!-- =====================================================
+             RIGHT SIDE
+        ====================================================== -->
 
         <div class="forgot-right">
 
-            <div class="forgot-box">
+            <div class="forgot-box"
+                 style="width: 100%; max-width: 505px;">
+
+
+                <!-- =================================================
+                     HEADER
+                ================================================== -->
 
                 <div class="forgot-header">
 
@@ -98,17 +109,22 @@
                 </div>
 
 
-                <!-- NEW PASSWORD -->
+                <!-- =================================================
+                     NEW PASSWORD
+                ================================================== -->
 
                 <div class="form-group">
 
                     <label>
                         New Password
+                        <span style="color: red;">*</span>
                     </label>
+
 
                     <div class="input-wrapper">
 
                         <i class="bi bi-lock input-icon"></i>
+
 
                         <asp:TextBox
                             ID="txtNewPassword"
@@ -120,20 +136,50 @@
 
                     </div>
 
+
+                    <!-- REQUIRED -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvNewPassword"
+                        runat="server"
+                        ControlToValidate="txtNewPassword"
+                        ErrorMessage="New Password is required."
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- MINIMUM 8 CHARACTERS -->
+
+                    <asp:RegularExpressionValidator
+                        ID="revNewPassword"
+                        runat="server"
+                        ControlToValidate="txtNewPassword"
+                        ValidationExpression="^.{8,}$"
+                        ErrorMessage="Password must be at least 8 characters."
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RegularExpressionValidator>
+
                 </div>
 
 
-                <!-- CONFIRM PASSWORD -->
+                <!-- =================================================
+                     CONFIRM PASSWORD
+                ================================================== -->
 
                 <div class="form-group">
 
                     <label>
                         Confirm Password
+                        <span style="color: red;">*</span>
                     </label>
+
 
                     <div class="input-wrapper">
 
                         <i class="bi bi-lock-fill input-icon"></i>
+
 
                         <asp:TextBox
                             ID="txtConfirmPassword"
@@ -145,10 +191,39 @@
 
                     </div>
 
+
+                    <!-- REQUIRED -->
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvConfirmPassword"
+                        runat="server"
+                        ControlToValidate="txtConfirmPassword"
+                        ErrorMessage="Confirm Password is required."
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:RequiredFieldValidator>
+
+
+                    <!-- PASSWORD MATCH -->
+
+                    <asp:CompareValidator
+                        ID="cvConfirmPassword"
+                        runat="server"
+                        ControlToValidate="txtConfirmPassword"
+                        ControlToCompare="txtNewPassword"
+                        Operator="Equal"
+                        Type="String"
+                        ErrorMessage="Passwords do not match."
+                        Display="Dynamic"
+                        ForeColor="Red">
+                    </asp:CompareValidator>
+
                 </div>
 
 
-                <!-- RESET BUTTON -->
+                <!-- =================================================
+                     RESET BUTTON
+                ================================================== -->
 
                 <asp:Button
                     ID="btnReset"
@@ -158,7 +233,9 @@
                     PostBackUrl="~/Accounts/Login.aspx" />
 
 
-                <!-- BACK TO LOGIN -->
+                <!-- =================================================
+                     BACK TO LOGIN
+                ================================================== -->
 
                 <asp:HyperLink
                     ID="lnkBackLogin"
@@ -171,6 +248,7 @@
                     Back to Login
 
                 </asp:HyperLink>
+
 
             </div>
 

@@ -98,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Accounts\ForgotPassword.aspx" />
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\NewPassword.aspx" />
     <Content Include="Accounts\Registration.aspx" />
@@ -283,13 +282,6 @@
     </Compile>
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Accounts\ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Accounts\ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Accounts\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
