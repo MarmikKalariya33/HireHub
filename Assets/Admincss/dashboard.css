@@ -1,0 +1,198 @@
+﻿```css
+/* ==========================================
+   ADMIN DASHBOARD
+========================================== */
+.admin-dashboard {
+    padding: 30px;
+    background: #FFF9EE;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* ==========================================
+   WELCOME SECTION
+========================================== */
+
+.welcome-box {
+    background: #456276;
+    color: white;
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+    .welcome-box h1 {
+        margin: 0;
+        font-size: 27px;
+        font-weight: 700;
+    }
+
+    .welcome-box p {
+        margin: 7px 0 0;
+        font-size: 13px;
+        color: #e7eef2;
+    }
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid #e5dfd5;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+
+    .stat-card:hover {
+        box-shadow: 0 6px 18px rgba(69, 98, 118, 0.10);
+        transform: translateY(-2px);
+    }
+
+
+/* Statistics Icon */
+
+.icon {
+    width: 42px;
+    height: 42px;
+    background: #edf4f7;
+    color: #456276;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+/* Statistics Title */
+
+.stat-card h6 {
+    margin: 0;
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* Statistics Number */
+
+.stat-card h2 {
+    margin: 5px 0 0;
+    color: #456276;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   HIREHUB OVERVIEW
+========================================== */
+
+.overview {
+    background: #ffffff;
+    border: 1px solid #e5dfd5;
+    border-radius: 14px;
+    padding: 23px;
+}
+
+
+    /* Overview Heading */
+
+    .overview h3 {
+        margin: 0 0 18px;
+        color: #456276;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+/* Overview Items */
+
+.overview-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+
+/* Individual Overview Item */
+
+.overview-item {
+    background: #f7f9fa;
+    border-radius: 10px;
+    padding: 17px;
+}
+
+
+    /* Overview Icon */
+
+    .overview-item i {
+        color: #6096BA;
+        font-size: 20px;
+    }
+
+
+    /* Overview Title */
+
+    .overview-item h5 {
+        margin: 10px 0 4px;
+        color: #444653;
+        font-size: 13px;
+    }
+
+
+    /* Overview Description */
+
+    .overview-item p {
+        margin: 0;
+        color: #888;
+        font-size: 11px;
+    }
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overview-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-dashboard {
+        padding: 18px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-box h1 {
+        font-size: 23px;
+    }
+}
+
+```

@@ -1,15 +1,17 @@
-﻿<%@ Page Title="Dashboard"
+﻿<%@ Page Title="Admin Dashboard"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
     CodeBehind="Dashboard.aspx.cs"
     Inherits="Job_Portal.Admin.Dashboard" %>
 
-
-
 <asp:Content ID="Content1"
     ContentPlaceHolderID="head"
     runat="server">
+
+    <!-- Dashboard CSS -->
+    <link href="../Assets/Admincss/dashboard.css"
+          rel="stylesheet" />
 
 </asp:Content>
 
@@ -18,323 +20,172 @@
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
 
-
-    <!-- ================= WELCOME ================= -->
-
-    <div class="welcome">
-
-        <h1>
-            Welcome back, Admin!
-        </h1>
-
-        <p>
-            Here is what's happening with HireHub today.
-        </p>
-
-    </div>
+    <div class="admin-dashboard">
 
 
-    <!-- ================= STATISTICS ================= -->
+        <!-- ==========================
+             WELCOME SECTION
+        =========================== -->
 
-    <div class="stats">
+        <div class="welcome-box">
+
+            <h1>
+                Welcome back, Admin! 👋
+            </h1>
+
+            <p>
+                Manage your HireHub platform from one place.
+            </p>
+
+        </div>
 
 
-        <!-- USERS -->
+        <!-- ==========================
+             STATISTICS
+        =========================== -->
 
-        <div class="stat-card">
+        <div class="stats">
 
-            <div class="stat-left">
+
+            <!-- Total Users -->
+
+            <div class="stat-card">
+
+                <div class="icon">
+                    <i class="bi bi-people"></i>
+                </div>
 
                 <h6>
                     Total Users
                 </h6>
 
-                <h3>
+                <h2>
                     2,847
-                </h3>
+                </h2>
 
             </div>
 
-            <div class="stat-icon">
 
-                <i class="bi bi-people"></i>
+            <!-- Total Employers -->
 
-            </div>
+            <div class="stat-card">
 
-        </div>
-
-
-        <!-- EMPLOYERS -->
-
-        <div class="stat-card">
-
-            <div class="stat-left">
+                <div class="icon">
+                    <i class="bi bi-building"></i>
+                </div>
 
                 <h6>
                     Total Employers
                 </h6>
 
-                <h3>
+                <h2>
                     456
-                </h3>
+                </h2>
 
             </div>
 
-            <div class="stat-icon">
 
-                <i class="bi bi-building"></i>
+            <!-- Total Jobs -->
 
-            </div>
+            <div class="stat-card">
 
-        </div>
-
-
-        <!-- JOBS -->
-
-        <div class="stat-card">
-
-            <div class="stat-left">
+                <div class="icon">
+                    <i class="bi bi-briefcase"></i>
+                </div>
 
                 <h6>
                     Total Jobs
                 </h6>
 
-                <h3>
+                <h2>
                     1,234
-                </h3>
+                </h2>
 
             </div>
 
-            <div class="stat-icon">
 
-                <i class="bi bi-briefcase"></i>
+            <!-- Total Applications -->
 
-            </div>
+            <div class="stat-card">
 
-        </div>
-
-
-        <!-- APPLICATIONS -->
-
-        <div class="stat-card">
-
-            <div class="stat-left">
+                <div class="icon">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
 
                 <h6>
                     Total Applications
                 </h6>
 
-                <h3>
+                <h2>
                     8,912
-                </h3>
-
-            </div>
-
-            <div class="stat-icon">
-
-                <i class="bi bi-file-earmark-text"></i>
+                </h2>
 
             </div>
 
         </div>
 
 
-    </div>
+        <!-- ==========================
+             HIREHUB OVERVIEW
+        =========================== -->
+
+        <div class="overview">
+
+            <h3>
+                HireHub Overview
+            </h3>
 
 
-    <!-- ================= DASHBOARD GRID ================= -->
-
-    <div class="dashboard-grid">
+            <div class="overview-items">
 
 
-        <!-- APPLICATION OVERVIEW -->
+                <!-- Users -->
 
-        <div class="box">
+                <div class="overview-item">
 
-            <div class="box-title">
+                    <i class="bi bi-person-check"></i>
 
-                Application Overview
+                    <h5>
+                        Users
+                    </h5>
 
-            </div>
-
-
-            <div class="chart">
-
-
-                <!-- JAN -->
-
-                <div class="bar-container">
-
-                    <div class="bar"
-                         style="height:25%;">
-                    </div>
-
-                    <div class="bar-label">
-                        Jan
-                    </div>
+                    <p>
+                        Manage registered job seekers.
+                    </p>
 
                 </div>
 
 
-                <!-- FEB -->
+                <!-- Employers -->
 
-                <div class="bar-container">
+                <div class="overview-item">
 
-                    <div class="bar"
-                         style="height:50%;">
-                    </div>
+                    <i class="bi bi-building-check"></i>
 
-                    <div class="bar-label">
-                        Feb
-                    </div>
+                    <h5>
+                        Employers
+                    </h5>
 
-                </div>
-
-
-                <!-- MAR -->
-
-                <div class="bar-container">
-
-                    <div class="bar"
-                         style="height:35%;">
-                    </div>
-
-                    <div class="bar-label">
-                        Mar
-                    </div>
+                    <p>
+                        Manage companies and recruiters.
+                    </p>
 
                 </div>
 
 
-                <!-- APR -->
+                <!-- Jobs -->
 
-                <div class="bar-container">
+                <div class="overview-item">
 
-                    <div class="bar"
-                         style="height:70%;">
-                    </div>
+                    <i class="bi bi-search"></i>
 
-                    <div class="bar-label">
-                        Apr
-                    </div>
+                    <h5>
+                        Jobs & Applications
+                    </h5>
 
-                </div>
-
-
-                <!-- MAY -->
-
-                <div class="bar-container">
-
-                    <div class="bar"
-                         style="height:60%;">
-                    </div>
-
-                    <div class="bar-label">
-                        May
-                    </div>
-
-                </div>
-
-
-                <!-- JUN -->
-
-                <div class="bar-container">
-
-                    <div class="bar"
-                         style="height:85%;">
-                    </div>
-
-                    <div class="bar-label">
-                        Jun
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- ================= RECENT ACTIVITY ================= -->
-
-        <div class="box">
-
-            <div class="box-title">
-
-                Recent Activity
-
-            </div>
-
-
-            <div class="activity">
-
-
-                <!-- ACTIVITY 1 -->
-
-                <div class="activity-item">
-
-                    <div class="activity-icon">
-
-                        <i class="bi bi-person-plus"></i>
-
-                    </div>
-
-                    <div class="activity-text">
-
-                        New employer registered
-
-                        <span class="activity-time">
-                            10 minutes ago
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ACTIVITY 2 -->
-
-                <div class="activity-item">
-
-                    <div class="activity-icon">
-
-                        <i class="bi bi-briefcase"></i>
-
-                    </div>
-
-                    <div class="activity-text">
-
-                        New job posted
-
-                        <span class="activity-time">
-                            1 hour ago
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- ACTIVITY 3 -->
-
-                <div class="activity-item">
-
-                    <div class="activity-icon">
-
-                        <i class="bi bi-person-check"></i>
-
-                    </div>
-
-                    <div class="activity-text">
-
-                        User registered successfully
-
-                        <span class="activity-time">
-                            3 hours ago
-                        </span>
-
-                    </div>
+                    <p>
+                        Manage jobs and submitted applications.
+                    </p>
 
                 </div>
 
@@ -345,6 +196,5 @@
 
 
     </div>
-
 
 </asp:Content>

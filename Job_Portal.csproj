@@ -132,6 +132,7 @@
     <Content Include="Assets\Admincss\application_detail.css" />
     <Content Include="Assets\Admincss\categories.css" />
     <Content Include="Assets\Admincss\companies.css" />
+    <Content Include="Assets\Admincss\dashboard.css" />
     <Content Include="Assets\Admincss\edit_admin_profile.css" />
     <Content Include="Assets\Admincss\edit_jobs.css" />
     <Content Include="Assets\Admincss\edit_users.css" />
