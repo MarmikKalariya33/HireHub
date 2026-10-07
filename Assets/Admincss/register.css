@@ -1,369 +1,651 @@
 ﻿/* =========================================================
-   RESET
-========================================================= */
+   HIREHUB REGISTRATION PAGE
+   ========================================================= */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   BODY
-========================================================= */
 
 html,
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
-    color: #172033;
+    color: #17233b;
+    overflow: hidden;
 }
 
 
 /* =========================================================
    MAIN PAGE
-========================================================= */
+   ========================================================= */
 
 .register-page {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
+    overflow: hidden;
 }
 
 
 /* =========================================================
    LEFT SECTION
-========================================================= */
+   FIXED - NEVER SCROLL
+   ========================================================= */
 
 .left-section {
-    width: 36.2%;
-    min-height: 100vh;
-    background: #1d2f54;
-    position: relative;
-    padding: 0 51px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 32%;
+    height: 100vh;
+    background: #1d2d51;
+    color: #ffffff;
+    overflow: hidden;
+    z-index: 10;
 }
+
+
+    /* =========================================================
+   LEFT DECORATION
+   ========================================================= */
+
+    .left-section::before {
+        content: "";
+        position: absolute;
+        width: 430px;
+        height: 430px;
+        right: -260px;
+        bottom: -220px;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 50%;
+    }
+
+
+    .left-section::after {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        left: -210px;
+        bottom: 90px;
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 50%;
+    }
 
 
 /* =========================================================
    LOGO
-========================================================= */
+   ========================================================= */
 
 .logo-section {
-    position: absolute;
-    top: 34px;
-    left: 140px;
-    display: flex;
-    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 38px 0 0 45px;
 }
 
+
 .hirehub-logo {
-    width: 220px;
+    width: 200px;
     height: auto;
-    object-fit: contain;
+    display: block;
 }
 
 
 /* =========================================================
    LEFT CONTENT
-========================================================= */
+   ========================================================= */
 
 .left-content {
     position: absolute;
-    left: 51px;
-    right: 45px;
-    top: 397px;
+    z-index: 2;
+    left: 45px;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
-    .left-content h1 {
-        color: #ffffff;
-        font-size: 43px;
-        line-height: 1.18;
-        font-weight: 700;
-        letter-spacing: -1px;
-        margin-bottom: 27px;
-    }
+.small-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(169,188,232,0.3);
+    border-radius: 25px;
+    background: rgba(255,255,255,0.06);
+    color: #b4c5e5;
+    font-size: 12px;
+    font-weight: 600;
+}
 
 
-.description {
-    color: #a9bce9;
-    font-size: 18px;
-    line-height: 1.45;
-    max-width: 390px;
-    margin-bottom: 28px;
+.left-content h1 {
+    margin: 0 0 22px;
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.16;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+
+.left-content p {
+    max-width: 470px;
+    margin: 0;
+    color: #b0c0dc;
+    font-size: 16px;
+    line-height: 1.65;
 }
 
 
 .features {
-    color: #a9bce9;
-    font-size: 17px;
-    line-height: 1.5;
+    margin-top: 28px;
+    color: #b5c4dd;
+    font-size: 13px;
 }
 
 
-    .features span {
-        padding: 0 6px;
+    .features b {
+        margin: 0 9px;
+        color: #728ab5;
     }
 
 
 /* =========================================================
-   RIGHT SECTION
-========================================================= */
+   LEFT FOOTER
+   ========================================================= */
 
-.right-section {
-    width: 63.8%;
-    min-height: 100vh;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 87px;
+.left-footer {
+    position: absolute;
+    z-index: 2;
+    left: 45px;
+    bottom: 28px;
+    color: #8095b8;
+    font-size: 11px;
 }
 
 
 /* =========================================================
+   RIGHT SECTION
+   ONLY THIS SECTION SCROLLS
+   ========================================================= */
+
+.right-section {
+    width: 68%;
+    height: 100vh;
+    margin-left: 32%;
+    padding: 45px 55px 55px;
+    background: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+    /* Scrollbar */
+
+    .right-section::-webkit-scrollbar {
+        width: 8px;
+    }
+
+
+    .right-section::-webkit-scrollbar-track {
+        background: #f4f6f9;
+    }
+
+
+    .right-section::-webkit-scrollbar-thumb {
+        background: #c7d0dc;
+        border-radius: 10px;
+    }
+
+
+        .right-section::-webkit-scrollbar-thumb:hover {
+            background: #aab6c6;
+        }
+
+
+/* =========================================================
    REGISTER CONTAINER
-========================================================= */
+   ========================================================= */
 
 .register-container {
-    width: 470px;
-    max-width: calc(100% - 40px);
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
 /* =========================================================
    HEADING
-========================================================= */
+   ========================================================= */
 
 .heading-section {
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 25px;
 }
 
 
-    .heading-section h2 {
-        color: #151d2f;
-        font-size: 34px;
-        line-height: 1.2;
-        font-weight: 700;
-        letter-spacing: -0.7px;
-        margin-bottom: 8px;
-    }
+.heading-icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #edf3f7;
+    color: #456276;
+    font-size: 25px;
+}
 
 
-    .heading-section p {
-        color: #56667f;
-        font-size: 17px;
-        line-height: 1.5;
-    }
+.heading-section h2 {
+    margin: 0;
+    color: #17233b;
+    font-size: 31px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+.heading-section p {
+    margin: 7px 0 0;
+    color: #687587;
+    font-size: 14px;
+    line-height: 1.4;
+}
 
 
 /* =========================================================
    ACCOUNT TABS
-========================================================= */
+   ========================================================= */
 
 .account-tabs {
-    width: 75%;
-    height: 49px;
-    background: #f7f9fc;
-    border: 1px solid #dce3ec;
-    border-radius: 11px;
+    width: 100%;
+    height: 58px;
+    padding: 4px;
     display: flex;
+    gap: 4px;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 3px;
-    margin: 0 auto 26px auto;
+    margin-bottom: 27px;
+    border: 1px solid #dce2ea;
+    border-radius: 10px;
+    background: #f7f9fb;
 }
 
 
 .account-tab {
-    width: 150px;
-    height: 41px;
+    flex: 1;
+    height: 48px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #4c5d76;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 8px;
+    color: #536176;
     font-size: 15px;
-    font-weight: 500;
-    border-radius: 9px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s ease;
 }
+
+
+    .account-tab:hover {
+        background: #eef3f8;
+        color: #2864e8;
+    }
 
 
     .account-tab.active {
         background: #2864e8;
         color: #ffffff;
-        font-weight: 600;
-        box-shadow: 0 2px 5px rgba(40, 100, 232, 0.25);
+        box-shadow: 0 4px 10px rgba(40,100,232,0.18);
+    }
+
+
+    .account-tab i {
+        font-size: 18px;
     }
 
 
 /* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.form-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+}
+
+
+/* =========================================================
    FORM GROUP
-========================================================= */
+   ========================================================= */
 
 .form-group {
     width: 100%;
-    margin-bottom: 17px;
+    min-width: 0;
 }
 
 
     .form-group label {
         display: block;
-        color: #182237;
-        font-size: 15px;
-        font-weight: 600;
-        margin-bottom: 7px;
+        margin-bottom: 8px;
+        color: #17233b;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.55px;
     }
+
+
+.required-star {
+    color: #e33434;
+    margin-left: 2px;
+}
 
 
 /* =========================================================
    INPUT WRAPPER
-========================================================= */
+   ========================================================= */
 
 .input-wrapper {
     width: 100%;
-    height: 52px;
     position: relative;
 }
 
 
 /* =========================================================
+   INPUT ICON
+   ========================================================= */
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c9bb0;
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* =========================================================
    INPUT
-========================================================= */
+   ========================================================= */
 
 .form-input {
     width: 100%;
     height: 52px;
-    border: 1px solid #d9e1eb;
-    border-radius: 9px;
+    padding: 0 15px 0 45px;
+    border: 1px solid #d2dbe7;
+    border-radius: 8px;
     background: #ffffff;
-    color: #182237;
-    font-size: 16px;
+    color: #26354b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     outline: none;
-    padding: 0 16px 0 48px;
-    transition: all 0.2s ease;
+    transition: 0.2s ease;
 }
 
 
     .form-input::placeholder {
-        color: #94a8c6;
-        opacity: 1;
+        color: #9aa5b4;
     }
 
 
     .form-input:focus {
         border-color: #2864e8;
-        box-shadow: 0 0 0 3px rgba(40, 100, 232, 0.08);
+        box-shadow: 0 0 0 3px rgba(40,100,232,0.09);
     }
 
 
 /* =========================================================
-   INPUT ICON
-========================================================= */
+   SELECT
+   ========================================================= */
 
-.input-icon {
-    position: absolute;
-    left: 17px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #8da3c2;
-    font-size: 19px;
-    z-index: 2;
-    pointer-events: none;
+.select-input {
+    padding-right: 40px;
+    cursor: pointer;
+    appearance: auto;
 }
 
 
 /* =========================================================
-   PASSWORD INPUT
-========================================================= */
+   DATE
+   ========================================================= */
+
+input[type="date"] {
+    padding-right: 14px;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
 
 .password-input {
-    padding-right: 48px;
+    padding-right: 50px;
 }
 
 
 /* =========================================================
-   PASSWORD EYE
-========================================================= */
+   PASSWORD BUTTON
+   ========================================================= */
 
-.password-eye {
+.password-toggle {
     position: absolute;
-    right: 17px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
-    color: #8da3c2;
-    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #8391a5;
     cursor: pointer;
-    z-index: 3;
+    font-size: 18px;
 }
+
+
+    .password-toggle:hover {
+        color: #2864e8;
+    }
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.validation-message {
+    display: block;
+    margin-top: 5px;
+    color: #e33434;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   FILE UPLOAD
+   ========================================================= */
+
+.upload-box {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 10px;
+    border: 1px solid #d2dbe7;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+
+.upload-icon {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #edf3f7;
+    color: #456276;
+    font-size: 20px;
+}
+
+
+.upload-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.file-input {
+    width: 100%;
+    color: #40536b;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.upload-content small {
+    color: #9aa5b5;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   INFORMATION
+   ========================================================= */
+
+.information-section {
+    width: 100%;
+    margin-top: 27px;
+    margin-bottom: 20px;
+}
+
+
+    .information-section h3 {
+        margin: 0 0 9px;
+        color: #17233b;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+
+.information-input {
+    width: 100%;
+    min-height: 115px;
+    height: 115px;
+    padding: 13px 15px;
+    resize: vertical;
+    border: 1px solid #d2dbe7;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #26354b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+    outline: none;
+}
+
+
+    .information-input::placeholder {
+        color: #9aa5b4;
+    }
+
+
+    .information-input:focus {
+        border-color: #2864e8;
+        box-shadow: 0 0 0 3px rgba(40,100,232,0.09);
+    }
 
 
 /* =========================================================
    TERMS
-========================================================= */
+   ========================================================= */
 
 .terms-section {
-    width: 100%;
-    margin-top: 21px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 
 .checkbox-container {
     display: flex;
     align-items: center;
+    gap: 9px;
+    margin: 0;
     cursor: pointer;
-    position: relative;
 }
 
-
-    /* Hide default checkbox */
 
     .checkbox-container input {
         position: absolute;
         opacity: 0;
-        cursor: pointer;
     }
 
 
-/* Custom checkbox */
-
 .custom-checkbox {
-    width: 21px;
-    height: 21px;
-    min-width: 21px;
-    border-radius: 5px;
-    background: #2864e8;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 13px;
+    border: 1px solid #cbd4df;
+    border-radius: 4px;
+    background: #ffffff;
 }
 
 
-    .custom-checkbox i {
-        color: #ffffff;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 1;
-    }
+.checkbox-container input:checked + .custom-checkbox {
+    background: #2864e8;
+    border-color: #2864e8;
+}
 
 
-/* =========================================================
-   TERMS TEXT
-========================================================= */
+.custom-checkbox i {
+    display: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+.checkbox-container input:checked + .custom-checkbox i {
+    display: block;
+}
+
 
 .terms-text {
-    color: #53627a;
-    font-size: 14px;
-    line-height: 1.5;
+    color: #6c7888;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 
@@ -374,50 +656,50 @@ body {
     }
 
 
-        .terms-text a:hover {
-            text-decoration: underline;
-        }
-
-
 /* =========================================================
    REGISTER BUTTON
-========================================================= */
+   ========================================================= */
 
 .register-button {
     width: 100%;
-    height: 54px;
+    height: 53px;
     border: none;
     border-radius: 8px;
     background: #2864e8;
     color: #ffffff;
-    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(40, 100, 232, 0.18);
-    transition: all 0.2s ease;
+    box-shadow: 0 5px 13px rgba(40,100,232,0.18);
+    transition: 0.2s ease;
 }
 
 
     .register-button:hover {
-        background: #2058d5;
+        background: #2158d0;
+        transform: translateY(-1px);
     }
 
 
     .register-button:active {
-        transform: translateY(1px);
+        transform: translateY(0);
     }
 
 
 /* =========================================================
    LOGIN
-========================================================= */
+   ========================================================= */
 
 .login-section {
-    width: 100%;
-    text-align: center;
-    margin-top: 17px;
-    color: #596982;
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding-bottom: 20px;
+    color: #758091;
+    font-size: 13px;
 }
 
 
@@ -425,7 +707,6 @@ body {
         color: #2864e8;
         font-weight: 600;
         text-decoration: none;
-        margin-left: 4px;
     }
 
 
@@ -435,230 +716,205 @@ body {
 
 
 /* =========================================================
-   TABLET
-========================================================= */
+   1200px
+   ========================================================= */
 
-@media screen and (max-width: 1100px) {
+@media (max-width: 1200px) {
 
     .left-section {
-        width: 38%;
-        padding-left: 35px;
-        padding-right: 30px;
+        width: 30%;
     }
+
 
     .right-section {
-        width: 62%;
-        padding-top: 70px;
+        width: 70%;
+        margin-left: 30%;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
-    .logo-section {
-        left: 70px;
+
+    .left-content h1 {
+        font-size: 34px;
     }
 
-    .hirehub-logo {
-        width: 190px;
+
+    .left-content p {
+        font-size: 14px;
     }
 
-    .left-content {
-        left: 35px;
-        top: 350px;
-    }
 
-        .left-content h1 {
-            font-size: 36px;
-        }
-
-    .description {
-        font-size: 16px;
-    }
-
-    .features {
-        font-size: 15px;
-    }
-
-    .account-tabs {
-        width: 80%;
-    }
-
-    .account-tab {
-        width: 135px;
+    .form-grid {
+        column-gap: 20px;
     }
 }
 
 
 /* =========================================================
    MOBILE
-========================================================= */
+   ========================================================= */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 750px) {
 
-    .register-page {
-        display: block;
+    body {
+        overflow: auto;
     }
 
 
+    .register-page {
+        display: block;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+
+    /*
+       Mobile par left section normal rahega.
+       Desktop ki tarah fixed nahi rakha.
+    */
+
     .left-section {
+        position: relative;
         width: 100%;
-        min-height: 330px;
-        height: 330px;
-        padding: 0 30px;
+        height: 220px;
+        min-height: 220px;
     }
 
 
     .logo-section {
-        position: absolute;
-        top: 28px;
-        left: 30px;
+        padding: 22px 25px 0;
     }
 
 
     .hirehub-logo {
-        width: 180px;
+        width: 170px;
     }
 
 
     .left-content {
-        position: absolute;
-        left: 30px;
-        right: 30px;
-        top: 145px;
+        left: 25px;
+        right: 25px;
+        top: auto;
+        bottom: 25px;
+        transform: none;
     }
 
 
-        .left-content h1 {
-            font-size: 31px;
-            line-height: 1.2;
-            margin-bottom: 17px;
-        }
+    .small-badge {
+        display: none;
+    }
 
 
-    .description {
-        font-size: 15px;
-        line-height: 1.45;
-        max-width: 600px;
-        margin-bottom: 15px;
+    .left-content h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+
+    .left-content p {
+        display: none;
     }
 
 
     .features {
-        font-size: 14px;
+        margin-top: 8px;
+        font-size: 11px;
+    }
+
+
+    .left-footer {
+        display: none;
     }
 
 
     .right-section {
         width: 100%;
-        min-height: auto;
-        padding: 45px 0 50px;
+        height: auto;
+        margin-left: 0;
+        padding: 30px 20px 40px;
+        overflow: visible;
     }
 
 
     .register-container {
-        width: 470px;
-        max-width: calc(100% - 40px);
+        max-width: 100%;
     }
 
 
     .heading-section h2 {
-        font-size: 29px;
+        font-size: 25px;
     }
 
 
     .heading-section p {
-        font-size: 15px;
+        font-size: 12px;
     }
 
 
-    .account-tabs {
-        width: 80%;
+    .form-grid {
+        grid-template-columns: 1fr;
+        row-gap: 18px;
     }
 
 
-    .account-tab {
-        width: 130px;
+    .form-input {
+        height: 50px;
+    }
+
+
+    .upload-box {
+        height: 50px;
+    }
+
+
+    .information-input {
+        height: 120px;
+        min-height: 120px;
     }
 }
 
 
 /* =========================================================
    SMALL MOBILE
-========================================================= */
+   ========================================================= */
 
-@media screen and (max-width: 480px) {
-
-    .left-section {
-        min-height: 310px;
-        height: 310px;
-    }
-
-
-    .hirehub-logo {
-        width: 160px;
-    }
-
-
-    .left-content {
-        top: 135px;
-    }
-
-
-        .left-content h1 {
-            font-size: 27px;
-        }
-
-
-    .description {
-        font-size: 14px;
-    }
-
-
-    .features {
-        font-size: 13px;
-    }
-
+@media (max-width: 450px) {
 
     .right-section {
-        padding-top: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
 
-    .register-container {
-        max-width: calc(100% - 30px);
+    .heading-icon {
+        width: 48px;
+        height: 48px;
     }
 
 
     .heading-section h2 {
-        font-size: 27px;
-    }
-
-
-    .account-tabs {
-        width: 85%;
-        height: 48px;
-        justify-content: center;
-        gap: 5px;
+        font-size: 22px;
     }
 
 
     .account-tab {
-        width: 125px;
-        height: 40px;
-        font-size: 14px;
-    }
-
-
-    .form-input,
-    .input-wrapper {
-        height: 51px;
-    }
-
-
-    .terms-text {
         font-size: 13px;
     }
 
 
-    .register-button {
-        height: 52px;
-        font-size: 16px;
+    .form-group label {
+        font-size: 11px;
+    }
+
+
+    .form-input {
+        font-size: 14px;
+        height: 49px;
+    }
+
+
+    .terms-text {
+        font-size: 12px;
     }
 }

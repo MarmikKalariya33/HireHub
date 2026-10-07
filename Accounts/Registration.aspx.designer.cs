@@ -24,13 +24,22 @@ namespace Job_Portal.Accounts
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// rfvFullNameStar control.
+        /// txtCompanyName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFullNameStar;
+        protected global::System.Web.UI.WebControls.TextBox txtCompanyName;
+
+        /// <summary>
+        /// rfvCompanyName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCompanyName;
 
         /// <summary>
         /// txtFullName control.
@@ -51,13 +60,13 @@ namespace Job_Portal.Accounts
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFullName;
 
         /// <summary>
-        /// rfvEmailStar control.
+        /// fuProfilePicture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailStar;
+        protected global::System.Web.UI.WebControls.FileUpload fuProfilePicture;
 
         /// <summary>
         /// txtEmail control.
@@ -87,15 +96,6 @@ namespace Job_Portal.Accounts
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
-        /// rfvPhoneStar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneStar;
-
-        /// <summary>
         /// txtPhone control.
         /// </summary>
         /// <remarks>
@@ -123,13 +123,49 @@ namespace Job_Portal.Accounts
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
 
         /// <summary>
-        /// rfvPasswordStar control.
+        /// txtLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPasswordStar;
+        protected global::System.Web.UI.WebControls.TextBox txtLocation;
+
+        /// <summary>
+        /// ddlIndustry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlIndustry;
+
+        /// <summary>
+        /// ddlCompanySize control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCompanySize;
+
+        /// <summary>
+        /// txtWebsite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtWebsite;
+
+        /// <summary>
+        /// txtRegistrationDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRegistrationDate;
 
         /// <summary>
         /// txtPassword control.
@@ -159,15 +195,6 @@ namespace Job_Portal.Accounts
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPassword;
 
         /// <summary>
-        /// rfvConfirmPasswordStar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvConfirmPasswordStar;
-
-        /// <summary>
         /// txtConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -193,6 +220,24 @@ namespace Job_Portal.Accounts
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator cvPassword;
+
+        /// <summary>
+        /// txtPersonalInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPersonalInformation;
+
+        /// <summary>
+        /// txtCompanyInformation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCompanyInformation;
 
         /// <summary>
         /// btnRegister control.

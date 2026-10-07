@@ -1,10 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"
+﻿
+<%@ Page Language="C#" AutoEventWireup="true"
     CodeBehind="Login.aspx.cs"
     Inherits="Job_Portal.Accounts.Login" %>
 
 <!DOCTYPE html>
 
 <html>
+
 <head runat="server">
 
     <title>HireHub - Login</title>
@@ -15,19 +17,23 @@
           content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
+
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
     <!-- Bootstrap Icons -->
+
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
     <!-- Login CSS -->
+
     <link rel="stylesheet"
           type="text/css"
           href="<%= ResolveUrl("~/Assets/Admincss/login.css") %>" />
 
 </head>
+
 
 <body>
 
@@ -37,12 +43,12 @@
 
 
         <!-- =========================================
-             LEFT SIDE
-        ========================================= -->
+             LEFT BRAND SECTION
+        ========================================== -->
 
-        <div class="login-left">
+        <div class="brand-panel">
 
-            <div class="brand-area">
+            <div class="brand-top">
 
                 <img src="<%= ResolveUrl("~/Assets/images/logo.png") %>"
                      class="hirehub-logo"
@@ -51,108 +57,174 @@
             </div>
 
 
-            <div class="left-content">
+            <div class="brand-content">
+
+                <div class="brand-badge">
+                    <i class="bi bi-briefcase"></i>
+                    HIREHUB PORTAL
+                </div>
 
                 <h1>
-                    Build Your Career.<br />
-                    Shape Your Future.
+                    Your career<br />
+                    starts here.
                 </h1>
 
                 <p>
-                    Explore trusted job opportunities, connect with
-                    leading companies, and find the right path for
-                    your career.
+                    Connect with companies, discover opportunities,
+                    and take the next step in your career.
                 </p>
 
-                <div class="left-features">
 
-                    Find jobs
-                    <span>•</span>
-                    Apply Easily
-                    <span>•</span>
-                    Grow Professionally
+                <div class="brand-points">
+
+                    <div class="brand-point">
+
+                        <span class="point-icon">
+                            <i class="bi bi-check2"></i>
+                        </span>
+
+                        <span>
+                            Find the right opportunities
+                        </span>
+
+                    </div>
+
+
+                    <div class="brand-point">
+
+                        <span class="point-icon">
+                            <i class="bi bi-check2"></i>
+                        </span>
+
+                        <span>
+                            Connect with trusted employers
+                        </span>
+
+                    </div>
+
+
+                    <div class="brand-point">
+
+                        <span class="point-icon">
+                            <i class="bi bi-check2"></i>
+                        </span>
+
+                        <span>
+                            Build your professional future
+                        </span>
+
+                    </div>
 
                 </div>
 
+            </div>
+
+
+            <div class="brand-footer">
+                © 2026 HireHub
             </div>
 
         </div>
 
 
         <!-- =========================================
-             RIGHT SIDE
-        ========================================= -->
+             RIGHT LOGIN SECTION
+        ========================================== -->
 
-        <div class="login-right">
+        <div class="login-panel">
 
-            <div class="login-box">
-
-
-                <!-- =========================================
-                     WELCOME
-                ========================================= -->
-
-                <div class="welcome-section">
-
-                    <h2>
-                        Welcome
-                    </h2>
-
-                    <p>
-                        Select your role and enter your details to sign in
-                    </p>
-
-                </div>
+            <div class="login-card">
 
 
-                <!-- =========================================
-                     ROLE TABS
-                ========================================= -->
+                <!-- =====================================
+                     HEADER
+                ====================================== -->
 
-                <div class="role-tabs">
+                <div class="login-header">
 
-                    <button
-                        type="button"
-                        class="role-tab active"
-                        data-role="Admin">
+                    <div class="login-icon">
 
-                        Admin
+                        <i class="bi bi-person-lock"></i>
 
-                    </button>
+                    </div>
 
+                    <div>
 
-                    <button
-                        type="button"
-                        class="role-tab"
-                        data-role="Employer">
+                        <h2>
+                            Welcome back
+                        </h2>
 
-                        Employer
+                        <p>
+                            Sign in to continue to HireHub
+                        </p>
 
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="role-tab"
-                        data-role="Job Seeker">
-
-                        Job Seeker
-
-                    </button>
+                    </div>
 
                 </div>
 
 
-                <!-- =========================================
+                <!-- =====================================
+                     ROLE SELECTION
+                ====================================== -->
+
+                <div class="role-section">
+
+                    <label>
+                        Login as
+                    </label>
+
+                    <div class="role-tabs">
+
+
+                        <button
+                            type="button"
+                            class="role-tab active"
+                            data-role="Admin">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Admin
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="role-tab"
+                            data-role="Employer">
+
+                            <i class="bi bi-building"></i>
+
+                            Employer
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="role-tab"
+                            data-role="Job Seeker">
+
+                            <i class="bi bi-person"></i>
+
+                            Job Seeker
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
                      LOGIN FORM
-                ========================================= -->
+                ====================================== -->
 
                 <div class="login-form">
 
 
-                    <!-- =========================================
-                         EMAIL
-                    ========================================= -->
+                    <!-- EMAIL -->
 
                     <div class="form-group">
 
@@ -190,8 +262,6 @@
                         </div>
 
 
-                        <!-- Email Required Message -->
-
                         <asp:RequiredFieldValidator
                             ID="rfvEmail"
                             runat="server"
@@ -202,8 +272,6 @@
                             Display="Dynamic">
                         </asp:RequiredFieldValidator>
 
-
-                        <!-- Email Format Validation -->
 
                         <asp:RegularExpressionValidator
                             ID="revEmail"
@@ -219,9 +287,7 @@
                     </div>
 
 
-                    <!-- =========================================
-                         PASSWORD
-                    ========================================= -->
+                    <!-- PASSWORD -->
 
                     <div class="form-group">
 
@@ -258,7 +324,7 @@
                             </asp:TextBox>
 
 
-                            <!-- PASSWORD SHOW/HIDE -->
+                            <!-- PASSWORD SHOW / HIDE -->
 
                             <button
                                 type="button"
@@ -275,8 +341,6 @@
                         </div>
 
 
-                        <!-- Password Required Message -->
-
                         <asp:RequiredFieldValidator
                             ID="rfvPassword"
                             runat="server"
@@ -290,11 +354,12 @@
                     </div>
 
 
-                    <!-- =========================================
+                    <!-- =====================================
                          LOGIN OPTIONS
-                    ========================================= -->
+                    ====================================== -->
 
                     <div class="login-options">
+
 
                         <label class="remember-option">
 
@@ -322,9 +387,9 @@
                     </div>
 
 
-                    <!-- =========================================
+                    <!-- =====================================
                          LOGIN BUTTON
-                    ========================================= -->
+                    ====================================== -->
 
                     <asp:Button
                         ID="btnLogin"
@@ -336,9 +401,9 @@
                         OnClientClick="return validateLogin();" />
 
 
-                    <!-- =========================================
-                         REGISTRATION LINK
-                    ========================================= -->
+                    <!-- =====================================
+                         REGISTER
+                    ====================================== -->
 
                     <div class="register-section">
 
@@ -413,7 +478,7 @@
             tab.addEventListener("click", function () {
 
 
-                /* Remove active from all */
+                /* Remove active */
 
                 roleTabs.forEach(function (item) {
 
@@ -422,20 +487,20 @@
                 });
 
 
-                /* Add active to clicked role */
+                /* Add active */
 
                 tab.classList.add("active");
 
 
-                /* Get selected role */
+                /* Get role */
 
                 selectedRole =
                     tab.getAttribute("data-role");
 
 
-                /* =========================================
-                   SET DEFAULT LOGIN DETAILS
-                ========================================= */
+                /* =====================================
+                   DEFAULT LOGIN DETAILS
+                ===================================== */
 
                 if (selectedRole === "Admin") {
 
@@ -504,14 +569,13 @@
 
 
         /* =========================================
-           LOGIN ROLE FUNCTION
+           LOGIN FUNCTION
         ========================================= */
 
         window.validateLogin = function () {
 
-            /*
-               First run ASP.NET Toolbox validation
-            */
+
+            /* ASP.NET validation */
 
             if (typeof Page_ClientValidate === "function") {
 
@@ -531,9 +595,9 @@
                 passwordInput.value.trim();
 
 
-            /* =========================================
+            /* =====================================
                ADMIN LOGIN
-            ========================================= */
+            ====================================== */
 
             if (selectedRole === "Admin") {
 
@@ -562,9 +626,9 @@
             }
 
 
-            /* =========================================
+            /* =====================================
                EMPLOYER LOGIN
-            ========================================= */
+            ====================================== */
 
             else if (selectedRole === "Employer") {
 
@@ -593,9 +657,9 @@
             }
 
 
-            /* =========================================
+            /* =====================================
                JOB SEEKER LOGIN
-            ========================================= */
+            ====================================== */
 
             else if (selectedRole === "Job Seeker") {
 
@@ -632,5 +696,7 @@
 
 </script>
 
+
 </body>
+
 </html>
