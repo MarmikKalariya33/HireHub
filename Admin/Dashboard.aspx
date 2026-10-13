@@ -30,7 +30,7 @@
         <div class="welcome-box">
 
             <h1>
-                Welcome back, Admin! 👋
+                Welcome back, Admin! 
             </h1>
 
             <p>

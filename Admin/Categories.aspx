@@ -453,7 +453,7 @@
 
                                     <a href="#"
                                        class="category-action category-delete"
-                                       title="Delete Category"
+                                       title=""
                                        onclick="return confirm('Are you sure you want to delete this category?');">
 
                                         <i class="fa-solid fa-trash-can"></i>

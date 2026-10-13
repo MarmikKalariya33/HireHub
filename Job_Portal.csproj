@@ -121,9 +121,9 @@
     <Content Include="Admin\Final_User_Edit.aspx" />
     <Content Include="Admin\Jobs.aspx" />
     <Content Include="Admin\Users.aspx" />
-    <Content Include="App_Data\job_portal.mdf" />
-    <Content Include="App_Data\job_portal_log.ldf">
-      <DependentUpon>job_portal.mdf</DependentUpon>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\Admincss\add_categories.css" />
     <Content Include="Assets\Admincss\add_jobs.css" />
