@@ -361,19 +361,7 @@
                     <div class="login-options">
 
 
-                        <label class="remember-option">
-
-                            <input
-                                type="checkbox"
-                                id="rememberMe" />
-
-                            <span class="custom-checkbox"></span>
-
-                            <span class="remember-text">
-                                Keep me signed in
-                            </span>
-
-                        </label>
+                       
 
 
                         <a

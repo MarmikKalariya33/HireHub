@@ -110,7 +110,7 @@
                         ID="txtNumberOfJobs"
                         runat="server"
                         CssClass="form-input"
-                        Text="0"
+                        Text=""
                         placeholder="Enter number of jobs">
                     </asp:TextBox>
 
