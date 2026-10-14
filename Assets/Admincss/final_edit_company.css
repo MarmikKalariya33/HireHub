@@ -1,443 +1,293 @@
-﻿.edit-company-page {
-    width: 100%;
+﻿
+/* =========================================
+   EDIT COMPANY PAGE
+========================================= */
+.edit-company-page {
+    padding: 25px 30px 40px;
+    background: #f5f7fb;
     min-height: 100vh;
-    background: #fbf9f4;
-    padding: 35px 40px 50px 40px;
-    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: #444653;
+    box-sizing: border-box;
 }
 
-    .edit-company-page *,
-    .edit-company-page *::before,
-    .edit-company-page *::after {
-        box-sizing: border-box;
-    }
+.edit-company-page *,
+.edit-company-page *::before,
+.edit-company-page *::after {
+    box-sizing: border-box;
+}
 
-
-/* =========================================
-   BACK LINK
-========================================= */
+/* BACK LINK */
 
 .back-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: #475467;
+    gap: 9px;
+    color: #456276;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
+    transition: color 0.2s ease;
 }
 
     .back-link:hover {
-        color: #1d4ed8;
+        color: #6096ba;
     }
 
-    .back-link i {
-        font-size: 16px;
-    }
-
-
-/* =========================================
-   MAIN CARD
-========================================= */
+/* MAIN CARD */
 
 .company-card {
     width: 100%;
-    max-width: 1478px;
+    max-width: 1150px;
     margin: 0 auto;
+    padding: 30px;
     background: #ffffff;
-    border: 1px solid #e4e7ec;
+    border: 1px solid #e5eaf0;
     border-radius: 12px;
-    padding: 32px 40px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 8px rgba(16, 24, 40, 0.05);
+    box-shadow: 0 4px 18px rgba(35, 55, 75, 0.06);
 }
 
-
-/* =========================================
-   COMPANY HEADER
-========================================= */
+/* HEADER */
 
 .company-header {
     display: flex;
     align-items: center;
     gap: 18px;
-    width: 100%;
+    padding-bottom: 22px;
 }
 
-
-/* =========================================
-   COMPANY AVATAR
-========================================= */
-
 .company-avatar-large {
-    width: 72px;
-    height: 72px;
-    min-width: 72px;
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background: #e8efff;
-    color: #2563eb;
-    font-size: 24px;
+    align-items: center;
+    background: #456276;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 28px;
     font-weight: 700;
 }
 
-
-/* =========================================
-   COMPANY TITLE
-========================================= */
-
-.company-title-area {
-    flex: 1;
+.company-title-area h1 {
+    margin: 0 0 7px;
+    color: #456276;
+    font-size: 27px;
+    font-weight: 700;
 }
 
-    .company-title-area h1 {
-        margin: 0;
-        color: #101828;
-        font-size: 25px;
-        font-weight: 700;
-    }
+.company-title-area p {
+    margin: 0;
+    color: #7b8794;
+    font-size: 14px;
+}
 
-    .company-title-area p {
-        margin: 7px 0 0 0;
-        color: #667085;
-        font-size: 14px;
-    }
-
-
-/* =========================================
-   DIVIDER
-========================================= */
+/* DIVIDERS */
 
 .divider {
-    width: 100%;
     height: 1px;
-    background: #eaecf0;
-    margin: 28px 0;
+    width: 100%;
+    background: #e8edf2;
+    margin: 22px 0;
 }
 
-
-/* =========================================
-   SECTION TITLE
-========================================= */
+/* SECTION TITLES */
 
 .section-title {
-    width: 100%;
     margin-bottom: 22px;
 }
 
-    .section-title h2 {
+    .section-title h2,
+    .full-section h2 {
         margin: 0;
-        color: #101828;
-        font-size: 19px;
+        color: #456276;
+        font-size: 18px;
         font-weight: 700;
     }
 
-
-/* =========================================
-   COMPANY INFORMATION
-========================================= */
+/* COMPANY INFORMATION GRID */
 
 .company-information {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px 34px;
+    gap: 22px 25px;
 }
-
-
-/* =========================================
-   FORM GROUP
-========================================= */
 
 .form-group {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    min-width: 0;
 }
-
-
-    /* =========================================
-   LABEL
-========================================= */
 
     .form-group label {
-        color: #667085;
+        display: block;
+        margin-bottom: 9px;
+        color: #444653;
         font-size: 11px;
         font-weight: 700;
-        letter-spacing: 0.7px;
-        line-height: 16px;
+        letter-spacing: 0.6px;
     }
+
+/* REQUIRED STAR */
 
 .required-star {
-    display: inline;
-    color: #dc2626;
-    font-size: 14px;
+    color: #dc3545;
     font-weight: 700;
-    margin-left: 2px;
-    vertical-align: baseline;
 }
 
+/* INPUTS */
 
-/* =========================================
-   INPUT
-========================================= */
-
-.edit-input {
+.edit-company-page .edit-input {
+    display: block;
     width: 100%;
-    min-height: 52px;
-    padding: 11px 15px;
-    box-sizing: border-box;
-    border: 1px solid #d0d5dd;
-    border-radius: 7px;
+    min-width: 0;
+    min-height: 43px;
+    padding: 10px 13px;
+    border: 1px solid #dce3eb;
+    border-radius: 6px;
     background: #ffffff;
-    color: #344054;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    color: #444653;
+    font-family: inherit;
+    font-size: 13px;
     outline: none;
-    transition: 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-    .edit-input:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+    .edit-company-page .edit-input:focus {
+        border-color: #6096ba;
+        box-shadow: 0 0 0 3px rgba(96, 150, 186, 0.13);
     }
 
+/* VALIDATION */
 
-/* =========================================
-   DROPDOWN
-========================================= */
-
-select.edit-input {
-    cursor: pointer;
-    appearance: auto;
+.edit-company-page .validation-error {
+    display: block;
+    margin-top: 6px;
+    color: #dc3545;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
-
-/* =========================================
-   FULL WIDTH SECTION
-========================================= */
+/* FULL-WIDTH SECTIONS */
 
 .full-section {
     width: 100%;
-    margin-bottom: 30px;
 }
 
     .full-section h2 {
-        margin: 0 0 15px 0;
-        color: #101828;
-        font-size: 19px;
-        font-weight: 700;
+        margin-bottom: 15px;
     }
 
-
-/* =========================================
-   TEXTAREA
-========================================= */
-
-.edit-textarea {
-    width: 100%;
-    min-height: 150px;
-    padding: 13px 15px;
-    box-sizing: border-box;
-    resize: vertical;
-    border: 1px solid #d0d5dd;
-    border-radius: 7px;
-    background: #ffffff;
-    color: #344054;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    outline: none;
-    transition: 0.2s ease;
-}
-
-    .edit-textarea:focus {
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
-    }
-
-
-/* =========================================
-   VALIDATION
-========================================= */
-
-.validation-error {
+.edit-company-page .edit-textarea {
     display: block;
-    margin: 0;
-    padding: 0;
-    color: #ff0000 !important;
-    font-size: 12px !important;
-    font-weight: 500;
-    line-height: 1.4;
+    width: 100%;
+    max-width: 100%;
+    min-height: 130px;
+    padding: 13px 14px;
+    border: 1px solid #dce3eb;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #444653;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+    .edit-company-page .edit-textarea:focus {
+        border-color: #6096ba;
+        box-shadow: 0 0 0 3px rgba(96, 150, 186, 0.13);
+    }
 
-/* =========================================
-   COMPANY ACTIONS
-========================================= */
+/* ACTION BUTTONS */
 
 .company-actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 12px;
-    margin-top: 5px;
+    padding-top: 5px;
 }
 
-
-/* =========================================
-   SAVE BUTTON
-========================================= */
-
-.save-button {
+.save-button,
+.cancel-button {
+    min-height: 42px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    min-height: 43px;
-    padding: 0 22px;
-    border: none;
-    border-radius: 7px;
-    background: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    padding: 11px 21px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
     font-weight: 600;
+    text-decoration: none;
     cursor: pointer;
-    transition: 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.save-button {
+    border: 1px solid #456276;
+    background: #456276;
+    color: #ffffff;
 }
 
     .save-button:hover {
-        background: #1d4ed8;
-        color: #ffffff;
+        background: #344d60;
+        border-color: #344d60;
     }
 
-
-/* =========================================
-   CANCEL BUTTON
-========================================= */
-
 .cancel-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 43px;
-    padding: 0 22px;
-    border-radius: 7px;
-    background: #f2f4f7;
-    color: #344054;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
+    border: 1px solid #dce3eb;
+    background: #ffffff;
+    color: #456276;
 }
 
     .cancel-button:hover {
-        background: #e4e7ec;
-        color: #344054;
+        background: #f3f6f9;
+        border-color: #b8c7d4;
     }
 
+/* RESPONSIVE */
 
-/* =========================================
-   RESPONSIVE - LARGE
-========================================= */
-
-@media (max-width: 1200px) {
-
-    .company-card {
-        max-width: 100%;
-    }
-}
-
-
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
     .edit-company-page {
-        padding: 25px 20px 40px 20px;
+        padding: 18px 12px 28px;
     }
 
     .company-card {
-        padding: 28px;
+        padding: 20px 16px;
     }
-
-    .company-information {
-        gap: 20px 25px;
-    }
-}
-
-
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
-
-@media (max-width: 700px) {
 
     .company-information {
         grid-template-columns: 1fr;
-    }
-
-    .company-header {
-        align-items: flex-start;
-    }
-
-    .company-avatar-large {
-        width: 60px;
-        height: 60px;
-        min-width: 60px;
-        font-size: 20px;
+        gap: 18px;
     }
 
     .company-title-area h1 {
-        font-size: 21px;
-    }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 500px) {
-
-    .edit-company-page {
-        padding: 20px 12px 30px 12px;
+        font-size: 23px;
     }
 
-    .company-card {
-        padding: 20px;
-        border-radius: 9px;
-    }
-
-    .company-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .company-title-area {
-        width: 100%;
+    .company-avatar-large {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        font-size: 24px;
     }
 
     .company-actions {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: wrap;
     }
 
     .save-button,
     .cancel-button {
-        width: 100%;
-        box-sizing: border-box;
+        flex: 1;
     }
 }

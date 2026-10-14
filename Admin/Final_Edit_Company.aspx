@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Edit Company"
+﻿
+<%@ Page Title="Edit Company"
     Language="C#"
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true"
@@ -18,7 +19,6 @@
 
 </asp:Content>
 
-
 <asp:Content ID="Content4"
     ContentPlaceHolderID="ContentPlaceHolder1"
     runat="server">
@@ -26,56 +26,32 @@
     <div class="edit-company-page">
 
         <div class="back-wrapper">
-
-            <a href="Companies.aspx"
-               class="back-link">
-
+            <a href="Companies.aspx" class="back-link">
                 <i class="fa-solid fa-arrow-left"></i>
-
                 <span>Back to Companies</span>
-
             </a>
-
         </div>
-
 
         <div class="company-card">
 
             <div class="company-header">
 
-                <div class="company-avatar-large">
-                    T
-                </div>
+                <div class="company-avatar-large">T</div>
 
                 <div class="company-title-area">
-
-                    <h1>
-                        Edit Company
-                    </h1>
-
-                    <p>
-                        Update Company Information
-                    </p>
-
+                    <h1>Edit Company</h1>
+                    <p>Update Company Information</p>
                 </div>
 
             </div>
-
 
             <div class="divider"></div>
 
-
             <div class="section-title">
-
-                <h2>
-                    Company Information
-                </h2>
-
+                <h2>Company Information</h2>
             </div>
 
-
             <div class="company-information">
-
 
                 <!-- COMPANY NAME -->
 
@@ -104,7 +80,6 @@
                     </asp:RequiredFieldValidator>
 
                 </div>
-
 
                 <!-- CONTACT EMAIL -->
 
@@ -145,7 +120,6 @@
 
                 </div>
 
-
                 <!-- CONTACT PHONE -->
 
                 <div class="form-group">
@@ -185,7 +159,6 @@
 
                 </div>
 
-
                 <!-- LOCATION -->
 
                 <div class="form-group">
@@ -214,6 +187,45 @@
 
                 </div>
 
+                <!-- ADDRESS - NEW FIELD -->
+
+                <div class="form-group">
+
+                    <label>
+                        ADDRESS
+                        <span class="required-star">*</span>
+                    </label>
+
+                    <asp:TextBox
+                        ID="txtAddress"
+                        runat="server"
+                        CssClass="edit-input"
+                        MaxLength="250"
+                        Text="TCS House, Raveline Street, Fort, Mumbai, Maharashtra, India - 400001">
+                    </asp:TextBox>
+
+                    <asp:RequiredFieldValidator
+                        ID="rfvAddress"
+                        runat="server"
+                        ControlToValidate="txtAddress"
+                        ErrorMessage="Address is required."
+                        ValidationGroup="CompanyValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RequiredFieldValidator>
+
+                    <asp:RegularExpressionValidator
+                        ID="revAddress"
+                        runat="server"
+                        ControlToValidate="txtAddress"
+                        ErrorMessage="Enter a valid address between 10 and 250 characters."
+                        ValidationExpression="^[A-Za-z0-9\s,.'&amp;/#():\-]{10,250}$"
+                        ValidationGroup="CompanyValidation"
+                        Display="Dynamic"
+                        CssClass="validation-error">
+                    </asp:RegularExpressionValidator>
+
+                </div>
 
                 <!-- INDUSTRY -->
 
@@ -242,7 +254,6 @@
                     </asp:RequiredFieldValidator>
 
                 </div>
-
 
                 <!-- EMPLOYEES -->
 
@@ -283,14 +294,11 @@
 
                 </div>
 
-
                 <!-- COMPANY SIZE -->
 
                 <div class="form-group">
 
-                    <label>
-                        COMPANY SIZE
-                    </label>
+                    <label>COMPANY SIZE</label>
 
                     <asp:DropDownList
                         ID="ddlCompanySize"
@@ -332,7 +340,6 @@
 
                 </div>
 
-
                 <!-- WEBSITE -->
 
                 <div class="form-group">
@@ -360,7 +367,6 @@
                     </asp:RequiredFieldValidator>
 
                 </div>
-
 
                 <!-- REGISTRATION DATE -->
 
@@ -390,14 +396,11 @@
 
                 </div>
 
-
                 <!-- STATUS -->
 
                 <div class="form-group">
 
-                    <label>
-                        STATUS
-                    </label>
+                    <label>STATUS</label>
 
                     <asp:DropDownList
                         ID="ddlStatus"
@@ -426,9 +429,7 @@
 
             </div>
 
-
             <div class="divider"></div>
-
 
             <!-- ABOUT COMPANY -->
 
@@ -460,9 +461,7 @@ TCS provides technology solutions and consulting services to organizations acros
 
             </div>
 
-
             <div class="divider"></div>
-
 
             <!-- COMPANY DESCRIPTION -->
 
@@ -492,9 +491,7 @@ TCS provides technology solutions and consulting services to organizations acros
 
             </div>
 
-
             <div class="divider"></div>
-
 
             <!-- BUTTONS -->
 
@@ -508,15 +505,11 @@ TCS provides technology solutions and consulting services to organizations acros
                     ValidationGroup="CompanyValidation"
                     PostBackUrl="Companies.aspx" />
 
-                <a href="Companies.aspx"
-                   class="cancel-button">
-
+                <a href="Companies.aspx" class="cancel-button">
                     Cancel
-
                 </a>
 
             </div>
-
 
         </div>
 

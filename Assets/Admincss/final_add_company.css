@@ -1,0 +1,281 @@
+﻿/* ================================
+   ADD COMPANY PAGE
+================================ */
+.add-company-page {
+    padding: 28px 32px;
+    background: #f5f7fb;
+    min-height: 100vh;
+    color: #444653;
+    font-family: Arial, sans-serif;
+}
+
+/* Page Heading */
+
+.page-heading {
+    margin-bottom: 24px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #456276;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+    .back-link:hover {
+        color: #6096ba;
+    }
+
+.page-heading h2 {
+    margin: 0 0 8px;
+    color: #456276;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.page-heading p {
+    margin: 0;
+    color: #7b8492;
+    font-size: 14px;
+}
+
+/* Main Card */
+
+.company-card {
+    background: #ffffff;
+    border: 1px solid #e7ebf0;
+    border-radius: 14px;
+    box-shadow: 0 5px 22px rgba(37, 55, 75, 0.05);
+    overflow: hidden;
+}
+
+/* Card Header */
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px 28px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.header-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #eaf2f8;
+    color: #456276;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+.card-header h3 {
+    margin: 0 0 6px;
+    color: #456276;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.card-header p {
+    margin: 0;
+    color: #8993a1;
+    font-size: 13px;
+}
+
+/* Form Sections */
+
+.form-section {
+    padding: 26px 28px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+    .form-section h4 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #456276;
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0 0 22px;
+    }
+
+        .form-section h4 i {
+            color: #6096ba;
+        }
+
+/* Form Grid */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+    .form-group label {
+        margin-bottom: 9px;
+        color: #444653;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+        .form-group label span {
+            color: #dc3545;
+        }
+
+.form-input {
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 11px 13px;
+    border: 1px solid #dce2e9;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #444653;
+    font-size: 13px;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .form-input::placeholder {
+        color: #a3aab5;
+    }
+
+    .form-input:focus {
+        border-color: #6096ba;
+        box-shadow: 0 0 0 3px rgba(96, 150, 186, 0.13);
+    }
+
+select.form-input {
+    cursor: pointer;
+}
+
+.form-textarea {
+    min-height: 110px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+    .full-width:last-child {
+        margin-bottom: 0;
+    }
+
+/* Validation */
+
+.validation-error {
+    display: block;
+    margin-top: 6px;
+    color: #dc3545;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Form Actions */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    padding: 22px 28px;
+    background: #fcfdff;
+}
+
+.cancel-button,
+.save-button {
+    min-height: 42px;
+    padding: 0 22px;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.cancel-button {
+    color: #596575;
+    background: #ffffff;
+    border: 1px solid #dce2e9;
+}
+
+    .cancel-button:hover {
+        background: #f1f4f7;
+        color: #456276;
+    }
+
+.save-button {
+    color: #ffffff;
+    background: #456276;
+    border: 1px solid #456276;
+}
+
+    .save-button:hover {
+        background: #344c5d;
+        border-color: #344c5d;
+    }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .add-company-page {
+        padding: 20px 15px;
+    }
+
+    .page-heading h2 {
+        font-size: 24px;
+    }
+
+    .card-header {
+        padding: 20px;
+    }
+
+    .form-section {
+        padding: 22px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-actions {
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .cancel-button,
+    .save-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+

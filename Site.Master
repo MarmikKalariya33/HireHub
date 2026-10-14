@@ -130,16 +130,15 @@
         <!-- LOGOUT -->
         <div class="logout-container">
 
+          
             <asp:LinkButton
                 ID="btnLogout"
                 runat="server"
                 CssClass="logout-btn"
+                Text="Logout"
                 OnClick="btnLogout_Click">
-
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Logout</span>
-
             </asp:LinkButton>
+
 
         </div>
 

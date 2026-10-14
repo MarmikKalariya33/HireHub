@@ -1,0 +1,429 @@
+﻿/* ==========================================
+   HIREHUB - VIEW COMPANY PAGE
+========================================== */
+.view-company-page {
+    min-height: 100vh;
+    padding: 25px 30px 40px;
+    background: #f5f7fb;
+    color: #444653;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.view-company-page *,
+.view-company-page *::before,
+.view-company-page *::after {
+    box-sizing: border-box;
+}
+
+/* BACK LINK */
+
+.back-wrapper {
+    margin-bottom: 20px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #456276;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+    .back-link:hover {
+        color: #6096ba;
+    }
+
+/* COMPANY PROFILE */
+
+.company-profile-card {
+    width: 100%;
+    padding: 27px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(35, 55, 75, 0.05);
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.company-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    border-radius: 12px;
+    background: #456276;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.company-heading {
+    flex: 1;
+    min-width: 0;
+}
+
+    .company-heading h1 {
+        margin: 0 0 9px;
+        color: #456276;
+        font-size: 25px;
+        line-height: 1.35;
+        font-weight: 700;
+        overflow-wrap: anywhere;
+    }
+
+.company-industry {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    color: #738091;
+    font-size: 13px;
+}
+
+.company-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .company-meta > span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: #718096;
+        font-size: 12px;
+    }
+
+/* STATUS */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: fit-content;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #eaf7ef;
+    color: #27804b;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #28a45c;
+}
+
+/* BUTTONS */
+
+.profile-actions {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.edit-company-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 11px 17px;
+    border: 1px solid #456276;
+    border-radius: 6px;
+    background: #456276;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+    .edit-company-button:hover {
+        background: #344d60;
+        color: #ffffff;
+    }
+
+/* SECTION HEADING */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+    .section-heading h2 {
+        margin: 0 0 7px;
+        color: #456276;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .section-heading p {
+        margin: 0;
+        color: #8490a0;
+        font-size: 13px;
+    }
+
+/* OVERVIEW GRID */
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+/* DETAIL CARDS */
+
+.view-card {
+    min-width: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(35, 55, 75, 0.035);
+}
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 19px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #edf4f8;
+    color: #456276;
+    font-size: 16px;
+}
+
+.card-heading h3 {
+    margin: 0;
+    color: #456276;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* DETAIL ROWS */
+
+.detail-list {
+    width: 100%;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+    .detail-item:last-child {
+        border-bottom: none;
+        padding-bottom: 4px;
+    }
+
+.detail-label {
+    color: #8490a0;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.detail-value {
+    color: #444653;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.website-link {
+    color: #456276;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+    .website-link:hover {
+        color: #6096ba;
+    }
+
+    .website-link i {
+        margin-left: 5px;
+        font-size: 10px;
+    }
+
+/* FULL WIDTH CARDS */
+
+.full-width-card {
+    margin-bottom: 22px;
+}
+
+    .full-width-card .card-heading {
+        margin-bottom: 16px;
+    }
+
+.description-text {
+    margin: 0 0 13px;
+    color: #697586;
+    font-size: 13px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+    .description-text:last-child {
+        margin-bottom: 0;
+    }
+
+/* BOTTOM ACTIONS */
+
+.bottom-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 6px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 42px;
+    padding: 11px 15px;
+    border: 1px solid #dce3eb;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #456276;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+    .back-button:hover {
+        background: #edf4f8;
+        color: #456276;
+    }
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .view-company-page {
+        padding: 22px 18px 30px;
+    }
+
+    .company-profile-card {
+        padding: 22px;
+    }
+
+    .overview-grid {
+        gap: 16px;
+    }
+
+    .view-card {
+        padding: 20px;
+    }
+
+    .profile-top {
+        flex-wrap: wrap;
+    }
+
+    .profile-actions {
+        margin-left: auto;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+    .view-company-page {
+        padding: 16px 12px 25px;
+    }
+
+    .company-profile-card {
+        padding: 19px 15px;
+    }
+
+    .profile-top {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .company-avatar {
+        width: 58px;
+        height: 58px;
+        font-size: 26px;
+    }
+
+    .company-heading {
+        flex-basis: calc(100% - 75px);
+    }
+
+        .company-heading h1 {
+            font-size: 20px;
+        }
+
+    .profile-actions {
+        width: 100%;
+        margin-left: 0;
+    }
+
+        .profile-actions .edit-company-button {
+            width: 100%;
+        }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .view-card {
+        padding: 18px 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .bottom-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+        .bottom-actions .back-button,
+        .bottom-actions .edit-company-button {
+            width: 100%;
+        }
+}
+

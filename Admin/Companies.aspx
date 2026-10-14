@@ -53,13 +53,13 @@
 
                 </div>
 
-                <a href="Add_Jobs.aspx"
+                <a href="final_add_company.aspx"
                    class="add-company-btn">
 
                     <i class="fa-solid fa-plus"></i>
 
                     <span>
-                        Add New Job
+                        Add New Companies
                     </span>
 
                 </a>
